@@ -1,0 +1,121 @@
+\documentclass{article}
+\usepackage{ifthen}
+\newboolean{enable-backrefs} % enable backrefs in the bibliography
+\setboolean{enable-backrefs}{true} % true false
+\newcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
+\newcommand{\backrefcitedsinglestring}[1]{(Cited on page~#1.)}
+\newcommand{\backrefcitedmultistring}[1]{(Cited on pages~#1.)}
+\ifthenelse{\boolean{enable-backrefs}}%
+{%
+		\PassOptionsToPackage{hyperpageref}{backref}
+		\usepackage{backref} % to be loaded after hyperref package
+		   \renewcommand{\backreftwosep}{ and~} % separate 2 pages
+		   \renewcommand{\backreflastsep}{, and~} % separate last of longer list
+		   \renewcommand*{\backref}[1]{}  % disable standard
+		   \renewcommand*{\backrefalt}[4]{% detailed backref
+		      \ifcase #1 %
+		         \backrefnotcitedstring%
+		      \or%
+		         \backrefcitedsinglestring{#2}%
+		      \else%
+		         \backrefcitedmultistring{#2}%
+		      \fi}%
+}{\relax}
+\usepackage{fullpage}
+\usepackage{comment}
+\usepackage[square, numbers]{natbib}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage[subrefformat=parens,labelformat=parens]{subfig}
+\usepackage{acronym}
+\usepackage{nomencl}
+\usepackage[style=long,nolist]{glossaries}
+% the following is useful when we have the old nomencl.sty package
+\providecommand{\printnomenclature}{\printglossary}
+\providecommand{\makenomenclature}{\makeglossary}
+\title{Deciding to Disclose: Pregnancy and Alcohol Misuse}
+\author{Jonathan Gray \and Jakub Bijak \and Seth Bullock\\
+University of Southampton, Southampton, SO17 1BJ, United Kingdom\\
+E-mail: \texttt{j.gray@soton.ac.uk}}
+\date{\vspace{-5ex}}
+\begin{document}
+\maketitle
+
+%*************************
+% Acronyms
+%*************************
+%\phantomsection
+%\refstepcounter{dummy}
+\pdfbookmark[1]{Acronyms}{acronyms}
+%\markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
+\section*{Acronyms}
+\begin{acronym}[UML]
+  \acro{FAS}{Foetal Alcohol Syndrome}
+  \acro{CPT}{Cumulative Prospect Theory}
+  \acro{PT}{Prospect Theory}
+  \acro{NICE}{National Institute for Health and Care Excellence}
+  \acro{IAPT}{Improving Access to Psychological Therapies}
+  \acro{CMACE}{Centre for Maternal and Child Enquiries}
+  \acroindefinite{CMACE}{the}{the}
+  \acro{AUDIT}{Alcohol Use Disorders Identification Test}
+  \acro{T-ACE}{Tolerance, Annoyance, Cut down, Eye-opener}
+  \acro{RCOG}{Royal College of Obstetricians and Gynecologists}
+  \acroindefinite{RCOG}{the}{the}
+  \acro{AML}{acute myeloid leukemia}
+  \acro{ADHD}{Attention Defecit Hyperactivity Disorder}
+  \acro{PND}{Postnatal Depression}
+  \acro{RCT}{randomised control trial}
+  \acro{WHO}{the World Health Organisation}
+  \acro{ESS}{Evolutionarily Stable Strategy}
+  \acro{MCMC}{Markov chain monte carlo methods}
+  \acro{DU}{Discounted Utility}
+  \acro{AIC}{Akaike information criterion}
+  \acro{ANOVA}{analysis of variance}
+  \acro{ALSPAC}{Avon Longitudinal Study of Parents and Children}
+  \acro{GEM}{Gaussian Emulation Machine}
+  \acrodefplural{GEM}{Gaussian Emulation Machines}
+  \acro{GEM-SA}{Gaussian Emulation Machine for Sensitivity Analysis}
+  \acro{JIT}{Just-in-time}
+  \acro{ABM}{Agent Based Model}
+  \acro{CPT}{Cumulative Prospect Theory}
+\end{acronym}              
+
+\newglossaryentry{gravid}{name={gravid}, description={Pregnant}}
+\newglossaryentry{term}{name={term}, description={Gestation of 37-42 weeks, 40 weeks is considered full term}}
+\newglossaryentry{binge}{name={binge drinking}, description={Drinking with the express purpose of becoming drunk}}
+\newglossaryentry{burnout}{name={burnout}, description={Lasting physical and emotional exhaustion, and disillusionment}}
+\newglossaryentry{antenatal}{name={antenatal},description={The time period covering the pregnancy, prior to birth}}
+\newglossaryentry{episiotomies}{name={episiotomies}, description={An episiotomy is a common procedure where an incision is made in the perineum to facilitate delivery, and attempt to reduce the risk of vaginal tearing}}
+\newglossaryentry{neonatal asphyxia}{name={antenatal},description={The time period covering the pregnancy, prior to birth}}
+
+%\refstepcounter{dummy}
+\pdfbookmark[1]{Glossary}{glossary}
+\printglossary[type=main]
+
+\printnomenclature{}
+
+
+\include{Abstract}
+
+\section{Introduction} %(half page)
+
+\include{Background}
+
+\section{Model}
+
+\subsection{Disclosure Game}
+
+\subsection{Agent Models}
+
+\section{Method}
+\subsection{Qualitative Trends}
+\subsection{Sensitivity Analysis}
+
+\section{Results}
+\subsection{}
+
+\section{Discussion and Conclusions}
+
+\bibliographystyle{plainnat}
+\bibliography{library}
+\end{document}

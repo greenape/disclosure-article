@@ -8,63 +8,33 @@
 
 \section*{Abstract}
 
-Background:
-Roots in agents, decision theory, game theory.
+\subsection*{Background}
+
 We draw together methodologies from game theory, agent based modelling, and decision theory to explore the process of decision making around disclosure. This is framed in the context of pregnant women disclosing their drinking behaviour to their midwives.
 
-Objective: 
-To pimp out this method, and maybe get some insight into reality.
-Address the perceived ad hoc character with strongly theoretically underpinned agents.
+\subsection*{Objective} 
 
-Methods: 
-Made a game, made a simulation, did a sensitivity analysis.
+The primary purpose it to demonstrate the potential utility of an approach which it is hoped goes some way towards addressing concerns about the ad hoc character of \ac{ABM}, by providing a strong theoretical grounding for the reasoning processes of individual agents. To this end we hope to show that these simple rules, operating in an inescapably artificial scenario are nonetheless capable of producing trends from the literature.
+We also seek to demonstrate the significance of precisely how the decision making process is formulated, by contrasting four distinct decision rules against one another and exploring a simple form of information sharing, supported by the use of statistical emulators for a full exploration of the parameter space.
 
-Results: 
-Look! Chaos! Look! Qualitative trends! Look! More data needed.
+\subsection*{Methods} 
 
-Conclusions:
-This.. might actually kind of work??
+We employ game theory to define a signalling game representative of a scenario where pregnant women decide how far to disclose their drinking behaviours to their midwives, and midwives employ the information provided to decide whether a costly referral should be made. This game is then recast as two games taking play against nature, to permit the use of a decision theoretic approach where both classes of agent use simple rules to decide their moves.
+Four decision rules are explored - a lexicographic heuristic which considers only the link between moves and payoffs, a Bayesian risk minimisation agent that uses the same information, a more complex Bayesian risk minimiser, and a \ac{CPT} type.
 
-Comments: 
-Lesson learned: data should drive modelling.
+Using a simulator we have developed in Python, we recreate two key qualitative trends described in the Midwifery literature for all the decision models, and investigate the impact of introducing a simple form of information sharing within agent groups.
+Finally a global sensitivity analysis using \acp{GEM} was conducted, to compare the response surfaces of the different decision rules in the game.
 
-This dissertation presents a method for modelling disclosure behaviour
-by treating the interaction as paired signalling games played by decision
-theoretic agents. Two theories of decision making - Bayesian risk
-minimisation, and \ac{CPT} - are investigated, and a simulation developed
-using Python.
+\subsection*{Results} 
 
-The feasibility of the method is examined through a case study, which
-considers the disclosure of the drinking behaviour of pregnant women
-to their midwives. 
+Selected results showing the ability of all decision rules to reproduce qualitative trends noted in the literature are provided, together with a sensitivity analysis, and comparitive heat maps produced using \acp{GEM} demonstrating the significance of the precise implementation of the decision making.
 
-The essence of the scenario is that there is considered to be a long
-term benefit to disclosure - common in the healthcare arena, but an
-opportunity cost associated with disclosure. In the case study, this
-is conceptualised as arising from the perceived undesirability of
-drinking while pregnant. More generally this could derive from any
-imbalance in the long term benefit and the opportunity cost, for example
-the subjective benefit of a cigarette in the near future, versus the
-discounted benefit of better health later.
-
-Theories of decision are driven by the weighing of probabilities and
-subjective gains or losses. In this case, the probabilities are generated
-by individual agents based on their initial preconceptions and their
-experiences across the simulation, using Bayesian inference.
-
-The Bayesian risk minimising model is able to reproduce qualitative
-trends around increased honesty over appointments, and a negative
-impact of harsh judgement of drinkers on disclosure. The \ac{CPT}
-model is less successful, which may be a result of improper, or excessively
-homogenous parameters, in combination with unrealistic payoffs.
-
-A global sensitivity analysis is also conducted using Gaussian Emulation
-Machines, and finally recommendations for further work are dervived, along
-with a few key recommendations for practice - assume people are being honest,
-and be non-judgemental.
-
-\vfill{}
+\subsection*{Conclusions}
 
 
-\endgroup
+The ability of all the decision rules to show the qualitative trends suggests that there is some utility associated with this approach.  
 
+\subsection*{Comments} 
+
+
+We note that the scenario omits the overwhelming complexity of the reality, and is presented largely in the spirit of a convenient demonstration of the methodology. Clearly a domain where there is sufficient data to permit a more comprehensive approach to validation of model outcomes is desirable, and will form the basis of our future work.

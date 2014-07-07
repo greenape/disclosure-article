@@ -1,4 +1,5 @@
 \documentclass{article}
+\usepackage{multirow}
 \usepackage{ifthen}
 \newboolean{enable-backrefs} % enable backrefs in the bibliography
 \setboolean{enable-backrefs}{true} % true false
@@ -31,9 +32,7 @@
 \usepackage[nolist,footnote]{acronym}
 \usepackage{nomencl}
 \usepackage[style=long,nolist]{glossaries}
-% the following is useful when we have the old nomencl.sty package
-\providecommand{\printnomenclature}{\printglossary}
-\providecommand{\makenomenclature}{\makeglossary}
+
 \title{Deciding to Disclose: Pregnancy and Alcohol Misuse}
 \author{Jonathan Gray \and Jakub Bijak \and Seth Bullock\\
 University of Southampton, Southampton, SO17 1BJ, United Kingdom\\
@@ -88,7 +87,7 @@ E-mail: \texttt{j.gray@soton.ac.uk}}
 \newglossaryentry{burnout}{name={burnout}, description={Lasting physical and emotional exhaustion, and disillusionment}}
 \newglossaryentry{antenatal}{name={antenatal},description={The time period covering the pregnancy, prior to birth}}
 \newglossaryentry{episiotomies}{name={episiotomies}, description={An episiotomy is a common procedure where an incision is made in the perineum to facilitate delivery, and attempt to reduce the risk of vaginal tearing}}
-\newglossaryentry{neonatal asphyxia}{name={antenatal},description={The time period covering the pregnancy, prior to birth}}
+%\newglossaryentry{neonatal asphyxia}{name={antenatal},description={The time period covering the pregnancy, prior to birth}}
 
 %\refstepcounter{dummy}
 \pdfbookmark[1]{Glossary}{glossary}
@@ -115,6 +114,6 @@ E-mail: \texttt{j.gray@soton.ac.uk}}
 \include{Conclusion}
 \include{Acknowledgements}
 
-\bibliographystyle{plainnat}
-\bibliography{library}
+\bibliography{library,library_addendum}
+\bibliographystyle{myplainnat}
 \end{document}

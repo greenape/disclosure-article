@@ -28,7 +28,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage[subrefformat=parens,labelformat=parens]{subfig}
-\usepackage{acronym}
+\usepackage[nolist,footnote]{acronym}
 \usepackage{nomencl}
 \usepackage[style=long,nolist]{glossaries}
 % the following is useful when we have the old nomencl.sty package
@@ -49,7 +49,7 @@ E-mail: \texttt{j.gray@soton.ac.uk}}
 %\refstepcounter{dummy}
 \pdfbookmark[1]{Acronyms}{acronyms}
 %\markboth{\spacedlowsmallcaps{Acronyms}}{\spacedlowsmallcaps{Acronyms}}
-\section*{Acronyms}
+%\section*{Acronyms}
 \begin{acronym}[UML]
   \acro{FAS}{Foetal Alcohol Syndrome}
   \acro{CPT}{Cumulative Prospect Theory}
@@ -77,8 +77,9 @@ E-mail: \texttt{j.gray@soton.ac.uk}}
   \acrodefplural{GEM}{Gaussian Emulation Machines}
   \acro{GEM-SA}{Gaussian Emulation Machine for Sensitivity Analysis}
   \acro{JIT}{Just-in-time}
-  \acro{ABM}{Agent Based Model}
+  \acro{ABM}{Agent Based Modelling}
   \acro{CPT}{Cumulative Prospect Theory}
+  \acro{FFH}{Fast and Frugal Heuristic}
 \end{acronym}              
 
 \newglossaryentry{gravid}{name={gravid}, description={Pregnant}}

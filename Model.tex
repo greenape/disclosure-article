@@ -4,6 +4,14 @@
 %Start this off with a brief description of our fictional scenario.
 % Whole section ~ 1.5K
 
+In this section we outline the disclosure game model, and give details of the four decision rules.
+
+A brief sketch of a pregnancy in terms of encounters between a woman and a midwife is instructive at this juncture. Typically women will have 12 appointments with a midwife during the antenatal period. Outside of caseloading teams, a woman does not generally have a named midwife, and may see a different practitioner at each appointment. In the UK, and unlike most healthcare scenarios, maternity notes are patient held, so midwives do not have extensive information prior to an appointment unless they have encountered the woman previously. Maternity notes are not generally linked to extra-departmental records, meaning that a history of alcohol related admissions to another service may remain unknown unless revealed by the woman.
+
+According to NICE guidance \citep{NICE2010a,NICE2010} substance misuse should be raised at the initial booking appointment, and subsequent action if a concern is raised is at the discretion of the midwife. This may take the form of specific guidance to reduce intake, or if deemed necessary a referral to a specialist midwife and relevant interdisciplinary team. On alcohol consumption, policy regarding how to determine the level of consumption is generally at the trust level, or according to the best judgement of the individual midwife, with no guidance provided by NICE. This commonly takes the form of average units per week, but may include \ac{T-ACE} and similar measures. 
+
+Beyond the booking appointment, the onus is on women to raise concerns about their drinking behaviour, or the midwife to probe further if they feel it is warranted. 
+
 \subsection{Disclosure Game}
 \label{sub:the_game}
 %Outline how the scenario translates into a game.
@@ -11,13 +19,13 @@
 
 In order to translate the scenario sketched above into a more abstract, tractable form, we cast it as a signalling game, and assume that women's disclosures (or not), are signals. We also make the simplifying assumption that a woman may have one of only three drinking patterns - light, moderate, or heavy. Correspondingly, they are limited in what signals they may send to claiming to be one of these three types.
 
-Midwives are treated in a similar fashion, where their type corresponds to how negatively they regard a drinking pattern - non-judgemental, moderately judgemental, and harshly judgemental. The expression of this judgement is not a matter of choice on their part, and is assumed not to impact on their choice of response, which is either to refer the woman for specialist treatment, or to do nothing.
+Midwives are treated in a similar fashion, where their type corresponds to how negatively they regard a drinking pattern - non-judgemental, moderately judgemental, and harshly judgemental. The expression of this judgement is not a matter of choice on their part, and is assumed to have no impact on their response, which is to either refer the woman for specialist treatment, or do nothing.
 
 At the end of a game, each player receives a payoff dependent on the actions and types of both players, which has a partially common interest component. Women receive a payoff based on the health of their eventual baby, with a social cost dependent on the signal they sent and the midwife's reaction to it. Midwives receive the same health payoff as the women, but pay a cost for referring to a specialist, mirroring the organisational cost of non-routine care.
 
-
-
-Agents treat this two player game as taking place against nature, along the lines of adversial risk analysis \citep{THINGY}. 
+Taken together, this leads to a game tree that is relatively complex even at the subgame level (figure \ref{fig:subgame_tree} shows the subgame tree, with information sets). 
+%The subgame has a large number of pure Nash equilibria, and solution using Gambit \citep{Gambit13}
+Rather than attempt to solve for equilibria, agents treat this two player game as taking place against nature, along the lines of adversial risk analysis \citep{RiosInsua2009}. This effectively translates the game to a pair of decision problems, which agents attempt to resolve at each turn using a simple decision rule.
 
 %Might belong in a more methody bit? Read some stuff to check..
 Women are drawn in order from a queue, and play against a midwife chosen at random. They play for a maximum of 12 rounds (following the routine number of ante-natal appointments in the UK \citep{NICE2010a}) or until they are referred. At which point a new player is drawn from the same distribution that produced the original players to replace them. If they are not referred, they rejoin the back of the queue after their appointment. In either case, they are informed of their payoff after each round and update their beliefs accordingly.
@@ -36,9 +44,12 @@ Midwives play for \(k\) rounds (\(k=1000\) in all experiments), and conduct appo
 %		properly explain dirichlet priors
 % How about comparing the decision problem representation for the agent types?
 
-While in principle a wide variety of agent models, given that decision rules operate on essentially the same information, and produce the same outputs, we limit ourselves here to four. The simplest is a lexicographic rule (1), motivated as in the spirit of a \ac{FFH} \citep{Gigerenzer2004} which uses only information about payoffs given actions; a Bayesian risk minimisation rule using the same information (2); a second Bayesian risk rule (3) which uses information about the underlying lottery; and a two-stage \ac{CPT} \cite{Hau2008} agent (4) which is identical with 3, but uses the \ac{CPT} decision rule from \cite{Tversky1992}.
+While in principle a wide variety of agent models are possible, given that decision rules operate on essentially the same information, and produce the same outputs, we limit ourselves here to four. The simplest is a lexicographic rule (1), motivated as in the spirit of a \ac{FFH} \citep{Gigerenzer2004} which uses only information about payoffs given actions; a Bayesian risk minimisation rule using the same information (2); a second Bayesian risk rule (3) which uses information about the underlying lottery; and a two-stage \ac{CPT} \cite{Hau2008} agent (4) which is identical with 3, but uses the \ac{CPT} decision rule from \cite{Tversky1992}. Hence, each successive decision model adds a layer of sophistication to the problem representation while retaining the same input-ouput characteristics.
 
 As noted in section \ref{sub:the_game}, agents have perfect recall, and recognise individual opponents if they encounter them subsequently. While agents recall perfectly and make use of the new information for retrospective updates, their decisions are made \'as-if\' they were facing a new opponent.
+
+A simplifying assumption is made that all midwives have just qualified, with identical training and as a result have entirely homogenous beliefs about their women. It is assumed in general that they have not been trained by Dr. House, and as a result have been taught that people will generally tell the truth.
+Women are heterogenous in their prior observations, which are assigned stochastically and constrained such that they have encountered each scenario possible at least once, with exactly \(k\) encounters overall.
 
 \subsubsection{Payoff Reasoning}
 
@@ -80,14 +91,16 @@ a count of observations with no particular concern as to their order.
 
 \subsubsection{Descriptive Decision Theory}
 
+The most complex decision rule used is \ac{CPT}, which attempts to reproduce a number of systematic deviations from rationality observed in humans. While \ac{CPT} has primarily been applied in the context of decisions from description, it has been modified to deal with decisions from experience by incorporating a first stage where probabilities are estimates from observations as in \cite{Hau2008}. In this instance we replace the frequentist first stage with the equivalent Bayesian inference process.
+
 \subsection{Information Sharing}
 \label{sub:info_sharing}
 
-It would seem unreasonable to suppose that neither party recounts their experiences to their peers, and to explore the impact of this we also modify the game to introduce a simple form of information sharing within agent groups. This takes the form of having each agent share their memories with their colleagues with some probability \(p\). Individuals then incorporate shared information into their beliefs using weighted updates, such that a shared observation of a low type signal contributes to their beliefs by \(q\), and \(0\leq q\leq 1\). Women share only when they have finished play, and provide their complete history of games, because they have accurate information about the outcomes. By the same rationale, midwives share only their history with the most recent woman they referred. Sharing occurs simultaneously for all players at the end of each round, and all memories are either shared immediately or discarded.\footnote{Memories of games remain, but the assumption is that only current news is relevant.}
+It would seem unreasonable to suppose that neither party recounts their experiences to their peers, and to explore the impact of this we also modify the game to introduce a simple form of information sharing within agent groups. This takes the form of having each agent share their memories with their colleagues with some probability \(p\). Individuals then incorporate shared information into their beliefs using weighted updates, such that a shared observation of a low type signal contributes to their beliefs by \(q\), and \(0\leq q\leq 1\). Women share only when they have finished play, and provide their complete history of games, because they have accurate information about the outcomes. By the same rationale, midwives share only their history with the most recent woman they referred. Sharing occurs simultaneously for all players at the end of each round, and all memories are either shared immediately or discarded.\footnote{Memories of games remain, but it is assumed that only current news is relevant.}
 
 Because of their differing problem representations, the simple payoff reasoners and their more complex counterparts incorporate this outside information differently. The simple payoff based rule relys on a belief structure relating actions directly to rewards. Because payoffs differ by the agent's private type, the information shared may not correspond to the experience of the listening agent in the same scenario. As a result, payoff reasoners have a belief bias towards the most common player type, and can believe in outcomes that are, for them, impossible.
 
-By contrast, representing the problem in terms of the probabilities of the individual lotteries yields a structure that generalises the new information.
+By contrast, representing the problem in terms of the probabilities of the individual lotteries yields a structure that abstracts the new information from payoffs, and allows the agent discount implausible outcomes.
 
 \subsection{Model Implementation}
 \label{sub:the_code}

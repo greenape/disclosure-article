@@ -1,0 +1,28 @@
+digraph G {
+	rankdir=LR
+	node [shape=circle, fontname="CMU Serif"]
+	edge[fontname="CMU Serif"]
+
+	root [shape=square, label=""]
+	payoff1a [shape=diamond]
+	payoff1b [shape=diamond]
+	payoff2a [shape=diamond]
+	payoff2b [shape=diamond]
+	payoff3a [shape=diamond]
+	payoff3b [shape=diamond]
+	payoff3c [shape=diamond]
+
+	root -> high
+	root -> moderate
+	root -> low
+
+	high -> payoff3a
+	high -> payoff3b
+	high -> payoff3c
+
+	low -> payoff1a
+	low -> payoff1b
+
+	moderate -> payoff2a
+	moderate -> payoff2b
+}

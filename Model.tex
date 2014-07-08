@@ -31,12 +31,12 @@ Rather than attempt to solve for equilibria, agents treat this two player game a
 %Might belong in a more methody bit? Read some stuff to check..
 Women are drawn in order from a queue, and play against a midwife chosen at random. They play for a maximum of 12 rounds (following the routine number of ante-natal appointments in the UK \citep{NICE2010a}) or until they are referred. At which point a new player is drawn from the same distribution that produced the original players to replace them. If they are not referred, they rejoin the back of the queue after their appointment. In either case, they are informed of their payoff after each round and update their beliefs accordingly.
 
-Midwives play for \(k\) rounds (\(k=1000\) in all experiments), and conduct appointments in parallel, i.e. if there are 5 midwives, then five women are drawn from the queue and assigned at random to the midwives. 
+Midwives play for \(A_{m}\) rounds (\(A_{m}=1000\) in all experiments), and conduct appointments in parallel, i.e. if there are 5 midwives, then five women are drawn from the queue and assigned at random to the midwives. 
 Unlike women, midwives are only informed of their payoff if they choose to make a referral. Both groups of agents have perfect recall, and midwives are assumed to retrospectively update their observations if they make a referral after a number of appointments.
 
 \begin{table}
 \center
-\subfloat[Social cost\label{tab:Social-cost-matrix}]{%
+\subfloat[Social cost, \(P_{s}\)\label{tab:Social-cost-matrix}]{%
 \begin{tabular}{|c|c|c|c|c|}
 \cline{3-5} 
 \multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
@@ -54,7 +54,7 @@ Unlike women, midwives are only informed of their payoff if they choose to make 
 
 }
 
-\subfloat[Health outcome\label{tab:Referral-payoff-matrix}]{%
+\subfloat[Health outcome, \(P_{h}\)\label{tab:Referral-payoff-matrix}]{%
 \begin{tabular}{|c|c|c|c|c|}
 \cline{3-5} 
 \multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
@@ -70,7 +70,7 @@ Unlike women, midwives are only informed of their payoff if they choose to make 
 
 }
 
-\subfloat[Referral cost\label{tab:inst_cost_matrix}]{%
+\subfloat[Referral cost, \(P_{c}\)\label{tab:inst_cost_matrix}]{%
 \begin{tabular}{|c|c|c|c|c|}
 \cline{3-5}  
 \multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
@@ -103,18 +103,40 @@ While in principle a wide variety of agent models are possible, given that decis
 
 As noted in section \ref{sub:the_game}, agents have perfect recall, and recognise individual opponents if they encounter them subsequently. While agents recall perfectly and make use of the new information for retrospective updates, all four agent models make decisions `as-if' they were always facing a new opponent.
 
-A simplifying assumption is made that all midwives have just qualified, with identical training and as a result have entirely homogenous beliefs about their women. It is assumed in general that they have not been trained by Dr. House, and as a result have been taught that people will generally tell the truth.
+A simplifying assumption is made that all midwives have just qualified after receiving identical training. As a result, they have homogenous beliefs about their women and assume to some extent that they are honest.
 Women are heterogenous in their prior observations, which are assigned stochastically and constrained such that they have encountered each scenario possible at least once, with exactly \(k\) encounters overall.
 
-\subsubsection{Payoff Reasoning}
+Formally we let \(S\) be the set of signals \(\{l, m, h\}\), \(T_{w}\) be the set of drinking types \(\{l, m, h\}\), \(T_{m}\) the set of midwife types \(\{l, m, h\}\), and \(J=\{r,n\}\) the actions available to midwives. The set of all payoffs shall be denoted \(P\), where \(P_{w}\) are the payoffs for all women\footnote{While it is assumed that \(P_{w}\) for an individual of type \(a\) is constrained such that \(T=\{a\}\), this can change under the modified game described in subsection \ref{sub:info_sharing}} defined by \(P_{w}=\{x | x=P_{h, b, c} + P_{s, a, d}\wedge b \in J\wedge c \in T\wedge d \in M\}\), and equivalently for midwives \(P_{m}=\{x | x=P_{h, b, c} + P_{c, b}\}\).
 
-Both payoff reasoners assume a simplified decision problem, as in figure \ref{fig:payoff_problem}, where an action is a choice between lotteries. The lexicographic heuristic (algorithm \ref{alg:lexicographic}) maintains a count of the number of times that each action was followed by a payoff, and chooses the action which most commonly has the best payoff, i.e. one reason decision making. The Bayesian risk minimisation agent uses the same subset of information, but updates beliefs on the link between actions and payoffs using Bayes rule, and attempts to choose the action which minimises risk.
 
-\subsubsection{Bayesian Risk Minimisation}
+\subsection{Lexicographic Heuristic}
+\label{sub:lexico}
 
-Aside from the heuristic agent, the remaining three agent types use Bayesian updating to attempt to improve
-the accuracy of their beliefs. Given the discrete nature of agent
-types, and actions, coupled with a desire for tractability of the
+The lexicographic heuristic (algorithm \ref{alg:lexico}) follows the form of that used in \cite{Hau2008}, and assumes a simplified decision problem, as in figure \ref{fig:payoff_problem}, where an action is a choice between combined lotteries. Functionally, the heuristic maintains a count of the number of times that each action was followed by a payoff, and chooses the action which most commonly has the best payoff, i.e. one reason decision making. This approach requires minimal computation, and does not assume that all payoffs are known, or static.
+
+Women maintain a count, \(n\) for each of the \(k\) payoffs in \(P_{w, a},a\in k\), an individual payoff paired with a signal, such that \(n_{i}=\{n_{i,1}\ldots n_{i,k}\}\).
+
+Midwives solve a slightly different problem, where the signal received may convey useful information. This is resolved by maintaining a separate count for each signal, i.e. \(n_{i,j}=\{n_{i,j,1}\ldots n_{i, j, k}\}\), and otherwise follow the same algorithm.
+
+\begin{algorithm}
+\begin{algorithmic}
+\State n=1, action=none
+\While{action is none}
+\State Calculate the nth most common outcome following each action.
+\State Sort actions by the value of the nth most common outcome.
+\If{clear winner} \State action = best \EndIf
+\State n = n + 1
+\EndWhile
+\State \Return action
+\end{algorithmic}
+\caption{Lexicographic heuristic\label{alg:lexico}}
+\end{algorithm}
+
+\subsubsection{Bayesian Payoff Heuristic}
+
+The Bayesian payoff agent uses the same subset of information as the lexicographic method, but updates beliefs on the link between actions and payoffs using Bayes rule, and attempts to choose the action which minimises risk.
+
+Given the discrete nature of actions and payoffs, coupled with a desire for tractability of the
 simulation, the Dirichlet distribution is employed to represent these beliefs. The probability
 density function takes the form -
 
@@ -124,12 +146,12 @@ D(\Theta|\alpha)=\frac{\Gamma(\sum_{i=1}^{k}\alpha_{i})}{\prod_{i=1}^{k}\Gamma(\
 
 
 Where \(\alpha=\{\alpha_{1}\ldots\alpha_{k}\}\), \(k\) is the number
-of discrete types, \(\Theta=\{x_{1},\,\ldots,x_{k-\text{1}}\}\) all
+of signal-payoff pairs, \(\Theta=\{x_{1},\,\ldots,x_{k-\text{1}}\}\) all
 more than zero and summing to less than 1, and \(\alpha_{i}\) is the integer
-psuedo-count of prior observations for type \(i\). 
+psuedo-count of prior observations for a pair \(i\). 
 
 The distribution is particularly convenient, in that to infer the
-probability of a new observation being of some particular type becomes
+probability of a signal implying a payoff becomes
 simply -
 
 \begin{equation}
@@ -137,16 +159,36 @@ P(x=j|D,\alpha)=\frac{\alpha_{j}+n_{j}}{\sum_{j}(\alpha_{j}+n_{j})}\label{eq:pos
 \end{equation}
 
 
-Where \(n_{j}\) is simply the count of occurrences of type \(j\), so
-that the belief that a new observation is of type \(j\) the number
+Where \(n_{j}\) is simply the count of occurrences of pair \(j\), so
+that the belief that a signal \(j\) the number
 of times that type has been observed (including the pseudo-count),
 over the total number of observations thus far. This makes computation
 of beliefs fast and simple, since all that must be maintained is
-a count of observations with no particular concern as to their order. 
+a count of observations with no particular concern as to their order.
+
+As before, midwives follow a similar pattern but per signal.
+
+\subsubsection{Bayesian Risk Minimisation}
+
+The second Bayesian agent augments the payoff reasoning version by separating the two lotteries and assuming that \(P\) is a static, and known set of payoffs possible for the agent. For women, this means that they maintain two sets of beliefs: a Dirichlet mixture which represents the believed distribution of midwife types, and a second set linking signals to referrals.
+
+Formally, let \(D=\{D_{h}, D_{s}\}\), \(\alpha=\{\alpha_{h},\alpha_{s}\}\), and \(n=\{n_{h},n_{s}\}\). The quantity to be minimised then becomes -
+
+\begin{equation}
+R(i)= \sum_{z=1}\sum_{j=1}-P_{w, i, z, j}P(x=l|D_{s},\alpha_{s})P(x=j|D_{h},\alpha_{h})\label{eq:risk}
+\end{equation}
+
+So that the risk of a signal, \(i\) is the sum of all possible payoffs multiplied by the probability of that payoff occurring.
+
+Midwives reasoning centers determing the meaning of signals, since given the knowledge of what some signal \(i\) conveys about the true type of the sender, the payoff for an action is known. As such, their inference process is the same as for the simple Bayesian agent but over signal-type pairs, and they attempt to minimise -
+
+\begin{equation}
+R(i, j)= \sum_{z=1}\sum_{j=1}-P_{m, i, z, j}P(x=l|D_{s},\alpha_{s})P(x=j|D_{h},\alpha_{h})\label{eq:mw_risk}
+\end{equation}
 
 \subsubsection{Descriptive Decision Theory}
 
-The most complex decision rule used is \ac{CPT}, which attempts to reproduce a number of systematic deviations from rationality observed in humans. While \ac{CPT} has primarily been applied in the context of decisions from description, it has been modified to deal with decisions from experience by incorporating a first stage where probabilities are estimates from observations as in \cite{Hau2008}. In this instance we replace the frequentist first stage with the equivalent Bayesian inference process.
+The most complex decision rule used is \ac{CPT}, which attempts to reproduce a number of systematic deviations from rationality observed in humans. While \ac{CPT} has primarily been applied in the context of decisions from description, it has been modified to deal with decisions from experience by incorporating a first stage where probabilities are estimates from observations as in \cite{FoxCPT}. In this instance we replace the frequentist first stage with the equivalent Bayesian inference process.
 
 Rather than the psychologically more interesting \ac{PT}, the \ac{CPT}
 decision rule is used in this instance, because of the requirement
@@ -214,4 +256,4 @@ Women share only when they have finished play, and provide their complete histor
 
 Because of their differing problem representations, the simple payoff reasoners and their more complex counterparts incorporate this exogenous information differently. The simple payoff based rule relys on a belief structure relating actions directly to rewards. Because payoffs differ by the agent's private type, the information shared may not correspond to the experience of the listening agent in the same scenario. As a result, payoff reasoners have a belief bias towards the most common player type, and can believe in outcomes that are, for them, impossible.
 
-By contrast, representing the problem in terms of the probabilities of the individual lotteries yields a structure that abstracts the new information from payoffs, and allows the agent discount implausible outcomes.
+By contrast, representing the problem in terms of the probabilities of the individual lotteries yields a structure that abstracts the new information from payoffs, and allows the agent discount implausible outcomes. This stronger assumption as to the static and known qualities of payoffs does however reduce the flexibility of the decision rule.

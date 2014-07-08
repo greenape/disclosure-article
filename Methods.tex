@@ -22,8 +22,8 @@ Two key measures were used - the fraction of the subpopulation who had ever sign
 Name & Description & Value \\ \hline
 \(N_{w}\) & Number of women & 1000 \\ \hline
 \(N_{m}\) & Number of midwives & 100 \\ \hline
-k & Number of appointments per midwive & 1000 \\ \hline
-A & Maximum number of appointments per woman & 12 \\ \hline
+\(A_{m}\) & Number of appointments per midwive & 1000 \\ \hline
+\(A_{w}\) & Maximum number of appointments per woman & 12 \\ \hline
 R & Runs & 1000 \\ \hline
 \(P_{h,w}\) & Proportion of heavy drinkers & \(1/3\) \\ \hline
 \(P_{m,w}\) & Proportion of moderate drinkers & \(1/3\) \\ \hline
@@ -45,13 +45,13 @@ R & Runs & 1000 \\ \hline
 %Will require some discussion of the gemsa technique at this point - can also cite Jason H for precedent!
  \cite{Bijak2013b}
 
-Parameters for training were generated in R \citep{RTeam2014} using Latin Hypercube Sampling \citep{Carnell2012} over the space of inputs given in table \ref{tab:sa_params}. Initially a unit hypercube was generated, then the margins transformed appropriately to cover those regions where the inputs are not bounded between 0 and 1, and for proportions of agent types which necessarily sum to one across the three parameters. Given the limitation of 400 design points for the \ac{GEM-SA} software, we produced exactly that many parameter combinations and collected results for 100 runs of each. A fixed set of 100 random seeds was used, such that each parameter set was run once with each seed, for every decision rule.
+Parameters for training were generated in R \citep{RTeam2014} using Latin Hypercube Sampling \citep{Carnell2012} over the space of inputs given in table \ref{tab:sa_params}, giving 10 free parameters. Initially a unit hypercube was generated, then the margins transformed appropriately to cover those regions where the inputs are not bounded between 0 and 1, and for proportions of agent types which necessarily sum to one across the three parameters. Given the limitation of 400 design points for the \ac{GEM-SA} software, we produced exactly that many parameter combinations and collected results for 100 runs of each. A fixed set of 100 random seeds was used, such that each parameter set was run once with each seed, for every decision rule.
 
-To better capture the response characteristics for the model, we employ three - (1) the interquartile range of the average signal sent by each type of agent in a run, (2) the average signal of moderate drinking agents in a run, and (3) the standard deviation of that average signal between simulation runs. Together these three metrics give an indication of how far women are separable by their signalling behaviour (1), the behaviour of the at risk drinking groups\footnote{Under most conditions, the behaviour of heavy drinkers tracks closely with their moderate counterparts.} (2), and finally the stability of the system in the face of the stochastic elements.
+To better capture the response characteristics for the model, we measure three outcome variables - (1) the interquartile range of the average signal sent by each type of agent in a run, (2) the average signal of moderate drinking agents in a run, and (3) the standard deviation of that average signal between simulation runs. Together these three metrics give an indication of how far women are separable by their signalling behaviour (1), the behaviour of the at risk drinking groups\footnote{Under most conditions, the behaviour of heavy drinkers tracks closely with their moderate counterparts.} (2), and finally the stability of the system in the face of the stochastic elements.
 
 Measurements were taken at the end of 1000 rounds of play, and for 1 and 2, 400 results were selected covering the full hypercube with each chosen randomly from the runs for that design point. This approach, rather than averaging across runs, was taken to avoid obscuring the high degree of variability evident in the output of the payoff reasoning agents in some areas of the parameter space.
 
-Twelve emulators were built, covering each of the three output on all four decision models. These emulators were used to conduct a probabalistic sensitivity analysis using \ac{GEM-SA} to assess the impact of parameters individually, and in combination. In addition, the trained emulators were used to explore novel areas of the parameter space.?????????????
+Twelve emulators were built, covering each of the three output on all four decision models. These emulators were used to conduct a probabalistic sensitivity analysis using \ac{GEM-SA} to assess the impact of parameters individually, and in combination.
 
 \begin{table}
 \center
@@ -69,7 +69,7 @@ Name & Description & Min & Max \\ \hline
 \(p_{m}\) & Probability of midwives sharing & 0 & 1 \\ \hline
 \(q_{m}\) & Weight of shared information for midwives & 0 & 1 \\ \hline
 \(Payoff_{baby}\) & Health payoff for healthy delivery & 1 & 100 \\ \hline
-\(Payoff_{referral}\) & Cost for referral & \multicolumn{2}{l|}{\(Payoff_{baby} - 1\)} \\ \hline
+\(Payoff_{referral}\) & Cost for referral & \multicolumn{2}{l|}{\(-(Payoff_{baby} - 1)\)} \\ \hline
 \(s_{i}[a_{i}]\) & Psuedo-count favouring honesty & 1 & 100 \\ \hline
 \end{tabular}
 \caption[Table caption text]{Parameter ranges. \label{tab:sa_params}}

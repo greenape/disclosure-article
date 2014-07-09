@@ -22,7 +22,7 @@ In order to translate the scenario sketched above into a more abstract, tractabl
 
 Midwives are treated in a similar fashion, where their type corresponds to how negatively they regard a drinking pattern - non-judgemental, moderately judgemental, and harshly judgemental. The expression of this judgement is not a matter of choice on their part, and is assumed to have no impact on their response, which is to either refer the woman for specialist treatment, or do nothing.
 
-At the end of a game, each player receives a payoff dependent on the actions and types of both players, which has a partially common interest component. Women receive a payoff based on the health of their eventual baby, with a social cost dependent on the signal they sent and the midwife's reaction to it. Midwives receive the same health payoff as the women, but pay a cost for referring to a specialist, mirroring the organisational cost of non-routine care (table \ref{tab:Payoff-matrix}).
+At the end of a game, each player receives a payoff dependent on the actions and types of both players, which has a partially common interest component. Women receive a payoff based on the health of their eventual baby, with a social cost dependent on the signal they sent and the midwife's reaction to it. Midwives receive the same health payoff as the women, but pay a cost for referring to a specialist, mirroring the organisational cost of non-routine care. Table \ref{tab:Payoff-matrix} shows the three payoff matrices which together describe the game.
 
 Taken together, this leads to a game tree that is relatively complex even at the subgame level (figure \ref{fig:subgame_tree} shows the extensive form for a subgame, with information sets). 
 %The subgame has a large number of pure Nash equilibria, and solution using Gambit \citep{Gambit13}
@@ -31,8 +31,11 @@ Rather than attempt to solve for equilibria, agents treat this two player game a
 %Might belong in a more methody bit? Read some stuff to check..
 Women are drawn in order from a queue, and play against a midwife chosen at random. They play for a maximum of 12 rounds (following the routine number of ante-natal appointments in the UK \citep{NICE2010a}) or until they are referred. At which point a new player is drawn from the same distribution that produced the original players to replace them. If they are not referred, they rejoin the back of the queue after their appointment. In either case, they are informed of their payoff after each round and update their beliefs accordingly.
 
-Midwives play for \(A_{m}\) rounds (\(A_{m}=1000\) in all experiments), and conduct appointments in parallel, i.e. if there are 5 midwives, then five women are drawn from the queue and assigned at random to the midwives. 
+Midwives play for \(R_{m}\) rounds (\(R_{m}=1000\) in all experiments), and conduct appointments in parallel, i.e. if there are 5 midwives, then five women are drawn from the queue and assigned at random to the midwives. 
 Unlike women, midwives are only informed of their payoff if they choose to make a referral. Both groups of agents have perfect recall, and midwives are assumed to retrospectively update their observations if they make a referral after a number of appointments.
+
+
+Formally then, let \(N = \{m, w\}\) be the set of players each with a private type \(\theta_{i} \in \Theta\), and a set of types \(\Theta=\{l, m, h\}\), with pure strategies \(A_{m}=\{r,n\}, A_{w}=\{l, m, h\}\). Additionally define a utility function \(u_{i}(s_{w}, s_{m}, \theta_{w}, \theta_{m})=P_{s, s_{w}, \theta_{m}} + P_{h, \theta_{w}, s_{m}} + P_{c, \theta_{w}, s_{m}}\), and distributions over types \(p_{w}(l, m, h), p_{m}(l, m, h)\).
 
 \begin{table}
 \center
@@ -106,17 +109,15 @@ As noted in section \ref{sub:the_game}, agents have perfect recall, and recognis
 A simplifying assumption is made that all midwives have just qualified after receiving identical training. As a result, they have homogenous beliefs about their women and assume to some extent that they are honest.
 Women are heterogenous in their prior observations, which are assigned stochastically and constrained such that they have encountered each scenario possible at least once, with exactly \(k\) encounters overall.
 
-Formally we let \(S\) be the set of signals \(\{l, m, h\}\), \(T_{w}\) be the set of drinking types \(\{l, m, h\}\), \(T_{m}\) the set of midwife types \(\{l, m, h\}\), and \(J=\{r,n\}\) the actions available to midwives. The set of all payoffs shall be denoted \(P\), where \(P_{w}\) are the payoffs for all women\footnote{While it is assumed that \(P_{w}\) for an individual of type \(a\) is constrained such that \(T=\{a\}\), this can change under the modified game described in subsection \ref{sub:info_sharing}} defined by \(P_{w}=\{x | x=P_{h, b, c} + P_{s, a, d}\wedge b \in J\wedge c \in T\wedge d \in M\}\), and equivalently for midwives \(P_{m}=\{x | x=P_{h, b, c} + P_{c, b}\}\).
-
 
 \subsection{Lexicographic Heuristic}
 \label{sub:lexico}
 
-The lexicographic heuristic (algorithm \ref{alg:lexico}) follows the form of that used in \cite{Hau2008}, and assumes a simplified decision problem, as in figure \ref{fig:payoff_problem}, where an action is a choice between combined lotteries. Functionally, the heuristic maintains a count of the number of times that each action was followed by a payoff, and chooses the action which most commonly has the best payoff, i.e. one reason decision making. This approach requires minimal computation, and does not assume that all payoffs are known, or static.
+The lexicographic heuristic (algorithm \ref{alg:lexico}) follows the form of that used in \cite{Hau2008}, and assumes a simplified decision problem, as in figure \ref{fig:payoff_problem}, where an action is a choice between combined lotteries. Functionally, the heuristic maintains a count of the number of times that each action was followed by a payoff, and chooses the action which most commonly has the best payoff, i.e. one reason decision making. This approach requires minimal computation, and does not assume that \(u_{i}\) is static, or known.
 
-Women maintain a count, \(n\) for each of the \(k\) payoffs in \(P_{w, a},a\in k\), an individual payoff paired with a signal, such that \(n_{i}=\{n_{i,1}\ldots n_{i,k}\}\).
+Women resolve this by approximating the utility function, as a function \(f(s_{w}, \sigma)\) on their choice of signal and an unknown distribution, which maps to \(u_{w}\) - i.e. \(s_{w}\) is a choice between simple lotteries. The algorithm maintains a count, \(n\), of the number of occurrences of each outcome given the choice from \(s_{w}\).
 
-Midwives solve a slightly different problem, where the signal received may convey useful information. This is resolved by maintaining a separate count for each signal, i.e. \(n_{i,j}=\{n_{i,j,1}\ldots n_{i, j, k}\}\), and otherwise follow the same algorithm.
+Midwives solve a slightly different problem with more information, where \(s_{w}\) is known, and \(s_{m}\) is the lottery choice - \(f(s_{w}, s_{m},\sigma)\). This is resolved by maintaining a separate count for each signal (i.e. \(n_{s_{w},s_{m}}\)), and otherwise following the same algorithm.
 
 \begin{algorithm}
 \begin{algorithmic}
@@ -170,7 +171,7 @@ As before, midwives follow a similar pattern but per signal.
 
 \subsubsection{Bayesian Risk Minimisation}
 
-The second Bayesian agent augments the payoff reasoning version by separating the two lotteries and assuming that \(P\) is a static, and known set of payoffs possible for the agent. For women, this means that they maintain two sets of beliefs: a Dirichlet mixture which represents the believed distribution of midwife types, and a second set linking signals to referrals.
+The second Bayesian agent augments the reasoning of the simple payoff model, approximating \(u_{w}\) with a more complex function - \(f(s_{w}, \theta_{w}, \sigma_{s}, \sigma_{r})=g(s_{w}, \theta_{w}, \sigma_{s}) + h(s_{w}, \theta_{w}, \sigma_{r})\). For women, this means that they maintain two sets of beliefs: a Dirichlet mixture which represents the believed distribution of midwife types, and a second set linking signals to referrals.
 
 Formally, let \(D=\{D_{h}, D_{s}\}\), \(\alpha=\{\alpha_{h},\alpha_{s}\}\), and \(n=\{n_{h},n_{s}\}\). The quantity to be minimised then becomes -
 
@@ -180,7 +181,7 @@ R(i)= \sum_{z=1}\sum_{j=1}-P_{w, i, z, j}P(x=l|D_{s},\alpha_{s})P(x=j|D_{h},\alp
 
 So that the risk of a signal, \(i\) is the sum of all possible payoffs multiplied by the probability of that payoff occurring.
 
-Midwives reasoning centers determing the meaning of signals, since given the knowledge of what some signal \(i\) conveys about the true type of the sender, the payoff for an action is known. As such, their inference process is the same as for the simple Bayesian agent but over signal-type pairs, and they attempt to minimise -
+Midwives reasoning centers on determining the meaning of signals, since given the knowledge of what some signal \(i\) conveys about the true type of the sender, the payoff for an action is known. As such, their inference process is the same as for the simple Bayesian agent but over signal-type pairs, and they attempt to minimise -
 
 \begin{equation}
 R(i, j)= \sum_{z=1}\sum_{j=1}-P_{m, i, z, j}P(x=l|D_{s},\alpha_{s})P(x=j|D_{h},\alpha_{h})\label{eq:mw_risk}

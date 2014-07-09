@@ -29,13 +29,13 @@ Taken together, this leads to a game tree that is relatively complex even at the
 Rather than attempt to solve for equilibria, agents treat this two player game as taking place against nature, along the lines of adversial risk analysis \citep{RiosInsua2009}. This effectively translates the game to a pair of decision problems, which agents attempt to resolve at each turn using a simple decision rule, given their prior beliefs and experience of play.
 
 %Might belong in a more methody bit? Read some stuff to check..
-Women are drawn in order from a queue, and play against a midwife chosen at random. They play for a maximum of 12 rounds (following the routine number of ante-natal appointments in the UK \citep{NICE2010a}) or until they are referred. At which point a new player is drawn from the same distribution that produced the original players to replace them. If they are not referred, they rejoin the back of the queue after their appointment. In either case, they are informed of their payoff after each round and update their beliefs accordingly.
+Women are drawn in order from a queue, and play against a midwife chosen at random. They play for a maximum of \(r_{w}\) rounds (\(r_{w}=12\) following the routine number of ante-natal appointments in the UK \citep{NICE2010a}) or until they are referred. At which point a new player is drawn from the same distribution that produced the original players to replace them. If they are not referred, they rejoin the back of the queue after their appointment. In either case, they are informed of their payoff after each round and update their beliefs accordingly.
 
-Midwives play for \(R_{m}\) rounds (\(R_{m}=1000\) in all experiments), and conduct appointments in parallel, i.e. if there are 5 midwives, then five women are drawn from the queue and assigned at random to the midwives. 
+Midwives play for \(r_{m}\) rounds (\(r_{m}=1000\) in all experiments), and conduct appointments in parallel, i.e. if there are 5 midwives, then five women are drawn from the queue and assigned at random to the midwives. 
 Unlike women, midwives are only informed of their payoff if they choose to make a referral. Both groups of agents have perfect recall, and midwives are assumed to retrospectively update their observations if they make a referral after a number of appointments.
 
 
-Formally then, let \(N = \{m, w\}\) be the set of players each with a private type \(\theta_{i} \in \Theta\), and a set of types \(\Theta=\{l, m, h\}\), with pure strategies \(A_{m}=\{r,n\}, A_{w}=\{l, m, h\}\). Additionally define a utility function \(u_{i}(s_{w}, s_{m}, \theta_{w}, \theta_{m})=X_{s, s_{w}, \theta_{m}} + X_{h, \theta_{w}, s_{m}} + X_{c, \theta_{w}, s_{m}}\), and distributions over types \(p_{w}(l, m, h), p_{m}(l, m, h)\).
+Formally then, let \(N = \{m, w\}\) be the set of players each with a private type \(\theta_{i} \in \Theta\), and a set of types \(\Theta=\{l, m, h\}\), with pure strategies \(A_{m}=\{r,n\}, A_{w}=\{l, m, h\}\). Additionally define a utility function \(u_{i}(s_{w}, s_{m}, \theta_{w}, \theta_{m})=X_{s, s_{w}, \theta_{m}} + X_{h, \theta_{w}, s_{m}} + X_{c, \theta_{w}, s_{m}}\), and distributions over types \(p_{w}(l, m, h)\), \(p_{m}(l, m, h)\).
 
 \begin{table}
 \center
@@ -148,7 +148,7 @@ D(\Theta|\alpha)=\frac{\Gamma(\sum_{i=1}^{k}\alpha_{i})}{\prod_{i=1}^{k}\Gamma(\
 
 Where \(\alpha=\{\alpha_{1}\ldots\alpha_{k}\}\), \(k\) is the number
 of signal-payoff pairs, \(\Theta=\{x_{1},\,\ldots,x_{k-\text{1}}\}\) all
-more than zero and summing to less than 1, and \(\alpha_{i}\) is the integer
+more than zero and summing to less than 1, and \(\alpha_{i}\) is the 
 psuedo-count of prior observations for a pair \(i\). 
 
 The distribution is particularly convenient, in that to infer the
@@ -170,15 +170,17 @@ As before, midwives follow a similar pattern but per signal.
 
 Agents then choose $s_{i}$ to minimise $R_{i}$, which is simply - 
 \begin{equation}
-R_{w}(s_{w}) = \sum_{x\in \Theta} -xp(x | s_{w})
+R_{w}(s_{w}) = \sum_{x \in X} -xp(x | s_{w})
 \end{equation}
 \begin{equation}
-R_{m}(s_{w}, s_{m}) = \sum_{x\in \Theta} -xp(x | s_{w}\wedge s_{m})
+R_{m}(s_{w}, s_{m}) = \sum_{x \in X} -xp(x | s_{w}\wedge s_{m})
 \end{equation}
+
+Where $X$ is set of payoffs the agent has observed to follow $s$.
 
 \subsubsection{Bayesian Risk Minimisation}
 
-The second Bayesian agent augments the reasoning of the simple payoff model, making the stronger assumption that the utility function is static, and known. Women maintain two sets of beliefs, one each for \(g\) and \(h\), corresponding respectively to \(p_{m}\), and the probability of referral. This leads to the risk function -
+The second Bayesian agent augments the reasoning of the simple payoff model, making the stronger assumption that the utility function is static, and known. Women maintain two sets of beliefs, corresponding respectively to \(p_{m}\), and the probability of referral given signal choice. This leads to the risk function -
 
 \begin{equation}
 R_{w}(s_{w}) = \sum_{i\in s_{m}}\sum_{j\in \theta_{m}} -u_{w}(s_{w}, s_{m, i}, \theta_{w}, \theta_{m, j})p(j)p(i | s_{w})
@@ -257,7 +259,7 @@ to choose the action which maximises the prospect theory value.
 \subsection{Information Sharing}
 \label{sub:info_sharing}
 
-It would seem unreasonable to suppose that neither party recounts their experiences to their peers, and to explore the impact of this we also modify the game to introduce a simple form of information sharing within agent groups. This takes the form of having each agent share their memories with their colleagues with some probability \(p\). Individuals then incorporate shared information into their beliefs using weighted updates, such that a shared observation of a low type signal contributes to their beliefs by \(q\), and \(0\leq q\leq 1\) (i.e. \(n_{j} = n_{j} + q\)).
+It would seem unreasonable to suppose that neither party recounts their experiences to their peers, and to explore the impact of this we also modify the game to introduce a simple form of information sharing within agent groups. This takes the form of having each agent share their memories with their colleagues with some probability \(q\). Individuals then incorporate shared information into their beliefs using weighted updates, such that a shared observation of a low type signal contributes to their beliefs by \(w\), and \(0\leq w\leq 1\) (i.e. \(n_{j} = n_{j} + w\)).
 Women share only when they have finished play, and provide their complete history of games, because they have accurate information about the outcomes. By the same rationale, midwives share only their history with the most recent woman they referred. Sharing occurs simultaneously for all players at the end of each round, and all memories are either shared immediately or discarded.\footnote{Memories of games remain, but it is assumed that only current news is relevant.}
 
 Because of their differing problem representations, the simple payoff reasoners and their more complex counterparts incorporate this exogenous information differently. The simple payoff based rule relys on a belief structure relating actions directly to rewards. Because payoffs differ by the agent's private type, the information shared may not correspond to the experience of the listening agent in the same scenario. As a result, payoff reasoners have a belief bias towards the most common player type, and can believe in outcomes that are, for them, impossible.

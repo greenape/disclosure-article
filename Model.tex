@@ -35,11 +35,11 @@ Midwives play for \(R_{m}\) rounds (\(R_{m}=1000\) in all experiments), and cond
 Unlike women, midwives are only informed of their payoff if they choose to make a referral. Both groups of agents have perfect recall, and midwives are assumed to retrospectively update their observations if they make a referral after a number of appointments.
 
 
-Formally then, let \(N = \{m, w\}\) be the set of players each with a private type \(\theta_{i} \in \Theta\), and a set of types \(\Theta=\{l, m, h\}\), with pure strategies \(A_{m}=\{r,n\}, A_{w}=\{l, m, h\}\). Additionally define a utility function \(u_{i}(s_{w}, s_{m}, \theta_{w}, \theta_{m})=P_{s, s_{w}, \theta_{m}} + P_{h, \theta_{w}, s_{m}} + P_{c, \theta_{w}, s_{m}}\), and distributions over types \(p_{w}(l, m, h), p_{m}(l, m, h)\).
+Formally then, let \(N = \{m, w\}\) be the set of players each with a private type \(\theta_{i} \in \Theta\), and a set of types \(\Theta=\{l, m, h\}\), with pure strategies \(A_{m}=\{r,n\}, A_{w}=\{l, m, h\}\). Additionally define a utility function \(u_{i}(s_{w}, s_{m}, \theta_{w}, \theta_{m})=X_{s, s_{w}, \theta_{m}} + X_{h, \theta_{w}, s_{m}} + X_{c, \theta_{w}, s_{m}}\), and distributions over types \(p_{w}(l, m, h), p_{m}(l, m, h)\).
 
 \begin{table}
 \center
-\subfloat[Social cost, \(P_{s}\)\label{tab:Social-cost-matrix}]{%
+\subfloat[Social cost, \(X_{s}\)\label{tab:Social-cost-matrix}]{%
 \begin{tabular}{|c|c|c|c|c|}
 \cline{3-5} 
 \multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
@@ -57,7 +57,7 @@ Formally then, let \(N = \{m, w\}\) be the set of players each with a private ty
 
 }
 
-\subfloat[Health outcome, \(P_{h}\)\label{tab:Referral-payoff-matrix}]{%
+\subfloat[Health outcome, \(X_{h}\)\label{tab:Referral-payoff-matrix}]{%
 \begin{tabular}{|c|c|c|c|c|}
 \cline{3-5} 
 \multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
@@ -73,7 +73,7 @@ Formally then, let \(N = \{m, w\}\) be the set of players each with a private ty
 
 }
 
-\subfloat[Referral cost, \(P_{c}\)\label{tab:inst_cost_matrix}]{%
+\subfloat[Referral cost, \(X_{c}\)\label{tab:inst_cost_matrix}]{%
 \begin{tabular}{|c|c|c|c|c|}
 \cline{3-5}  
 \multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
@@ -166,25 +166,29 @@ of times that type has been observed (including the pseudo-count),
 over the total number of observations thus far. This makes computation
 of beliefs fast and simple, since all that must be maintained is
 a count of observations with no particular concern as to their order.
-
 As before, midwives follow a similar pattern but per signal.
+
+\begin{equation}
+R_{w}(s_{w}) = \sum_{x\in \Theta} -xp(x | s_{w})
+\end{equation}
+\begin{equation}
+R_{m}(s_{w}, s_{m}) = \sum_{x\in \Theta} -xp(x | s_{w}\wedge s_{m})
+\end{equation}
 
 \subsubsection{Bayesian Risk Minimisation}
 
-The second Bayesian agent augments the reasoning of the simple payoff model, approximating \(u_{w}\) with a more complex function - \(f(s_{w}, \theta_{w}, \sigma_{s}, \sigma_{r})=g(s_{w}, \theta_{w}, \sigma_{s}) + h(s_{w}, \theta_{w}, \sigma_{r})\). For women, this means that they maintain two sets of beliefs: a Dirichlet mixture which represents the believed distribution of midwife types, and a second set linking signals to referrals.
-
-Formally, let \(D=\{D_{h}, D_{s}\}\), \(\alpha=\{\alpha_{h},\alpha_{s}\}\), and \(n=\{n_{h},n_{s}\}\). The quantity to be minimised then becomes -
+The second Bayesian agent augments the reasoning of the simple payoff model, approximating \(u_{w}\) with a more complex function - \(f(s_{w}, \theta_{w}, \sigma_{s}, \sigma_{r})=g(s_{w}, \theta_{w}, \sigma_{s}) + h(s_{w}, \theta_{w}, \sigma_{r})\). Women maintain two sets of beliefs, one each for \(g\) and \(h\), corresponding respectively to \(p_{m}\), and the probability of referral. This leads to the risk function -
 
 \begin{equation}
-R(i)= \sum_{z=1}\sum_{j=1}-P_{w, i, z, j}P(x=l|D_{s},\alpha_{s})P(x=j|D_{h},\alpha_{h})\label{eq:risk}
+R(s_{w}) = \sum_{i\in s_{m}}\sum_{j\in \theta_{m}} -u_{w}(s_{w}, s_{m, i}, \theta_{w}, \theta_{m, j})p(j)p(i | s_{w})
 \end{equation}
 
-So that the risk of a signal, \(i\) is the sum of all possible payoffs multiplied by the probability of that payoff occurring.
+So that the risk of a signal is the sum of the products of all payoffs with the probabilities of their entailed midwife types and responses.
 
 Midwives reasoning centers on determining the meaning of signals, since given the knowledge of what some signal \(i\) conveys about the true type of the sender, the payoff for an action is known. As such, their inference process is the same as for the simple Bayesian agent but over signal-type pairs, and they attempt to minimise -
 
 \begin{equation}
-R(i, j)= \sum_{z=1}\sum_{j=1}-P_{m, i, z, j}P(x=l|D_{s},\alpha_{s})P(x=j|D_{h},\alpha_{h})\label{eq:mw_risk}
+R(s_{w}, s_{m}) = \sum_{i\in \theta_{w}} -u_{w}(s_{w}, s_{m}, \theta_{w, i}, \theta_{m})p(i | s_{w})
 \end{equation}
 
 \subsubsection{Descriptive Decision Theory}

@@ -102,7 +102,7 @@ Formally then, let \(N = \{m, w\}\) be the set of players each with a private ty
 %		properly explain dirichlet priors
 % How about comparing the decision problem representation for the agent types?
 
-While in principle a wide variety of agent models are possible, given that decision rules operate on essentially the same information, and produce the same outputs, we limit ourselves here to four. The simplest is a lexicographic rule (1), motivated as in the spirit of a \ac{FFH} \citep{Gigerenzer2004} which uses only information about payoffs given actions; a Bayesian risk minimisation rule using the same information (2); a second Bayesian risk rule (3) which uses information about the underlying lottery; and a two-stage \ac{CPT} \cite{Hau2008} agent (4) which is identical with 3, but uses the \ac{CPT} decision rule from \cite{Tversky1992}. Hence, each successive decision model adds a layer of sophistication to the problem representation while retaining the same input-ouput characteristics.
+While in principle a wide variety of agent models are possible, given that decision rules operate on essentially the same information, and produce the same outputs, we limit ourselves here to four. The simplest is a lexicographic rule (1), motivated as in the spirit of a \ac{FFH} \citep{Gigerenzer2004} which uses only information about payoffs given actions; a Bayesian risk minimisation rule using the same information (2); a second Bayesian risk rule (3) which uses information about the underlying lottery; and a two-stage \ac{CPT} \citep{Hau2008} agent (4) which is identical with 3, but uses the \ac{CPT} decision rule from \cite{Tversky1992}. Hence, each successive decision model adds a layer of sophistication to the problem representation while retaining the same input-ouput characteristics.
 
 As noted in section \ref{sub:the_game}, agents have perfect recall, and recognise individual opponents if they encounter them subsequently. While agents recall perfectly and make use of the new information for retrospective updates, all four agent models make decisions `as-if' they were always facing a new opponent.
 
@@ -198,6 +198,7 @@ R_{m}(s_{w}, s_{m}) = \sum_{i\in \theta_{w}} -u_{w}(s_{w}, s_{m}, \theta_{w, i},
 
 The most complex decision rule used is \ac{CPT}, which attempts to reproduce a number of systematic deviations from rationality observed in humans. While \ac{CPT} has primarily been applied in the context of decisions from description, it has been modified to deal with decisions from experience by incorporating a first stage where probabilities are estimates from observations as in \cite{FoxCPT}. In this instance the Bayesian inference process fills the first stage role.
 
+%Maybe cut this bit and make explanation richer?
 Rather than the psychologically more interesting \ac{PT}, the \ac{CPT}
 decision rule is used in this instance, because of the requirement
 for women to evaluate more than two `prospects'.\footnote{A prospect in this instance is a paired outcome and probability, and the set of prospects

@@ -43,7 +43,7 @@ Runs & Simulation runs & 1000 \\ \hline
 \label{sub:sensitivity}
 %Maxmin latin hypercube -> remember to cite the r package used.
 %Will require some discussion of the gemsa technique at this point - can also cite Jason H for precedent!
-In general, we follow the procedure outlined in \cite{Bijak2013b} for stochastic 
+In general, we follow the procedure outlined in \cite{Bijak2013b} for stochastic \acp{ABMs}.
 
 Parameters for training were generated in R \citep{RTeam2014} using Latin Hypercube Sampling \citep{Carnell2012} over the space of inputs given in table \ref{tab:sa_params}, giving 10 free parameters. Initially a unit hypercube was generated, then the margins transformed appropriately to cover those regions where the inputs are not bounded between 0 and 1, and for proportions of agent types which necessarily sum to one across the three parameters. Given the limitation of 400 design points for the \ac{GEM-SA} software, we produced exactly that many parameter combinations and collected results for 100 runs of each. A fixed set of 100 random seeds was used, such that each parameter set was run once with each seed, for every decision rule.
 

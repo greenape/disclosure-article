@@ -1,106 +1,34 @@
 %!TEX root = disclosure_game.tex
 %Rewrite all of this, ditch the alcohol stuff altogether. Any really key can be woven in elsewhere (discussion)
-\section{Background}
+\section{Previous Research}
 
 \label{sec:lit_review}
 
-This section presents a brief overview of literature focusing on the theoretical underpinning of the modelling
-approach, with particular reference to statistical decision theory.
+This section presents a brief overview of previous research, addressing in turn signalling games, normative decision theory, heuristic decision making, and descriptive decision theory.
 
 
-\subsection{Games, Signals, and Decisions}
-\label{sub:games_signals}
+\subsection{Signalling Games}
 
+The preponderance of classical game theory focuses on strategic decision making, in scenarios where all players have complete information about all aspects of the game. An alternative, perhaps more common situation, is that players have incomplete information, i.e. their knowledge of the rules of play is in some way deficient. \citet{Harsanyi1967} introduced the concept of a Bayesian game, resolving the problems introduced by the incomplete information scenario by allowing the possible variations on the rules to be treated as subgames. This adds an additional player - nature, to the game, where nature takes the first move thereby deciding which subgame is played. Nature is assumed to make their move by lottery, and where the probability distribution governing the lottery is known to all players this permits the game to be formulated as one of complete information. Here, we are specifically interested in signalling games \citep{Kreps1987,Spence1973}, where one player holds some private information which may be communicated (or not) by means of a signal.
 
+This basic form has been widely applied, with substantial interest in what conditions permit honest signalling as Nash equilibria or \ac{ESS}. \citet{Grafen1990}, following from a suggestion by \citet{Zahavi1975}, proposed that if signals intended to indicate mate quality exacted a cost on the signaller (e.g. peacock tail feathers), then honest signalling would constitute an \ac{ESS}. \citet{Spence1973} demonstrated similar results in a game of job market signalling, where signal cost was differentiated by type. Costly signalling has also been suggested as an explaination of behaviour that at first gasp appears counter intuitive, for example \citet{Godfray1991} applied the idea to the food solicitation behaviour of chicks, where a stronger signal carries a risk of being eaten. Moving beyond animal behaviour, \citet{Sosis2003} considered the implications if ritual behaviour, in the context of religion, represented a costly signal, an idea subsequently extended by \citet{Henrich2009} to include cultural transmission, and \citet{Wildman2011} to introduce group differentiation.
 
+Other work augments the signalling game model, for example \citet{Austen-Smith2005} adds a second `peer group' audience signalling game to the original \citeauthor{Spence1973} game in an effort to explain poor academic performance in some social groups, with some subseqent empirical support for the idea from \citet{Jr2010}. On a similar tack, \citet{Feltovich2002} introduced additional noisy type information, finding that this effectively explained counterintuitive observed behaviour where actors with every right to boast of their quality faail to do so.
 
-\subsubsection{Signalling Games}
+\subsection{Normative Decision Theory}
 
+Where game theory addresses strategic decision making, decision theory deals instead with rational decision making \citep{Peterson2009}.  Taken literally, this leads to normative decision theory, where the focus is on giving the rational answer to a decision problem. An alternative view - descriptive, or behavioural decisin theory, holds that the focus should instead be on giving an account of human decision making, complete with observed deviations from perfect rationality, which we address in section \ref{sub:descriptive_theories}. Finally a third perspective, which to some extent overlaps this division, suggests that decisions are heuristic in nature and rational in ecological context (section \ref{sub:heuristic_theories}).
 
+The conceptual underpinning of all of these is the central idea of expected utility, originated by \citet{Bernoulli1954} and later formalised by \citet{Neumann1953}, which treats all decisions as gambles defined in terms of payoffs and probabilities.
 
-Game theory generally deals with strategic decision making in the
-unusual circumstance of complete information, that is, every player
-has at least complete knowledge of all possible outcomes, who their
-opponents are, and so forth. Arguably more generally applicable is
-the incomplete information scenario, where players lack information
-about the rules of play in some fashion. \citet{Harsanyi1967} proposed
-a method for effectively transforming such games into games of complete
-information by treating the possible variations on the rules as subgames.
-To determine which subgame is to be played, an additional player -
-nature - is introduced to make the first move, where nature conducts
-a lottery according to some probability distribution. If it is assumed
-that the underlying probability distribution is known to all players,
-the game is then one of complete information. 
+\subsection{Heuristic Decision Making}\label{sub:heuristic_theories}
 
-Perhaps the best known example of Bayesian games, are the signalling
-games codified by \citet{Kreps1987}, after initially being framed
-by \citet{Spence1973} in the context of employment markets. The general
-form of such a game is that one player holds information known only
-to them, on the basis of which they send a signal to the other player(s),
-which the other player(s) then act upon. Much of the interest in signalling
-games turns on what conditions are necessary for honest signalling
-to be a Nash equilibrium, or in the context of evolutionary game theory,
-an \ac{ESS} . 
+As noted, heuristic decision making stems from a contention that \citeauthor{Neumann1953} type rationality ignores the context of decision making.
 
-One approach to this requires that signalling is a costly exercise,
-as proposed by \citet{Grafen1990} in examining biological signals
-(for example, the eye-catching but unwieldy peacock tail). \citeauthor{Grafen1990}
-demonstrated that an earlier suggestion by \citet{Zahavi1975}, who
-proposed that such signals were in effect a handicap demonstrating
-fitness, would lead to an \ac{ESS} because of the costly nature of
-the signalling. This solution is also noted by \citet{Spence1973},
-who showed that a separating equilibrium exists%
-\footnote{In fact, an infinite number of them.%
-} contingent on signals being more costly for some types.
+\subsection{Descriptive Decision Theory}\label{sub:descriptive_theories}
 
-Costly signalling has been applied to explain a variety of apparently
-contradictory behaviours, for example \citet{Godfray1991} in the
-context of offspring soliciting food from parents, where the key question
-is why a behaviour with potentially very high costs (namely, being
-eaten) would be preferred to a less risky method. In a social context,
-costly signalling has been proposed as an explanation for religion
-in human societies. \citet{Sosis2003} developed a model of religious
-ritual as an exercise in costly signalling, showing that higher costs
-to engagement in rituals for skeptics maintains the stability of religious
-groups and the presumed benefits that membership confers. \citet{Henrich2009}
-extended this idea, and developed an evolutionary model combining
-cultural transmission with costly signalling in a population, finding
-that for even modest costs the system moved towards universal belief.
-\citet{Wildman2011} subsequently extended the model, to address the
-fact that both stable equilibria are binary states, finding that the
-incorporation of group differentiation allowed subgroups to persist.
+While normative theories are concerned with how decisions should be made, descriptive theories instead focus on how decisions are made.
 
-Signalling games have also been extended to provide models of other
-observed human behaviour, for example \citet{Austen-Smith2005} attempted
-to explain the observed poor academic attainment of some social groups
-by positing a multiple audience signalling game. They found that the
-introduction of a secondary signalling game with a peer audience,
-alongside the prototypical \citeauthor{Spence1973} model introduced
-a pooling equilibrium. Subsequent empirical work by \citet{Jr2010}
-has provided some support for this idea. Along similar lines, \citet{Feltovich2002}
-examine an observed failure by high quality types to signal as would
-be anticipated, introducing the concept of countersignaling in scenarios
-where there is noisy leakage of type information. They found that
-where there is added noisy type information available, separating
-equilibriums exist where high quality senders signal either as low
-quality, or not at all.
-
-
-\subsubsection{Bayesian Decision Theory and Expected Utility}
-
-Decision theory is the theory of rational decision making \citep{Peterson2009},
-this contrasts with game theory which is concerned with strategic
-decision making. In the broadest sense, the field can be divided into
-two types of theories: normative, and descriptive. Normative theories
-are those which attempt to give the rational answer to a decision
-problem, descriptive or behavioural theories focus instead on characterising
-the process of human decision making. In this instance, the particular
-concern is with theories of decision making under uncertainty.
-
-Underpinning almost all theories of decision making, and much of economic
-theory in general is the concept of expected utility, originally proposed
-by \citet{Bernoulli1954}. This casts decisions as choices between
-lotteries or gambles, with differing payoffs and probabilities.
 
 Under this model, the expected utility of any gamble is a function
 of the probability of the outcomes, their utility to the gambler,

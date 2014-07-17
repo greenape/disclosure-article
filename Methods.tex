@@ -39,11 +39,29 @@ Runs & Simulation runs & 1000 \\ \hline
 \end{tabular}
 \caption[Table caption text]{Model parameters. \label{tab:qt_params}}
 \end{table}
+
+\subsection{Information Sharing}
+
+In addition to assessing the adequacy of the rules in capturing qualitative trends, we also examine the impact of simple information sharing (section \ref{sub:info_sharing}) on the robustness of these trends. Table \ref{tab:sharing_params} gives the parameters explored, with a more complete exploration of the effects on the system as a whole performed as part of the global sensitivity analysis.
+
+\begin{table}
+\center
+\begin{tabular} {|l | l | l| l| l|}
+\hline
+Name & Description & Min & Max & Step Size \\ \hline
+\(q_{w}\) & Probability of women sharing & 0 & 1 & 0.25 \\ \hline
+\(w_{w}\) & Weight of shared information for women & 0 & 1 & 0.25 \\ \hline
+\(q_{m}\) & Probability of midwives sharing & 0 & 1 & 0.25 \\ \hline
+\(w_{m}\) & Weight of shared information for midwives & 0 & 1 & 0.25 \\ \hline
+\end{tabular}
+\caption[Table caption text]{Information sharing parameter ranges. \label{tab:sharing_params}}
+\end{table}
+
 \subsection{Global Sensitivity Analysis}
 \label{sub:sensitivity}
 %Maxmin latin hypercube -> remember to cite the r package used.
 %Will require some discussion of the gemsa technique at this point - can also cite Jason H for precedent!
-In general, we follow the procedure outlined in \cite{Bijak2013b} for stochastic \acp{ABMs}.
+In general, we follow the procedure outlined in \cite{Bijak2013b} for stochastic \acp{ABMs}, although see \citet{Thiele2014} for a review of alternative techniques.
 
 Parameters for training were generated in R \citep{RTeam2014} using Latin Hypercube Sampling \citep{Carnell2012} over the space of inputs given in table \ref{tab:sa_params}, giving 10 free parameters. Initially a unit hypercube was generated, then the margins transformed appropriately to cover those regions where the inputs are not bounded between 0 and 1, and for proportions of agent types which necessarily sum to one across the three parameters. Given the limitation of 400 design points for the \ac{GEM-SA} software, we produced exactly that many parameter combinations and collected results for 100 runs of each. A fixed set of 100 random seeds was used, such that each parameter set was run once with each seed, for every decision rule.
 

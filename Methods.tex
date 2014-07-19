@@ -61,7 +61,7 @@ Name & Description & Min & Max & Step Size \\ \hline
 \label{sub:sensitivity}
 %Maxmin latin hypercube -> remember to cite the r package used.
 %Will require some discussion of the gemsa technique at this point - can also cite Jason H for precedent!
-In general, we follow the procedure outlined in \cite{Bijak2013b} for stochastic \acp{ABMs}, although see \citet{Thiele2014} for a review of alternative techniques.
+In general, we follow the procedure outlined in \cite{Bijak2013b} for stochastic agent based models, although see \citet{Thiele2014} for a review of alternative techniques.
 
 Parameters for training were generated in R \citep{RTeam2014} using Latin Hypercube Sampling \citep{Carnell2012} over the space of inputs given in table \ref{tab:sa_params}, giving 10 free parameters. Initially a unit hypercube was generated, then the margins transformed appropriately to cover those regions where the inputs are not bounded between 0 and 1, and for proportions of agent types which necessarily sum to one across the three parameters. Given the limitation of 400 design points for the \ac{GEM-SA} software, we produced exactly that many parameter combinations and collected results for 100 runs of each. A fixed set of 100 random seeds was used, such that each parameter set was run once with each seed, for every decision rule.
 
@@ -86,8 +86,8 @@ Name & Description & Min & Max \\ \hline
 \(w_{w}\) & Weight of shared information for women & 0 & 1 \\ \hline
 \(q_{m}\) & Probability of midwives sharing & 0 & 1 \\ \hline
 \(w_{m}\) & Weight of shared information for midwives & 0 & 1 \\ \hline
-\(X_{h,}\) & Health payoff for healthy delivery & 1 & 100 \\ \hline
-\(X_{c, r}\) & Cost for referral & \multicolumn{2}{l|}{\(-(X_{h} - 1)\)} \\ \hline
+\(x_{h}\) & Health payoff for healthy delivery & 1 & 100 \\ \hline
+\(x_{r}\) & Cost for referral & \multicolumn{2}{l|}{\(-(X_{h} - 1)\)} \\ \hline
 \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Psuedo-count favouring honesty & 1:1 & 100:1 \\ \hline
 \end{tabular}
 \caption[Table caption text]{Parameter ranges. \label{tab:sa_params}}

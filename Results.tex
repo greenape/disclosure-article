@@ -9,10 +9,10 @@
 
 As shown in figure \ref{fig:honest_signals}, all four decision rules were able to reproduce both qualitative trends towards more disclosure as women experience more appointments \citep{Phillips2007}, and a greater tendency towards underreporting of consumption by heavier drinkers \citep{Alvik2006}.  Trends for all four rules are broadly similar, exhibiting a gradual increase across appointments which subsequently levels off. This levelling can in part be explained by the referral results (figure \ref{fig:referrals}), which show that the majority of drinkers are referred, despite substantial concealment. Referrals continue to occur, in the absence of honest signals, because drinkers are able to achieve a referral by pooling with higher or lower types, dependent on how their initial beliefs are biased. Despite this the results suggest that a minority of drinkers will evade detection altogether, with no notable distinction between heavy and moderate types. Under these parameters, light drinkers always signal honestly and are never referred since there is no perceived advantage in doing so, and the evidence of deceptive signalling is insufficient to outweigh the biased priors of the midwives. 
 
-\begin{figure}[h!]
-\begin{adjustbox}{center}\subfloat[Average fraction of population signalling honestly\label{fig:honest_signals}]{\includegraphics[width=0.43\paperwidth]{figures/honesty_plot.png}
+\begin{figure}[H]
+\begin{adjustbox}{center}\subfloat[Average fraction of population signalling honestly\label{fig:honest_signals}]{\includegraphics[width=0.43\paperwidth]{figures/honesty_plot}
 
-}\subfloat[Average fraction of population referred\label{fig:referrals}]{\includegraphics[width=0.43\paperwidth]{figures/ref_plot.png}}\end{adjustbox}
+}\subfloat[Average fraction of population referred\label{fig:referrals}]{\includegraphics[width=0.43\paperwidth]{figures/ref_plot}}\end{adjustbox}
 \caption{Qualitative trends after 1000 rounds, mean with 95\% confidence limit over 1000 runs.}
 \label{fig:qt_trends}
 \end{figure}
@@ -20,10 +20,28 @@ As shown in figure \ref{fig:honest_signals}, all four decision rules were able t
 \subsection{Information Sharing}
 \label{sub:sharing_results}
 
+Introducing information sharing amongst women leads the behaviour of the decision rules to diverge markedly. Figure \ref{fig:honest_sharing} shows the proportion of women who have signalled honestly at least once by their final appointment, under four sharing conditions. Aside from the lexicographic decision rule, the general tendency is towards less honest signalling by heavy drinkers, but \ref{fig:ref_sharing} shows a slight increase in referrals for the Bayesian, and \ac{CPT} rules. For these decision models, this is because information sharing exacerbates the existing tendency to pool with moderate drinkers, who behave more honestly as heavy drinkers become less so.
+
+Particularly notable, is the decline in honest signalling by light drinkers visible in both heuristic type rules at the .25 level, and the associated increase in false positives. This arises because of the lack of homophilly in information sharing, as light drinkers become informed about negative outcomes associated with concealment, despite having nothing to conceal. The relatively high referral rates of drinkers heighten the effect further, because shared information becomes dominated by their experiences. 
+
+The relationship is not, however entirely that simple, in that increasing information sharing leads to greater variance between runs. A linear model was was used to predict the standard deviation between runs of the average signal sent by moderate drinkers, with decision rule, and level of information sharing, together with the interaction between the two as predictors. The regression results were significant (\(F_{7,12}=25,p<2.9\times10^{-6}\)) with \(R^2=94\%\), and intercept 0.07. The only significant coefficients were for the interaction terms, which were 0.44 (\(p<0.05\)) for the Bayesian payoff rule, and 0.69 (\(p<0.005\)) for the lexicographic. This suggests that information sharing, for the heuristic style decision rules introduces considerable uncertainty to the model, which is explored further in the sensitivity analysis.
+
+\begin{figure}[H]
+\begin{adjustbox}{center}\subfloat[Honest signalling\label{fig:honest_sharing}]{\includegraphics[width=0.43\paperwidth]{figures/honesty_sharing}
+
+}\subfloat[Referrals\label{fig:ref_sharing}]{\includegraphics[width=0.43\paperwidth]{figures/ref_sharing}}\end{adjustbox}
+\caption{Impact of information sharing on qualitative trends after 1000 rounds, mean with 95\% confidence interval over 100 runs.}
+\label{fig:sharing_trends}
+\end{figure}
 
 
 \subsection{Sensitivity Analysis}
 \label{sub:sa_results}
 
-The full results for the sensitivity analysis covering all twelve emulators are available in appendix \ref{}, and in this section we present selected results highlighting......
+In this section we present selected results highlighting the global effect of changes to perceived payoffs and degree of bias towards honesty, as well as information sharing within women. The full results for the sensitivity analysis covering all sixteen emulators are available in appendix \ref{}
 
+\begin{figure}[h!]
+\begin{adjustbox}{center}\includegraphics[width=0.8\paperwidth]{figures/sharing_emulated_simulated}\end{adjustbox}
+\caption{Mean moderate drinker signal vs mean between drinking type IQR for all decision rules.}
+\label{fig:outcome_plots}
+\end{figure}

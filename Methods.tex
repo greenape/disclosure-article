@@ -13,7 +13,7 @@ This section provides details of experiments conducted to examine the ability of
 
 Throughout this paper, parameters for the \ac{CPT} model were as used in \cite{Tversky1992} (table \ref{tab:qt_params}). While there has been significant work on determining appropriate parameterisation for the model (e.g. \cite{Neilson2002,Glockner2012,Nilsson2011}, and particularly \citet{Byrnes1999,Booij2009} addressing risk aversion and gender), a full exploration of the impact of these parameters, or heterogeneous values within populations is beyond the scope of this work. For simplicity, it is assumed that all three drinking types are equally prevalent within the population, although results derived from \ac{ALSPAC} suggest that the reality is far more positive \citep{Humphriss2013}. The scenario is biased towards disclosure as the better option by presuming a distribution of midwives strongly skewed towards non-judgemental types, with beliefs initially favouring honesty. Payoffs were as in table \ref{tab:Payoff-matrix}, which ensure that it is always strictly preferable to refer drinkers, and together with the initial belief that signals will be honest, not refer those claiming otherwise.
 
-Two key measures were used - the fraction of the subpopulation who had ever signalled honestly, and the proportion referred. Both measures were taken after every round of play, and were taken relative to the agent's position in their sequence of appointments giving the probability of signalling honestly, or being referred having had a given number of appointments.
+Two key measures were used: the fraction of the subpopulation who had ever signalled honestly, and the proportion referred. Both measures were taken after every round of play, and were taken relative to the agent's position in their sequence of appointments giving the probability of signalling honestly, or being referred having had a given number of appointments.
 
 \begin{table}[h!]
 \center
@@ -42,21 +42,21 @@ Runs & Simulation runs & 1000 \\ \hline
 
 \subsection{Information Sharing}
 
-In addition to assessing the adequacy of the rules in capturing qualitative trends, we also examine the impact of simple information sharing within the population of women (section \ref{sub:info_sharing}) on the robustness of these trends. The original experiment was repeated at \(q_{w}\,\&\,w_{w}={0.25, 0.5, 0.75, 1}\). 
+In addition to assessing the adequacy of the rules in capturing qualitative trends, we also examine the impact of simple information sharing within the population of women (section \ref{sub:info_sharing}) on the robustness of these trends. The original experiment was repeated at \(q_{w}=w_{w}={0.25, 0.5, 0.75, 1}\), with 100 runs under each condition. 
 
 \subsection{Global Sensitivity Analysis}
 \label{sub:sensitivity}
 %Maxmin latin hypercube -> remember to cite the r package used.
 %Will require some discussion of the gemsa technique at this point - can also cite Jason H for precedent!
-In general, we follow the procedure outlined in \cite{Bijak2013b} for global sensitivity analysis of stochastic agent based models, although see \citet{Thiele2014} for a review of alternative techniques. This employs the \ac{GEM-SA} software \citep{Kennedy}, which draws on the theoretical framework developed by \citeauthor{Oakley2004} \citep{Oakley2002,Oakley2004,Dorresteijn2010}.
+In general, we follow the procedure outlined in \cite{Bijak2013b} for global sensitivity analysis of stochastic agent based models, although see \citet{Thiele2014} for a review of alternative techniques. This employs the \ac{GEM-SA} software \citep{Kennedy}, which draws on the theoretical framework developed by \citeauthor{Oakley2004} \citep{Oakley2002,Oakley2004,Dorresteijn2010}. Under this method...
 
 Parameters for training were generated in R \citep{RTeam2014} using Latin Hypercube Sampling \citep{Carnell2012} over the space of inputs given in table \ref{tab:sa_params}, giving 10 free parameters. Initially a unit hypercube was generated, then the margins transformed appropriately to cover those regions where the inputs are not bounded between 0 and 1, and for proportions of agent types which necessarily sum to one across the three parameters. Given the limitation of 400 design points for the \ac{GEM-SA} software, we produced exactly that many parameter combinations and collected results for 100 runs of each. A fixed set of 100 random seeds was used, such that each parameter set was run once with each seed, for every decision rule.
 
-To better capture the response characteristics for the model, we measure three outcome variables - (1) the interquartile range of the average signal sent by each type of agent in a run, (2) the average signal of moderate drinking agents in a run, and (3) the standard deviation of that average signal between simulation runs. Together these three metrics give an indication of how far women are separable by their signalling behaviour (1), the behaviour of the at risk drinking groups\footnote{Under most conditions, the behaviour of heavy drinkers tracks closely with their moderate counterparts.} (2), and finally the stability of the system in the face of the stochastic elements.
+To better capture the response characteristics for the model, we measure four outcome variables - (1) the interquartile range of the average signal sent by each type of agent in a run, (2) the average signal of moderate drinking agents in a run, and (3, 4) the interquartile range of the average signal, and interquartile range between simulation runs. Together these four metrics give an indication of how far women are separable by their signalling behaviour (1), the behaviour of the at risk drinking groups\footnote{Under most conditions, the behaviour of heavy drinkers tracks closely with their moderate counterparts.} (2), and finally the variability in the system in response to changes to the parameters (3 \& 4).
 
-Measurements were taken at the end of 1000 rounds of play, and for 1 and 2, 400 results were selected covering the full hypercube with each chosen randomly from the runs for that design point. This approach, rather than averaging across runs, was taken to avoid obscuring the high degree of variability evident in the output of the payoff reasoning agents in some areas of the parameter space.
+Measurements were taken at the end of 1000 rounds of play, and emulators were built against the mean, and interquartile range of each measure to assess both the overall trend, and the extent to which the parameters contribute to variance between runs.
 
-Twelve emulators were built, covering each of the three output on all four decision models. These emulators were used to conduct a probabalistic sensitivity analysis using \ac{GEM-SA} to assess the impact of parameters individually, and in combination.
+Twelve emulators were built, covering each of the four output on all four decision models. These emulators were used to conduct a probabalistic sensitivity analysis using \ac{GEM-SA} to assess the impact of parameters individually, and in combination.
 
 \begin{table}
 \center
@@ -78,15 +78,4 @@ Name & Description & Min & Max \\ \hline
 \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Psuedo-count favouring honesty & 1:1 & 100:1 \\ \hline
 \end{tabular}
 \caption[Table caption text]{Parameter ranges. \label{tab:sa_params}}
-\end{table}
-
-\begin{table}
-\center
-\begin{tabular} {| l | l |}
-Name & Description \\ \hline
-
-
-
-\end{tabular}
-\caption[Table caption text]{Output measures. \label{tab:sa_measures}}
 \end{table}

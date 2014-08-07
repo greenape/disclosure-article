@@ -34,3 +34,7 @@
 *.fls
 
 *.txt
+
+*.SyncTemp
+
+*.tiff

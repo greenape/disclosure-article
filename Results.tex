@@ -24,7 +24,7 @@ Introducing information sharing amongst women leads the behaviour of the decisio
 
 Particularly notable, is the decline in honest signalling by light drinkers visible in both heuristic type rules at the .25 level, and the associated increase in false positives. This arises because of the lack of homophilly in information sharing, as light drinkers become informed about negative outcomes associated with concealment, despite having nothing to conceal. The relatively high referral rates of drinkers heighten the effect further, because shared information becomes dominated by their experiences. 
 
-The relationship is not, however entirely that simple, in that increasing information sharing leads to greater variance between runs. A linear model was was used to predict the standard deviation between runs of the average signal sent by moderate drinkers, with decision rule, and level of information sharing, together with the interaction between the two as predictors. The regression results were significant (\(F_{7,12}=25,p<2.9\times10^{-6}\)) with \(R^2=94\%\), and intercept 0.07. The only significant coefficients were for the interaction terms, which were 0.44 (\(p<0.05\)) for the Bayesian payoff rule, and 0.69 (\(p<0.005\)) for the lexicographic. This suggests that information sharing, for the heuristic style decision rules introduces considerable uncertainty to the model, which is explored further in the sensitivity analysis.
+The relationship is not, however, entirely that simple, in that increasing information sharing leads to greater variance between runs. A linear model was was used to predict the standard deviation between runs of the average signal sent by moderate drinkers, with decision rule, and level of information sharing, together with the interaction between the two as predictors. The regression results were significant (\(F_{7,12}=25,p<2.9\times10^{-6}\)) with \(R^2=94\%\), and intercept 0.07. The only significant coefficients were for the interaction terms, which were 0.44 (\(p<0.05\)) for the Bayesian payoff rule, and 0.69 (\(p<0.005\)) for the lexicographic. This suggests that information sharing, for the heuristic style decision rules introduces considerable uncertainty to the model, which is explored further in the sensitivity analysis.
 
 \begin{figure}[H]
 \begin{adjustbox}{center}\subfloat[Honest signalling\label{fig:honest_sharing}]{\includegraphics[width=0.43\paperwidth]{figures/honesty_sharing}
@@ -40,26 +40,26 @@ The relationship is not, however entirely that simple, in that increasing inform
 
 In this section we present selected results highlighting the global effect of changes to perceived payoffs and degree of bias towards honesty, as well as information sharing within women. The full results for the sensitivity analysis covering all sixteen emulators are available in appendix \ref{app:sensitivity_results}.
 
-\begin{figure}[h!]
-\begin{adjustbox}{center}\includegraphics[width=0.8\paperwidth]{figures/sharing_emulated_simulated}\end{adjustbox}
+\begin{figure}[H]
+\begin{adjustbox}{center}\includegraphics[width=0.8\linewidth]{figures/sharing_emulated_simulated}\end{adjustbox}
 \caption{Median moderate drinker signal vs median between drinking type IQR for all decision rules.}
 \label{fig:outcome_plots}
 \end{figure}
 
 Figure \ref{fig:outcome_plots} gives a qualitative picture of both emulator quality, and the divergent response surfaces of the decision rules in response to variations in information sharing parameters. Emulator fit is clearly imperfect, but overall behaviour is qualitatively similar, with both emulated and simulated plots demonstrating separation in outcome space for the decision rules.
 
-\begin{figure}[h!]
-\begin{adjustbox}{center}\includegraphics[width=0.8\paperwidth]{figures/unfixed_emu_sig_iqr}\end{adjustbox}
+\begin{figure}[H]
+\begin{adjustbox}{center}\includegraphics[width=0.8\linewidth]{figures/unfixed_emu_sig_iqr}\end{adjustbox}
 \caption{Emulated moderate drinker signal IQR in response to varying \(q_{w}\), and \(w_{w}\).}
 \label{fig:emulated_sharing_iqr}
 \end{figure}
 
-Following from the suggestive results for information sharing introducing uncertainty (section \ref{sub:info_sharing}), figure \ref{fig:emulated_sharing_iqr} shows emulated points covering the parameter space in high resolution. These plots reflect the increase in uncertainty of outcome shown for the heuristic type rules. They also suggest that the Bayesian decision rule is less stable under conditions where the weight of shared information is substantially higher than the probability of sharing. Also of interest is the large region of instability that can be discerned for the Bayesian rule under modest probability of information sharing and higher weights.
+Following from the suggestive results for information sharing introducing uncertainty (section \ref{sub:info_sharing}), figure \ref{fig:emulated_sharing_iqr} shows emulated points covering the parameter space in high resolution. These plots reflect the increase in uncertainty of outcome shown for the heuristic type rules, which is especially severe for the Bayesian payoff rule. They also suggest that the Bayesian decision rule is less stable under conditions where the weight of shared information is substantially higher than the probability of sharing. Also of interest is the large region of instability that can be discerned for the Bayesian rule under modest probability of information sharing and higher weights. This suggests that, perhaps unsurprisingly, that what information is shared is significant to outcomes.
 
 For the \ac{CPT}, and Bayesian decision models, the interaction of bias towards honesty, and distinction between payoffs has a significant, and non-linear effect on instability, and separability of groups. Figure \ref{fig:emulated_payoff_group_iqr} shows the effects, and also highlights the tendency towards poor separability of groups for both the heuristic type decision rules. The response surface of the Bayesian payoff rule is slightly more nuanced than the simple Lexicographic rule, showing better separation close to partial pooling at high payoff distinction, with relatively modest honesty bias.  For the more complex rules, the general tendency is towards less pooling for higher values of both, but with pockets where full pooling occurs.  The plots also suggest that the sensitivity of the \ac{CPT} rule is marginally greater, which reflects the distorted utility function.
 
-\begin{figure}[h!]
-\begin{adjustbox}{center}\includegraphics[width=0.8\paperwidth]{figures/unfixed_emu_payoff_honesty_group_iqr}\end{adjustbox}
+\begin{figure}[H]
+\begin{adjustbox}{center}\includegraphics[width=0.8\linewidth]{figures/unfixed_emu_payoff_honesty_group_iqr}\end{adjustbox}
 \caption{Emulated between groups IQR in response to varying \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\), and \(x_{h}\).}
 \label{fig:emulated_payoff_group_iqr}
 \end{figure}

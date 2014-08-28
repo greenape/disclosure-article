@@ -25,9 +25,16 @@ Midwives are treated in a similar fashion, where their type corresponds to how n
 
 At the end of a game, each player receives a payoff dependent on the actions and types of both players, which has a partially common interest component. Women receive a payoff based on the health of their eventual baby, with a social cost dependent on the signal they sent and the midwife's reaction to it. Midwives receive the same health payoff as the women, but pay a cost for referring to a specialist, mirroring the organisational cost of non-routine care. Table \ref{tab:Payoff-matrix} shows the three payoff matrices which together describe the game.
 
-Taken together, this leads to a game tree that is relatively complex even at the subgame level (figure \ref{fig:subgame_tree} shows the extensive form for a subgame, with information sets). 
-%The subgame has a large number of pure Nash equilibria, and solution using Gambit \citep{Gambit13}
-Rather than attempt to solve for equilibria, agents treat this two player game as taking place against nature, along the lines of adversial risk analysis \citep{RiosInsua2009}. This effectively translates the game to a pair of decision problems, which agents attempt to resolve at each turn using a simple decision rule, given their prior beliefs and experience of play.
+Taken together, this leads to a game tree that is relatively complex even at the subgame level. Rather than attempt to solve for equilibria, agents treat this two player game as taking place against nature, along the lines of adversial risk analysis \citep{RiosInsua2009}. This effectively translates the game to a pair of decision problems (figure \ref{fig:decision_probs}), which agents attempt to resolve at each turn using a simple decision rule, given their prior beliefs and experience of play.
+
+\begin{figure}[H]
+\begin{adjustbox}{center}\subfloat[Women]{\includegraphics[width=0.43\paperwidth]{figures/women_influence}
+
+}\subfloat[Midwives]{\includegraphics[width=0.43\paperwidth]{figures/mw_influence}}\end{adjustbox}
+\caption{Influence diagrams, showing the game broken into two decision problems.}
+
+\label{fig:decision_problems}
+\end{figure}
 
 %Might belong in a more methody bit? Read some stuff to check..
 Women are drawn in order from a queue, and play against a midwife chosen at random. They play for a maximum of \(r_{w}\) rounds (\(r_{w}=12\) following the routine number of ante-natal appointments in the UK \citep{NICE2010a}) or until they are referred. At which point a new player is drawn from the same distribution that produced the original players to replace them. If they are not referred, they rejoin the back of the queue after their appointment. In either case, they are informed of their payoff after each round and update their beliefs accordingly.

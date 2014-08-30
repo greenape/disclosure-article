@@ -10,16 +10,16 @@
 \begin{tabular} {|l | l | l | l | l | l |}
 \hline
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac(CPT) \\ \hline
-\(p_{w}(m)\) & Proportion of moderate drinkers & 0.367 & 1.145 \\ \hline
-\(p_{w}(l)\) & Proportion of light drinkers & 10.080 & 37.750 \\ \hline
-\(p_{m}(m)\) & Proportion of moderate midwives & 6.715 & 13.017\\ \hline
-\(p_{m}(l)\) & Proportion of non-judgemental midwives & 43.942 & 1.655 \\ \hline
-\(q_{w}\) & Probability of women sharing & 0.198 & 5.527 \\ \hline
-\(w_{w}\) & Weight of shared information for women & 0.355 & 13.025 \\ \hline
-\(q_{m}\) & Probability of midwives sharing & 0.145 & 0.667 \\ \hline
-\(w_{m}\) & Weight of shared information for midwives & 0.118 & 0.376 \\ \hline
-\(x_{h}\) & Health payoff for healthy delivery & 0.457 & 9.618 \\ \hline
-\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Psuedo-count favouring honesty & 0.140 & 7.537 \\ \hline
+\(p_{w}(m)\) & Proportion of moderate drinkers & 0.367 & 1.145 & 0.801 & 0.614 \\ \hline
+\(p_{w}(l)\) & Proportion of light drinkers & 10.080 & 37.750 & 23.968  & 5.137\\ \hline
+\(p_{m}(m)\) & Proportion of moderate midwives & 6.715 & 13.017 & 0.894 & 1.485\\ \hline
+\(p_{m}(l)\) & Proportion of non-judgemental midwives & 43.942 & 1.655 & 1.602 & 2.618 \\ \hline
+\(q_{w}\) & Probability of women sharing & 0.198 & 5.527 & 4.460 & 1.159 \\ \hline
+\(w_{w}\) & Weight of shared information for women & 0.355 & 13.025 & 2.716 & 0.888 \\ \hline
+\(q_{m}\) & Probability of midwives sharing & 0.145 & 0.667 & 0.368 & 0.157 \\ \hline
+\(w_{m}\) & Weight of shared information for midwives & 0.118 & 0.376 & 0.176 & 0.200 \\ \hline
+\(x_{h}\) & Health payoff for healthy delivery & 0.457 & 9.618 & 1.912 & 15.355 \\ \hline
+\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Psuedo-count favouring honesty & 0.140 & 7.537 & 10.427 & 7.795 \\ \hline
 \end{tabular}
 \caption[Table caption text]{Median moderate drinker signalling parameter sensitivity. \label{tab:sa_results_sig}}
 \end{table}
@@ -31,8 +31,8 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac(CPT) 
 Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\ \hline
 Lexicographic & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
 Bayesian Payoff & 1.667 & 0.475 &  0.662 & 0.003 & 0.181 & 3.12 \\ \hline
-Bayesian & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
-\ac{CPT} & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
+Bayesian & 3.352 & 0.534 & 1.160 & 0.001 & 0.068 & 2.423 \\ \hline
+\ac{CPT} & 1.503 & 0.331 & 1.241 & 0.002 & 0.101 & 1.842 \\ \hline
 \end{tabular}
 \caption[Table caption text]{Median moderate drinker signalling emulator statistics. \label{tab:sa_emulator_sig}}
 \end{table}
@@ -44,16 +44,16 @@ Bayesian & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
 \begin{tabular} {|l | l | l | l | l | l |}
 \hline
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac(CPT) \\ \hline
-\(p_{w}(m)\) & Proportion of moderate drinkers & 0.367 & 1 \\ \hline
-\(p_{w}(l)\) & Proportion of light drinkers & 10.080 & 1 \\ \hline
-\(p_{m}(m)\) & Proportion of moderate midwives & 6.715 & 1 \\ \hline
-\(p_{m}(l)\) & Proportion of non-judgemental midwives & 43.942 & 1 \\ \hline
-\(q_{w}\) & Probability of women sharing & 0.198 & 1 \\ \hline
-\(w_{w}\) & Weight of shared information for women & 0.355 & 1 \\ \hline
-\(q_{m}\) & Probability of midwives sharing & 0.145 & 1 \\ \hline
-\(w_{m}\) & Weight of shared information for midwives & 0.118 & 1 \\ \hline
-\(x_{h}\) & Health payoff for healthy delivery & 0.457 & 100 \\ \hline
-\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Psuedo-count favouring honesty & 0.140 & 100:1 \\ \hline
+\(p_{w}(m)\) & Proportion of moderate drinkers & 0.327 & 0.688 & 0.457 & 0.586 \\ \hline
+\(p_{w}(l)\) & Proportion of light drinkers & 11.223 & 20.123 & 11.046 & 4.081 \\ \hline
+\(p_{m}(m)\) & Proportion of moderate midwives & 36.630 & 1.160 & 0.364 & 1.945 \\ \hline
+\(p_{m}(l)\) & Proportion of non-judgemental midwives & 6.228 & 4.487 & 0.0964 & 2.627\\ \hline
+\(q_{w}\) & Probability of women sharing & 0.498 & 0.235 & 2.537 & 1.812 \\ \hline
+\(w_{w}\) & Weight of shared information for women & 1.018 & 2.307 & 1.889 & 0.740 \\ \hline
+\(q_{m}\) & Probability of midwives sharing & 0.158 & 0.343 & 0.387 & 0.156 \\ \hline
+\(w_{m}\) & Weight of shared information for midwives & 0.076 & 0.973 & 0.125 & 0.213 \\ \hline
+\(x_{h}\) & Health payoff for healthy delivery & 0.317 & 10.960 & 3.305 & 16.493 \\ \hline
+\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Psuedo-count favouring honesty & 1.107 & 8.411 & 2.890 & 6.729 \\ \hline
 \end{tabular}
 \caption[Table caption text]{Median between groups IQR parameter sensitivity. \label{tab:sa_results_iqr}}
 \end{table}
@@ -63,10 +63,10 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac(CPT) 
 \begin{tabular} {|l | l | l | l | l | l |}
 \hline
 Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\ \hline
-Lexicographic & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
-Bayesian Payoff & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
-Bayesian & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
-\ac{CPT} & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
+Lexicographic & 0.930 & 0.240 & 0.249 & 0.002 & 0.040 & 1.832 \\ \hline
+Bayesian Payoff & 1.242 & 0.417 & 0.232 & 0.001 & 0.0034 & 2.308 \\ \hline
+Bayesian & 1.254 & 0.131 & 0.644 & 0.000 & 0.019 & 1.167 \\ \hline
+\ac{CPT} & 1.190 & 0.313 & 0.659 & 0.000 & 0.024 & 1.701 \\ \hline
 \end{tabular}
 \caption[Table caption text]{Median between groups IQR emulator statistics. \label{tab:sa_emulator_iqr}}
 \end{table}
@@ -78,16 +78,16 @@ Bayesian & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
 \begin{tabular} {|l | l | l | l | l | l |}
 \hline
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac(CPT) \\ \hline
-\(p_{w}(m)\) & Proportion of moderate drinkers & 0.367 & 1 \\ \hline
-\(p_{w}(l)\) & Proportion of light drinkers & 10.080 & 1 \\ \hline
-\(p_{m}(m)\) & Proportion of moderate midwives & 6.715 & 1 \\ \hline
-\(p_{m}(l)\) & Proportion of non-judgemental midwives & 43.942 & 1 \\ \hline
-\(q_{w}\) & Probability of women sharing & 0.198 & 1 \\ \hline
-\(w_{w}\) & Weight of shared information for women & 0.355 & 1 \\ \hline
-\(q_{m}\) & Probability of midwives sharing & 0.145 & 1 \\ \hline
-\(w_{m}\) & Weight of shared information for midwives & 0.118 & 1 \\ \hline
-\(x_{h}\) & Health payoff for healthy delivery & 0.457 & 100 \\ \hline
-\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Psuedo-count favouring honesty & 0.140 & 100:1 \\ \hline
+\(p_{w}(m)\) & Proportion of moderate drinkers & 0.428 & 9.828 & 3.816 & 2.068 \\ \hline
+\(p_{w}(l)\) & Proportion of light drinkers & 8.369 & 13.791 & 4.045 & 2.400 \\ \hline
+\(p_{m}(m)\) & Proportion of moderate midwives & 13.416 & 0.712 & 0.676 & 0.583 \\ \hline
+\(p_{m}(l)\) & Proportion of non-judgemental midwives & 21.079 & 0.648 & 0.659 & 0.373 \\ \hline
+\(q_{w}\) & Probability of women sharing & 2.307 & 3.481 & 0.891 & 0.600 \\ \hline
+\(w_{w}\) & Weight of shared information for women & 6.021 & 6.009 & 0.562 & 0.937 \\ \hline
+\(q_{m}\) & Probability of midwives sharing & 0.315 & 1.829 & 0.114 & 0.117 \\ \hline
+\(w_{m}\) & Weight of shared information for midwives & 1.652 & 1.354 & 0.260 & 0.0.139 \\ \hline
+\(x_{h}\) & Health payoff for healthy delivery & 0.253 & 0.612 & 4.889 & 15.146 \\ \hline
+\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Psuedo-count favouring honesty & 0.504 & 3.096 & 19.863 & 25.999 \\ \hline
 \end{tabular}
 \caption[Table caption text]{IQR of median moderate drinker signalling parameter sensitivity. \label{tab:sa_results_sig_iqr}}
 \end{table}
@@ -97,10 +97,10 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac(CPT) 
 \begin{tabular} {|l | l | l | l | l | l |}
 \hline
 Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\ \hline
-Lexicographic & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
-Bayesian Payoff & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
-Bayesian & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
-\ac{CPT} & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
+Lexicographic & 1.425 & 0.436 & 0.549 & 0.008 & 0.114 & 2.719 \\ \hline
+Bayesian Payoff & 1.223 & 0.496 & 0.747 & 0.012 & 0.207 & 2.034 \\ \hline
+Bayesian &  1.065 & 0.000 & 0.230 & 0.002 & 0.088 & 1.015 \\ \hline
+\ac{CPT} & 0.874 & 0.213 & 0.233 & 0.001 & 0.066 & 1.806 \\ \hline
 \end{tabular}
 \caption[Table caption text]{IQR of median between groups IQR emulator statistics. \label{tab:sa_emulator_sig_iqr}}
 \end{table}
@@ -112,16 +112,16 @@ Bayesian & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
 \begin{tabular} {|l | l | l | l | l | l |}
 \hline
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac(CPT) \\ \hline
-\(p_{w}(m)\) & Proportion of moderate drinkers & 0.367 & 1 \\ \hline
-\(p_{w}(l)\) & Proportion of light drinkers & 10.080 & 1 \\ \hline
-\(p_{m}(m)\) & Proportion of moderate midwives & 6.715 & 1 \\ \hline
-\(p_{m}(l)\) & Proportion of non-judgemental midwives & 43.942 & 1 \\ \hline
-\(q_{w}\) & Probability of women sharing & 0.198 & 1 \\ \hline
-\(w_{w}\) & Weight of shared information for women & 0.355 & 1 \\ \hline
-\(q_{m}\) & Probability of midwives sharing & 0.145 & 1 \\ \hline
-\(w_{m}\) & Weight of shared information for midwives & 0.118 & 1 \\ \hline
-\(x_{h}\) & Health payoff for healthy delivery & 0.457 & 100 \\ \hline
-\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Psuedo-count favouring honesty & 0.140 & 100:1 \\ \hline
+\(p_{w}(m)\) & Proportion of moderate drinkers & 0.691 & 5.926 & 1.053 & 1.265 \\ \hline
+\(p_{w}(l)\) & Proportion of light drinkers & 3.664 & 17.047 & 4.877 & 3.656 \\ \hline
+\(p_{m}(m)\) & Proportion of moderate midwives & 41.369 & 1.124 & 0.814 & 0.591 \\ \hline
+\(p_{m}(l)\) & Proportion of non-judgemental midwives & 7.109 & 0.739 & 0.496 & 0.378 \\ \hline
+\(q_{w}\) & Probability of women sharing & 1.963 & 2.038 & 0.733 & 0.589 \\ \hline
+\(w_{w}\) & Weight of shared information for women & 7.932 & 11.193 & 2.289 & 1.960 \\ \hline
+\(q_{m}\) & Probability of midwives sharing & 0.413 & 1.972 & 0.267 & 0.069\\ \hline
+\(w_{m}\) & Weight of shared information for midwives & 0.120 & 2.902 & 0.150 & 0.123 \\ \hline
+\(x_{h}\) & Health payoff for healthy delivery & 0.228 & 3.190 & 6.308 & 14.777 \\ \hline
+\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Psuedo-count favouring honesty & 0.673 & 10.411 & 22.901 & 26.340 \\ \hline
 \end{tabular}
 \caption[Table caption text]{IQR of median between groups IQR parameter sensitivity. \label{tab:sa_results_iqr_iqr}}
 \end{table}
@@ -131,10 +131,10 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac(CPT) 
 \begin{tabular} {|l | l | l | l | l | l |}
 \hline
 Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\ \hline
-Lexicographic & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
-Bayesian Payoff & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
-Bayesian & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
-\ac{CPT} & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
+Lexicographic & 0.826 & 0.409 & 0.259 & 0.002 & 0.034 & 2.364 \\ \hline
+Bayesian Payoff & 3.202 & 0.520 & 0.328 & 0.002 & 0.032 & 2.452 \\ \hline
+Bayesian & 1.177 & 0.041 & 0.133 & 0.000 & 0.018 & 1.152 \\ \hline
+\ac{CPT} & 0.874 & 0.118 & 0.126 & 0.000 & 0.017 & 1.570 \\ \hline
 \end{tabular}
 \caption[Table caption text]{IQR of median between groups IQR emulator statistics. \label{tab:sa_emulator_iqr_iqr}}
 \end{table}

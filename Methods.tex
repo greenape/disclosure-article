@@ -11,7 +11,7 @@ This section provides details of experiments conducted to examine the ability of
 %explicit subsection on the SA.
 
 
-Throughout this paper, parameters for the \ac{CPT} model were as used in \cite{Tversky1992} (table \ref{tab:qt_params}). While there has been significant work on determining appropriate parameterisation for the model (e.g. \cite{Neilson2002,Glockner2012,Nilsson2011}, and particularly \citet{Byrnes1999,Booij2009} addressing risk aversion and gender), a full exploration of the impact of these parameters, or heterogeneous values within populations is beyond the scope of this work. For simplicity, it is assumed that all three drinking types are equally prevalent within the population, although results derived from \ac{ALSPAC} suggest that the reality is far more positive \citep{Humphriss2013}. The scenario is biased towards disclosure as the better option by presuming a distribution of midwives strongly skewed towards non-judgemental types, with beliefs initially favouring honesty. Payoffs were as in table \ref{tab:Payoff-matrix}, which ensure that it is always strictly preferable to refer drinkers, and together with the initial belief that signals will be honest, not refer those claiming otherwise.
+Throughout this paper, parameters for the \ac{CPT} model were as used in \cite{Tversky1992} (table \ref{tab:qt_params}). While there has been significant work on determining appropriate parameterisation for the model (e.g. \cite{Neilson2002,Glockner2012,Nilsson2011}, and particularly \citet{Byrnes1999,Booij2009} addressing risk aversion and gender), a full exploration of the impact of these parameters, or heterogeneous values within populations is beyond the scope of this work. For simplicity, it was assumed that all three drinking types are equally prevalent within the population, although results derived from \ac{ALSPAC} suggest that the reality is far more positive \citep{Humphriss2013}. The scenario was biased towards disclosure as the better option by presuming a distribution of midwives strongly skewed towards non-judgemental types, with beliefs initially favouring honesty. Payoffs were as in table \ref{tab:Payoff-matrix}, which ensure that it is always strictly preferable to refer drinkers, and together with the initial belief that signals will be honest, not refer those claiming otherwise.
 
 Two key measures were used: the fraction of the subpopulation who had ever signalled honestly, and the proportion referred. Both measures were taken after every round of play, and were taken relative to the agent's position in their sequence of appointments giving the probability of signalling honestly, or being referred having had a given number of appointments.
 
@@ -42,13 +42,13 @@ Runs & Simulation runs & 1000 \\ \hline
 
 \subsection{Information Sharing}
 
-In addition to assessing the adequacy of the rules in capturing qualitative trends, we also examine the impact of simple information sharing within the population of women (section \ref{sub:info_sharing}) on the robustness of these trends. The original experiment was repeated at \(q_{w}=w_{w}={0.25, 0.5, 0.75, 1}\), with 100 runs under each condition. 
+In addition to assessing the adequacy of the rules in capturing qualitative trends, we also examined the impact of simple information sharing within the population of women (section \ref{sub:info_sharing}) on the robustness of these trends. The original experiment was repeated at \(q_{w}=w_{w}={0.25, 0.5, 0.75, 1}\), with 100 runs under each condition. 
 
 \subsection{Global Sensitivity Analysis}
 \label{sub:sensitivity}
 %Maxmin latin hypercube -> remember to cite the r package used.
 %Will require some discussion of the gemsa technique at this point - can also cite Jason H for precedent!
-In general, we follow the example of \cite{Bijak2013b} for global sensitivity analysis of stochastic agent based models, although see \citet{Thiele2014} for a review of alternative techniques. For this purpose the \ac{GEM-SA} software \citep{Kennedy} was used, which implements the \ac{BACCO} method developed by \citeauthor{Oakley2004} \citep{Oakley2002,Oakley2004,Dorresteijn2010}. This is a form of variance based sensitivity analysis, which assumes that the model output is an unknown, smooth function of the inputs. The unknown function can then be approximated as a Gaussian Process, which is fitted to the training data using Bayes' Theorem. The emulator is then able to provide an indication about the extent to which uncertainty in a parameter propogates to uncertainty in the output, and how sharply the output responds to change in each input.
+In general, we have followed the example of \cite{Bijak2013b} for global sensitivity analysis of stochastic agent based models, although see \citet{Thiele2014} for a review of alternative techniques. For this purpose the \ac{GEM-SA} software \citep{Kennedy} was used, which implements the \ac{BACCO} method developed by \citeauthor{Oakley2004} \citep{Oakley2002,Oakley2004,Dorresteijn2010}. This is a form of variance based sensitivity analysis, which assumes that the model output is an unknown, smooth function of the inputs. The unknown function can then be approximated as a Gaussian Process, which is fitted to the training data using Bayes' Theorem. The emulator is then able to provide an indication about the extent to which uncertainty in a parameter propogates to uncertainty in the output, and how sharply the output responds to change in each input.
 
 \begin{comment}
 
@@ -58,7 +58,7 @@ Justification for doing SA, point out the wide variety of places this gets used.
 
 Parameters for training were generated in R \citep{RTeam2014} using Latin Hypercube Sampling \citep{Carnell2012} over the space of inputs given in table \ref{tab:sa_params}, giving 10 free parameters which were treated as uniformly distrubuted in the range given. Initially a unit hypercube was generated, then the margins transformed appropriately to cover those regions where the inputs are not bounded between 0 and 1, and for proportions of agent types which necessarily sum to one across the three parameters. Given the limitation of 400 design points for the \ac{GEM-SA} software, we produced exactly that many parameter combinations and collected results for 100 runs of each, with emulator quality assessed by leave-one-out cross validation. A fixed set of 100 random seeds was used, such that each parameter set was run once with each seed, for every decision rule.
 
-To capture the response characteristics for the model, we measure four outcome variables - (1) the interquartile range of the average signal sent by each type of agent in a run, (2) the average signal of moderate drinking agents in a run, and (3, 4) the interquartile range of the average signal, and interquartile range between simulation runs. Together these four metrics give an indication of how far women are separable by their signalling behaviour (1), the behaviour of the at risk drinking groups\footnote{Under most conditions, the behaviour of heavy drinkers tracks closely with their moderate counterparts.} (2), and finally the variability in the system in response to changes to the parameters (3 \& 4).
+To capture the response characteristics for the model, we measured four outcome variables - (1) the interquartile range of the average signal sent by each type of agent in a run, (2) the average signal of moderate drinking agents in a run, and (3, 4) the interquartile range of the average signal, and interquartile range between simulation runs. Together these four metrics give an indication of how far women are separable by their signalling behaviour (1), the behaviour of the at risk drinking groups\footnote{Under most conditions, the behaviour of heavy drinkers tracks closely with their moderate counterparts.} (2), and finally the variability in the system in response to changes to the parameters (3 \& 4).
 
 Measurements were taken at the end of 1000 rounds of play, and emulators were built against the median, and interquartile range of each measure to assess both the overall trend, and the extent to which the parameters contribute to variance between runs.
 
@@ -71,10 +71,8 @@ In addition to the sensitivity analysis, we also employed the resulting emulator
 \begin{tabular} {|l | l | l| l|}
 \hline
 Name & Description & Min & Max \\ \hline
-\(p_{w}(h)\) & Proportion of heavy drinkers & 0 & 1 \\ \hline
 \(p_{w}(m)\) & Proportion of moderate drinkers & 0 & 1 \\ \hline
 \(p_{w}(l)\) & Proportion of light drinkers & 0 & 1 \\ \hline
-\(p_{m}(h)\) & Proportion of harsh midwives & 0 & 1 \\ \hline
 \(p_{m}(m)\) & Proportion of moderate midwives & 0 & 1 \\ \hline
 \(p_{m}(l)\) & Proportion of non-judgemental midwives & 0 & 1 \\ \hline
 \(q_{w}\) & Probability of women sharing & 0 & 1 \\ \hline

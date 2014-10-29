@@ -25,7 +25,16 @@ Midwives are treated in a similar fashion, where their type corresponds to how n
 
 At the end of a game, each player receives a payoff dependent on the actions and types of both players, which has a partially common interest component. Women receive a payoff based on the health of their eventual baby, with a social cost dependent on the signal they sent and the midwife's reaction to it. Midwives receive the same health payoff as the women, but pay a cost for referring to a specialist, mirroring the organisational cost of non-routine care. Table \ref{tab:Payoff-matrix} shows the three payoff matrices which together describe the game.
 
-Taken together, this leads to a game tree that is relatively complex even at the subgame level. Rather than attempt to solve for equilibria, agents treat this two player game as taking place against nature, along the lines of adversial risk analysis \citep{RiosInsua2009}. This effectively translates the game to a pair of decision problems (figure \ref{fig:decision_probs}), which agents attempt to resolve at each turn using a simple decision rule, given their prior beliefs and experience of play.
+Taken together, this leads to a game tree that is relatively complex (figure \ref{fig:simple_tree} shows a simplified representation) even at the subgame level. Rather than attempt to solve for equilibria, agents treat this two player game as taking place against nature, along the lines of adversial risk analysis \citep{RiosInsua2009}. This effectively translates the game to a pair of decision problems (figure \ref{fig:decision_problems}), which agents attempt to resolve at each turn using a simple decision rule, given their prior beliefs and experience of play.
+
+\begin{figure}[H]
+\begin{adjustbox}{center}
+\subfloat[Women]{\includegraphics[width=0.43\paperwidth]{figures/simple_game_tree}}
+\end{adjustbox}
+\caption{Simmplified game tree.}
+
+\label{fig:simple_tree}
+\end{figure}
 
 \begin{figure}[H]
 \begin{adjustbox}{center}\subfloat[Women]{\includegraphics[width=0.43\paperwidth]{figures/women_influence}
@@ -112,7 +121,7 @@ Formally then, let \(N = \{m, w\}\) be the set of players each with a private ty
 
 While in principle a wide variety of agent models are possible, given that decision rules operate on essentially the same information, and produce the same outputs, we limit ourselves here to four. The simplest is a lexicographic rule (1), motivated as in the spirit of a \ac{FFH} \citep{Gigerenzer2004} which uses only information about payoffs given actions; a Bayesian risk minimisation rule using the same information (2); a second Bayesian risk rule (3) which uses information about the underlying lottery; and a two-stage \ac{CPT} \citep{Hau2008} agent (4) which is identical with 3, but uses the \ac{CPT} decision rule from \cite{Tversky1992}. Hence, each successive decision model adds a layer of sophistication to the problem representation while retaining the same input-ouput characteristics.
 
-As noted in section \ref{sub:the_game}, agents have perfect recall, and recognise individual opponents if they encounter them subsequently. While agents recall perfectly and make use of the new information for retrospective updates, all four agent models make decisions `as-if' they were always facing a new opponent.
+As noted in section \ref{sub:the_game}, agents have perfect recall, and midwives recognise women if they encounter them subsequently. While agents recall perfectly and make use of the new information for retrospective updates, all four agent models make decisions `as-if' they were always facing a new opponent.
 
 A simplifying assumption is made that all midwives have just qualified after receiving identical training. As a result, they have homogenous beliefs about their women and assume to some extent that they are honest.
 Women are heterogenous in their prior observations, which are assigned stochastically and constrained such that they have encountered each scenario possible at least once, with exactly \(k\) encounters overall.
@@ -121,7 +130,7 @@ Women are heterogenous in their prior observations, which are assigned stochasti
 \subsubsection{Lexicographic Heuristic}
 \label{sub:lexico}
 
-The lexicographic heuristic (algorithm \ref{alg:lexico}) follows the form of that used in \cite{Hau2008}, and assumes a simplified decision problem, as in figure \ref{fig:payoff_problem}, where an action is a choice between combined lotteries. Functionally, the heuristic maintains a count of the number of times that each action was followed by a payoff, and chooses the action which most commonly has the best payoff, i.e. one reason decision making. This approach requires minimal computation, and does not assume that \(u_{i}\) is static, or known.
+The lexicographic heuristic (algorithm \ref{alg:lexico}) follows the form of that used in \cite{Hau2008}, and assumes a simplified, where an action is a choice between combined lotteries. Functionally, the heuristic maintains a count of the number of times that each action was followed by a payoff, and chooses the action which most commonly has the best payoff, i.e. one reason decision making. This approach requires minimal computation, and does not assume that \(u_{i}\) is static, or known.
 
 Women resolve this by approximating the utility function, as a function \(f(s_{w}, \sigma)\) on their choice of signal and an unknown distribution, which maps to \(u_{w}\) - i.e. \(s_{w}\) is a choice between simple lotteries. The algorithm maintains a count, \(n\), of the number of occurrences of each outcome given the choice from \(s_{w}\).
 
@@ -209,15 +218,8 @@ The most complex decision rule used is \ac{CPT}, which attempts to reproduce a n
 %Maybe cut this bit and make explanation richer?
 Rather than the psychologically more interesting \ac{PT}, the \ac{CPT}
 decision rule is used in this instance, because of the requirement
-for women to evaluate more than two `prospects'.\footnote{A prospect in this instance is a paired outcome and probability, and the set of prospects
-for an action hence define the outcome space.} \ac{CPT} introduces
-the concept of a probability weighting function, which underweights
-small probabilities, and overweights large ones in an effort to capture
-the tendency of humans to treat high probability events as sure things,
-and small probabilities as `never going to happen'. A number of different
-weighting functions have been proposed, but in this instance the original
-formulation by \citet{Tversky1992} is used. This distinguishes between
-weighting for gains, and losses -
+for women to evaluate more than two `prospects'.\footnote{Where a prospect is a payoff-probability pair, with the set of prospects for an action defining the possible outcomes for it.} \ac{CPT} uses transformed probabilities, underweighting
+small probabilities, and overweighting large ones. This is intended to reflect the observed behaviour of humans, where sufficiently high likelihoods are treated as certain, and contrastingly low probabilities as impossible. The correct weighting function is subject to some debate, but here we have used that of \citet{Tversky1992}, which treats probabilities differently for gains and losses -
 
 \begin{eqnarray*}
 w^{+}(p) & = & \frac{p^{\gamma}}{(p^{\gamma}+(1-p)^{\gamma})^{\frac{1}{\gamma}}}\\
@@ -226,10 +228,7 @@ w^{-}(p) & = & \frac{p^{\delta}}{(p^{\delta}+(1-p)^{\delta})^{\frac{1}{\delta}}}
 
 
 Where $p$ is the unweighted probability, and $\gamma$ and $\delta$
-are the weights for gain and loss probabilities respectively. Humans
-have also been observed to value gains and losses differently, with
-a loss being `worse' than the equivalent gain is `good'. This
-entails a transformed value function -
+are the weights for gain and loss probabilities respectively. Along similar lines, the values of losses and gains are transformed to reflect a tendency to regard a loss as more significant than a gain  -
 
 \[
 v(x)=\begin{cases}
@@ -262,8 +261,7 @@ And $\alpha$, and $\beta$ are respectively the power of a gain,
 and a loss, and \(x=u_{i}\). The \ac{CPT} value of outcome $x$ is $v(x)w^{+}(x)$
 if $x\geq0$, and $v(x)w^{-}(x)$ otherwise. For an action the \ac{CPT}
 value is the sum of the value of the prospects of that action, as
-in the Bayesian risk model. The decision rule then requires the agent
-to choose the action which maximises the prospect theory value.
+in the Bayesian risk model, and the agent chooses the option which maximises this quantity.
 
 \subsection{Information Sharing}
 \label{sub:info_sharing}

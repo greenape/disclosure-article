@@ -10,19 +10,19 @@
 
 \subsection*{Background}
 
-We draw together methodologies from game theory, agent based modelling, and decision theory to explore the process of decision making around disclosure. This is framed in the context of pregnant women disclosing their drinking behaviour to their midwives.
+We draw together methodologies from game theory, agent based modelling, decision theory, and uncertainty analysis to explore the process of decision making in the context of pregnant women disclosing their drinking behaviour to their midwives.
 
 \subsection*{Objective} 
 
-The primary purpose it to demonstrate the potential utility of an approach which it is hoped goes some way towards addressing concerns about the ad hoc character of \ac{ABM}, by providing a strong theoretical grounding for the reasoning processes of individual agents. To this end we hope to show that these simple rules, operating in an inescapably artificial scenario are nonetheless capable of producing trends from the literature.
-We also seek to demonstrate the significance of precisely how the decision making process is formulated, by contrasting four distinct decision rules against one another and exploring a simple form of information sharing, supported by the use of statistical emulators for a full exploration of the parameter space.
+The primary purpose of this work is to demonstrate the significance of precisely how the decision making process is formulated, by contrasting four distinct decision rules against one another and exploring a simple form of information sharing, supported by the use of statistical emulators for a full exploration of the parameter space.
+We also demonstrate the utility of an approach which it is hoped goes some way towards addressing concerns about the ad hoc character of \ac{ABM}, by providing a strong theoretical grounding for the reasoning processes of individual agents. To this end we hope to show that these simple rules, operating in an inescapably artificial scenario are nonetheless capable of reproducing trends from the literature.
 
 \subsection*{Methods} 
 
-We employ game theory to define a signalling game representative of a scenario where pregnant women decide how far to disclose their drinking behaviours to their midwives, and midwives employ the information provided to decide whether a costly referral should be made. This game is then recast as two games taking play against nature, to permit the use of a decision theoretic approach where both classes of agent use simple rules to decide their moves.
-Four decision rules are explored - a lexicographic heuristic which considers only the link between moves and payoffs, a Bayesian risk minimisation agent that uses the same information, a more complex Bayesian risk minimiser, and a \ac{CPT} type.
+We employ game theory to define a signalling game representative of a scenario where pregnant women decide the extent to which they disclose their drinking behaviours to their midwives, and midwives employ the information provided to decide whether to refer their patients for costly specialist treatment. This game is then recast as two games played against nature, to permit the use of a decision theoretic approach where both classes of agent use simple rules to decide their moves.
+Four decision rules are explored - a lexicographic heuristic which considers only the link between moves and payoffs, a Bayesian risk minimisation agent that uses the same information, a more complex Bayesian risk minimiser with full access to the structure of the decision problem, and a \ac{CPT} rule.
 
-Using a simulator we have developed in Python, we recreate two key qualitative trends described in the Midwifery literature for all the decision models, and investigate the impact of introducing a simple form of information sharing within agent groups.
+In simulation, we recreate two key qualitative trends described in the Midwifery literature for all the decision models, and investigate the impact of introducing a simple form of information sharing within agent groups.
 Finally a global sensitivity analysis using \acp{GEM} was conducted, to compare the response surfaces of the different decision rules in the game.
 
 \subsection*{Results} 
@@ -32,6 +32,6 @@ Selected results showing the ability of all decision rules to reproduce qualitat
 \subsection*{Comments} 
 
 
-We note that the scenario omits the overwhelming complexity of the reality, and is presented largely in the spirit of a convenient demonstration of the methodology. Clearly a domain where there is sufficient data to permit a more comprehensive approach to validation of model outcomes is desirable, and will form the basis of our future work.
+We note that the model omits the overwhelming complexity of the real disclosure scenario, and is presented largely in the spirit of a convenient demonstration of the methodology. Clearly a domain where there is sufficient data to permit a more comprehensive approach to validation of model outcomes is desirable, and will form the basis of our future work.
 
 To aid in replication and extension, the model has been implemented as a Python module, and is freely available under the Mozilla Public License from \url{https://github.com/greenape/disclosure-game-module}.

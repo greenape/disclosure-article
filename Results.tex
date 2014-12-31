@@ -9,13 +9,14 @@
 
 As shown in figure \ref{fig:honest_signals}, all four decision rules were able to reproduce both qualitative trends towards more disclosure as women experience more appointments \citep{Phillips2007}, and a greater tendency towards underreporting of consumption by heavier drinkers \citep{Alvik2006}.  Trends for all four rules are broadly similar, exhibiting a gradual increase across appointments which subsequently levels off. This levelling can in part be explained by the referral results (figure \ref{fig:referrals}), which show that the majority of drinkers are referred, even with substantial concealment. Referrals continue to occur, in the absence of honest signals, because drinkers are able to achieve a referral by masquerading as higher or lower types, dependent on how their initial beliefs are biased. Despite this the results suggest that a minority of risky drinkers will evade detection altogether, with no notable distinction between heavy and moderate types. Under these parameters, light drinkers always signal honestly and are never referred since there is no perceived advantage in doing so, and the evidence of deceptive signalling is insufficient to outweigh the biased priors of the midwives. 
 
-\begin{figure}[H]
-\begin{adjustbox}{center}\subfloat[Average fraction of population ever signalled honestly\label{fig:honest_signals}]{\includegraphics[width=0.43\paperwidth]{figures/honesty_plot}
-
-}\subfloat[Average fraction of population referred\label{fig:referrals}]{\includegraphics[width=0.43\paperwidth]{figures/ref_plot}}\end{adjustbox}
-\caption{Qualitative trends after 1000 rounds, mean with 95\% confidence limit over 1000 runs.}
+\begin{SCfigure}[H]
+\begin{adjustbox}{center}\subfloat[Average fraction of population ever signalled honestly\label{fig:honest_signals}]{\includegraphics[width=78mm]{figures/honesty_plot}\end{adjustbox}{center}
+}
+\vskip
+\begin{adjustbox}{center}\subfloat[Average fraction of population referred\label{fig:referrals}]{\includegraphics[width=78mm]{figures/ref_plot}}\end{adjustbox}
+\caption{Qualitative trends after 1000 rounds, mean with 95\% confidence limit over 1000 runs}
 \label{fig:qt_trends}
-\end{figure}
+\end{SCfigure}
 
 \subsection{Information Sharing}
 \label{sub:sharing_results}
@@ -28,17 +29,17 @@ The relationship is not, however, entirely straighforward, in that increasing in
 
 \begin{figure}[H]
 \begin{adjustbox}{center}
-\includegraphics[width=0.8\textwidth]{figures/honesty_sharing}
+\includegraphics[width=119mm]{figures/honesty_sharing}
 \end{adjustbox}
-\caption{Impact of information sharing on trends in honest signalling after 1000 rounds, mean with 95\% confidence interval over 100 runs.}
+\caption{Impact of information sharing on trends in honest signalling after 1000 rounds, mean with 95\% confidence interval over 100 runs}
 \label{fig:honest_sharing}
 \end{figure}
 
 \begin{figure}[H]
 \begin{adjustbox}{center}
-\includegraphics[width=0.8\textwidth]{figures/ref_sharing}
+\includegraphics[width=119mm]{figures/ref_sharing}
 \end{adjustbox}
-\caption{Impact of information sharing on referral trends after 1000 rounds, mean with 95\% confidence interval over 100 runs.}
+\caption{Impact of information sharing on referral trends after 1000 rounds, mean with 95\% confidence interval over 100 runs}
 \label{fig:ref_sharing}
 \end{figure}
 
@@ -53,16 +54,16 @@ For the median signal choice of moderate drinkers, the results of the sensitivit
 Perhaps surprisingly, variance attributable to information sharing between midwives is relatively low, with neither the weight nor probability accounting for more than 5\% of variance in any measure. While there are small contributions to variance in interaction with other parameters (e.g. 4\% to between groups IQR, for the interaction with the proportion of light drinkers under the Bayesian rule), this may suggest that the implementation is lacking, which we touch on in section \ref{sec:conclusion}.
 
 \begin{figure}[H]
-\begin{adjustbox}{center}\includegraphics[width=0.8\textwidth]{figures/sharing_emulated_simulated}\end{adjustbox}
-\caption{Median moderate drinker signal vs median between drinking type IQR for all decision rules.}
+\begin{adjustbox}{center}\includegraphics[width=119mm]{figures/sharing_emulated_simulated}\end{adjustbox}
+\caption{Median moderate drinker signal vs median between drinking type IQR for all decision rules}
 \label{fig:outcome_plots}
 \end{figure}
 
 Figure \ref{fig:outcome_plots} gives a qualitative picture of both emulator quality, and the divergent response surfaces of the decision rules in response to variations in information sharing parameters. Emulator fit is clearly imperfect, but overall behaviour is qualitatively similar, with both emulated and simulated plots demonstrating separation in outcome space for the decision rules.
 
 \begin{figure}[H]
-\begin{adjustbox}{center}\includegraphics[width=0.8\textwidth]{figures/unfixed_emu_sig_iqr}\end{adjustbox}
-\caption{Emulated moderate drinker signal IQR in response to varying \(q_{w}\), and \(w_{w}\).}
+\begin{adjustbox}{center}\includegraphics[width=119mm]{figures/unfixed_emu_sig_iqr}\end{adjustbox}
+\caption{Emulated moderate drinker signal IQR in response to varying \(q_{w}\), and \(w_{w}\)}
 \label{fig:emulated_sharing_iqr}
 \end{figure}
 
@@ -71,7 +72,7 @@ Following from the suggestive results for information sharing introducing uncert
 For the \ac{CPT}, and Bayesian decision models, the interaction of bias towards honesty, and distinction between payoffs has a significant, and non-linear effect on instability, and separability of groups. Figure \ref{fig:emulated_payoff_group_iqr} shows the effects, and also highlights the tendency towards poor separability of groups for both the heuristic type decision rules. The response surface of the Bayesian payoff rule is slightly more nuanced than the simple Lexicographic rule. Figure \ref{fig:emulated_payoff_group_iqr} shows better separation, close to partial pooling\footnote{Pooling occurs when signallers of different types `pool' their signals, and one adopts the signals of another.} at high payoff distinction, with relatively modest honesty bias, which is reflected by the variance contributions of 11\% and 8\% respectively.  For the more complex rules, the general tendency is towards less pooling for higher values of both, but with pockets where full pooling\footnote{Indicating that all signallers types are using a single signal.} occurs.  The plots also suggest that the sensitivity of the \ac{CPT} rule is marginally greater, which is supported by the significant contribution to variance of close to 15\% for all measures of \(x_{h}\).
 
 \begin{figure}[H]
-\begin{adjustbox}{center}\includegraphics[width=0.8\linewidth]{figures/unfixed_emu_payoff_honesty_group_iqr}\end{adjustbox}
-\caption{Emulated between groups IQR in response to varying \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\), and \(x_{h}\).}
+\begin{adjustbox}{center}\includegraphics[width=119mm]{figures/unfixed_emu_payoff_honesty_group_iqr}\end{adjustbox}
+\caption{Emulated between groups IQR in response to varying \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\), and \(x_{h}\)}
 \label{fig:emulated_payoff_group_iqr}
 \end{figure}

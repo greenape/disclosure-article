@@ -40,3 +40,5 @@
 *.tiff
 
 disclosure_game.pdf
+
+*.gz(busy)

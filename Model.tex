@@ -173,7 +173,7 @@ Midwives solve a slightly different problem with more information, where \(s_{w}
 \caption{Lexicographic heuristic\label{alg:lexico}}
 \end{algorithm}
 
-As an example, take a light drinker who has played three rounds, signalling honestly in two and claiming to be a moderate drinker in one, where they encountered a particularly judgemental midwife. The most common outcome of the honest signal was a payoff of 10, which is clearly preferable to the 9 gained by claiming to be moderate. On that basis, they choose to signal honestly.
+As an example, take a light drinker who has played three rounds with a succession of particularly judgemental midwives, signalling honestly in two and claiming to be a moderate drinker in one. The most common outcome of the honest signal was a payoff of 10, which is clearly preferable to the 9 gained by claiming to be moderate. On that basis, they choose to signal honestly.
 
 \subsubsection{Bayesian Payoff}
 
@@ -252,14 +252,24 @@ Midwives reasoning centres on determining the meaning of signals, since given th
 R_{m}(s_{w}, s_{m}) = \sum_{i\in \Theta} -u_{m}(s_{w}, s_{m}, i)p(i | s_{w})
 \end{equation}
 
-Returning to our example agent, we now add slightly more information, and stipulate that they have in fact encountered a harshly judgemental midwife in all three rounds, hence \(n_{h}=3\). Their prior beliefs remain uninformative, i.e. \(\alpha_{j} = 1, j \in \{l,m,h\}\), \(\alpha_{i}=1,i \in \{r,n\}\). As before, the agent evaluates \(R_{w}\) for the three signals, and the process for the light signal is given below -
+Returning to our example agent, under this model the type of the midwife becomes salient, hence \(n_{h}=3\). Their prior beliefs remain uninformative, i.e. \(\alpha_{j} = 1, j \in \{l,m,h\}\), \(\alpha_{i}=1,i \in \{r,n\}\). As before, the agent evaluates \(R_{w}\) for the three signals, and the process for the light signal is given below -
 
 \begin{equation*}
 \begin{align*}
-R_{w}(s_{w}, l) &= \sum_{i\in A_{m}}\sum_{j\in \Theta} -u_{w}(s_{w}, i, l, j)p(j)p(i | s_{w}),
-R_{w}(s_{w}, l) &= 
+R_{w}(l, l) &= \sum_{i\in A_{m}}\sum_{j\in \Theta} -u_{w}(l, i, l, j)p(j)p(i | l)\\
+R_{w}(l, l) &= -u_{w}(l, r, l, l)p(l)p(r | l) - u_{w}(l, n, l, l)p(l)p(n | l) \\- u_{w}(l, r, l, m)p(m)p(r | l) - u_{w}(l, n, l, m)p(m)p(n | l) \\- u_{w}(l, r, l, h)p(h)p(r | l) - u_{w}(l, n, l, h)p(h)p(n | l)\\
+R_{w}(l, l) &= -10p(l)p(r | l) - 10p(l)p(n | l) \\- 10p(m)p(r | l) - 10p(m)p(n | l) \\- 10p(h)p(r | l) - 10p(h)p(n | l)\\
+p(l) &= \frac{1 + 0}{1 + 1 + 1 + 3} &= \frac{1}{6}\\
+p(m) &= \frac{1 + 0}{1 + 1 + 1 + 3} &= \frac{1}{6}\\
+p(h) &= \frac{1 + 3}{1 + 1 + 1 + 3} &= \frac{2}{3}\\
+p(r | l) &= \frac{1 + 0}{1 + 1 + 2} &= \frac{1}{4}\\
+p(n | l) &= \frac{1 + 2}{1 + 1 + 2} &= \frac{3}{4}\\
+WRONGWRONGWRONGWRONGWRONGR_{w}(l, l) &= -\frac{1}{3} - \frac{4}{3} - \frac{1}{3} - \frac{4}{3} - \frac{4}{3} - \frac{16}{3}\\
+R_{w}(l, l) &= -10
 \end{align}
 \end{equation}
+
+and similarly for moderate (\(R_{w}(m,l)=-9\frac{1}{3}\)), and heavy (\(R_{w}(h,l)=-\frac{1}{2}\)) signals, once again concluding that honesty is the better option.
 
 \subsubsection{Descriptive Decision Theory}
 

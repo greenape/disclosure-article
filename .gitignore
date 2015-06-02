@@ -42,3 +42,7 @@
 disclosure_game.pdf
 
 *.gz(busy)
+
+.ipynb_checkpoints/Untitled-checkpoint.ipynb
+
+.ipynb_checkpoints/Agent example calulations-checkpoint.ipynb

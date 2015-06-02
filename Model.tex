@@ -23,7 +23,7 @@ In order to translate the scenario sketched above into a more abstract, tractabl
 
 Midwives are treated in a similar fashion, where their type corresponds to how negatively they regard a drinking pattern - non-judgemental, moderately judgemental, and harshly judgemental. The expression of this judgement is not a matter of choice on their part, and is assumed to have no impact on their clinical response, which is to either refer the woman for specialist treatment, or do nothing.
 
-At the end of a game, each player receives a payoff dependent on the actions and types of both players. Because both women and midwives have an interest in the outcome of the pregnancy, and would prefer a healthy baby, the payoff has a common interest component. Hence, both players receive a payoff based on the health of their eventual baby, but women bear a social cost dependent on the signal they sent and the midwife's reaction to it. Similarly, midwives pay a cost if they refer to a specialist, mirroring the organisational cost of non-routine care. Table \ref{tab:Payoff-matrix} shows the three payoff matrices which together describe the game.
+At the end of a game, each player receives a payoff dependent on the actions and types of both players. Because both women and midwives have an interest in the outcome of the pregnancy, and would prefer a healthy baby, the payoff has a common interest component. Hence, both players receive a payoff based on the outcome of pregnancy, but women bear a social cost dependent on the signal they sent and the midwife's reaction to it. Similarly, midwives pay a cost if they refer to a specialist, mirroring the organisational cost of non-routine care. Table \ref{tab:Payoff-matrix} shows the three payoff matrices which together describe the game.
 
 \begin{table}
 \center
@@ -142,7 +142,7 @@ While in principle a wide variety of agent models are possible, given that decis
 As noted in section \ref{sub:the_game}, agents have perfect recall, and midwives recognise women if they repeatedly encounter them. While agents recall perfectly and make use of the new information for retrospective updates, all four agent models make decisions `as-if' they were always facing a new \enquote{opponent}.
 
 A simplifying assumption is made that all midwives have just qualified after receiving identical training. As a result, they have homogeneous beliefs about  women and assume to some extent that they are honest.
-Women are heterogeneous in their prior observations, which are assigned stochastically and constrained such that they have encountered each scenario possible for their type at least once, with exactly \(k\) encounters overall.
+Women have heterogeneous beliefs, which correspond to experiencing \(k\) randomly chosen paths through the game, and following each path at least once.
 
 
 \subsubsection{Lexicographic Heuristic}

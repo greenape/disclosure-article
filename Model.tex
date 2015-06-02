@@ -220,6 +220,22 @@ R_{m}(s_{w}, s_{m}) = \sum_{x \in X} -xp(x | s_{w}\wedge s_{m}),
 
 where $X$ is the set of payoffs the agent has observed to follow $s_{i}$.
 
+
+If we take our light drinker from the lexicographic case, and assume that they began with an uninformative prior. The 6 possible signal-payoffs pairings are then \([(l,10),(m,10),(h,10),(m,9),(h,9),(h,8)]\), with \(\alpha_{i}=1\) for all \(i\). After playing the three rounds, \(n_{l,10}=2\), and \(n_{m,9}=1\).
+
+The agent then evaluates \(R_{w}\) for each signal, e.g. for the light signal:
+
+\begin{equation*}
+\begin{align*}
+X &= \{10\}\\
+R_{w}(l) &= \sum_{x \in X} -xp(x | l) &= -10p(10 | l)\\
+R_{w}(l) &= -10(\frac{\alpha_{l,10}+n_{l,10}}{\sum_{j}(\alpha_{j}+n_{j})}) &= -10(\frac{1+2}{1+2})\\
+R_{w}(l) &= -10(\frac{3}{3}) &= -10
+\end{align}
+\end{equation}
+
+and by the same method, \(R_{w}(m)=-7\), and \(R_{w}(h)=-9\), concluding that signalling honestly is the best move.
+
 \subsubsection{Bayesian Risk Minimisation}
 
 The second Bayesian agent augments the reasoning of the simple payoff model, making the stronger assumption that the utility function is static, and known. Women maintain two sets of beliefs, corresponding respectively to \(p_{m}\), and the probability of referral given signal choice. This leads to the risk function, minimised with respect to \(s_{w}\) -
@@ -233,7 +249,16 @@ so that the risk of a signal is the sum of the products of all payoffs with the 
 Midwives reasoning centres on determining the meaning of signals, since given the knowledge of what some signal \(s_{w}\) conveys about the true type of the sender, the payoff for an action is known. As such, their inference process is the same as for the simple Bayesian agent but over signal-type pairs, and they attempt to minimise the following risk function, minimised with respect to \(s_{m}\) -
 
 \begin{equation}
-R_{m}(s_{w}, s_{m}) = \sum_{i\in \Theta} -u_{w}(s_{w}, s_{m}, i)p(i | s_{w})
+R_{m}(s_{w}, s_{m}) = \sum_{i\in \Theta} -u_{m}(s_{w}, s_{m}, i)p(i | s_{w})
+\end{equation}
+
+Returning to our example agent, we now add slightly more information, and stipulate that they have in fact encountered a harshly judgemental midwife in all three rounds, hence \(n_{h}=3\). Their prior beliefs remain uninformative, i.e. \(\alpha_{j} = 1, j \in \{l,m,h\}\), \(\alpha_{i}=1,i \in \{r,n\}\). As before, the agent evaluates \(R_{w}\) for the three signals, and the process for the light signal is given below -
+
+\begin{equation*}
+\begin{align*}
+R_{w}(s_{w}, l) &= \sum_{i\in A_{m}}\sum_{j\in \Theta} -u_{w}(s_{w}, i, l, j)p(j)p(i | s_{w}),
+R_{w}(s_{w}, l) &= 
+\end{align}
 \end{equation}
 
 \subsubsection{Descriptive Decision Theory}

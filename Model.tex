@@ -228,9 +228,9 @@ The agent then evaluates \(R_{w}\) for each signal, e.g. for the light signal:
 \begin{equation*}
 \begin{align*}
 X &= \{10\}\\
-R_{w}(l) &= \sum_{x \in X} -xp(x | l) &= -10p(10 | l)\\
-R_{w}(l) &= -10(\frac{\alpha_{l,10}+n_{l,10}}{\sum_{j}(\alpha_{j}+n_{j})}) &= -10(\frac{1+2}{1+2})\\
-R_{w}(l) &= -10(\frac{3}{3}) &= -10
+R_{w}(l) &= \sum_{x \in X} -xp(x | l) = -10p(10 | l)\\
+R_{w}(l) &= -10(\frac{\alpha_{l,10}+n_{l,10}}{\sum_{j}(\alpha_{j}+n_{j})}) = -10(\frac{1+2}{1+2})\\
+R_{w}(l) &= -10(\frac{3}{3}) = -10
 \end{align*}
 \end{equation*}
 
@@ -267,7 +267,7 @@ p(h) &= \frac{1 + 3}{1 + 1 + 1 + 3} = \frac{2}{3}\\
 p(r | l) &= \frac{1 + 0}{1 + 1 + 2} = \frac{1}{4}\\
 p(n | l) &= \frac{1 + 2}{1 + 1 + 2} = \frac{3}{4}\\
 R_{w}(l, l) &= -10\cdot \frac{1}{6} \cdot \frac{1}{4} - 10\cdot \frac{1}{6} \cdot \frac{3}{4} - 10\cdot \frac{1}{6} \cdot \frac{1}{4} - 10\cdot \frac{1}{6} \cdot \frac{3}{4} - 10\cdot \frac{2}{3} \cdot \frac{1}{4} - 10\cdot \frac{2}{3} \cdot \frac{3}{4}\\
-R_{w}(l, l) &= -10
+&= -10
 \end{align*}
 \end{equation*}
 
@@ -284,8 +284,8 @@ for women to evaluate the `prospects'\footnote{Where a prospect is a sequence of
 small probabilities, and overweighting large ones. This is intended to reflect the observed behaviour of humans, where sufficiently high likelihoods are treated as certain, and contrastingly low probabilities as impossible. The correct weighting function is subject to some debate, but here we have used that of \citet{Tversky1992}, which treats probabilities differently for gains (eqn \ref{eqn:cpt_p_pos}) and losses (eqn \ref{eqn:cpt_p_neg}) -
 
 \begin{align}
-w^{+}(p) & = & \frac{p^{\gamma}}{(p^{\gamma}+(1-p)^{\gamma})^{\frac{1}{\gamma}}}\label{eqn:cpt_p_pos}\\
-w^{-}(p) & = & \frac{p^{\delta}}{(p^{\delta}+(1-p)^{\delta})^{\frac{1}{\delta}}}\label{eqn:cpt_p_neg},
+w^{+}(p) & = \frac{p^{\gamma}}{(p^{\gamma}+(1-p)^{\gamma})^{\frac{1}{\gamma}}}\label{eqn:cpt_p_pos}\\
+w^{-}(p) & = \frac{p^{\delta}}{(p^{\delta}+(1-p)^{\delta})^{\frac{1}{\delta}}}\label{eqn:cpt_p_neg},
 \end{align}
 
 

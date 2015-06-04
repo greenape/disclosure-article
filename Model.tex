@@ -337,9 +337,9 @@ Finally, the transformed probabilities are used to construct decision weights, \
 \pi_{i}^{-}=w^{-}(p_{-m}+\ldots+p_{i}) - w^{-}(p_{-m}+\ldots+p_{i-1}),1-m\leq i \leq 0
 \end{equation}
 
-The \ac{CPT} value of outcome $u_{i}$, occurring with probability \(p\) is $v(u_{i})\pi^{+}(p_{i})$
+The \ac{CPT} value of a single outcome prospect \(f=(u_{i};p_{i})\), is $v(u_{i})\pi^{+}(p_{i})$
 if $u_{i}\geq0$, and $v(u_{i})\pi^{-}(p_{i})$ otherwise. For any given action the \ac{CPT}
-value is the sum of the value of the prospects of that action, as
+value, \(V\) is the sum of the value of the prospects of that action, as
 in the Bayesian risk model, and the agent chooses the option which maximises this quantity.
 
 
@@ -355,18 +355,31 @@ p(h) &= \frac{2}{3}\\
 p(r | l) &= \frac{1}{4}\\
 p(n | l) &= \frac{3}{4}\\
 u_{w}(l, i, l, j) &= 10\\
+f&=(10;\frac{1}{24},10;\frac{1}{8},10;\frac{1}{24},10;\frac{1}{8},10;\frac{1}{6},10;\frac{1}{2})\\
+f^{+}&=f,f^{-}=()\\
+n &= 5\\
 v(u_{w}) &= f(u_{w}) = u_{w}^\alpha\\
 v(u_{w}) &= 10^{0.88} = 7.59\\
-w^{+}(p(l)p(r | l))  &= \frac{(p(l)p(r | l))^\gamma}{[(p(l)p(r | l))^\gamma + (1-(p(l)p(r | l)))^\gamma]^\frac{1}{\gamma}}\\
-w^{+}(p(l)p(r | l))  &= \frac{\frac{1}{24}^{0.61}}{[\frac{1}{24}^{0.61} + (1-\frac{1}{24})^{0.61}]^\frac{1}{0.61}} = 0.12\\
-w^{+}(p(l)p(n | l)) &= \frac{\frac{1}{8}^{0.61}}{[\frac{1}{8}^{0.61} + (1-\frac{1}{8})^{0.61}]^\frac{1}{0.61}} = 0.21\\
-w^{+}(p(m)p(r | l)) &= 0.12\\
-w^{+}(p(m)p(n | l)) &= 0.21\\
-w^{+}(p(h)p(r | l)) &= 0.24\\
-w^{+}(p(h)p(n | l)) &= 0.42\\
-V(l) &= 0.12\cdot7.59 + 0.21\cdot7.59 + 0.12\cdot7.59 + 0.21\cdot7.59 + 0.24\cdot7.59 + 0.42\cdot7.59 &= 10.02
+\pi_{0}^{+}&=w^{+}(\frac{1}{24} + \frac{1}{8} + \frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2}) - w^{+}(\frac{1}{8} + \frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2})=w^{+}(1) - w^{+}(\frac{23}{24})\\
+&=0.19\\
+\pi_{1}^{+}&=w^{+}(\frac{1}{8} + \frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2}) - w^{+}(\frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2})=w^{+}(\frac{23}{24}) - w^{+}(\frac{5}{6})\\
+&= 0.17\\
+\pi_{2}^{+}&=w^{+}(\frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2}) - w^{+}(\frac{1}{8} + \frac{1}{6} + \frac{1}{2})=w^{+}(\frac{5}{6}) - w^{+}(\frac{19}{24})\\
+&= 0.04\\
+\pi_{3}^{+}&=w^{+}(\frac{1}{8} + \frac{1}{6} + \frac{1}{2}) - w^{+}(\frac{1}{6} + \frac{1}{2})=w^{+}(\frac{19}{24}) - w^{+}(\frac{2}{3})\\
+&= 0.09\\
+\pi_{4}^{+}&=w^{+}(\frac{1}{6} + \frac{1}{2}) - w^{+}(\frac{1}{2})=w^{+}(\frac{2}{3}) - w^{+}(\frac{1}{2})\\
+&= 0.09\\
+\pi_{5}^{+}&=w^{+}(\frac{1}{2})\\
+&= 0.42\\
+V(f) &= V(f^{+}) + V(f^{-}) = V(f^{+}) + 0\\
+V(f^{+}) &= \sum_{i\leqn}\pi_{i}^{+}(f^{+})v_{i}^{+}(f^{+}) = 7.59
 \end{align*}
 \end{equation*}
+
+
+And as before, following the same process for moderate, and heavy signals which yields respectively 7.14, and 6.22, the agent chooses the higher valued action and sends an honest signal.
+
 
 \subsection{Information Sharing}
 \label{sub:info_sharing}

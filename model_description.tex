@@ -1,20 +1,15 @@
-%!TEX root = disclosure_game.tex
-\section{Disclosure Game Model}
-\label{sec:model}
-%Start this off with a brief description of our fictional scenario.
-% Whole section ~ 1.5K
+\section{Model Description}
+\label{app:model_description}
 
-In this section we sketch\footnote{A complete example of this for the alcohol misuse in pregnancy model is given in appendix \ref{app:model_description}} the process of moving from a real world scenario to a minimal game which sufficiently captures reality, expressing the result as a decision problem representation, and finally translating this to a simulation model, and then outline four possible decision rules.
+In this section we sketch the process of moving from a real world scenario, to a minimal game which sufficiently captures reality. For a
 
-\subsection{Model Construction Approach}
-\label{sec:model_design}
+Typically in the UK, a women will have 12 appointments with a midwife during the antenatal period, and in the majority of cases will encounter several different midwives \citep{Redshaw2014} in the course of their care. In the UK, and unlike most healthcare scenarios, maternity notes are held by the patient, so midwives do not have extensive information prior to an appointment unless they have encountered the woman previously. Maternity notes are not generally linked to extra-departmental records, meaning that a history of alcohol related admissions to another service may remain unknown unless revealed by the woman.
 
-The appropriate game representative of the scenario of interest, which captures the desired strategic dynamics may not be immediately obvious. There will almost invariably be many possible alternatives, of which some are isomorphisms, and others fundamentally different conjectures about the data generating process. We suggest that an iterative process is beneficial, beginning from the simplest possible game, and progressively augmenting it.
+According to NICE guidance \citep{NICE2010a,NICE2010} the issue of substance misuse should be raised at the initial booking appointment, followed by subsequent action if a concern is raised is at the discretion of the midwife. This may take the form of specific guidance to reduce intake, or if deemed necessary a referral to a specialist midwife and relevant interdisciplinary team. On alcohol consumption, policy regarding how to determine the level of consumption is at the time of writing generally at the level of local health authority, hospital trust, or according to the best judgement of the individual midwife, with no guidance provided by NICE. This commonly takes the form of average units per week, but may include \ac{T-ACE}\footnote{The \ac{T-ACE} is a four question screening test for alcohol misuse intended specifically for use with pregnant women.} \citep{Sokol1989863} and similar measures. 
 
-Transitioning from the resulting game, to a set of decision problems is a relatively simple task. We treat the $n$ player game as $n$ one-player games \citep{RiosInsua2009}, where the moves of other players are drawn from a probability distribution - nature, in game theoretic parlance. As with the game, the decision problem representation admits a degree of variation, and may need to be adjusted to reflect the decision rules that will be used.
+Beyond the \enquote{booking} appointment, the onus is on women to raise concerns about their drinking behaviour, or the midwife to probe further if they feel it is warranted. In either case, once a concern has been raised the midwife must respond clinically, and inevitably personally, to the information.
 
-These decision problems may then form the basis of an agent model, where agents use learning, and decision rules to play out the game. Simulation can then support features which are not readily representable within an analytic framework, for example, populations of heterogeneous players, individual and social learning, or network effects. In addition, the ability to observe the system in a state of flux rather than at equilibrium is desirable, since even where a social system reaches a stable state, the process by which we arrive at it is significant. 
-
+In an ideal world, all interactions with healthcare providers would be immediately and fully disclosive, with no repercussions for the patient. However, alcohol misuse by women is known to attract stigma \citep{Gomberg1988}, and is a recognised barrier to appropriate treatment in the maternity context \citep{NICE2010,Radcliffe2011}.
 
 \subsection{Disclosure Game}
 \label{sub:the_game}
@@ -27,9 +22,92 @@ Midwives are treated in a similar fashion, where their type corresponds to how n
 
 At the end of a game, each player receives a payoff dependent on the actions and types of both players. Because both women and midwives have an interest in the outcome of the pregnancy, and would prefer a healthy baby, the payoff has a common interest component. Hence, both players receive a payoff based on the outcome of pregnancy, but women bear a social cost dependent on the signal they sent and the midwife's reaction to it. Similarly, midwives pay a cost if they refer to a specialist, mirroring the organisational cost of non-routine care. Table \ref{tab:Payoff-matrix} shows the three payoff matrices which together describe the game.
 
+\begin{table}
+\center
+\subfloat[Social cost, \(X_{s}\), for women, given their signal, and the midwife's type\label{tab:Social-cost-matrix}]{%
+\begin{tabular}{|c|c|c|c|c|}
+\cline{3-5} 
+\multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
+
+\hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{Midwife}} &  & Heavy & Moderate & Light\tabularnewline
+\cline{2-5} 
+ & Harsh & -2 & -1 & 0\tabularnewline
+\cline{2-5} 
+ & Moderate & -1 & 0 & 0\tabularnewline
+\cline{2-5} 
+ & Non & 0 & 0 & 0\tabularnewline
+\hline 
+\end{tabular}
+
+}
+
+\subfloat[Health outcome, \(X_{h}\), for women and midwives, given the midwife's action, and woman's type\label{tab:Referral-payoff-matrix}]{%
+\begin{tabular}{|c|c|c|c|c|}
+\cline{3-5} 
+\multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
+
+\hline 
+\multirow{3}{*}{\rotatebox[origin=c]{90}{Midwife}} &  & Heavy & Moderate & Light\tabularnewline
+\cline{2-5} 
+ & Refer & 10 & 10 & 10\tabularnewline
+\cline{2-5} 
+ & Don't refer & -2 & -1 & 10\tabularnewline
+\hline 
+\end{tabular}
+
+}
+
+\subfloat[Referral cost, \(X_{c}\), for midwife, given their action and the woman's type\label{tab:inst_cost_matrix}]{%
+\begin{tabular}{|c|c|c|c|c|}
+\cline{3-5}  
+\multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
+\hline 
+\multirow{3}{*}{\rotatebox[origin=c]{90}{Midwife}} &  & Heavy & Moderate & Light\tabularnewline
+\cline{2-5} 
+ & Refer & -9 & -9 & -9 \tabularnewline
+\cline{2-5} 
+ & Don't refer & 0 & 0 & 0\tabularnewline
+\hline 
+\end{tabular}
+
+}
+
+\caption{Payoff matrices\label{tab:Payoff-matrix}}
+\end{table}
+
+Taken together, this leads to a game tree that is relatively complex (figure \ref{fig:simple_tree} shows a simplified representation, with a detailed view of one branch in figure \ref{fig:zoom_tree}) even at the subgame level. 
 
 As an example, consider the challenge faced by an agent of the heavy drinking type. In order to get the best health outcome, they must be referred and would ideally achieve this without paying any social cost at all. The best move depends on the type, and beliefs of the midwife. For example, a particularly unlucky scenario might be for the midwife to not only be of a harshly judgemental disposition, but to believe that no women really need to be referred. Even a relatively weak belief in this possibility can make the honest signal look like an unwarranted risk.
 
+Rather than attempt to solve for equilibria, agents treat this two player game as taking place against nature, along the lines of adversarial risk analysis \citep{RiosInsua2009}. This effectively translates the game to a pair of decision problems (figure \ref{fig:decision_problems}), which agents attempt to resolve at each turn using a simple decision rule, given their prior beliefs and experience of play.
+
+\begin{figure}[H]
+\begin{adjustbox}{center}
+\includegraphics[width=119mm]{figures/rounded_clover_infosets}
+\end{adjustbox}
+\caption{Simplified game tree. Arrows correspond to two moves by nature, followed by women, and midwives respectively. Line weight distinguishes between information sets, and possible moves, corresponding to ascending player types. For midwives, referral is shown by a heavier arrow. Light terminal nodes indicate that the game may repeat from that point, and black nodes are exits}
+
+\label{fig:simple_tree}
+\end{figure}
+
+\begin{figure}[H]
+\begin{adjustbox}{center}
+\includegraphics[width=119mm]{figures/tree_zoom}
+\end{adjustbox}
+\caption{Detail view of a single game tree branch, showing the possible moves by each player, with information sets for midwives}
+
+\label{fig:zoom_tree}
+\end{figure}
+
+\begin{figure}[H]
+\begin{adjustbox}{center}\subfloat[Women (heavy drinkers)]{\includegraphics[width=119mm]{figures/women_influence}}\end{adjustbox}
+\vskip
+\begin{adjustbox}{center}\subfloat[Midwives]{\includegraphics[width=119mm]{figures/mw_influence}}\end{adjustbox}
+\caption{Influence diagrams, showing the game broken into two decision problems. Squares indicate a decision node, while circles are (from the perspective of the agent) chance nodes}
+
+\label{fig:decision_problems}
+\end{figure}
 
 %Might belong in a more methody bit? Read some stuff to check..
 To formally define the game, let \(N = \{m, w\}\) be the set of players each with a private type \(\theta_{i} \in \Theta\), and a set of types \(\Theta=\{l, m, h\}\), with pure strategies \(A_{m}=\{r,n\}, A_{w}=\{l, m, h\}\). Here, \(\{l, m, h\}\) correspond to light, moderate, and heavy alcohol consumption for women, and non-judgemental, moderately judgemental, and harshly judgemental for midwives. Midwives' pure strategies \(\{r,n\}\) are to refer, or do nothing, and those for women are to signal that they have one of the possible drinking patterns.
@@ -99,7 +177,8 @@ As an example, take a light drinker who has played three rounds with a successio
 The Bayesian payoff agent uses the same subset of information as the lexicographic method, but updates beliefs on the link between actions and payoffs using the Bayes rule, and attempts to choose the action which minimises risk.
 
 Given the discrete nature of actions and payoffs, coupled with a desire for tractability of the
-simulation, the Dirichlet distribution is employed as a prior to represent these beliefs. The probability density function takes the form -
+simulation, the Dirichlet distribution is employed as a prior to represent these beliefs. The probability
+density function takes the form -
 
 \begin{equation}
 D(\Theta|\alpha)=\frac{\Gamma(\sum_{i=1}^{k}\alpha_{i})}{\prod_{i=1}^{k}\Gamma(\alpha_{i})}\overset{k}{\underset{i=1}{\prod}\Theta_{i}^{\alpha_{i-1}}}
@@ -109,7 +188,7 @@ D(\Theta|\alpha)=\frac{\Gamma(\sum_{i=1}^{k}\alpha_{i})}{\prod_{i=1}^{k}\Gamma(\
 where \(\alpha=\{\alpha_{1}\ldots\alpha_{k}\}\), \(k\) is the number
 of signal-payoff pairs, \(\Theta=\{x_{1},\,\ldots,x_{k-\text{1}}\}\) all
 more than zero and summing to less than 1, and \(\alpha_{i}\) is the 
-pseudo-count of prior observations\footnote{Psuedo-counts are related to, but distinct from prior beliefs. Here, the psuedo-count is a parameter to the prior belief distribution.} for a pair \(i\). 
+pseudo-count of prior observations for a pair \(i\). 
 
 The distribution is particularly convenient, in that to infer the
 probability of a signal implying a payoff becomes
@@ -299,7 +378,7 @@ V(f^{+}) &= \sum_{i}^{n}\pi_{i}^{+}(f^{+})v_{i}^{+}(f^{+}) = 7.59
 And as before, following the same process for moderate, and heavy signals which yields respectively 7.14, and 6.22, the agent chooses the higher valued action and sends an honest signal.
 
 
-\subsection{Social Learning}
+\subsection{Information Sharing}
 \label{sub:info_sharing}
 
 It would seem unreasonable to suppose that neither party recounts their experiences to their peers, and to explore the impact of this we also modify the game to introduce a simple form of information sharing within agent groups. This takes the form of having each agent share their memories with their colleagues with some probability \(q\). Individuals then incorporate shared information into their beliefs using weighted updates, such that a shared observation of a low type signal contributes to their beliefs by \(w\), and \(0\leq w\leq 1\) (i.e. \(n_{j} = n_{j} + w\)).

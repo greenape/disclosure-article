@@ -1,0 +1,43 @@
+%!TEX root = disclosure_game.tex
+
+\section{Simulation Schedule}
+\label{app:sim_schedule}
+
+In this section we provide psuedocode for a single simulation, which encompasses several games.
+
+\begin{algorithm}
+\begin{algorithmic}
+\State $rounds \gets 1000, appointments \gets 12$
+\State women \gets enqueue([], $w_{1},\ldots,w_{1000}$), midwives \gets [$m_{1},\ldots,m_{100}$]
+\While{$rounds > 0$}
+	\State players $\gets$ dequeue first 100 women
+	\State referred $\gets$ []
+	\State $i $\gets$ 1$
+	\While{$i < 100$}
+		\State woman $\gets$ players[i], midwife $\gets$ midwives[i]
+		\State signal $\gets$ signal(woman)
+		\State response $\gets$ respond(midwife)
+		\State midwife's memory $\gets$ woman, signal, response
+		\State woman's memory $\gets$ type(midwife), signal, response, $X_{w, s, r, type(woman), type(midwife)}$
+		\State update woman's beliefs
+		\If{$response = refer$}
+			\State midwife's memory $\gets$ type(woman), $X_{m, s, r, type(woman)}$
+			\State retrospectively update midwife's beliefs
+			\State women $\gets$ enqueue(women, new woman)
+			\State Add woman to referred
+		\Else
+			women $\gets$ enqueue(women, woman)
+		\EndIf
+	\EndWhile
+	\For{woman in referred}
+		\If{$random \lt p$}
+			\For{player in women}
+
+			\EndFor
+		\EndIf
+	\EndFor
+\State $rounds \gets rounds - 1$
+\EndWhile
+\end{algorithmic}
+\caption{Simulation schedule\label{alg:sim}}
+\end{algorithm}

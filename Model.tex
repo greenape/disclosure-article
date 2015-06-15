@@ -4,7 +4,7 @@
 %Start this off with a brief description of our fictional scenario.
 % Whole section ~ 1.5K
 
-In this section we sketch\footnote{A complete example of this for the alcohol misuse in pregnancy model is given in appendix \ref{app:model_description}} the process of moving from a real world scenario to a minimal game which sufficiently captures reality, expressing the result as a decision problem representation, and finally translating this to a simulation model, and then outline four possible decision rules.
+In this section we sketch\footnote{A complete example of this for the alcohol misuse in pregnancy model is given in appendix \ref{app:model_description}, with simulation psuedocode in appendix \ref{app:sim_schedule}} the process of moving from a real world scenario to a minimal game which sufficiently captures reality, expressing the result as a decision problem representation, and finally translating this to a simulation model, and then outline four possible decision rules.
 
 \subsection{Model Construction Approach}
 \label{sec:model_design}
@@ -80,12 +80,12 @@ Midwives solve a slightly different problem with more information, where \(s_{w}
 
 \begin{algorithm}
 \begin{algorithmic}
-\State n=1, action=none
-\While{action is none}
-\State Calculate the nth most common outcome following each action.
-\State Sort actions by the value of the nth most common outcome.
-\If{clear winner} \State action = best \EndIf
-\State n = n + 1
+\State $n \gets 1, action \gets none$
+\While{$action = none$}
+\State Calculate the $n$th most common outcome following each action.
+\State Sort actions by the value of the $n$th most common outcome.
+\If{clear winner} \State $action \gets best$ \EndIf
+\State $n \gets n + 1$
 \EndWhile
 \State \Return action
 \end{algorithmic}
@@ -109,7 +109,7 @@ D(\Theta|\alpha)=\frac{\Gamma(\sum_{i=1}^{k}\alpha_{i})}{\prod_{i=1}^{k}\Gamma(\
 where \(\alpha=\{\alpha_{1}\ldots\alpha_{k}\}\), \(k\) is the number
 of signal-payoff pairs, \(\Theta=\{x_{1},\,\ldots,x_{k-\text{1}}\}\) all
 more than zero and summing to less than 1, and \(\alpha_{i}\) is the 
-pseudo-count of prior observations\footnote{Psuedo-counts are related to, but distinct from prior beliefs. Here, the psuedo-count is a parameter to the prior belief distribution.} for a pair \(i\). 
+pseudo-count of prior observations\footnote{Psuedo-counts are related to, but distinct from prior beliefs. Here, the psuedo-count is a parameter to the prior belief distribution and is nothing more than a hypothetical count of prior observations.} for a pair \(i\). 
 
 The distribution is particularly convenient, in that to infer the
 probability of a signal implying a payoff becomes

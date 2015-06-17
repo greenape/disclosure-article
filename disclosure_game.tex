@@ -48,7 +48,7 @@
 }{\relax}
 \usepackage{comment}
  \usepackage{natbib}
- \setcitestyle{authoryear,round,aysep={,}}
+ \setcitestyle{numbers,square}
 % \usepackage{hyperref}
  \usepackage{graphicx}
  \usepackage[subrefformat=parens,labelformat=simple,caption=false,labelfont={bf}]{subfig}
@@ -126,7 +126,7 @@
 %Assuming this is for JASSS.. Need to make background shorter.
 %Aim for ~ 7-8,000 words overall.
 
-\input{Abstract}
+\input{abstract_short}
 \acresetall
 
 \input{Introduction} %(half page)
@@ -144,10 +144,6 @@
 
 \bibliography{library,library_addendum}
 \bibliographystyle{spbasic}
-
-\appendix
-\setcounter{table}{0}
-\renewcommand{\thetable}{A\arabic{table}}
 \input{SensitivityAnalysis}
 \input{model_description}
 \input{simulation_schedule}

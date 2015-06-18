@@ -23,7 +23,7 @@
  \usepackage{algorithm}
  \usepackage{algpseudocode}
  \usepackage{ifthen}
- %\usepackage{csquotes}
+ \usepackage{csquotes}
  \usepackage{amsmath}
 \newboolean{enable-backrefs} % enable backrefs in the bibliography
 \setboolean{enable-backrefs}{true} % true false
@@ -134,7 +134,7 @@
 %\input{Background}
 
 \input{Model}
-
+\input{agent_models}
 
 \input{Methods}
 
@@ -146,6 +146,7 @@
 \bibliography{library,library_addendum}
 \bibliographystyle{spbasic}
 \input{SensitivityAnalysis}
-%\input{model_description}
+\input{model_description}
+\input{agent_examples}
 \input{simulation_schedule}
 \end{document}

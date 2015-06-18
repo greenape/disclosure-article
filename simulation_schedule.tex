@@ -10,32 +10,32 @@ In this section we give the step by step process for a single run of the disclos
 \item Generate 100 midwives.
 \item For each round of the game
 \begin{itemize}
-\item Take 100 women from the queue
-\item Pair each one with a random midwife
-\item For each pair
-\begin{itemize}
-\item Woman sends a signal
-\item Midwife refers or not based on the signal
-\item Woman is informed of their payoff, the midwife's type, and whether they are referred
-\item If the woman is referred
-\begin{itemize}
-\item The midwife is informed of the woman's true type
-\item The midwife retrospectively updates their beliefs using the true type, and memories of any games with this woman
-\item The midwife is now eligible to share their memories of games with this woman
-\end{itemize}
-\end{itemize}
-\item Women who have not been referred, or had their baby join the back of the queue
-\item Generate new women to replace those referred, or delivered
-\item Add new women to the back of the queue
-\item For each referred or birthed woman
-\begin{itemize}
-\item With probability p, their memory of games is shared with the active women
-\item They are removed from simulation
-\end{itemize}
-\item For each midwife with information to share
-\begin{itemize}
-\item With probability p, their memory of games with the referred woman is shared
-\item The memory is no longer eligible to be shared
-\end{itemize}
+	\item Take 100 women from the queue
+	\item Pair each one with a random midwife
+	\item For each pair
+	\begin{itemize}
+		\item Woman sends a signal
+		\item Midwife refers or not based on the signal
+		\item Woman is informed of their payoff, the midwife's type, and whether they are referred
+		\item If the woman is referred
+		\begin{itemize}
+			\item The midwife is informed of the woman's true type
+			\item The midwife retrospectively updates their beliefs using the true type, and memories of any games with this woman
+			\item The midwife is now eligible to share their memories of games with this woman
+		\end{itemize}
+	\end{itemize}
+	\item Women who have not been referred, or had their baby join the back of the queue
+	\item Generate new women to replace those referred, or delivered
+	\item Add new women to the back of the queue
+	\item For each referred or birthed woman
+	\begin{itemize}
+		\item With probability p, their memory of games is shared with the active women
+		\item They are removed from simulation
+	\end{itemize}
+	\item For each midwife with information to share
+	\begin{itemize}
+		\item With probability p, their memory of games with the referred woman is shared
+		\item The memory is no longer eligible to be shared
+	\end{itemize}
 \end{itemize}
 \end{itemize}

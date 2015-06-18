@@ -16,12 +16,12 @@ If we take our light drinker from the lexicographic case, and assume that they b
 The agent then evaluates \(R_{w}\) for each signal, e.g. for the light signal:
 
 \begin{equation*}
-\begin{align*}
+\begin{aligned}
 X &= \{10\}\\
 R_{w}(l) &= \sum_{x \in X} -xp(x | l) = -10p(10 | l)\\
 R_{w}(l) &= -10(\frac{\alpha_{l,10}+n_{l,10}}{\sum_{j}(\alpha_{j}+n_{j})}) = -10(\frac{1+2}{1+2})\\
 R_{w}(l) &= -10(\frac{3}{3}) = -10
-\end{align*}
+\end{aligned}
 \end{equation*}
 
 and by the same method, \(R_{w}(m)=-9\frac{1}{3}\), and \(R_{w}(h)=-9\), concluding that signalling honestly is the best move.
@@ -32,7 +32,7 @@ and by the same method, \(R_{w}(m)=-9\frac{1}{3}\), and \(R_{w}(h)=-9\), conclud
 Returning to our example agent, under this model the type of the midwife becomes salient, hence \(n_{h}=3\), and \(n_{l,n}=2\), \(n_{m,n}=1\). Their prior beliefs remain uninformative, i.e. \(\alpha_{j} = 1, j \in \{l,m,h\}\), \(\alpha_{i,j}=1,i \in \{r,n\}, j \in \{l,m,h\}\). As before, the agent evaluates \(R_{w}\) for the three signals, and the process for the light signal is given below -
 
 \begin{equation*}
-\begin{align*}
+\begin{aligned}
 R_{w}(l, l) &= \sum_{i\in A_{m}}\sum_{j\in \Theta} -u_{w}(l, i, l, j)p(j)p(i | l)\\
 R_{w}(l, l) &= -u_{w}(l, r, l, l)p(l)p(r | l) - u_{w}(l, n, l, l)p(l)p(n | l) - u_{w}(l, r, l, m)p(m)p(r | l) - u_{w}(l, n, l, m)p(m)p(n | l) \\
 &\phantom{{}=1}- u_{w}(l, r, l, h)p(h)p(r | l) - u_{w}(l, n, l, h)p(h)p(n | l)\\
@@ -45,7 +45,7 @@ p(r | l) &= \frac{1 + 0}{1 + 1 + 2} = \frac{1}{4}\\
 p(n | l) &= \frac{1 + 2}{1 + 1 + 2} = \frac{3}{4}\\
 R_{w}(l, l) &= -10\cdot \frac{1}{6} \cdot \frac{1}{4} - 10\cdot \frac{1}{6} \cdot \frac{3}{4} - 10\cdot \frac{1}{6} \cdot \frac{1}{4} - 10\cdot \frac{1}{6} \cdot \frac{3}{4} - 10\cdot \frac{2}{3} \cdot \frac{1}{4} - 10\cdot \frac{2}{3} \cdot \frac{3}{4}\\
 &= -10
-\end{align*}
+\end{aligned}
 \end{equation*}
 
 and similarly for moderate (\(R_{w}(m,l)=-9\frac{1}{3}\)), and heavy (\(R_{w}(h,l)=-8\frac{1}{2}\)) signals, once again concluding that honesty is the better option.
@@ -65,11 +65,11 @@ Name & Description & Value \\ \hline
 \(\beta\) & Power for losses & 0.88 \\ \hline
 \(\lambda\) & Loss aversion &  2.25 \\ \hline
 \end{tabular}
-\caption[Table caption text]{Model parameters. \label{tab:cpt_params}}
+\caption[Table caption text]{\ac{CPT} parameters. \label{tab:cpt_params}}
 \end{table}
 
 \begin{equation*}
-\begin{align*}
+\begin{aligned}
 \alpha &= 0.88\\
 \gamma &= 0.61\\
 p(l) &= \frac{1}{6}\\
@@ -97,7 +97,7 @@ v(u_{w}) &= 10^{0.88} = 7.59\\
 &= 0.42\\
 V(f) &= V(f^{+}) + V(f^{-}) = V(f^{+}) + 0\\
 V(f^{+}) &= \sum_{i}^{n}\pi_{i}^{+}(f^{+})v_{i}^{+}(f^{+}) = 7.59
-\end{align*}
+\end{aligned}
 \end{equation*}
 
 

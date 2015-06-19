@@ -25,27 +25,7 @@
  \usepackage{ifthen}
  \usepackage{csquotes}
  \usepackage{amsmath}
-\newboolean{enable-backrefs} % enable backrefs in the bibliography
-\setboolean{enable-backrefs}{true} % true false
-\newcommand{\backrefnotcitedstring}{\relax}%(Not cited.)
-\newcommand{\backrefcitedsinglestring}[1]{(Cited on page~#1.)}
-\newcommand{\backrefcitedmultistring}[1]{(Cited on pages~#1.)}
-\ifthenelse{\boolean{enable-backrefs}}%
-{%
-		\PassOptionsToPackage{hyperpageref}{backref}
-		\usepackage{backref} % to be loaded after hyperref package
-		   \renewcommand{\backreftwosep}{ and~} % separate 2 pages
-		   \renewcommand{\backreflastsep}{, and~} % separate last of longer list
-		   \renewcommand*{\backref}[1]{}  % disable standard
-		   \renewcommand*{\backrefalt}[4]{% detailed backref
-		      \ifcase #1 %
-		         \backrefnotcitedstring%
-		      \or%
-		         \backrefcitedsinglestring{#2}%
-		      \else%
-		         \backrefcitedmultistring{#2}%
-		      \fi}%
-}{\relax}
+
 \usepackage{comment}
  \usepackage{natbib}
  \setcitestyle{numbers,square}
@@ -55,7 +35,6 @@
  \usepackage[nolist,smaller]{acronym}
  \usepackage{sidecap}
 % \usepackage{nomencl}
-
 \makeindex
 
 \begin{document}
@@ -147,6 +126,6 @@
 \bibliographystyle{spbasic}
 \input{SensitivityAnalysis}
 \input{model_description}
-\input{agent_examples}
 \input{simulation_schedule}
+\input{agent_examples}
 \end{document}

@@ -23,59 +23,7 @@ Midwives are treated in a similar fashion, where their type corresponds to how n
 
 At the end of a game, each player receives a payoff dependent on the actions and types of both players. Because both women and midwives have an interest in the outcome of the pregnancy, and would prefer a healthy baby, the payoff has a common interest component. Hence, both players receive a payoff based on the outcome of pregnancy, but women bear a social cost dependent on the signal they sent and the midwife's reaction to it. Similarly, midwives pay a cost if they refer to a specialist, mirroring the organisational cost of non-routine care. Table \ref{tab:Payoff-matrix} shows the three payoff matrices which together describe the game.
 
-\begin{table}
-\center
-\subfloat[Social cost, \(X_{s}\), for women, given their signal, and the midwife's type\label{tab:Social-cost-matrix}]{%
-\begin{tabular}{|c|c|c|c|c|}
-\cline{3-5} 
-\multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
 
-\hline
-\multirow{4}{*}{\rotatebox[origin=c]{90}{Midwife}} &  & Heavy & Moderate & Light\tabularnewline
-\cline{2-5} 
- & Harsh & -2 & -1 & 0\tabularnewline
-\cline{2-5} 
- & Moderate & -1 & 0 & 0\tabularnewline
-\cline{2-5} 
- & Non & 0 & 0 & 0\tabularnewline
-\hline 
-\end{tabular}
-
-}
-
-\subfloat[Health outcome, \(X_{h}\), for women and midwives, given the midwife's action, and woman's type\label{tab:Referral-payoff-matrix}]{%
-\begin{tabular}{|c|c|c|c|c|}
-\cline{3-5} 
-\multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
-
-\hline 
-\multirow{3}{*}{\rotatebox[origin=c]{90}{Midwife}} &  & Heavy & Moderate & Light\tabularnewline
-\cline{2-5} 
- & Refer & 10 & 10 & 10\tabularnewline
-\cline{2-5} 
- & Don't refer & -2 & -1 & 10\tabularnewline
-\hline 
-\end{tabular}
-
-}
-
-\subfloat[Referral cost, \(X_{c}\), for midwife, given their action and the woman's type\label{tab:inst_cost_matrix}]{%
-\begin{tabular}{|c|c|c|c|c|}
-\cline{3-5}  
-\multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
-\hline 
-\multirow{3}{*}{\rotatebox[origin=c]{90}{Midwife}} &  & Heavy & Moderate & Light\tabularnewline
-\cline{2-5} 
- & Refer & -9 & -9 & -9 \tabularnewline
-\cline{2-5} 
- & Don't refer & 0 & 0 & 0\tabularnewline
-\hline 
-\end{tabular}
-
-}
-
-\caption{Payoff matrices\label{tab:Payoff-matrix}}
-\end{table}
 
 Taken together, this leads to a game tree that is relatively complex (figure \ref{fig:simple_tree} shows a simplified representation, with a detailed view of one branch in figure \ref{fig:zoom_tree}) even at the subgame level. 
 

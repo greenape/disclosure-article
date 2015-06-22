@@ -27,6 +27,59 @@ Midwives are treated in a similar fashion, where their type corresponds to how n
 
 At the end of a game, each player receives a payoff dependent on the actions and types of both players. Because both women and midwives have an interest in the outcome of the pregnancy, and would prefer a healthy baby, the payoff has a common interest component. Hence, both players receive a payoff based on the outcome of pregnancy, but women bear a social cost dependent on the signal they sent and the midwife's reaction to it. Similarly, midwives pay a cost if they refer to a specialist, mirroring the organisational cost of non-routine care. Table \ref{tab:Payoff-matrix} shows the three payoff matrices which together describe the game.
 
+\begin{table}
+\center
+\subfloat[Social cost, \(X_{s}\), for women, given their signal, and the midwife's type\label{tab:Social-cost-matrix}]{%
+\begin{tabular}{|c|c|c|c|c|}
+\cline{3-5} 
+\multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
+
+\hline
+\multirow{4}{*}{\rotatebox[origin=c]{90}{Midwife}} &  & Heavy & Moderate & Light\tabularnewline
+\cline{2-5} 
+ & Harsh & -2 & -1 & 0\tabularnewline
+\cline{2-5} 
+ & Moderate & -1 & 0 & 0\tabularnewline
+\cline{2-5} 
+ & Non & 0 & 0 & 0\tabularnewline
+\hline 
+\end{tabular}
+
+}
+
+\subfloat[Health outcome, \(X_{h}\), for women and midwives, given the midwife's action, and woman's type\label{tab:Referral-payoff-matrix}]{%
+\begin{tabular}{|c|c|c|c|c|}
+\cline{3-5} 
+\multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
+
+\hline 
+\multirow{3}{*}{\rotatebox[origin=c]{90}{Midwife}} &  & Heavy & Moderate & Light\tabularnewline
+\cline{2-5} 
+ & Refer & 10 & 10 & 10\tabularnewline
+\cline{2-5} 
+ & Don't refer & -2 & -1 & 10\tabularnewline
+\hline 
+\end{tabular}
+
+}
+
+\subfloat[Referral cost, \(X_{c}\), for midwife, given their action and the woman's type\label{tab:inst_cost_matrix}]{%
+\begin{tabular}{|c|c|c|c|c|}
+\cline{3-5}  
+\multicolumn{2}{c}{} & \multicolumn{3}{|c|}{Woman}\tabularnewline
+\hline 
+\multirow{3}{*}{\rotatebox[origin=c]{90}{Midwife}} &  & Heavy & Moderate & Light\tabularnewline
+\cline{2-5} 
+ & Refer & -9 & -9 & -9 \tabularnewline
+\cline{2-5} 
+ & Don't refer & 0 & 0 & 0\tabularnewline
+\hline 
+\end{tabular}
+
+}
+
+\caption{Payoff matrices\label{tab:Payoff-matrix}}
+\end{table}
 
 As an example, consider the challenge faced by an agent of the heavy drinking type. In order to get the best health outcome, they must be referred and would ideally achieve this without paying any social cost at all. The best move depends on the type, and beliefs of the midwife. For example, a particularly unlucky scenario might be for the midwife to not only be of a harshly judgemental disposition, but to believe that no women really need to be referred. Even a relatively weak belief in this possibility can make the honest signal look like an unwarranted risk.
 
@@ -51,7 +104,7 @@ Unlike women, midwives are only informed of their payoff if they choose to make 
 \subsection{Social Learning}
 \label{sub:info_sharing}
 
-It would seem unreasonable to suppose that neither party recounts their experiences to their peers, and to explore the impact of this we also modify the game to introduce a simple form of information sharing within agent groups. This takes the form of having each agent share their memories with their colleagues with some probability \(q\). Individuals then incorporate shared information into their beliefs using weighted updates, such that a shared observation of a low type signal contributes to their beliefs by \(w\), and \(0\leq w\leq 1\) (i.e. \(n_{j} = n_{j} + w\)).
+In reality, learning is not exclusively from personal experience, and social learning plays an important role. In the disclosure game model, this takes the form of having each agent recount their play history to their colleagues with some probability \(q\). Individuals then incorporate shared information into their beliefs using weighted updates, such that a shared observation of a low type signal contributes to their beliefs by \(w\), and \(0\leq w\leq 1\) (i.e. \(n_{j} = n_{j} + w\)).
 Women share only when they have finished play, and provide their complete history of games, because they have accurate information about the outcomes. By the same rationale, midwives share only their history with the most recent woman they referred. Sharing occurs simultaneously for all players at the end of each round, and all memories are either shared immediately or discarded.\footnote{More precisely, memories of games remain, but it is assumed that only the most current information is relevant enough to be shared.}
 
 Because of their differing problem representations, the simple payoff reasoners and their more complex counterparts incorporate this exogenous information differently. The simple payoff based rule relies on a belief structure relating actions directly to rewards which is essentially model free. Because payoffs differ by the agent's private type, the information shared may not correspond to the experience of the listening agent in the same scenario. As a result, payoff reasoners have a belief bias towards the most common player type, and can believe in outcomes that are, for them, impossible.

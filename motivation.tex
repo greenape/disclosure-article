@@ -1,0 +1,8 @@
+\section{Methods and Motivation}
+\label{sec:model_design}
+
+The appropriate game representative of the scenario of interest, which captures the desired strategic dynamics may not be immediately obvious. There will almost invariably be many possible alternatives, of which some are isomorphisms, and others fundamentally different conjectures about the data generating process. We suggest that an iterative process is beneficial, beginning from the simplest possible game, and progressively augmenting it.
+
+Transitioning from the resulting game, to a set of decision problems is a relatively simple task. We treat the $n$ player game as $n$ one-player games \citep{RiosInsua2009}, where the moves of other players are drawn from a probability distribution - nature, in game theoretic parlance. As with the game, the decision problem representation admits a degree of variation, and may need to be adjusted to reflect the decision rules that will be used.
+
+These decision problems may then form the basis of an agent model, where agents use learning, and decision rules to play out the game. Simulation can then support features which are not readily representable within an analytic framework, for example, populations of heterogeneous players, individual and social learning, or network effects. In addition, the ability to observe the system in a state of flux rather than at equilibrium is desirable, since even where a social system reaches a stable state, the process by which we arrive at it is significant. 

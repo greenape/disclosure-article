@@ -1,16 +1,6 @@
 %!TEX root = disclosure_game.tex
 \section{Introduction}
 \label{sec:intro}
-%CONTRIBUTION, FUCKER!
-%Also, remember to say what you're going to do for the rest of the article?
-%CONTRIBUTION
-%	Agents are awesome
-%	Decision theory is super awesome
-%	'nice story to hang it on'
-% 	mention the importance of behaviour change
-% tool for thinking
-% theoretical vacuum at the middle
-% under what scenarios does an as if explanation break down
 
 The case in favour of \ac{ABM} as a general analytical approach has been made numerously, and elegantly (e.g. \cite{epstein1994growing,Resnick,Axelrod1997,gilbert1999simulation,Macy2002a,Silverman2011,Silverman2013,epstein2014agent_zero}, amongst others). As such we will not belabour the point, and instead turn to addressing some of the concerns expressed about the approach. In this instance we focus on the perception of \ac{ABM} as ad hoc in nature, reflecting the assumptions of the modeller rather than empirically or theoretically grounded \citep{Waldherr2013}. To ameliorate this concern, we draw on decision theory to produce simple rule based, learning, decision making agents and show that they are able to play a form of signalling game\footnote{In a signalling game, one player (the signaller), has some piece of information that is known only to them which affects the outcome of the game for both players. The signaller has a choice as to what they tell the other player about this hidden information, and the responding player as to what they believe the information to be.} \citep{Kreps1987} with a basic form of intragroup social learning. Four decision models of varying complexity, and behavioural plausibility are contrasted, by way of demonstrating the significance of the operationalisation of decision making in \ac{ABM}.
 
@@ -20,7 +10,6 @@ Turning more specifically to disclosure of alcohol use by women during their pre
 
 The resulting scenario is of substantial independent interest, and shows the potential utility of a simulation approach in arenas where randomized control trials are not viable for ethical, or financial reasons. With this said, the lack of a strong quantitative evidence base against which to validate the behaviour of the model augers for caution in interpreting the results, and a necessary reminder that in this instance the model is primarily a tool for formalisation of the thought process \citep{epstein2008}, rather than a machine for predicting.
 
-%two fold appeal. cognitive plausibility - neuroec. inaccessible systems (litigation, concealment). fast. cheap. portable. theoretical grounding. rigor.
 
 A game theoretic approach to generating an abstract form of the problem gives a convenient, and well known framework to reason about the processes involved in the scenario. While scenarios may map to a number of games, exploring one candidate game still allows for a principled comparison between interpretations, and enforces explicit assumptions. Relating this to decision theory shifts the emphasis away from analytical equilibrium-seeking, and heightens the importance of behaviour change. This is clearly desirable where the focus is on the behavioural processes driving a system in motion, and how they change in response to that movement.
 Fundamentally, the shift of emphasis is from the process of acquiring and inferring the information needed to make choices, to the process of decision.
@@ -30,6 +19,5 @@ While there is no universal theory of human behaviour to sit at the centre of \a
 
 Given these features, the application of decision, and game theory to \ac{ABM} is an attractive approach to computational social science, where the locus of interest is decision making. Taking a balance between models focused on replication of low level neurological mechanics, and those with a higher level emphasis where individual behaviours are abstracted away yields a computationally tractable approach. Despite the relative simplicity, it nonetheless captures some of the nuance and sophistication of human decisions.
 
-%Finishing up
 
 The remainder of this paper proceeds to outline the proposed approach to model development (section \ref{sec:model}), and experiments (section \ref{sec:method}), with selected results (section \ref{sec:results}), followed by a discussion contrasting the decision models (section \ref{sec:discussion}), and conclusions (section \ref{sec:conclusion}).

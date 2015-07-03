@@ -1,25 +1,35 @@
 %!TEX root = disclosure_game.tex
 \section{Disclosure Game Model}
 \label{sec:model}
-%Start this off with a brief description of our fictional scenario.
-% Whole section ~ 1.5K
 
-In this section we sketch\footnote{A complete example of this for the alcohol misuse in pregnancy model is given in appendix \ref{app:model_description}, with a schedule of simulation provided in appendix \ref{app:sim_schedule}} the process of moving from a real world scenario to a minimal game which sufficiently captures reality, expressing the result as a decision problem representation, and finally translating this to a simulation model, and then outline four possible decision rules.
+In this section we sketch\footnote{A complete example of this for the alcohol misuse in pregnancy model is given in appendix \ref{app:model_description}, with a schedule of simulation provided in appendix \ref{app:sim_schedule}} the process of moving from a real world scenario to a minimal game which sufficiently captures reality, expressing the result as a decision problem representation, and translating this to a simulation model. We then outline four possible decision rules, and as an example of additional flexibility of process models and simulation in contrast to purely predictive or analytical approaches, extend the model to allow a simple form of social learning.
 
-\subsection{Model Construction Approach}
+
+\subsection{Modelling Approach}
 \label{sec:model_design}
 
-The appropriate game representative of the scenario of interest, which captures the desired strategic dynamics may not be immediately obvious. There will almost invariably be many possible alternatives, of which some are isomorphisms, and others fundamentally different conjectures about the data generating process. We suggest that an iterative process is beneficial, beginning from the simplest possible game, and progressively augmenting it.
+To model a scenario, we take the approach of first creating a formal game to represent it, capturing the key features as far as possible in the structure of that game. This game is in essence a conjecture about the real data generating process, which can be played out it in simulation.
+
+The appropriate game representative of the scenario of interest, which captures the desired strategic dynamics may not be immediately obvious. We suggest that an iterative process is beneficial, beginning from the simplest possible game, and progressively augmenting it.
 
 Transitioning from the resulting game, to a set of decision problems is a relatively simple task. We treat the $n$ player game as $n$ one-player games \citep{RiosInsua2009}, where the moves of other players are drawn from a probability distribution - nature, in game theoretic parlance. As with the game, the decision problem representation admits a degree of variation, and may need to be adjusted to reflect the decision rules that will be used.
 
 These decision problems may then form the basis of an agent model, where agents use learning, and decision rules to play out the game. Simulation can then support features which are not readily representable within an analytic framework, for example, populations of heterogeneous players, individual and social learning, or network effects. In addition, the ability to observe the system in a state of flux rather than at equilibrium is desirable, since even where a social system reaches a stable state, the process by which we arrive at it is significant. 
 
+\subsection{Scenario}
+\label{sec:scenario}
+
+Typically in the UK, a women will have 12 appointments with a midwife during the antenatal period, and in the majority of cases will encounter several different midwives \citep{Redshaw2014} in the course of their care. In the UK, and unlike most healthcare scenarios, maternity notes are held by the patient, so midwives do not have extensive information prior to an appointment unless they have encountered the woman previously. Maternity notes are not generally linked to extra-departmental records, meaning that a history of alcohol related admissions to another service may remain unknown unless revealed by the woman.
+
+According to NICE guidance \citep{NICE2010a,NICE2010} the issue of substance misuse should be raised at the initial booking appointment, followed by subsequent action if a concern is raised is at the discretion of the midwife. This may take the form of specific guidance to reduce intake, or if deemed necessary a referral to a specialist midwife and relevant interdisciplinary team. On alcohol consumption, policy regarding how to determine the level of consumption is at the time of writing generally at the level of local health authority, hospital trust, or according to the best judgement of the individual midwife, with no guidance provided by NICE. This commonly takes the form of average units per week, but may include \ac{T-ACE}\footnote{The \ac{T-ACE} is a four question screening test for alcohol misuse intended specifically for use with pregnant women.} \citep{Sokol1989863} and similar measures. 
+
+Beyond the \enquote{booking} appointment, the onus is on women to raise concerns about their drinking behaviour, or the midwife to probe further if they feel it is warranted. In either case, once a concern has been raised the midwife must respond clinically, and inevitably personally, to the information.
+
+In an ideal world, all interactions with healthcare providers would be immediately and fully disclosive, with no repercussions for the patient. However, alcohol misuse by women is known to attract stigma \citep{Gomberg1988}, and is a recognised barrier to appropriate treatment in the maternity context \citep{NICE2010,Radcliffe2011}.
+
 
 \subsection{Disclosure Game}
 \label{sub:the_game}
-%Outline how the scenario translates into a game.
-%Brief mention of the game theoretic solution
 
 In order to translate the scenario sketched above into a more abstract, tractable form, we cast it as a signalling game, and assume that women's disclosures (or not), are signals. We also make the simplifying assumption that a woman may have one of only three drinking patterns - light\footnote{Or abstinent, the extent of alcohol consumption being such that it would generally be felt to pose essentially no risk.}, moderate, or heavy. Correspondingly, they are limited in what signals they may send when claiming to be one of these three types. 
 

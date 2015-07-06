@@ -8,8 +8,8 @@ This section provides complete variance based sensitivity analysis results for t
 \subsection{Median Moderate Drinker Signalling}
 
 \begin{table}[H]
-\center
-\begin{tabular} {|l | l | l | l | l | l |}
+\caption{Median moderate drinker signalling parameter sensitivity \label{tab:sa_results_sig}}
+\begin{tabular} {jjjjjj}
 \hline
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} \\ \hline
 \(p_{w}(m)\) & Proportion of moderate drinkers & 0.367 & 1.145 & 0.801 & 0.614 \\ \hline
@@ -24,12 +24,11 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} 
 \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty & 0.140 & 7.537 & 10.427 & 7.795 \\ \hline
 Total & All parameters and two way interactions & 86.777 & 96.527 & 85.529 & 74.123 \\ \hline
 \end{tabular}
-\caption{Median moderate drinker signalling parameter sensitivity \label{tab:sa_results_sig}}
 \end{table}
 
 \begin{table}[H]
-\center
-\begin{tabular} {|l | l | l | l | l | l | l |}
+\caption{Median moderate drinker signalling emulator statistics \label{tab:sa_emulator_sig}}
+\begin{tabular} {jjjjjjj}
 \hline
 Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\ \hline
 Lexicographic & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\ \hline
@@ -37,7 +36,6 @@ Bayesian Payoff & 1.667 & 0.475 &  0.662 & 0.003 & 0.181 & 3.12 \\ \hline
 Bayesian & 3.352 & 0.534 & 1.160 & 0.001 & 0.068 & 2.423 \\ \hline
 \ac{CPT} & 1.503 & 0.331 & 1.241 & 0.002 & 0.101 & 1.842 \\ \hline
 \end{tabular}
-\caption{Median moderate drinker signalling emulator statistics \label{tab:sa_emulator_sig}}
 \end{table}
 
 \input{top_5_table_sig}
@@ -45,8 +43,8 @@ Bayesian & 3.352 & 0.534 & 1.160 & 0.001 & 0.068 & 2.423 \\ \hline
 \subsection{Median Between Groups IQR}
 
 \begin{table}[H]
-\center
-\begin{tabular} {|l | l | l | l | l | l |}
+\caption{Median between groups IQR parameter sensitivity \label{tab:sa_results_iqr}}
+\begin{tabular} {jjjjjj}
 \hline
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} \\ \hline
 \(p_{w}(m)\) & Proportion of moderate drinkers & 0.327 & 0.688 & 0.457 & 0.586 \\ \hline
@@ -61,12 +59,11 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} 
 \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty & 1.107 & 8.411 & 2.890 & 6.729 \\ \hline
 Total & All parameters and two way interactions & 81.702 & 83.693 & 47.449 & 71.032 \\ \hline
 \end{tabular}
-\caption{Median between groups IQR parameter sensitivity \label{tab:sa_results_iqr}}
 \end{table}
 
 \begin{table}[H]
-\center
-\begin{tabular} {|l | l | l | l | l | l | l |}
+\caption{Median between groups IQR emulator statistics \label{tab:sa_emulator_iqr}}
+\begin{tabular} {jjjjjjj}
 \hline
 Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\ \hline
 Lexicographic & 0.930 & 0.240 & 0.249 & 0.002 & 0.040 & 1.832 \\ \hline
@@ -74,7 +71,6 @@ Bayesian Payoff & 1.242 & 0.417 & 0.232 & 0.001 & 0.0034 & 2.308 \\ \hline
 Bayesian & 1.254 & 0.131 & 0.644 & 0.000 & 0.019 & 1.167 \\ \hline
 \ac{CPT} & 1.190 & 0.313 & 0.659 & 0.000 & 0.024 & 1.701 \\ \hline
 \end{tabular}
-\caption{Median between groups IQR emulator statistics \label{tab:sa_emulator_iqr}}
 \end{table}
 
 \input{top_5_table_group_iqr}
@@ -82,8 +78,8 @@ Bayesian & 1.254 & 0.131 & 0.644 & 0.000 & 0.019 & 1.167 \\ \hline
 \subsection{Median Moderate Drinker Signalling IQR}
 
 \begin{table}[H]
-\center
-\begin{tabular} {|l | l | l | l | l | l |}
+\caption{IQR of median moderate drinker signalling parameter sensitivity \label{tab:sa_results_sig_iqr}}
+\begin{tabular} {jjjjjj}
 \hline
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} \\ \hline
 \(p_{w}(m)\) & Proportion of moderate drinkers & 0.428 & 9.828 & 3.816 & 2.068 \\ \hline
@@ -98,12 +94,11 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} 
 \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty & 0.504 & 3.096 & 19.863 & 25.999 \\ \hline
 Total & All parameters and two way interactions & 84.9968 & 77.413 & 57.125 & 83.322 \\ \hline
 \end{tabular}
-\caption{IQR of median moderate drinker signalling parameter sensitivity \label{tab:sa_results_sig_iqr}}
 \end{table}
 
 \begin{table}[H]
-\center
-\begin{tabular} {|l | l | l | l | l | l | l |}
+\caption{IQR of median between groups IQR emulator statistics \label{tab:sa_emulator_sig_iqr}}
+\begin{tabular} {jjjjjjj}
 \hline
 Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\ \hline
 Lexicographic & 1.425 & 0.436 & 0.549 & 0.008 & 0.114 & 2.719 \\ \hline
@@ -111,7 +106,6 @@ Bayesian Payoff & 1.223 & 0.496 & 0.747 & 0.012 & 0.207 & 2.034 \\ \hline
 Bayesian &  1.065 & 0.000 & 0.230 & 0.002 & 0.088 & 1.015 \\ \hline
 \ac{CPT} & 0.874 & 0.213 & 0.233 & 0.001 & 0.066 & 1.806 \\ \hline
 \end{tabular}
-\caption{IQR of median between groups IQR emulator statistics \label{tab:sa_emulator_sig_iqr}}
 \end{table}
 
 \input{top_5_table_sig_iqr}
@@ -119,8 +113,8 @@ Bayesian &  1.065 & 0.000 & 0.230 & 0.002 & 0.088 & 1.015 \\ \hline
 \subsection{Between Groups IQR IQR}
 
 \begin{table}[H]
-\center
-\begin{tabular} {|l | l | l | l | l | l |}
+\caption{IQR of median between groups IQR parameter sensitivity \label{tab:sa_results_iqr_iqr}}
+\begin{tabular} {jjjjjj}
 \hline
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} \\ \hline
 \(p_{w}(m)\) & Proportion of moderate drinkers & 0.691 & 5.926 & 1.053 & 1.265 \\ \hline
@@ -135,12 +129,11 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} 
 \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty & 0.673 & 10.411 & 22.901 & 26.340 \\ \hline
 Total & All parameters and two way interactions & 85.740 & 88.611 & 68.640 & 84.210 \\ \hline
 \end{tabular}
-\caption{IQR of median between groups IQR parameter sensitivity \label{tab:sa_results_iqr_iqr}}
 \end{table}
 
 \begin{table}[H]
-\center
-\begin{tabular} {|l | l | l | l | l | l | l |}
+\caption{IQR of median between groups IQR emulator statistics \label{tab:sa_emulator_iqr_iqr}}
+\begin{tabular} {jjjjjjj}
 \hline
 Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\ \hline
 Lexicographic & 0.826 & 0.409 & 0.259 & 0.002 & 0.034 & 2.364 \\ \hline
@@ -148,7 +141,6 @@ Bayesian Payoff & 3.202 & 0.520 & 0.328 & 0.002 & 0.032 & 2.452 \\ \hline
 Bayesian & 1.177 & 0.041 & 0.133 & 0.000 & 0.018 & 1.152 \\ \hline
 \ac{CPT} & 0.874 & 0.118 & 0.126 & 0.000 & 0.017 & 1.570 \\ \hline
 \end{tabular}
-\caption{IQR of median between groups IQR emulator statistics \label{tab:sa_emulator_iqr_iqr}}
 \end{table}
 
 \input{top_5_table_group_iqr_iqr}

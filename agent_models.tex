@@ -9,7 +9,7 @@
 %		properly explain dirichlet priors
 % How about comparing the decision problem representation for the agent types?
 
-While in principle a wide variety of agent models are possible, given that decision rules operate on essentially the same information, and produce the same outputs, we limit ourselves here to four. The simplest is a lexicographic rule (1), in the spirit of a \ac{FFH} \citep{Gigerenzer2004} which uses only information about payoffs given actions; this is followed by a Bayesian risk minimisation rule (2) using the same information; a second Bayesian risk rule (3) which uses information about the underlying lottery; and a two-stage \ac{CPT} \citep{Hau2008} agent (4) which is identical to 3, but uses the \ac{CPT} decision rule from \cite{Tversky1992}. Hence, each successive decision model adds a layer of sophistication to the problem representation while retaining the same input-output characteristics.
+While in principle a wide variety of agent models are possible, given that decision rules operate on essentially the same information, and produce the same outputs, we limit ourselves here to four. The simplest is a lexicographic rule (1), in the spirit of a \acl{FFH} \citep{Gigerenzer2004} which uses only information about payoffs given actions; this is followed by a Bayesian risk minimisation rule (2) using the same information; a second Bayesian risk rule (3) which uses information about the underlying lottery; and a two-stage \ac{CPT} \citep{Hau2008} agent (4) which is identical to 3, but uses the \ac{CPT} decision rule from \cite{Tversky1992}. Hence, each successive decision model adds a layer of sophistication to the problem representation while retaining the same input-output characteristics.
 
 Agents have perfect recall, midwives recognise women if they repeatedly encounter them, making use of new information for retrospective updates. However, all four agent models make decisions `as-if' they were always facing a new \enquote{opponent}.
 
@@ -46,20 +46,9 @@ Midwives solve a slightly different problem with more information, where \(s_{w}
 The Bayesian payoff agent uses the same subset of information as the lexicographic method, but updates beliefs on the link between actions and payoffs using the Bayes rule, and attempts to choose the action which minimises risk.
 
 Given the discrete nature of actions and payoffs, coupled with a desire for tractability of the
-simulation, the Dirichlet distribution is employed as a prior to represent these beliefs. The probability density function takes the form -
-
-\begin{equation}
-D(\Theta|\alpha)=\frac{\Gamma(\sum_{i=1}^{k}\alpha_{i})}{\prod_{i=1}^{k}\Gamma(\alpha_{i})}\overset{k}{\underset{i=1}{\prod}\Theta_{i}^{\alpha_{i-1}}}
-\end{equation}
-
-
-where \(\alpha=\{\alpha_{1}\ldots\alpha_{k}\}\), \(k\) is the number
-of signal-payoff pairs, \(\Theta=\{x_{1},\,\ldots,x_{k-\text{1}}\}\) all
-more than zero and summing to less than 1, and \(\alpha_{i}\) is the 
-pseudo-count of prior observations\footnote{Psuedo-counts are related to, but distinct from prior beliefs. Here, the psuedo-count is a parameter to the prior belief distribution and is nothing more than a hypothetical count of prior observations.} for a pair \(i\). 
-
+simulation, the Dirichlet distribution is employed as a prior to represent these beliefs. 
 The distribution is particularly convenient, in that to infer the
-probability of a signal implying a payoff becomes
+probability of a signal implying a payoff is
 simply -
 
 \begin{equation}
@@ -67,8 +56,8 @@ p(x=j|D,\alpha)=\frac{\alpha_{j}+n_{j}}{\sum_{j}(\alpha_{j}+n_{j})}\label{eq:pos
 \end{equation}
 
 
-Where \(n_{j}\) is simply the count of occurrences of signal-payoff pair \(j\), so
-that the belief that a signal will lead to a payoff is the number
+Where \(n_{j}\) is simply the count of occurrences of signal-payoff pair \(j\), and \(\alpha_{i}\) is the pseudo-count of prior observations\footnote{Psuedo-counts are related to, but distinct from prior beliefs. Here, the psuedo-count is a parameter to the prior belief distribution and is nothing more than a hypothetical count of prior observations.} for a pair \(i\). Hence,
+the belief that a signal will lead to a payoff is the number
 of times that pairing has been observed (including the pseudo-count),
 over the total number of observations thus far. This makes computation
 of beliefs fast and simple, since all that must be maintained is

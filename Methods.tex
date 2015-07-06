@@ -12,8 +12,9 @@ Throughout this paper, parameters for the \ac{CPT} model were as used in \cite{T
 Two key measures were used: the fraction of the subpopulation who had ever signalled honestly, and the proportion referred. Both measures were taken after every round of play, and were taken relative to the agent's position in their sequence of appointments giving the probability of signalling honestly, or being referred having had a given number of appointments.
 
 \begin{table}[h!]
-\center
-\begin{tabular} {|l | l | c|}
+\caption{Model parameters.} 
+\label{tab:qt_params}
+\begin{tabular} {llc}
 \hline
 Name & Description & Value \\ \hline
 \(n_{w}\) & Number of women & 1000 \\ \hline
@@ -38,7 +39,6 @@ Runs & Simulation runs & 1000 \\ \hline
 \(\beta\) & Power for losses & 0.88 \\ \hline
 \(\lambda\) & Loss aversion &  2.25 \\ \hline
 \end{tabular}
-\caption{Model parameters. \label{tab:qt_params}}
 \end{table}
 
 
@@ -66,8 +66,9 @@ Sixteen emulators were built, covering each of the four outputs on all decision 
 In addition to the sensitivity analysis, we also employed the resulting emulators to rapidly\footnote{Once constructed, the emulator has an analytical solution conditional on the roughness parameters, which obviates the need to use MCMC.} explore the parameter space. While emulated results are subject to inaccuracy, they do provide an indication of the interest, and plausibility, of regions of the parameter space. Results for the outcomes of the interactions of \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) with \(x_{h}\), and \(q_{w}\) with \(w_{w}\) are given in section \ref{sub:sa_results}.
 
 \begin{table}
-\center
-\begin{tabular} {|l | l | l| l|}
+\caption{Parameter ranges.}
+\label{tab:sa_params}
+\begin{tabular} {llll}
 \hline
 Name & Description & Min & Max \\ \hline
 \(p_{w}(m)\) & Proportion of moderate drinkers & 0 & 1 \\ \hline
@@ -82,5 +83,4 @@ Name & Description & Min & Max \\ \hline
 \(x_{r}\) & Cost for referral & \multicolumn{2}{l|}{\(-(x_{h} - 1)\)} \\ \hline
 \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty & 1:1 & 100:1 \\ \hline
 \end{tabular}
-\caption{Parameter ranges. \label{tab:sa_params}}
 \end{table}

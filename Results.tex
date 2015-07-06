@@ -20,9 +20,7 @@ As shown in figure \ref{fig:honest_signals}, all four decision rules were able t
 Introducing social learning amongst women leads the behaviour of the decision rules to diverge markedly. Figure \ref{fig:honest_sharing} shows the proportion of women who have signalled honestly at least once by their final appointment, under four sharing conditions. 
 
 \begin{figure}
-\begin{adjustbox}{center}
 \includegraphics[width=119mm]{figures/honesty_sharing}
-\end{adjustbox}
 \caption{Impact of social learning on trends in honest signalling after 1000 rounds, mean with 95\% confidence interval over 100 runs}
 \label{fig:honest_sharing}
 \end{figure}
@@ -44,7 +42,7 @@ For the median signal choice of moderate drinkers, the results of the sensitivit
 Perhaps surprisingly, variance attributable to social learning between midwives is relatively low, with neither the weight nor probability accounting for more than 5\% of variance in any measure. While there are small contributions to variance in interaction with other parameters (e.g. 4\% to between groups IQR, for the interaction with the proportion of light drinkers under the Bayesian rule), this may suggest that the implementation is lacking, which we touch on in section \ref{sec:conclusion}.
 
 \begin{figure}[h]
-\begin{adjustbox}{center}\includegraphics[width=119mm]{figures/sharing_emulated_simulated}\end{adjustbox}
+\includegraphics[width=119mm]{figures/sharing_emulated_simulated}
 \caption{Median moderate drinker signal vs median between drinking type IQR for all decision rules}
 \label{fig:outcome_plots}
 \end{figure}
@@ -52,7 +50,7 @@ Perhaps surprisingly, variance attributable to social learning between midwives 
 Figure \ref{fig:outcome_plots} gives a qualitative picture of both emulator quality, and the divergent response surfaces of the decision rules in response to variations in social learning parameters. Emulator fit is clearly imperfect, but overall behaviour is qualitatively similar, with both emulated and simulated plots demonstrating separation in outcome space for the decision rules.
 
 \begin{figure}[h]
-\begin{adjustbox}{center}\includegraphics[width=119mm]{figures/unfixed_emu_sig_iqr}\end{adjustbox}
+\includegraphics[width=119mm]{figures/unfixed_emu_sig_iqr}
 \caption{Emulated moderate drinker signal IQR in response to varying \(q_{w}\), and \(w_{w}\)}
 \label{fig:emulated_sharing_iqr}
 \end{figure}
@@ -62,7 +60,7 @@ Following from the suggestive results for social learning introducing uncertaint
 For the \ac{CPT}, and Bayesian decision models, the interaction of bias towards honesty, and distinction between payoffs has a significant, and non-linear effect on instability, and separability of groups. Figure \ref{fig:emulated_payoff_group_iqr} shows the effects, and also highlights the tendency towards poor separability of groups for both the heuristic type decision rules. The response surface of the Bayesian payoff rule is slightly more nuanced than the simple Lexicographic rule. Figure \ref{fig:emulated_payoff_group_iqr} shows better separation, close to partial pooling\footnote{Pooling occurs when signallers of different types `pool' their signals, and one adopts the signals of another.} at high payoff distinction, with relatively modest honesty bias, which is reflected by the variance contributions of 11\% and 8\% respectively.  For the more complex rules, the general tendency is towards less pooling for higher values of both, but with pockets where full pooling\footnote{Indicating that all signaller types are using a single signal.} occurs.  The plots also suggest that the sensitivity of the \ac{CPT} rule is marginally greater, which is supported by the significant contribution to variance of close to 15\% for all measures of \(x_{h}\).
 
 \begin{figure}[H]
-\begin{adjustbox}{center}\includegraphics[width=119mm]{figures/unfixed_emu_payoff_honesty_group_iqr}\end{adjustbox}
+\includegraphics[width=119mm]{figures/unfixed_emu_payoff_honesty_group_iqr}
 \caption{Emulated between groups IQR in response to varying \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\), and \(x_{h}\)}
 \label{fig:emulated_payoff_group_iqr}
 \end{figure}

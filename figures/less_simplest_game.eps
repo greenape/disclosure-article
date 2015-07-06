@@ -1,0 +1,1085 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: graphviz version 2.38.0 (20140413.2041)
+%%Title: G
+%%Pages: 1
+%%BoundingBox: 0 0 542 962
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 0 0 542 962
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+0 0 542 962 boxprim clip newpath
+1 1 set_scale 0 rotate 4 4 translate
+% Woman
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+160.72 745.49 moveto 46.65 (Woman) alignedtext
+grestore
+% heavy_heavy
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+317.69 880.49 moveto 48.94 (Midwife) alignedtext
+grestore
+% Woman->heavy_heavy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 206.1 765.21 moveto
+233.52 788.92 281.6 830.5 312.38 857.11 curveto
+stroke
+0 0 0 edgecolor
+newpath 310.34 859.97 moveto
+320.19 863.87 lineto
+314.91 854.68 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 310.34 859.97 moveto
+320.19 863.87 lineto
+314.91 854.68 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+243.49 846.19 moveto 38.08 (Heavy) alignedtext
+grestore
+% heavy_mid
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+317.69 772.49 moveto 48.94 (Midwife) alignedtext
+grestore
+% Woman->heavy_mid
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 215.51 752.27 moveto
+239.48 756.42 273.14 762.24 299.58 766.81 curveto
+stroke
+0 0 0 edgecolor
+newpath 299.24 770.3 moveto
+309.69 768.56 lineto
+300.44 763.41 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 299.24 770.3 moveto
+309.69 768.56 lineto
+300.44 763.41 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+233.36 773.19 moveto 58.32 (Moderate) alignedtext
+grestore
+% heavy_light
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+317.69 718.49 moveto 48.94 (Midwife) alignedtext
+grestore
+% Woman->heavy_light
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 215.21 736.37 moveto
+221.17 734.56 227.42 732.86 233.36 731.61 curveto
+254.85 727.08 279.14 724.27 299.22 722.55 curveto
+stroke
+0 0 0 edgecolor
+newpath 299.6 726.03 moveto
+309.29 721.75 lineto
+299.05 719.05 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 299.6 726.03 moveto
+309.29 721.75 lineto
+299.05 719.05 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+246.31 739.19 moveto 32.44 (Light) alignedtext
+grestore
+% woman_light
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+160.72 464.49 moveto 46.65 (Woman) alignedtext
+grestore
+% light_heavy
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+317.69 556.49 moveto 48.94 (Midwife) alignedtext
+grestore
+% woman_light->light_heavy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 215.51 483.96 moveto
+240.15 498.47 275.01 519.02 301.76 534.78 curveto
+stroke
+0 0 0 edgecolor
+newpath 300.11 537.87 moveto
+310.5 539.93 lineto
+303.66 531.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 300.11 537.87 moveto
+310.5 539.93 lineto
+303.66 531.84 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+243.49 536.19 moveto 38.08 (Heavy) alignedtext
+grestore
+% light_mid
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+317.69 464.49 moveto 48.94 (Midwife) alignedtext
+grestore
+% woman_light->light_mid
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 215.51 466 moveto
+239.48 466 273.14 466 299.58 466 curveto
+stroke
+0 0 0 edgecolor
+newpath 299.69 469.5 moveto
+309.69 466 lineto
+299.69 462.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 299.69 469.5 moveto
+309.69 466 lineto
+299.69 462.5 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+233.36 474.19 moveto 58.32 (Moderate) alignedtext
+grestore
+% light_light
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+317.69 394.49 moveto 48.94 (Midwife) alignedtext
+grestore
+% woman_light->light_light
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 215.36 451.08 moveto
+221.31 448.22 227.52 445.29 233.36 442.61 curveto
+255.29 432.57 279.96 421.86 300.17 413.24 curveto
+stroke
+0 0 0 edgecolor
+newpath 301.57 416.45 moveto
+309.4 409.31 lineto
+298.83 410 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 301.57 416.45 moveto
+309.4 409.31 lineto
+298.83 410 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+246.31 450.19 moveto 32.44 (Light) alignedtext
+grestore
+% woman_mid
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+160.72 208.49 moveto 46.65 (Woman) alignedtext
+grestore
+% mid_heavy
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+317.69 232.49 moveto 48.94 (Midwife) alignedtext
+grestore
+% woman_mid->mid_heavy
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 215.51 214.68 moveto
+239.48 218.37 273.14 223.54 299.58 227.61 curveto
+stroke
+0 0 0 edgecolor
+newpath 299.28 231.1 moveto
+309.69 229.16 lineto
+300.34 224.18 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 299.28 231.1 moveto
+309.69 229.16 lineto
+300.34 224.18 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+243.49 234.19 moveto 38.08 (Heavy) alignedtext
+grestore
+% mid_mid
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+317.69 178.49 moveto 48.94 (Midwife) alignedtext
+grestore
+% woman_mid->mid_mid
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 215.19 198.74 moveto
+221.15 196.8 227.41 194.98 233.36 193.61 curveto
+254.81 188.67 279.1 185.41 299.18 183.32 curveto
+stroke
+0 0 0 edgecolor
+newpath 299.65 186.79 moveto
+309.26 182.33 lineto
+298.97 179.82 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 299.65 186.79 moveto
+309.26 182.33 lineto
+298.97 179.82 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+233.36 201.19 moveto 58.32 (Moderate) alignedtext
+grestore
+% mid_light
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+317.69 70.49 moveto 48.94 (Midwife) alignedtext
+grestore
+% woman_mid->mid_light
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 202.03 191.7 moveto
+211.1 182.18 222.58 170.5 233.36 160.61 curveto
+258.06 137.96 287.54 113.92 309.43 96.6 curveto
+stroke
+0 0 0 edgecolor
+newpath 311.72 99.24 moveto
+317.42 90.31 lineto
+307.39 93.74 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 311.72 99.24 moveto
+317.42 90.31 lineto
+307.39 93.74 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+246.31 168.19 moveto 32.44 (Light) alignedtext
+grestore
+% Nature
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+8 464.49 moveto 42.39 (Nature) alignedtext
+grestore
+% Nature->Woman
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 39.99 484.01 moveto
+66.08 531.97 137.37 663.04 168.35 719.99 curveto
+stroke
+0 0 0 edgecolor
+newpath 165.28 721.67 moveto
+173.13 728.78 lineto
+171.43 718.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 165.28 721.67 moveto
+173.13 728.78 lineto
+171.43 718.32 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+86.51 664.19 moveto 38.08 (Heavy) alignedtext
+grestore
+% Nature->woman_light
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 58.59 466 moveto
+82.21 466 116.14 466 142.6 466 curveto
+stroke
+0 0 0 edgecolor
+newpath 142.71 469.5 moveto
+152.71 466 lineto
+142.71 462.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 142.71 469.5 moveto
+152.71 466 lineto
+142.71 462.5 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+89.34 474.19 moveto 32.44 (Light) alignedtext
+grestore
+% Nature->woman_mid
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 40.94 448 moveto
+67.35 403.76 135.55 289.54 166.87 237.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 169.98 238.7 moveto
+172.1 228.32 lineto
+163.97 235.12 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 169.98 238.7 moveto
+172.1 228.32 lineto
+163.97 235.12 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+76.39 391.19 moveto 58.32 (Moderate) alignedtext
+grestore
+% heavy_heavy_help
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 934.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% heavy_heavy->heavy_heavy_help
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.76 897.65 moveto
+380.63 900.28 386.76 902.85 392.63 905 curveto
+417.8 914.23 447 922.17 469.4 927.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 468.64 931.12 moveto
+479.18 930.08 lineto
+470.29 924.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 468.64 931.12 moveto
+479.18 930.08 lineto
+470.29 924.32 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+412.93 933.19 moveto 28.36 (Help) alignedtext
+grestore
+% heavy_heavy_nohelp
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+490.66 880.49 moveto 31.86 (-2, -2) alignedtext
+grestore
+% heavy_heavy->heavy_heavy_nohelp
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.86 882 moveto
+401.96 882 440.95 882 469.3 882 curveto
+stroke
+0 0 0 edgecolor
+newpath 469.59 885.5 moveto
+479.59 882 lineto
+469.59 878.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 469.59 885.5 moveto
+479.59 882 lineto
+469.59 878.5 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+392.63 890.19 moveto 68.96 (Do nothing) alignedtext
+grestore
+% heavy_mid_help
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 826.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% heavy_mid->heavy_mid_help
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.76 789.65 moveto
+380.63 792.28 386.76 794.85 392.63 797 curveto
+417.8 806.23 447 814.17 469.4 819.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 468.64 823.12 moveto
+479.18 822.08 lineto
+470.29 816.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 468.64 823.12 moveto
+479.18 822.08 lineto
+470.29 816.32 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+412.93 825.19 moveto 28.36 (Help) alignedtext
+grestore
+% heavy_mid_nohelp
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+490.66 772.49 moveto 31.86 (-2, -2) alignedtext
+grestore
+% heavy_mid->heavy_mid_nohelp
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.86 774 moveto
+401.96 774 440.95 774 469.3 774 curveto
+stroke
+0 0 0 edgecolor
+newpath 469.59 777.5 moveto
+479.59 774 lineto
+469.59 770.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 469.59 777.5 moveto
+479.59 774 lineto
+469.59 770.5 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+392.63 782.19 moveto 68.96 (Do nothing) alignedtext
+grestore
+% heavy_light_help
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 718.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% heavy_light->heavy_light_help
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.86 720 moveto
+401.96 720 440.95 720 469.3 720 curveto
+stroke
+0 0 0 edgecolor
+newpath 469.59 723.5 moveto
+479.59 720 lineto
+469.59 716.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 469.59 723.5 moveto
+479.59 720 lineto
+469.59 716.5 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+412.93 728.19 moveto 28.36 (Help) alignedtext
+grestore
+% heavy_light_nohelp
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+490.66 664.49 moveto 31.86 (-2, -2) alignedtext
+grestore
+% heavy_light->heavy_light_nohelp
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.74 704.06 moveto
+380.61 701.38 386.75 698.78 392.63 696.61 curveto
+417.76 687.35 446.96 679.51 469.38 674.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 470.24 677.48 moveto
+479.16 671.76 lineto
+468.62 670.66 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 470.24 677.48 moveto
+479.16 671.76 lineto
+468.62 670.66 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+392.63 704.19 moveto 68.96 (Do nothing) alignedtext
+grestore
+% mid_heavy_help
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 286.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% mid_heavy->mid_heavy_help
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.76 249.65 moveto
+380.63 252.28 386.76 254.85 392.63 257 curveto
+417.8 266.23 447 274.17 469.4 279.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 468.64 283.12 moveto
+479.18 282.08 lineto
+470.29 276.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 468.64 283.12 moveto
+479.18 282.08 lineto
+470.29 276.32 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+412.93 285.19 moveto 28.36 (Help) alignedtext
+grestore
+% mid_heavy_nohelp
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+490.66 232.49 moveto 31.86 (-1, -1) alignedtext
+grestore
+% mid_heavy->mid_heavy_nohelp
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.86 234 moveto
+401.96 234 440.95 234 469.3 234 curveto
+stroke
+0 0 0 edgecolor
+newpath 469.59 237.5 moveto
+479.59 234 lineto
+469.59 230.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 469.59 237.5 moveto
+479.59 234 lineto
+469.59 230.5 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+392.63 242.19 moveto 68.96 (Do nothing) alignedtext
+grestore
+% mid_mid_help
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 178.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% mid_mid->mid_mid_help
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.86 180 moveto
+401.96 180 440.95 180 469.3 180 curveto
+stroke
+0 0 0 edgecolor
+newpath 469.59 183.5 moveto
+479.59 180 lineto
+469.59 176.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 469.59 183.5 moveto
+479.59 180 lineto
+469.59 176.5 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+412.93 188.19 moveto 28.36 (Help) alignedtext
+grestore
+% mid_mid_nohelp
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+490.66 124.49 moveto 31.86 (-1, -1) alignedtext
+grestore
+% mid_mid->mid_mid_nohelp
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.74 164.06 moveto
+380.61 161.38 386.75 158.78 392.63 156.61 curveto
+417.76 147.35 446.96 139.51 469.38 134.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 470.24 137.48 moveto
+479.16 131.76 lineto
+468.62 130.66 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 470.24 137.48 moveto
+479.16 131.76 lineto
+468.62 130.66 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+392.63 164.19 moveto 68.96 (Do nothing) alignedtext
+grestore
+% mid_light_help
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 70.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% mid_light->mid_light_help
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.86 72 moveto
+401.96 72 440.95 72 469.3 72 curveto
+stroke
+0 0 0 edgecolor
+newpath 469.59 75.5 moveto
+479.59 72 lineto
+469.59 68.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 469.59 75.5 moveto
+479.59 72 lineto
+469.59 68.5 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+412.93 80.19 moveto 28.36 (Help) alignedtext
+grestore
+% mid_light_nohelp
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+490.66 16.49 moveto 31.86 (-1, -1) alignedtext
+grestore
+% mid_light->mid_light_nohelp
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.74 56.06 moveto
+380.61 53.38 386.75 50.78 392.63 48.61 curveto
+417.76 39.35 446.96 31.51 469.38 26.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 470.24 29.48 moveto
+479.16 23.76 lineto
+468.62 22.66 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 470.24 29.48 moveto
+479.16 23.76 lineto
+468.62 22.66 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+392.63 56.19 moveto 68.96 (Do nothing) alignedtext
+grestore
+% light_heavy_help
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 610.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% light_heavy->light_heavy_help
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.76 573.65 moveto
+380.63 576.28 386.76 578.85 392.63 581 curveto
+417.8 590.23 447 598.17 469.4 603.71 curveto
+stroke
+0 0 0 edgecolor
+newpath 468.64 607.12 moveto
+479.18 606.08 lineto
+470.29 600.32 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 468.64 607.12 moveto
+479.18 606.08 lineto
+470.29 600.32 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+412.93 609.19 moveto 28.36 (Help) alignedtext
+grestore
+% light_heavy_nohelp
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 556.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% light_heavy->light_heavy_nohelp
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.86 558 moveto
+401.96 558 440.95 558 469.3 558 curveto
+stroke
+0 0 0 edgecolor
+newpath 469.59 561.5 moveto
+479.59 558 lineto
+469.59 554.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 469.59 561.5 moveto
+479.59 558 lineto
+469.59 554.5 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+392.63 566.19 moveto 68.96 (Do nothing) alignedtext
+grestore
+% light_mid_help
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 502.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% light_mid->light_mid_help
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.66 476.81 moveto
+380.6 478.67 386.78 480.49 392.63 482 curveto
+418.02 488.55 447.06 494.17 469.34 498.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 468.92 501.56 moveto
+479.37 499.82 lineto
+470.11 494.67 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 468.92 501.56 moveto
+479.37 499.82 lineto
+470.11 494.67 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+412.93 504.19 moveto 28.36 (Help) alignedtext
+grestore
+% light_mid_nohelp
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 448.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% light_mid->light_mid_nohelp
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.86 462.88 moveto
+401.96 460.21 440.95 456.37 469.3 453.58 curveto
+stroke
+0 0 0 edgecolor
+newpath 469.98 457.02 moveto
+479.59 452.56 lineto
+469.3 450.06 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 469.98 457.02 moveto
+479.59 452.56 lineto
+469.3 450.06 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+392.63 468.19 moveto 68.96 (Do nothing) alignedtext
+grestore
+% light_light_help
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 394.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% light_light->light_light_help
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.86 396 moveto
+401.96 396 440.95 396 469.3 396 curveto
+stroke
+0 0 0 edgecolor
+newpath 469.59 399.5 moveto
+479.59 396 lineto
+469.59 392.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 469.59 399.5 moveto
+479.59 396 lineto
+469.59 392.5 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+412.93 404.19 moveto 28.36 (Help) alignedtext
+grestore
+% light_light_nohelp
+gsave
+0 0 0 nodecolor
+14 /CMU Serif set_font
+495.33 340.49 moveto 22.54 (1, 1) alignedtext
+grestore
+% light_light->light_light_nohelp
+gsave
+1 setlinewidth
+0 0 0 edgecolor
+newpath 374.74 380.06 moveto
+380.61 377.38 386.75 374.78 392.63 372.61 curveto
+417.76 363.35 446.96 355.51 469.38 350.08 curveto
+stroke
+0 0 0 edgecolor
+newpath 470.24 353.48 moveto
+479.16 347.76 lineto
+468.62 346.66 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 470.24 353.48 moveto
+479.16 347.76 lineto
+468.62 346.66 lineto
+closepath stroke
+0 0 0 edgecolor
+14 /CMU Serif set_font
+392.63 380.19 moveto 68.96 (Do nothing) alignedtext
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+end
+restore
+%%EOF

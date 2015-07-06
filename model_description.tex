@@ -21,14 +21,12 @@ The first complication, is that there should be differentiation between referrin
 This simple game is however not very informative, and clearly neglects much of the nuance of the scenario. The wider difficulty here is that the real outcome depends on an attribute of one of the players, rather than their moves. In this case, we would expect the right choices to depend on the alcohol consumption of the woman, rather than entirely on what they have claimed about it.
 To reflect this, we would need different variations on the same game to reflect this attribute. 
 
-To resolve this, we can do exactly that, and cast it as a signalling game. We make the simplifying assumption that a woman may have one of only three drinking patterns - light\footnote{Or abstinent, the extent of alcohol consumption being such that it would generally be felt to pose essentially no risk.}, moderate, or heavy. Each of these types of player, will play a different game. This also introduces a third player, who we will call nature. Nature takes the first move, and decides the type of the woman according to some probability distribution; in this case we will allow the probability of types to be uniform. 
-This changes the dynamics of play substantially, since the midwife can no longer be certain of which game they are playing, and hence which move yields the best outcome. We must also amend the moves, and payoffs slightly. The woman now claims to be one of the types, and may send a signal to say, for example, that they are a heavy drinker. We will also modify the common payoffs to allow light drinkers to get the best outcome no matter what, and moderate and heavy types to get the best outcome only if referred. We can also differentiate between the consequences of not getting help for these types by letting heavy drinkers have a very negative outcome, and moderate drinkers a slight one (fig \ref{fig:less_simple}).
+To resolve this, we can do exactly that, and cast it as a signalling game (fig \ref{fig:less_simple}). We make the simplifying assumption that a woman may have one of only three drinking patterns - light\footnote{Or abstinent, the extent of alcohol consumption being such that it would generally be felt to pose essentially no risk.}, moderate, or heavy. Each of these types of player, will play a different game. This also introduces a third player, who we will call nature. Nature takes the first move, and decides the type of the woman according to some probability distribution; in this case we will allow the probability of types to be uniform. 
+This changes the dynamics of play substantially, since the midwife can no longer be certain of which game they are playing, and hence which move yields the best outcome. We must also amend the moves, and payoffs slightly. The woman now claims to be one of the types, and may send a signal to say, for example, that they are a heavy drinker. We will also modify the common payoffs to allow light drinkers to get the best outcome no matter what, and moderate and heavy types to get the best outcome only if referred. We can also differentiate between the consequences of not getting help for these types by letting heavy drinkers have a very negative outcome, and moderate drinkers a slight one.
 
 \begin{figure}[H]
-\begin{adjustbox}{center}
-\includegraphics[width=78mm]{figures/less_simple_game}
-\end{adjustbox}
-\sidecaption{A less simple two player game.}
+\includegraphics[width=\textwidth]{figures/less_simplest_game}
+\caption{A less simple two player signalling game. }
 
 \label{fig:less_simple}
 \end{figure}
@@ -40,10 +38,9 @@ At this juncture, we do not gain much further from the game representation, and 
 Breaking the game down into separate decision problems can be achieved by treating the moves of the other players as a chance node, and omitting moves by nature that are known to them. For women, there are two such nodes, corresponding to the move by nature determining the type of midwife they play against, and the midwife's action. Midwives have simpler problem with only a single chance node, because the woman's move is known to them. Figure \ref{fig:decision_problems} shows the structure of the resulting decision problems. Note that there are in fact three distinct decision problems for the three types of woman, since the move by nature determining their type is known to them. 
 
 \begin{figure}[H]
-\centering
-\subfloat[Women (heavy drinkers)]{\includegraphics[width=119mm]{figures/women_influence}}
+\subfloat[Women (heavy drinkers)]{\includegraphics[width=11.9cm]{figures/women_influence}}
 \vskip\baselineskip
-\subfloat[Midwives]{\includegraphics[width=119mm]{figures/mw_influence}}
+\subfloat[Midwives]{\includegraphics[width=11.9cm]{figures/mw_influence}}
 \caption{Influence diagrams, showing the game broken into two decision problems. Squares indicate a decision node, while circles are (from the perspective of the agent) chance nodes}
 
 \label{fig:decision_problems}

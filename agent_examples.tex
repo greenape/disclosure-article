@@ -35,8 +35,9 @@ Returning to our example agent, under this model the type of the midwife becomes
 \begin{equation*}
 \begin{aligned}
 R_{w}(l, l) &= \sum_{i\in A_{m}}\sum_{j\in \Theta} -u_{w}(l, i, l, j)p(j)p(i | l)\\
-R_{w}(l, l) &= -u_{w}(l, r, l, l)p(l)p(r | l) - u_{w}(l, n, l, l)p(l)p(n | l) - u_{w}(l, r, l, m)p(m)p(r | l)\\
-&\phantom{{}=1}- u_{w}(l, n, l, m)p(m)p(n | l) - u_{w}(l, r, l, h)p(h)p(r | l) - u_{w}(l, n, l, h)p(h)p(n | l)\\
+R_{w}(l, l) &= -u_{w}(l, r, l, l)p(l)p(r | l) - u_{w}(l, n, l, l)p(l)p(n | l)\\
+&\phantom{{}=1}- u_{w}(l, r, l, m)p(m)p(r | l)- u_{w}(l, n, l, m)p(m)p(n | l)\\
+&\phantom{{}=1}- u_{w}(l, r, l, h)p(h)p(r | l) - u_{w}(l, n, l, h)p(h)p(n | l)\\
 u_{w}(l, i, l, j) &= 10\\
 R_{w}(l, l) &= -10p(l)p(r | l) - 10p(l)p(n | l) - 10p(m)p(r | l) - 10p(m)p(n | l)\\
 &\phantom{{}=1} - 10p(h)p(r | l) - 10p(h)p(n | l)\\
@@ -85,9 +86,11 @@ f^{+}&=f,f^{-}=()\\
 n &= 5\\
 v(u_{w}) &= f(u_{w}) = u_{w}^\alpha\\
 v(u_{w}) &= 10^{0.88} = 7.59\\
-\pi_{0}^{+}&=w^{+}(\frac{1}{24} + \frac{1}{8} + \frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2}) - w^{+}(\frac{1}{8} + \frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2})=w^{+}(1) - w^{+}(\frac{23}{24})\\
+\pi_{0}^{+}&=w^{+}(\frac{1}{24} + \frac{1}{8} + \frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2}) - w^{+}(\frac{1}{8} + \frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2})\\
+&=w^{+}(1) - w^{+}(\frac{23}{24})\\
 &=0.19\\
-\pi_{1}^{+}&=w^{+}(\frac{1}{8} + \frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2}) - w^{+}(\frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2})=w^{+}(\frac{23}{24}) - w^{+}(\frac{5}{6})\\
+\pi_{1}^{+}&=w^{+}(\frac{1}{8} + \frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2}) - w^{+}(\frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2})\\
+&=w^{+}(\frac{23}{24}) - w^{+}(\frac{5}{6})\\
 &= 0.17\\
 \pi_{2}^{+}&=w^{+}(\frac{1}{24} + \frac{1}{8} + \frac{1}{6} + \frac{1}{2}) - w^{+}(\frac{1}{8} + \frac{1}{6} + \frac{1}{2})=w^{+}(\frac{5}{6}) - w^{+}(\frac{19}{24})\\
 &= 0.04\\

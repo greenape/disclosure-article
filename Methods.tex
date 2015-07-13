@@ -15,29 +15,31 @@ Two key measures were used: the fraction of the subpopulation who had ever signa
 \caption{Model parameters.} 
 \label{tab:qt_params}
 \begin{tabular} {llc}
-\hline
-Name & Description & Value \\ \hline
-\(n_{w}\) & Number of women & 1000 \\ \hline
-\(n_{m}\) & Number of midwives & 100 \\ \hline
-\(r_{m}\) & Number of appointments per midwife & 1000 \\ \hline
-\(r_{w}\) & Maximum number of appointments per woman & 12 \\ \hline
-Runs & Simulation runs & 1000 \\ \hline
-\(p_{w}(h)\) & Proportion of heavy drinkers & \(1/3\) \\ \hline
-\(p_{w}(m)\) & Proportion of moderate drinkers & \(1/3\) \\ \hline
-\(p_{w}(l)\) & Proportion of light drinkers & \(1/3\) \\ \hline
-\(p_{m}(h)\) & Proportion of harsh midwives & \(5/100\) \\ \hline
-\(p_{m}(m)\) & Proportion of moderate midwives & \(10/100\) \\ \hline
-\(p_{m}(l)\) & Proportion of non-judgemental midwives & \(85/100\) \\ \hline
-\(q_{w}\) & Probability of women sharing & 0. \\ \hline
-\(w_{w}\) & Weight of shared information for women & 0. \\ \hline
-\(q_{m}\) & Probability of midwives sharing & 0. \\ \hline
-\(w_{m}\) & Weight of shared information for midwives & 0. \\ \hline
-\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty & 10:1 \\ \hline
-\(\gamma\) & Probability weighting for gains  & 0.61 \\ \hline
-\(\delta\) & Probability weighting for losses &  0.69\\ \hline
-\(\alpha\) & Power for gains  & 0.88 \\ \hline
-\(\beta\) & Power for losses & 0.88 \\ \hline
-\(\lambda\) & Loss aversion &  2.25 \\ \hline
+\hline\noalign{\smallskip}
+Name & Description & Value \\
+\noalign{\smallskip}\svhline\noalign{\smallskip}
+\(n_{w}\) & Number of women & 1000 \\ 
+\(n_{m}\) & Number of midwives & 100 \\ 
+\(r_{m}\) & Number of appointments per midwife & 1000 \\ 
+\(r_{w}\) & Maximum number of appointments per woman & 12 \\ 
+Runs & Simulation runs & 1000 \\ 
+\(p_{w}(h)\) & Proportion of heavy drinkers & \(1/3\) \\ 
+\(p_{w}(m)\) & Proportion of moderate drinkers & \(1/3\) \\ 
+\(p_{w}(l)\) & Proportion of light drinkers & \(1/3\) \\ 
+\(p_{m}(h)\) & Proportion of harsh midwives & \(5/100\) \\ 
+\(p_{m}(m)\) & Proportion of moderate midwives & \(10/100\) \\ 
+\(p_{m}(l)\) & Proportion of non-judgemental midwives & \(85/100\) \\ 
+\(q_{w}\) & Probability of women sharing & 0. \\ 
+\(w_{w}\) & Weight of shared information for women & 0. \\ 
+\(q_{m}\) & Probability of midwives sharing & 0. \\ 
+\(w_{m}\) & Weight of shared information for midwives & 0. \\ 
+\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty & 10:1 \\ 
+\(\gamma\) & Probability weighting for gains  & 0.61 \\ 
+\(\delta\) & Probability weighting for losses &  0.69\\ 
+\(\alpha\) & Power for gains  & 0.88 \\ 
+\(\beta\) & Power for losses & 0.88 \\ 
+\(\lambda\) & Loss aversion &  2.25 \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
 \end{tabular}
 \end{table}
 
@@ -69,18 +71,20 @@ In addition to the sensitivity analysis, we also employed the resulting emulator
 \caption{Parameter ranges.}
 \label{tab:sa_params}
 \begin{tabular} {llll}
-\hline
-Name & Description & Min & Max \\ \hline
-\(p_{w}(m)\) & Proportion of moderate drinkers & 0 & 1 \\ \hline
-\(p_{w}(l)\) & Proportion of light drinkers & 0 & 1 \\ \hline
-\(p_{m}(m)\) & Proportion of moderate midwives & 0 & 1 \\ \hline
-\(p_{m}(l)\) & Proportion of non-judgemental midwives & 0 & 1 \\ \hline
-\(q_{w}\) & Probability of women sharing & 0 & 1 \\ \hline
-\(w_{w}\) & Weight of shared information for women & 0 & 1 \\ \hline
-\(q_{m}\) & Probability of midwives sharing & 0 & 1 \\ \hline
-\(w_{m}\) & Weight of shared information for midwives & 0 & 1 \\ \hline
-\(x_{h}\) & Health payoff for healthy delivery & 1 & 100 \\ \hline
-\(x_{r}\) & Cost for referral & \multicolumn{2}{l|}{\(-(x_{h} - 1)\)} \\ \hline
-\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty & 1:1 & 100:1 \\ \hline
+\hline\noalign{\smallskip}
+Name & Description & Min & Max \\
+\noalign{\smallskip}\svhline\noalign{\smallskip}
+\(p_{w}(m)\) & Proportion of moderate drinkers & 0 & 1 \\ 
+\(p_{w}(l)\) & Proportion of light drinkers & 0 & 1 \\ 
+\(p_{m}(m)\) & Proportion of moderate midwives & 0 & 1 \\ 
+\(p_{m}(l)\) & Proportion of non-judgemental midwives & 0 & 1 \\ 
+\(q_{w}\) & Probability of women sharing & 0 & 1 \\ 
+\(w_{w}\) & Weight of shared information for women & 0 & 1 \\ 
+\(q_{m}\) & Probability of midwives sharing & 0 & 1 \\ 
+\(w_{m}\) & Weight of shared information for midwives & 0 & 1 \\ 
+\(x_{h}\) & Health payoff for healthy delivery & 1 & 100 \\ 
+\(x_{r}\) & Cost for referral & \multicolumn{2}{l}{\(-(x_{h} - 1)\)} \\ 
+\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty & 1:1 & 100:1 \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
 \end{tabular}
 \end{table}

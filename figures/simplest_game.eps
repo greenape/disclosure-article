@@ -1,376 +1,1524 @@
 %!PS-Adobe-3.0 EPSF-3.0
-%%Creator: graphviz version 2.38.0 (20140413.2041)
-%%Title: G
-%%Pages: 1
-%%BoundingBox: 0 0 198 112
+%Produced by poppler pdftops version: 0.35.0 (http://poppler.freedesktop.org)
+%%Creator: TeX
+%%LanguageLevel: 2
+%%DocumentSuppliedResources: (atend)
+%%BoundingBox: 0 0 296 196
+%%HiResBoundingBox: 0 0 296 196
+%%DocumentSuppliedResources: (atend)
 %%EndComments
-save
 %%BeginProlog
-/DotDict 200 dict def
-DotDict begin
-
-/setupLatin1 {
-mark
-/EncodingVector 256 array def
- EncodingVector 0
-
-ISOLatin1Encoding 0 255 getinterval putinterval
-EncodingVector 45 /hyphen put
-
-% Set up ISO Latin 1 character encoding
-/starnetISO {
-        dup dup findfont dup length dict begin
-        { 1 index /FID ne { def }{ pop pop } ifelse
-        } forall
-        /Encoding EncodingVector def
-        currentdict end definefont
+%%BeginResource: procset xpdf 3.00 0
+%%Copyright: Copyright 1996-2011 Glyph & Cog, LLC
+/xpdf 75 dict def xpdf begin
+% PDF special state
+/pdfDictSize 15 def
+/pdfSetup {
+  /setpagedevice where {
+    pop 2 dict begin
+      /Policies 1 dict dup begin /PageSize 6 def end def
+      { /Duplex true def } if
+    currentdict end setpagedevice
+  } {
+    pop
+  } ifelse
 } def
-/Times-Roman starnetISO def
-/Times-Italic starnetISO def
-/Times-Bold starnetISO def
-/Times-BoldItalic starnetISO def
-/Helvetica starnetISO def
-/Helvetica-Oblique starnetISO def
-/Helvetica-Bold starnetISO def
-/Helvetica-BoldOblique starnetISO def
-/Courier starnetISO def
-/Courier-Oblique starnetISO def
-/Courier-Bold starnetISO def
-/Courier-BoldOblique starnetISO def
-cleartomark
-} bind def
-
-%%BeginResource: procset graphviz 0 0
-/coord-font-family /Times-Roman def
-/default-font-family /Times-Roman def
-/coordfont coord-font-family findfont 8 scalefont def
-
-/InvScaleFactor 1.0 def
-/set_scale {
-       dup 1 exch div /InvScaleFactor exch def
-       scale
-} bind def
-
-% styles
-/solid { [] 0 setdash } bind def
-/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
-/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
-/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
-/bold { 2 setlinewidth } bind def
-/filled { } bind def
-/unfilled { } bind def
-/rounded { } bind def
-/diagonals { } bind def
-/tapered { } bind def
-
-% hooks for setting color 
-/nodecolor { sethsbcolor } bind def
-/edgecolor { sethsbcolor } bind def
-/graphcolor { sethsbcolor } bind def
-/nopcolor {pop pop pop} bind def
-
-/beginpage {	% i j npages
-	/npages exch def
-	/j exch def
-	/i exch def
-	/str 10 string def
-	npages 1 gt {
-		gsave
-			coordfont setfont
-			0 0 moveto
-			(\() show i str cvs show (,) show j str cvs show (\)) show
-		grestore
-	} if
-} bind def
-
-/set_font {
-	findfont exch
-	scalefont setfont
+/pdfSetupPaper {
+  % Change paper size, but only if different from previous paper size otherwise
+  % duplex fails. PLRM specifies a tolerance of 5 pts when matching paper size
+  % so we use the same when checking if the size changes.
+  /setpagedevice where {
+    pop currentpagedevice
+    /PageSize known {
+      2 copy
+      currentpagedevice /PageSize get aload pop
+      exch 4 1 roll
+      sub abs 5 gt
+      3 1 roll
+      sub abs 5 gt
+      or
+    } {
+      true
+    } ifelse
+    {
+      2 array astore
+      2 dict begin
+        /PageSize exch def
+        /ImagingBBox null def
+      currentdict end
+      setpagedevice
+    } {
+      pop pop
+    } ifelse
+  } {
+    pop
+  } ifelse
 } def
-
-% draw text fitted to its expected width
-/alignedtext {			% width text
-	/text exch def
-	/width exch def
-	gsave
-		width 0 gt {
-			[] 0 setdash
-			text stringwidth pop width exch sub text length div 0 text ashow
-		} if
-	grestore
+/pdfStartPage {
+  pdfDictSize dict begin
+  /pdfFillCS [] def
+  /pdfFillXform {} def
+  /pdfStrokeCS [] def
+  /pdfStrokeXform {} def
+  /pdfFill [0] def
+  /pdfStroke [0] def
+  /pdfFillOP false def
+  /pdfStrokeOP false def
+  /pdfLastFill false def
+  /pdfLastStroke false def
+  /pdfTextMat [1 0 0 1 0 0] def
+  /pdfFontSize 0 def
+  /pdfCharSpacing 0 def
+  /pdfTextRender 0 def
+  /pdfPatternCS false def
+  /pdfTextRise 0 def
+  /pdfWordSpacing 0 def
+  /pdfHorizScaling 1 def
+  /pdfTextClipPath [] def
 } def
-
-/boxprim {				% xcorner ycorner xsize ysize
-		4 2 roll
-		moveto
-		2 copy
-		exch 0 rlineto
-		0 exch rlineto
-		pop neg 0 rlineto
-		closepath
-} bind def
-
-/ellipse_path {
-	/ry exch def
-	/rx exch def
-	/y exch def
-	/x exch def
-	matrix currentmatrix
-	newpath
-	x y translate
-	rx ry scale
-	0 0 1 0 360 arc
-	setmatrix
-} bind def
-
-/endpage { showpage } bind def
-/showpage { } def
-
-/layercolorseq
-	[	% layer color sequence - darkest to lightest
-		[0 0 0]
-		[.2 .8 .8]
-		[.4 .8 .8]
-		[.6 .8 .8]
-		[.8 .8 .8]
-	]
-def
-
-/layerlen layercolorseq length def
-
-/setlayer {/maxlayer exch def /curlayer exch def
-	layercolorseq curlayer 1 sub layerlen mod get
-	aload pop sethsbcolor
-	/nodecolor {nopcolor} def
-	/edgecolor {nopcolor} def
-	/graphcolor {nopcolor} def
-} bind def
-
-/onlayer { curlayer ne {invis} if } def
-
-/onlayers {
-	/myupper exch def
-	/mylower exch def
-	curlayer mylower lt
-	curlayer myupper gt
-	or
-	{invis} if
+/pdfEndPage { end } def
+% PDF color state
+/cs { /pdfFillXform exch def dup /pdfFillCS exch def
+      setcolorspace } def
+/CS { /pdfStrokeXform exch def dup /pdfStrokeCS exch def
+      setcolorspace } def
+/sc { pdfLastFill not { pdfFillCS setcolorspace } if
+      dup /pdfFill exch def aload pop pdfFillXform setcolor
+     /pdfLastFill true def /pdfLastStroke false def } def
+/SC { pdfLastStroke not { pdfStrokeCS setcolorspace } if
+      dup /pdfStroke exch def aload pop pdfStrokeXform setcolor
+     /pdfLastStroke true def /pdfLastFill false def } def
+/op { /pdfFillOP exch def
+      pdfLastFill { pdfFillOP setoverprint } if } def
+/OP { /pdfStrokeOP exch def
+      pdfLastStroke { pdfStrokeOP setoverprint } if } def
+/fCol {
+  pdfLastFill not {
+    pdfFillCS setcolorspace
+    pdfFill aload pop pdfFillXform setcolor
+    pdfFillOP setoverprint
+    /pdfLastFill true def /pdfLastStroke false def
+  } if
 } def
-
-/curlayer 0 def
-
+/sCol {
+  pdfLastStroke not {
+    pdfStrokeCS setcolorspace
+    pdfStroke aload pop pdfStrokeXform setcolor
+    pdfStrokeOP setoverprint
+    /pdfLastStroke true def /pdfLastFill false def
+  } if
+} def
+% build a font
+/pdfMakeFont {
+  4 3 roll findfont
+  4 2 roll matrix scale makefont
+  dup length dict begin
+    { 1 index /FID ne { def } { pop pop } ifelse } forall
+    /Encoding exch def
+    currentdict
+  end
+  definefont pop
+} def
+/pdfMakeFont16 {
+  exch findfont
+  dup length dict begin
+    { 1 index /FID ne { def } { pop pop } ifelse } forall
+    /WMode exch def
+    currentdict
+  end
+  definefont pop
+} def
+% graphics state operators
+/q { gsave pdfDictSize dict begin } def
+/Q {
+  end grestore
+  /pdfLastFill where {
+    pop
+    pdfLastFill {
+      pdfFillOP setoverprint
+    } {
+      pdfStrokeOP setoverprint
+    } ifelse
+  } if
+} def
+/cm { concat } def
+/d { setdash } def
+/i { setflat } def
+/j { setlinejoin } def
+/J { setlinecap } def
+/M { setmiterlimit } def
+/w { setlinewidth } def
+% path segment operators
+/m { moveto } def
+/l { lineto } def
+/c { curveto } def
+/re { 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+      neg 0 rlineto closepath } def
+/h { closepath } def
+% path painting operators
+/S { sCol stroke } def
+/Sf { fCol stroke } def
+/f { fCol fill } def
+/f* { fCol eofill } def
+% clipping operators
+/W { clip newpath } def
+/W* { eoclip newpath } def
+/Ws { strokepath clip newpath } def
+% text state operators
+/Tc { /pdfCharSpacing exch def } def
+/Tf { dup /pdfFontSize exch def
+      dup pdfHorizScaling mul exch matrix scale
+      pdfTextMat matrix concatmatrix dup 4 0 put dup 5 0 put
+      exch findfont exch makefont setfont } def
+/Tr { /pdfTextRender exch def } def
+/Tp { /pdfPatternCS exch def } def
+/Ts { /pdfTextRise exch def } def
+/Tw { /pdfWordSpacing exch def } def
+/Tz { /pdfHorizScaling exch def } def
+% text positioning operators
+/Td { pdfTextMat transform moveto } def
+/Tm { /pdfTextMat exch def } def
+% text string operators
+/xyshow where {
+  pop
+  /xyshow2 {
+    dup length array
+    0 2 2 index length 1 sub {
+      2 index 1 index 2 copy get 3 1 roll 1 add get
+      pdfTextMat dtransform
+      4 2 roll 2 copy 6 5 roll put 1 add 3 1 roll dup 4 2 roll put
+    } for
+    exch pop
+    xyshow
+  } def
+}{
+  /xyshow2 {
+    currentfont /FontType get 0 eq {
+      0 2 3 index length 1 sub {
+        currentpoint 4 index 3 index 2 getinterval show moveto
+        2 copy get 2 index 3 2 roll 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } {
+      0 1 3 index length 1 sub {
+        currentpoint 4 index 3 index 1 getinterval show moveto
+        2 copy 2 mul get 2 index 3 2 roll 2 mul 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } ifelse
+    pop pop
+  } def
+} ifelse
+/cshow where {
+  pop
+  /xycp {
+    0 3 2 roll
+    {
+      pop pop currentpoint 3 2 roll
+      1 string dup 0 4 3 roll put false charpath moveto
+      2 copy get 2 index 2 index 1 add get
+      pdfTextMat dtransform rmoveto
+      2 add
+    } exch cshow
+    pop pop
+  } def
+}{
+  /xycp {
+    currentfont /FontType get 0 eq {
+      0 2 3 index length 1 sub {
+        currentpoint 4 index 3 index 2 getinterval false charpath moveto
+        2 copy get 2 index 3 2 roll 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } {
+      0 1 3 index length 1 sub {
+        currentpoint 4 index 3 index 1 getinterval false charpath moveto
+        2 copy 2 mul get 2 index 3 2 roll 2 mul 1 add get
+        pdfTextMat dtransform rmoveto
+      } for
+    } ifelse
+    pop pop
+  } def
+} ifelse
+/Tj {
+  fCol
+  0 pdfTextRise pdfTextMat dtransform rmoveto
+  currentpoint 4 2 roll
+  pdfTextRender 1 and 0 eq {
+    2 copy xyshow2
+  } if
+  pdfTextRender 3 and dup 1 eq exch 2 eq or {
+    3 index 3 index moveto
+    2 copy
+    currentfont /FontType get 3 eq { fCol } { sCol } ifelse
+    xycp currentpoint stroke moveto
+  } if
+  pdfTextRender 4 and 0 ne {
+    4 2 roll moveto xycp
+    /pdfTextClipPath [ pdfTextClipPath aload pop
+      {/moveto cvx}
+      {/lineto cvx}
+      {/curveto cvx}
+      {/closepath cvx}
+    pathforall ] def
+    currentpoint newpath moveto
+  } {
+    pop pop pop pop
+  } ifelse
+  0 pdfTextRise neg pdfTextMat dtransform rmoveto
+} def
+/TJm { 0.001 mul pdfFontSize mul pdfHorizScaling mul neg 0
+       pdfTextMat dtransform rmoveto } def
+/TJmV { 0.001 mul pdfFontSize mul neg 0 exch
+        pdfTextMat dtransform rmoveto } def
+/Tclip { pdfTextClipPath cvx exec clip newpath
+         /pdfTextClipPath [] def } def
+/Tclip* { pdfTextClipPath cvx exec eoclip newpath
+         /pdfTextClipPath [] def } def
+% Level 2/3 image operators
+/pdfImBuf 100 string def
+/pdfImStr {
+  2 copy exch length lt {
+    2 copy get exch 1 add exch
+  } {
+    ()
+  } ifelse
+} def
+/skipEOD {
+  { currentfile pdfImBuf readline
+    not { pop exit } if
+    (%-EOD-) eq { exit } if } loop
+} def
+/pdfIm { image skipEOD } def
+/pdfImM { fCol imagemask skipEOD } def
+/pr { 2 index 2 index 3 2 roll putinterval 4 add } def
+/pdfImClip {
+  gsave
+  0 2 4 index length 1 sub {
+    dup 4 index exch 2 copy
+    get 5 index div put
+    1 add 3 index exch 2 copy
+    get 3 index div put
+  } for
+  pop pop rectclip
+} def
+/pdfImClipEnd { grestore } def
+% shading operators
+/colordelta {
+  false 0 1 3 index length 1 sub {
+    dup 4 index exch get 3 index 3 2 roll get sub abs 0.004 gt {
+      pop true
+    } if
+  } for
+  exch pop exch pop
+} def
+/funcCol { func n array astore } def
+/funcSH {
+  dup 0 eq {
+    true
+  } {
+    dup 6 eq {
+      false
+    } {
+      4 index 4 index funcCol dup
+      6 index 4 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      5 index 5 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      6 index 8 index funcCol dup
+      3 1 roll colordelta 3 1 roll
+      colordelta or or or
+    } ifelse
+  } ifelse
+  {
+    1 add
+    4 index 3 index add 0.5 mul exch 4 index 3 index add 0.5 mul exch
+    6 index 6 index 4 index 4 index 4 index funcSH
+    2 index 6 index 6 index 4 index 4 index funcSH
+    6 index 2 index 4 index 6 index 4 index funcSH
+    5 3 roll 3 2 roll funcSH pop pop
+  } {
+    pop 3 index 2 index add 0.5 mul 3 index  2 index add 0.5 mul
+    funcCol sc
+    dup 4 index exch mat transform m
+    3 index 3 index mat transform l
+    1 index 3 index mat transform l
+    mat transform l pop pop h f*
+  } ifelse
+} def
+/axialCol {
+  dup 0 lt {
+    pop t0
+  } {
+    dup 1 gt {
+      pop t1
+    } {
+      dt mul t0 add
+    } ifelse
+  } ifelse
+  func n array astore
+} def
+/axialSH {
+  dup 0 eq {
+    true
+  } {
+    dup 8 eq {
+      false
+    } {
+      2 index axialCol 2 index axialCol colordelta
+    } ifelse
+  } ifelse
+  {
+    1 add 3 1 roll 2 copy add 0.5 mul
+    dup 4 3 roll exch 4 index axialSH
+    exch 3 2 roll axialSH
+  } {
+    pop 2 copy add 0.5 mul
+    axialCol sc
+    exch dup dx mul x0 add exch dy mul y0 add
+    3 2 roll dup dx mul x0 add exch dy mul y0 add
+    dx abs dy abs ge {
+      2 copy yMin sub dy mul dx div add yMin m
+      yMax sub dy mul dx div add yMax l
+      2 copy yMax sub dy mul dx div add yMax l
+      yMin sub dy mul dx div add yMin l
+      h f*
+    } {
+      exch 2 copy xMin sub dx mul dy div add xMin exch m
+      xMax sub dx mul dy div add xMax exch l
+      exch 2 copy xMax sub dx mul dy div add xMax exch l
+      xMin sub dx mul dy div add xMin exch l
+      h f*
+    } ifelse
+  } ifelse
+} def
+/radialCol {
+  dup t0 lt {
+    pop t0
+  } {
+    dup t1 gt {
+      pop t1
+    } if
+  } ifelse
+  func n array astore
+} def
+/radialSH {
+  dup 0 eq {
+    true
+  } {
+    dup 8 eq {
+      false
+    } {
+      2 index dt mul t0 add radialCol
+      2 index dt mul t0 add radialCol colordelta
+    } ifelse
+  } ifelse
+  {
+    1 add 3 1 roll 2 copy add 0.5 mul
+    dup 4 3 roll exch 4 index radialSH
+    exch 3 2 roll radialSH
+  } {
+    pop 2 copy add 0.5 mul dt mul t0 add
+    radialCol sc
+    encl {
+      exch dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      0 360 arc h
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      360 0 arcn h f
+    } {
+      2 copy
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a1 a2 arcn
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a2 a1 arcn h
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a1 a2 arc
+      dup dx mul x0 add exch dup dy mul y0 add exch dr mul r0 add
+      a2 a1 arc h f
+    } ifelse
+  } ifelse
+} def
+end
 %%EndResource
 %%EndProlog
 %%BeginSetup
-14 default-font-family set_font
-1 setmiterlimit
-% /arrowlength 10 def
-% /arrowwidth 5 def
-
-% make sure pdfmark is harmless for PS-interpreters other than Distiller
-/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
-% make '<<' and '>>' safe on PS Level 1 devices
-/languagelevel where {pop languagelevel}{1} ifelse
-2 lt {
-    userdict (<<) cvn ([) cvn load put
-    userdict (>>) cvn ([) cvn load put
-} if
-
+xpdf begin
+%%BeginResource: font CSSNFD+CMUSerif-Roman
+%!PS-TrueTypeFont-29810
+10 dict begin
+/FontName /CSSNFD+CMUSerif-Roman def
+/FontType 42 def
+/FontMatrix [1 0 0 1 0 0] def
+/FontBBox [-1135 -387 1495 1094] def
+/PaintType 0 def
+/Encoding 256 array
+dup 0 /.notdef put
+dup 1 /.notdef put
+dup 2 /.notdef put
+dup 3 /.notdef put
+dup 4 /.notdef put
+dup 5 /.notdef put
+dup 6 /.notdef put
+dup 7 /.notdef put
+dup 8 /.notdef put
+dup 9 /.notdef put
+dup 10 /.notdef put
+dup 11 /.notdef put
+dup 12 /.notdef put
+dup 13 /.notdef put
+dup 14 /.notdef put
+dup 15 /.notdef put
+dup 16 /.notdef put
+dup 17 /.notdef put
+dup 18 /.notdef put
+dup 19 /.notdef put
+dup 20 /.notdef put
+dup 21 /.notdef put
+dup 22 /.notdef put
+dup 23 /.notdef put
+dup 24 /.notdef put
+dup 25 /.notdef put
+dup 26 /.notdef put
+dup 27 /.notdef put
+dup 28 /.notdef put
+dup 29 /.notdef put
+dup 30 /.notdef put
+dup 31 /.notdef put
+dup 32 /space put
+dup 33 /exclam put
+dup 34 /quotedbl put
+dup 35 /numbersign put
+dup 36 /dollar put
+dup 37 /percent put
+dup 38 /ampersand put
+dup 39 /quotesingle put
+dup 40 /parenleft put
+dup 41 /parenright put
+dup 42 /asterisk put
+dup 43 /plus put
+dup 44 /comma put
+dup 45 /hyphen put
+dup 46 /period put
+dup 47 /slash put
+dup 48 /zero put
+dup 49 /one put
+dup 50 /two put
+dup 51 /three put
+dup 52 /four put
+dup 53 /five put
+dup 54 /six put
+dup 55 /seven put
+dup 56 /eight put
+dup 57 /nine put
+dup 58 /colon put
+dup 59 /semicolon put
+dup 60 /less put
+dup 61 /equal put
+dup 62 /greater put
+dup 63 /question put
+dup 64 /at put
+dup 65 /A put
+dup 66 /B put
+dup 67 /C put
+dup 68 /D put
+dup 69 /E put
+dup 70 /F put
+dup 71 /G put
+dup 72 /H put
+dup 73 /I put
+dup 74 /J put
+dup 75 /K put
+dup 76 /L put
+dup 77 /M put
+dup 78 /N put
+dup 79 /O put
+dup 80 /P put
+dup 81 /Q put
+dup 82 /R put
+dup 83 /S put
+dup 84 /T put
+dup 85 /U put
+dup 86 /V put
+dup 87 /W put
+dup 88 /X put
+dup 89 /Y put
+dup 90 /Z put
+dup 91 /bracketleft put
+dup 92 /backslash put
+dup 93 /bracketright put
+dup 94 /asciicircum put
+dup 95 /underscore put
+dup 96 /grave put
+dup 97 /a put
+dup 98 /b put
+dup 99 /c put
+dup 100 /d put
+dup 101 /e put
+dup 102 /f put
+dup 103 /g put
+dup 104 /h put
+dup 105 /i put
+dup 106 /j put
+dup 107 /k put
+dup 108 /l put
+dup 109 /m put
+dup 110 /n put
+dup 111 /o put
+dup 112 /p put
+dup 113 /q put
+dup 114 /r put
+dup 115 /s put
+dup 116 /t put
+dup 117 /u put
+dup 118 /v put
+dup 119 /w put
+dup 120 /x put
+dup 121 /y put
+dup 122 /z put
+dup 123 /braceleft put
+dup 124 /bar put
+dup 125 /braceright put
+dup 126 /asciitilde put
+dup 127 /.notdef put
+dup 128 /Adieresis put
+dup 129 /Aring put
+dup 130 /Ccedilla put
+dup 131 /Eacute put
+dup 132 /Ntilde put
+dup 133 /Odieresis put
+dup 134 /Udieresis put
+dup 135 /aacute put
+dup 136 /agrave put
+dup 137 /acircumflex put
+dup 138 /adieresis put
+dup 139 /atilde put
+dup 140 /aring put
+dup 141 /ccedilla put
+dup 142 /eacute put
+dup 143 /egrave put
+dup 144 /ecircumflex put
+dup 145 /edieresis put
+dup 146 /iacute put
+dup 147 /igrave put
+dup 148 /icircumflex put
+dup 149 /idieresis put
+dup 150 /ntilde put
+dup 151 /oacute put
+dup 152 /ograve put
+dup 153 /ocircumflex put
+dup 154 /odieresis put
+dup 155 /otilde put
+dup 156 /uacute put
+dup 157 /ugrave put
+dup 158 /ucircumflex put
+dup 159 /udieresis put
+dup 160 /dagger put
+dup 161 /degree put
+dup 162 /cent put
+dup 163 /sterling put
+dup 164 /section put
+dup 165 /bullet put
+dup 166 /paragraph put
+dup 167 /germandbls put
+dup 168 /registered put
+dup 169 /copyright put
+dup 170 /trademark put
+dup 171 /acute put
+dup 172 /dieresis put
+dup 173 /notequal put
+dup 174 /AE put
+dup 175 /Oslash put
+dup 176 /infinity put
+dup 177 /plusminus put
+dup 178 /lessequal put
+dup 179 /greaterequal put
+dup 180 /yen put
+dup 181 /mu put
+dup 182 /partialdiff put
+dup 183 /summation put
+dup 184 /product put
+dup 185 /pi put
+dup 186 /integral put
+dup 187 /ordfeminine put
+dup 188 /ordmasculine put
+dup 189 /Omega put
+dup 190 /ae put
+dup 191 /oslash put
+dup 192 /questiondown put
+dup 193 /exclamdown put
+dup 194 /logicalnot put
+dup 195 /radical put
+dup 196 /florin put
+dup 197 /approxequal put
+dup 198 /Delta put
+dup 199 /guillemotleft put
+dup 200 /guillemotright put
+dup 201 /ellipsis put
+dup 202 /space put
+dup 203 /Agrave put
+dup 204 /Atilde put
+dup 205 /Otilde put
+dup 206 /OE put
+dup 207 /oe put
+dup 208 /endash put
+dup 209 /emdash put
+dup 210 /quotedblleft put
+dup 211 /quotedblright put
+dup 212 /quoteleft put
+dup 213 /quoteright put
+dup 214 /divide put
+dup 215 /lozenge put
+dup 216 /ydieresis put
+dup 217 /Ydieresis put
+dup 218 /fraction put
+dup 219 /currency put
+dup 220 /guilsinglleft put
+dup 221 /guilsinglright put
+dup 222 /fi put
+dup 223 /fl put
+dup 224 /daggerdbl put
+dup 225 /periodcentered put
+dup 226 /quotesinglbase put
+dup 227 /quotedblbase put
+dup 228 /perthousand put
+dup 229 /Acircumflex put
+dup 230 /Ecircumflex put
+dup 231 /Aacute put
+dup 232 /Edieresis put
+dup 233 /Egrave put
+dup 234 /Iacute put
+dup 235 /Icircumflex put
+dup 236 /Idieresis put
+dup 237 /Igrave put
+dup 238 /Oacute put
+dup 239 /Ocircumflex put
+dup 240 /apple put
+dup 241 /Ograve put
+dup 242 /Uacute put
+dup 243 /Ucircumflex put
+dup 244 /Ugrave put
+dup 245 /dotlessi put
+dup 246 /circumflex put
+dup 247 /tilde put
+dup 248 /macron put
+dup 249 /breve put
+dup 250 /dotaccent put
+dup 251 /ring put
+dup 252 /cedilla put
+dup 253 /hungarumlaut put
+dup 254 /ogonek put
+dup 255 /caron put
+readonly def
+/CharStrings 256 dict dup begin
+/.notdef 0 def
+/space 1 def
+/w 26 def
+/u 25 def
+/t 24 def
+/s 23 def
+/q 22 def
+/p 21 def
+/o 20 def
+/n 19 def
+/m 18 def
+/l 17 def
+/i 16 def
+/h 15 def
+/g 14 def
+/f 13 def
+/e 12 def
+/d 11 def
+/a 10 def
+/W 9 def
+/R 8 def
+/M 7 def
+/H 6 def
+/D 5 def
+/one 4 def
+/zero 3 def
+/comma 2 def
+/space 1 def
+end readonly def
+/sfnts [
+<0001000000090080000300106376742005bb07cd0000009c0000005a6670676d
+6d042d57000000f800000205676c7966735897970000030000001c3c68656164
+ed5a419d00001f3c000000366868656105da038200001f7400000024686d7478
+3a9c038500001f980000006c6c6f63615b5a631600002004000000386d617870
+014504530000203c0000002070726570437738a80000205c000000f100>
+<ff3dff5e000001ae029802a6001f00000016001a00460019001c001e00280046
+004b0054005900670036005600500049001400600052003c0043003900410030
+00260021002a003f0023005c0033000c002c000f0012004e002e000000>
+<b0002cb000134bb01c5058b04a7659b000233f18b0062b583d594bb01c50587d
+5920d4b001132e182db0012c20dab00c2b2db0022c4b5258452359212db0032c
+691820b040505821b040592db0042cb0062b582123217a58dd1bcd591b4b5258
+58fd1bed591b2321b0052b58b046765958dd1bcd595959182db0052c0d5c5a2d
+b0062cb12201885058b020885c5c1bb000592db0072cb12401885058b040885c
+5c1bb000592db0082c121120392f2db0092c207db0062b58c41bcd5920b00325
+492320b004264ab00050588a658a6120b0005058381b2121591b8a8a6120b000
+5258381b21215959182db00a2cb0062b5821101b1021592db00b2c20d2b00c2b
+2db00c2c202fb0072b5c582020472346616a2058206462381b2121591b21592d
+b00d2c12112020392f208a20478a4661238a208a234ab000505823b0005258b0
+40381b21591b23b0005058b04065381b2159592db00e2cb0062b583dd6182121
+1b20d68a4b5258208a234920b0005558381b2121591b212159592db00f2c2320
+d6202fb0072b5c582320584b531b21b00159588ab0042649238a23208a498a23
+61381b21212121591b2121212121592db0102c20dab0122b2db0112c20d2b012
+2b2db0122c202fb0072b5c582020472346616a8a2047234623616a6020582064
+62381b2121591b2121592db0132c208a208a8720b003254a64238a07b0205058
+3c1bc0592d00000000>
+<0005000a000a02ee02fd000300060009000c000f00f400b20a05002bb00c33b4
+01060022042bb0002fb407060022042bb0083201b0102fb000d6b4040a003204
+2bb00632b00410b2000e102bb00f32b4030a0032042bb011d6b0361ab1040c87
+04b0042e05b00cc0b10714f904b00fc0b106088705b0082e04b006c0b10e14f9
+05b00ac0b00610b3050608132bb1060808b00410b305040c132b05b00610b309
+0608132bb1060808b00710b309070f132b05b00a10b30b0a0e132bb10a0e08b0
+0410b30b040c132b05b00a10b30d0a0e132bb10a0e08b00710b30d070f132b00
+b7040506090b0d0e0f2e2e2e2e2e2e2e2e01b7050708090a0b0c0d2e2e2e2e2e
+2e2e2eb0401a0100303137112111250901132109030301110a02e4fd580114fe
+ec230226feedfeed01130113f101140a02f3fd0d6601140113fdaf01140167fe
+ec0114fec3feec022700000000>
+<00010056ff3f00cb006a0016004d00b21502002bb403060013042bb20602002b
+b21002002bb00a2f01b0172fb010d6b4060b002c042bb210060a2bb300100c09
+2bb3001001092bb018d600b1150a1112b00e39b00311b0123930313634363332
+1615140e0123223534373635342307062322561c191e222a29080a0748020211
+1519202a20393034602e0b04074d5f0f020e000000>
+<00020027ffea01cc029a00120028004400b20e02002bb11808e9b20404002bb1
+2208e901b0292fb000d6b11311e9b01310b2001d102bb10a11e9b02ad6b11d13
+1112b10e04393900b122181112b10a00393930311334373633321e0117161514
+070623222627263714171e0133323637363534272e0123220e0207062725347a
+1a364515282536782d5b1d2d530b0c432528430a0b0a0d46230d1c281f070801
+409350770e362c55959250742e3753aa973c41383c41408f8b3841340816382a
+3600000000>
+<00010059000001a3029a0016006000b20f02002bb11006e9b00a32b20304002b
+b101031020c02fb10006e901b0172fb014d6b10710e9b207140a2bb340070b09
+2bb214070a2bb3401401092bb018d6b107141112b0033900b100101112b00739
+b00111b01539b00312b006393031133532373216151114163b01152622073533
+323635110659783e11061d402023fe23203f1e34023b1f400812fdcf1e121f03
+031f121e02061a0000>
+<00020023000002c302ab00120024003e00b20002002bb10106e9b01632b20b05
+002bb10a06e9b0203201b0252fb005d6b11311e9b01310b2051c102bb10f13e9
+b026d600b10a011112b00f3930313335333236351134262b0135213216151406
+232714163b0132363736353427262b0122061523183619193618016e80b2b37f
+b10f22654259173734437364220f1f121d020f1d121fcc8f8cc4471a0e361f4b
+9198475d0e1a000000>
+<00010021000002cc02ab003f00a100b20002002bb02b33b10106e9b229303a32
+3232b20b05002bb01c33b10a06e9b2101a21323232b41536000b0d2bb11506e9
+01b0402fb005d6b13712e9b01432b237050a2bb340373b092bb00f32b205370a
+2bb3400501092bb00a32b03710b20534102bb01632b12612e9b226340a2bb340
+262a092bb02032b234260a2bb3403430092bb01b32b041d6b137051112b10d3e
+3939b126341112b11e2d39390030313335333236351134262b01351633323715
+2322061d01213534262b01351633323715232206151114163b01152623220735
+3332363511211114163b01152623222118361919361823717023183619012b19
+36182371702318361919361823717023183619fed51936182371701f121d020f
+1d121f03031f121deaea1d121f03031f121dfdf11d121f03031f121d0106fefa
+1d121f0300>
+<000100250000036f02ab003c00d400b20002002bb1212f3333b10106e9b21f26
+39323232b21505002bb00c33b12c06e9b10a173232b21505002bb43206004d04
+2b01b03d2fb006d6b1340ce9b234060a2bb3403439092bb206340a2bb3400601
+092bb00b32b03410b2062a102bb11c11e9b21c2a0a2bb3401c20092bb01632b2
+2a1c0a2bb3402a26092bb03ed6b0361ab1323187b0322eb031c0b11017f9b011
+c0b12d2c87b02c2e04b02dc0b11218f9b1101108b011c000b41011122d312e2e
+2e2e2e01b61011122c2d31322e2e2e2e2e2e2eb0401a01b11c2a1112b0233900
+30313335323e02351134262b0135333216171b013e013b011523220615111416
+3b011526232207353332363511230306232227032311141e023315262225242e
+1104193618a9120a07d9db050913a9183619193618256a6b2518361901f6070b
+0c08f10104112e2469181f0e1b120f01f41d121f0610fdd002330e051f121dfd
+f11d121f03031f121d023efd871316026efde50f121b0e1f0300000000>
+<00020023ffea02dc02ab003c005000af00b22802002bb11c08e9b21c280a2bb3
+001c21092bb20002002bb10106e9b03832b20b05002bb10a06e9b04a32b43d34
+280b0d2bb13d08e901b0512fb005d6b13511e9b03d32b235050a2bb340353909
+2bb205350a2bb3400501092bb00a32b03510b20543102bb10f13e9b00f10b243
+1f102bb1230be9b052d6b143351112b12c123939b00f11b114163939b01f12b1
+1c28393900b134011112b214162e393939b03d11b01239b00a12b00f39303133
+35333236351134262b013521321615140607161f011e05333236373633321514
+0e022322272e0235342627262b011514163b011526221333323e0235342e0423
+22070e021523183619193618013a6d98634c63170d040509090e120c17270402
+0a0d0813291b4e301412030c1a233a7319361824dc996f3548220d1022223524
+1d310a0b09021f121d020f1d121f6b493858132252501d1d2813140729301011
+0d21261a2a122f25293a331922fd1d121f03015e1a2f2f1e23351f1408020201
+0b0c0e0000>
+<00010012ffea03f102ab003f012200b23a02002bb03233b22e02002bb22f0200
+2bb23c02002bb22a05002bb101133333b12b06e9b40008121a2524173201b040
+2fb041d6b0361ab13d3c87b03c2eb03dc0b10d15f9b00cc0b10d0e87b10c0d08
+b00d1004b00ec0b1380bf9b035c0b10f348705b00f2eb034c0b11e15f9b01fc0
+b11f2087b11e1f08b01f1004b020c0b1300bf9b02dc0b10d0e08b00f10b30e0f
+34132b05b03010b32e302d132bb32f302d132bb1383508b00f10b3350f34132b
+04b03810b3363835132bb3373835132bb2373835208a208a23060e111239b036
+3900400f0c0d0e0f1e1f202d3435363d3037382e2e2e2e2e2e2e2e2e2e2e2e2e
+2e2e0140120c0d0e0f1e1f202d2e3435363c3d2f3037382e2e2e2e2e2e2e2e2e
+2e2e2e2e2e2e2e2e2eb0401a010030311335321e0133323715221514171b0127
+2e012335321e0133323715221514171b0136353426273516333237152207030e
+022322270b010e02232227032e01120e3328116a245402a18b160822300e3328
+116a245403a096052a2d4e292e2d4f15bf020308070d06a6a5020308070d06c8
+091b028c1f0201031f1e0706fe1401ad46190b1f0201031f1e030cfe1601ce0f
+051222011f03031f43fdb50807051301fdfe040807051302651d0d0000>
+<0002002afff501ed01c00032003c00ae00b22f02002bb13608e9b22902002bb1
+2106e9b21603002bb10808e9b4043a2f160d2bb10408e9b40a102f160d2bb40a
+060016042b01b03d2fb000d6b13310e9b01320d611b10d12e9b03310b2003910
+2bb00432b11d0ae9b01d10b23923102bb1260be9b03ed6b133131112b1100a39
+39b1390d1112b308162f36241739b01d11b02c39b02312b0293900b13a211112
+b51d0024252c33241739b00411b00339b01012b01c39b00a11b0133930313734
+3736373534262322071e011514062322263534363332171e021d01141e013332
+3d0133151406232226270e0123222e013714163332363d010e012a643c7c4129
+49231e151915141a583f523711110204120f2419381a212a030f452f2444384d
+35252a4b6f605f552d1d07253e422e011e0f141a1916314037112c1d1cc80613
+19403838352a312126311232272530414064045800>
+<00020022fff5020f02b600160027007c00b21402002bb01133b11b08e9b21002
+002bb10f06e9b20b05002bb20a05002bb10906e9b20303002bb12408e901b028
+2fb000d6b11711e9b01710b20012102bb1051f3232b10c0ae9b20c120a2bb340
+0c10092bb2120c0a2bb3401209092bb029d6b112171112b10314393900b1240f
+1112b30005121724173930313734363332173534262335371114163315073506
+23222637141716333237363d013427262322070622855a4c321a34901a349334
+52567e531d28414a2c0b0b2943462b1fd75f843ed825131f0bfda125131f0b42
+42845d5d2e40461114cd14113c40300000>
+<0002001cfff5019f01c0001e0029006c00b21c02002bb10e09e9b20e1c0a2bb3
+000e15092bb20303002bb12508e9b41f0a1c030d2bb11f08e901b02a2fb000d6
+b10a11e9b01f32b00a10b20020102bb1060ae9b01732b02bd6b1200a1112b203
+0e1c393939b00611b0133900b10a0e1112b00039b01f11b00639303137343633
+3216151406232114171633323e023736333215140e022322263733342e022322
+0e021c7957585b0811fee91e2a470a17302a0c030a0d1324462a588454ed0715
+312410232a1ddc5e8672520f0666304304112e240e0c09272f238582152f4129
+0e214b0000>
+<000100210000016502c1002b008800b22602002bb12706e9b01e32b20605002b
+b11308e9b20103002bb01733b10006e9b01932b30c0006082b01b02c2fb02ad6
+b00232b11b0ae9b01632b21b2a0a2bb3401b19092bb3401b1f092bb22a1b0a2b
+b3402a00092bb01b10b22a0f102bb10912e9b02dd6b11b2a1112b02239b00f11
+b106133939b00912b0113900b1130c1112b00939303113353335343633321615
+1406232226353437262322061d013315231114163b01152623220e0123353236
+3511214f603b2733171514171e0f122438757218341528570c26320e35190190
+1f734a552a1c13191912200a074a3e741ffebe1d121f0301021f0d200144000000>
+<0003001cff3201e501c500370046005200ee00b23500002bb13b08e9b20c0300
+2bb14f08e9b21d03002bb11008e9b21d100a2bb3001d16092bb4442a350c0d2b
+b444060022042bb44923350c0d2bb14908e901b0532fb009d6b14710e9b33847
+09082bb4000e0027042bb0002fb4380e0027042bb3054709082bb1270de9b047
+10b2094d102bb12110e9b02110b24d3e102bb4320e0027042bb01920d611b413
+0a0032042bb054d6b147271112b2072503393939b04d11b5230c353b442c2417
+39b02112b10e1f3939b132191112b310161b1d24173900b1443b1112b1320039
+39b02a11b00339b02312b105273939b14f491112b507090e1f21252417393031
+1734363726353437263534363332173633321615140623222635343726232207
+16140623222706151416171633321e0117161514062322263714163332363534
+2e022b010e011314333237363534232207061c312b2c1f2f5e443c2e303a1a19
+130a0c111003073129295e44382b111e170744282c3f1941835b5c8134614948
+612246312d3b223037572c1b10572c1b104f20380c1c3d2f2427403b57242f20
+110f0f100d150601272676571f141b19270301020d0d244e39484936293f3e2a
+1e260f03023201547b281b397b281b0000>
+<000100200000021702b60030009a00b20002002bb01933b10106e9b2181e2c32
+3232b20a05002bb408060030042bb20f03002bb12508e901b0312fb004d6b129
+0ae9b00a32b229040a2bb340292c092bb204290a2bb3400401092bb00832b029
+10b20421102bb1150ae9b215210a2bb3401518092bb221150a2bb340211e092b
+b032d6b129041112b10c2f3939b02111b00f39b01512b01b3900b125011112b2
+0b0c143939393031333532363511342623353711333e013332171e011d011e01
+3315262322073532363d0134262322061d01141633152623222035191a349001
+1048384b1e160901202d660a086935191f2b34531935660a081f0d2002082513
+1f0bfea4243c25193848bf15091f03031f0d20e9333c5749b8200d1f0300000000>
+<00020021000000f7029d0012001c006500b20002002bb10106e9b00e32b20a03
+002bb20903002bb10806e9b01a2fb416060013042b01b01d2fb004d6b10b0ae9
+b01732b20b040a2bb3400b0e092bb2040b0a2bb3400401092bb00b10b11313e9
+b0132fb01ed6b10b041112b211161a3939390030313335323635113426233537
+11141633152623220334363216140623222621351919318c153166020e361f2c
+1f1f16171e1f0d20010d25121f0bfe911e0e1f03026514211e2e1e2000>
+<00010021000000ff02b60014004b00b20002002bb10106e9b00e32b20a05002b
+b408060030042b01b0152fb004d6b10b0ae9b20b040a2bb3400b0e092bb2040b
+0a2bb3400401092bb00832b016d6b10b041112b0133900303133353236351134
+262335371114163315222e0123222135191a349019350c33250b0c1f0d200208
+25131f0bfd96200d1f02010000>
+<000100200000032d01ba004700dd00b20002002bb11c303333b10106e9b41b21
+2f3543241732b20d03002bb10a123333b13c08e9b02832b20d03002bb4080600
+30042b01b0482fb004d6b1400ae9b40b0a004f042bb20b040a2bb3400b43092b
+b2040b0a2bb3400401092bb00832b04010b20438102bb12c0ae9b22c380a2bb3
+402c2f092bb2382c0a2bb3403835092bb02c10b540382c24000f2bb1180ae9b2
+18240a2bb340181b092bb224180a2bb3402421092bb049d6b10b041112b04639
+b138401112b00d39b02c11b10f323939b02412b01239b01811b01e3900b10801
+1112b20b0f173939393031333532363511342623353715363332173e01333217
+1e011d011e013315262322073532363d0134262322061d011416331526232207
+3532363d0134262322061d01141633152623222035191a348d2f657510114838
+4b1e160901202d660a086935191f2b34531935660a086935191f2b3453193566
+0a081f0d20010c25131f0b696962263c25193848bf15091f03031f0d20e9333c
+5749b8200d1f03031f0d20e9333c5749b8200d1f0300000000>
+<000100200000021701ba002e009f00b20002002bb01733b10106e9b2161c2a32
+3232b20d03002bb00a33b12308e9b20d03002bb408060030042b01b02f2fb004
+d6b1270ae9b40b0a004f042bb20b040a2bb3400b2a092bb2040b0a2bb3400401
+092bb00832b02710b2041f102bb1130ae9b2131f0a2bb3401316092bb21f130a
+2bb3401f1c092bb030d6b10b041112b02d39b11f271112b00d39b01311b01939
+00b108011112b10b1239393031333532363511342623353715363332171e011d
+011e013315262322073532363d0134262322061d01141633152623222035191a
+348d2f654b1e160901202d660a086935191f2b34531935660a081f0d20010c25
+131f0b696925193848bf15091f03031f0d20e9333c5749b8200d1f0300>
+<0002001cfff501d701c0000a001c004600b20902002bb10f09e9b20303002bb1
+1808e901b01d2fb001d6b10b11e9b00b10b20114102bb10611e9b01ed6b1140b
+1112b10903393900b1180f1112b2000106393939303136343633321615140623
+222714171633323637363534272623220607061c815d5b82835b593119274b25
+3e11161a274a203f131877be8b8a605e83e9612c4328222c5a602b4122212c0000>
+<0002001cff3e020901ba001f002e008400b21202002bb12508e9b21f00002bb1
+0006e9b01a32b20c03002bb00933b12b09e9b20803002bb10706e901b02f2fb0
+03d6b1170ae9b109203232b217030a2bb340171a092bb203170a2bb340030009
+2bb00732b01710b20328102bb10f11e9b030d6b117031112b01d39b02811b112
+0c393900b107251112b40a0f15282e2417393031173236351134262335371536
+333216151406232226271d011416331526232207131416171633323635342623
+2206071c35191935903c50557c845b324306193569080a6693040a284139574f
+37274416a30d2001d421111f0b4242845e5f84331309a8200d1f030301340f0b
+103d755854752a2600>
+<00020022ff3e020f01ba001b0029007900b21902002bb11f08e9b21200002bb1
+1306e9b00d32b20303002bb00833b12709e901b02a2fb000d6b11c11e9b01c10
+b20016102bb02332b10a0ae9b20a160a2bb3400a0d092bb2160a0a2bb3401613
+092bb02bd6b1161c1112b303191f27241739b00a11b10710393900b1271f1112
+b2001707393939303137343633321e011737331114163315262322073532363d
+0106232226371416333237363d013426232206228459253d1b09261619356908
+0a663519374e577e534f3736262843373957d760832424135bfdd0200d1f0303
+1f0d20b348855d5676292c288d2f5d7300>
+<00010021fff5016801c00044009b00b23902002bb04233b10b08e9b20b390a2b
+b3400b05092bb21703002bb01d33b429080031042bb229170a2bb3402925092b
+01b0452fb015d6b00032b42c0e002a042bb1080be9b02c10b2150e102bb02732
+b4360e002a042bb1230be9b046d6b108151112b04239b02c11b1093f3939b00e
+12b710110b1b1733393b241739b02311b01d3900b10b391112b03f39b02911b3
+1519363b24173930313735343e01333216171e013332363534272e0127263436
+3332173637363332161d01140e012322272623220615141e0317161716151406
+2322270e030706232226210106060705020f413b3839683c32162b4c5438260b
+060d0708030106060b01086d3b35101527181750222a5051412d060903010114
+0508030d840b0806060b4549322949130c10122364491c09070c0a0e650b0805
+09792d1f111a0f0e05050f212a353b502b060a040201140a00>
+<00010013fff5014c0267001c006e00b21602002bb10d09e9b20703002bb10a06
+e9b00032b00a10b10108e9b3121607082bb0062f01b01d2fb01bd6b10b0ae9b0
+0632b21b0b0a2bb3401b00092bb00b10b1050be9b0052fb20b050a2bb3400b09
+092bb00b10b21b10102bb1130be9b01ed6b1100b1112b0163900303113353e02
+37331533152311143332363d013315140623222e023511132e3d1501198f8f43
+1d2619323112242e1d0190160241502eb81ffeea6c3b353739365109183b2b01
+1400000000>
+<00010020fff5021701ba0023007f00b21a02002bb01733b10808e9b21a02002b
+b415060030042bb20103002bb01033b10006e9b00f32b21103002bb00233b40f
+060030042b01b0242fb020d6b1030ae9b220030a2bb3402000092bb00310b220
+0b102bb01732b1120ae9b20b120a2bb3400b0f092bb025d6b10b031112b01a39
+00b100151112b118203939303113353711141e023332363d0134262335371114
+16331507350623222e033d01342620930410261e36431a34931a34902a572c3c
+1e10021401901f0bfeb4181c200f5942b225131f0bfe9d25131f0b5a5a161c36
+212096441800000000>
+<00010012fff502bf01af003800cb00b22c02002bb03233b22603002bb1011133
+33b12706e9b4000610162124173201b0392fb03ad6b0361ab1363587b0362eb0
+35c0b10a1cf9b00bc0b10b0c87b10a0b08b00b1004b00cc0b1300bf9b02fc0b1
+0c2e87b10b0c08b00c1005b02ec0b11a1df9b01bc0b11b1c87b11a1b08b01b10
+04b01cc0b12a09f9b029c0b1302f08b00c10b32f0c2e132b00400d0a0b0c1a1b
+1c292a2e2f3035362e2e2e2e2e2e2e2e2e2e2e2e2e01400d0a0b0c1a1b1c292a
+2e2f3035362e2e2e2e2e2e2e2e2e2e2e2e2eb0401a0100303113351633323715
+22151417133726272623351633323715221514171b0136353426273516333237
+15060703060722270b010e01222627032e01123627135a3b055f5612050c332d
+2c11573b05635b051f1b392428213e16750b090d07666504071208047e091a01
+901f03031f1b060cfef5f231060f1f03031f1b040ffee901000d081619011f03
+031f023efeb8120113011cfee50c080a0c0162170c00000000>
+<000100000000b33394d38eb75f0f3cf5001f03e800000000c65fa56100000000
+c65fa561fb91fe7d05d7044600000008000200000000000000>
+<0001000003a7ff0600c805fffb91fe6105d70001000000000000000000000000
+0000001b00>
+<02f8000a014d00000115005601f4002701f4005902fb002302ee002103940025
+02e000230403001201f4002a022b002201bc001c0131002101f4001c022b0020
+011500210115002103410020022b002001f4001c022b001c020f0022018a0021
+01840013022b002002d2001200>
+<000000a600a600f0015201a601fa029c035a041c050a05b4062c069e071e0806
+089608f4093a0a060a940ae40b680be00c8c0cee0d620e1e00>
+<00010000001b009e0008009c000800020001000000140000010003130004000400>
+<b801ff85b0018d004bb0085058b101018e59b146062b5821b010594bb0145258
+21b080591db0062b5c5800b0062045b0032b44b0092045b20671022bb0032b44
+b0082045b20951022bb0032b44b0072045b20831022bb0032b4401b00a2045b0
+032b44b00e2045b20a16022bb10346762b44b00d2045b20e5e022bb10346762b
+44b00c2045b20d45022bb10346762b44b00b2045ba000c011500022bb1034676
+2b44b00f2045ba000a7fff00022bb10346762b44b0102045b20f6b022bb10346
+762b44b0112045b21030022bb10346762b44b0122045b21122022bb10346762b
+44b0132045b21214022bb10346762b445900000000>
+] def
+FontName currentdict end definefont pop
+%%EndResource
+/F8_0 /CSSNFD+CMUSerif-Roman 1 1
+[ /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef/.notdef
+  /space/exclam/quotedbl/numbersign/dollar/percent/ampersand/quotesingle
+  /parenleft/parenright/asterisk/plus/comma/hyphen/period/slash
+  /zero/one/two/three/four/five/six/seven
+  /eight/nine/colon/semicolon/less/equal/greater/question
+  /at/A/B/C/D/E/F/G
+  /H/I/J/K/L/M/N/O
+  /P/Q/R/S/T/U/V/W
+  /X/Y/Z/bracketleft/backslash/bracketright/asciicircum/underscore
+  /grave/a/b/c/d/e/f/g
+  /h/i/j/k/l/m/n/o
+  /p/q/r/s/t/u/v/w
+  /x/y/z/braceleft/bar/braceright/asciitilde/.notdef
+  /Adieresis/Aring/Ccedilla/Eacute/Ntilde/Odieresis/Udieresis/aacute
+  /agrave/acircumflex/adieresis/atilde/aring/ccedilla/eacute/egrave
+  /ecircumflex/edieresis/iacute/igrave/icircumflex/idieresis/ntilde/oacute
+  /ograve/ocircumflex/odieresis/otilde/uacute/ugrave/ucircumflex/udieresis
+  /dagger/degree/cent/sterling/section/bullet/paragraph/germandbls
+  /registered/copyright/trademark/acute/dieresis/notequal/AE/Oslash
+  /infinity/plusminus/lessequal/greaterequal/yen/mu/partialdiff/summation
+  /product/pi/integral/ordfeminine/ordmasculine/Omega/ae/oslash
+  /questiondown/exclamdown/logicalnot/radical/florin/approxequal/Delta/guillemotleft
+  /guillemotright/ellipsis/space/Agrave/Atilde/Otilde/OE/oe
+  /endash/emdash/quotedblleft/quotedblright/quoteleft/quoteright/divide/lozenge
+  /ydieresis/Ydieresis/fraction/currency/guilsinglleft/guilsinglright/fi/fl
+  /daggerdbl/periodcentered/quotesinglbase/quotedblbase/perthousand/Acircumflex/Ecircumflex/Aacute
+  /Edieresis/Egrave/Iacute/Icircumflex/Idieresis/Igrave/Oacute/Ocircumflex
+  /apple/Ograve/Uacute/Ucircumflex/Ugrave/dotlessi/circumflex/tilde
+  /macron/breve/dotaccent/ring/cedilla/hungarumlaut/ogonek/caron]
+pdfMakeFont
 %%EndSetup
-setupLatin1
-%%Page: 1 1
-%%PageBoundingBox: 0 0 198 112
-%%PageOrientation: Portrait
-0 0 1 beginpage
-gsave
-0 0 198 112 boxprim clip newpath
-0.623718 0.623718 set_scale 0 rotate 0 0 translate
-% Woman
-gsave
-0 0 0 nodecolor
-14 /CMU Serif set_font
-134.68 160.49 moveto 46.65 (Woman) alignedtext
-grestore
-% req_help
-gsave
-0 0 0 nodecolor
-14 /CMU Serif set_font
-85.53 88.49 moveto 48.94 (Midwife) alignedtext
-grestore
-% Woman->req_help
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 146.13 143.7 moveto
-140.5 135.47 133.65 125.48 127.43 116.42 curveto
-stroke
-0 0 0 edgecolor
-newpath 130.27 114.37 moveto
-121.73 108.1 lineto
-124.5 118.33 lineto
-closepath fill
-1 setlinewidth
-solid
-0 0 0 edgecolor
-newpath 130.27 114.37 moveto
-121.73 108.1 lineto
-124.5 118.33 lineto
-closepath stroke
-0 0 0 edgecolor
-14 /CMU Serif set_font
-54.86 134.18 moveto 79.13 (Request help) alignedtext
-grestore
-% no_help
-gsave
-0 0 0 nodecolor
-14 /CMU Serif set_font
-182.53 88.49 moveto 48.94 (Midwife) alignedtext
-grestore
-% Woman->no_help
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 170.11 143.7 moveto
-175.87 135.47 182.86 125.48 189.21 116.42 curveto
-stroke
-0 0 0 edgecolor
-newpath 192.16 118.3 moveto
-195.03 108.1 lineto
-186.42 114.29 lineto
-closepath fill
-1 setlinewidth
-solid
-0 0 0 edgecolor
-newpath 192.16 118.3 moveto
-195.03 108.1 lineto
-186.42 114.29 lineto
-closepath stroke
-0 0 0 edgecolor
-14 /CMU Serif set_font
-182.51 134.18 moveto 68.96 (Do nothing) alignedtext
-grestore
-% help1
-gsave
-0 0 0 nodecolor
-14 /CMU Serif set_font
-15.73 16.49 moveto 22.54 (1, 1) alignedtext
-grestore
-% req_help->help1
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 89.48 71.7 moveto
-79.13 62.97 66.41 52.24 55.16 42.75 curveto
-stroke
-0 0 0 edgecolor
-newpath 57.18 39.88 moveto
-47.28 36.1 lineto
-52.67 45.23 lineto
-closepath fill
-1 setlinewidth
-solid
-0 0 0 edgecolor
-newpath 57.18 39.88 moveto
-47.28 36.1 lineto
-52.67 45.23 lineto
-closepath stroke
-0 0 0 edgecolor
-14 /CMU Serif set_font
-40.15 62.2 moveto 28.36 (Help) alignedtext
-grestore
-% do_nothing1
-gsave
-0 0 0 nodecolor
-14 /CMU Serif set_font
-101.73 16.49 moveto 22.54 (0, 0) alignedtext
-grestore
-% req_help->do_nothing1
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 110.74 71.7 moveto
-111.07 63.98 111.47 54.71 111.84 46.11 curveto
-stroke
-0 0 0 edgecolor
-newpath 115.34 46.25 moveto
-112.27 36.1 lineto
-108.34 45.95 lineto
-closepath fill
-1 setlinewidth
-solid
-0 0 0 edgecolor
-newpath 115.34 46.25 moveto
-112.27 36.1 lineto
-108.34 45.95 lineto
-closepath stroke
-0 0 0 edgecolor
-14 /CMU Serif set_font
-111.5 62.08 moveto 68.96 (Do nothing) alignedtext
-grestore
-% help
-gsave
-0 0 0 nodecolor
-14 /CMU Serif set_font
-192.73 16.49 moveto 22.54 (1, 1) alignedtext
-grestore
-% no_help->help
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 206.26 71.7 moveto
-205.93 63.98 205.53 54.71 205.16 46.11 curveto
-stroke
-0 0 0 edgecolor
-newpath 208.66 45.95 moveto
-204.73 36.1 lineto
-201.66 46.25 lineto
-closepath fill
-1 setlinewidth
-solid
-0 0 0 edgecolor
-newpath 208.66 45.95 moveto
-204.73 36.1 lineto
-201.66 46.25 lineto
-closepath stroke
-0 0 0 edgecolor
-14 /CMU Serif set_font
-205.5 62.08 moveto 28.36 (Help) alignedtext
-grestore
-% do_nothing
-gsave
-0 0 0 nodecolor
-14 /CMU Serif set_font
-278.73 16.49 moveto 22.54 (1, 1) alignedtext
-grestore
-% no_help->do_nothing
-gsave
-1 setlinewidth
-0 0 0 edgecolor
-newpath 227.52 71.7 moveto
-237.87 62.97 250.59 52.24 261.84 42.75 curveto
-stroke
-0 0 0 edgecolor
-newpath 264.33 45.23 moveto
-269.72 36.1 lineto
-259.82 39.88 lineto
-closepath fill
-1 setlinewidth
-solid
-0 0 0 edgecolor
-newpath 264.33 45.23 moveto
-269.72 36.1 lineto
-259.82 39.88 lineto
-closepath stroke
-0 0 0 edgecolor
-14 /CMU Serif set_font
-248.49 62.2 moveto 68.96 (Do nothing) alignedtext
-grestore
-endpage
+pdfStartPage
+%%EndPageSetup
+[] 0 d
+1 i
+0 j
+0 J
+10 M
+1 w
+/DeviceGray {} cs
+[0] sc
+/DeviceGray {} CS
+[0] SC
+false op
+false OP
+{} settransfer
+0 0 296 196 re
+W
+q
+q
+[1 0 0 1 -57 -53] cm
+q
+[1 0 0 1 0 0] cm
+0 0 393 299 re
+W
+q
+Q
+q
+/DeviceRGB {} cs
+[0 0 0] sc
+[0 0 0] sc
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 123.676 199.2748] Tm
+0 0 Td
+/F8_0 1 Tf
+(W)
+[1.027
+0] Tj
+83 TJm
+(oman)
+[0.5
+0
+0.833
+0
+0.5
+0
+0.555
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 71.528 107.8849] Tm
+0 0 Td
+/F8_0 1 Tf
+(Midwife)
+[0.916
+0
+0.277
+0
+0.555
+0
+0.722
+0
+0.277
+0
+0.305
+0
+0.444
+0] Tj
+Q
+1 j
+1 M
+/DeviceRGB {} CS
+[0 0 0] SC
+[0 0 0] SC
+q
+[1 0 0 1 40 40] cm
+137.1667 182.5446 m
+129.6879 169.4362 119.2738 151.1829 110.7914 136.3155 c
+S
+Q
+q
+[1 0 0 1 40 40] cm
+113.7987 134.5236 m
+105.8031 127.5723 l
+107.7187 137.9925 l
+113.7987 134.5236 l
+h
+f
+113.7987 134.5236 m
+105.8031 127.5723 l
+107.7187 137.9925 l
+113.7987 134.5236 l
+h
+S
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 97 153.5798] Tm
+0 0 Td
+/F8_0 1 Tf
+(Request help)
+[0.736
+0
+0.444
+0
+0.527
+0
+0.555
+0
+0.444
+0
+0.394
+0
+0.388
+0
+0.333
+0
+0.555
+0
+0.444
+0
+0.277
+0
+0.555
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 173.528 107.8849] Tm
+0 0 Td
+/F8_0 1 Tf
+(Midwife)
+[0.916
+0
+0.277
+0
+0.555
+0
+0.722
+0
+0.277
+0
+0.305
+0
+0.444
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+156.8333 182.5446 m
+164.3121 169.4362 174.7262 151.1829 183.2086 136.3155 c
+S
+Q
+q
+[1 0 0 1 40 40] cm
+186.2813 137.9925 m
+188.1969 127.5723 l
+180.2013 134.5236 l
+186.2813 137.9925 l
+h
+f
+186.2813 137.9925 m
+188.1969 127.5723 l
+180.2013 134.5236 l
+186.2813 137.9925 l
+h
+S
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 184 153.5798] Tm
+0 0 Td
+/F8_0 1 Tf
+(Do nothing)
+[0.763
+0
+0.5
+0
+0.333
+0
+0.555
+0
+0.5
+0
+0.388
+0
+0.555
+0
+0.277
+0
+0.555
+0
+0.5
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 15.73 16.49496] Tm
+0 0 Td
+/F8_0 1 Tf
+(1, 1)
+[0.5
+0
+0.277
+0
+0.333
+0
+0.5
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+82.69611 91.15465 m
+72.48234 77.92265 58.22189 59.44815 46.68786 44.50574 c
+S
+Q
+q
+[1 0 0 1 40 40] cm
+49.14407 41.95976 m
+40.26305 36.18236 l
+43.60284 46.23705 l
+49.14407 41.95976 l
+h
+f
+49.14407 41.95976 m
+40.26305 36.18236 l
+43.60284 46.23705 l
+49.14407 41.95976 l
+h
+S
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 66 62.18992] Tm
+0 0 Td
+/F8_0 1 Tf
+(Help)
+[0.75
+0
+0.444
+0
+0.277
+0
+0.555
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 87.73 16.49496] Tm
+0 0 Td
+/F8_0 1 Tf
+(0, 0)
+[0.5
+0
+0.277
+0
+0.333
+0
+0.5
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+96.57843 91.15465 m
+97.00591 78.41731 97.59642 60.8221 98.08728 46.19588 c
+S
+Q
+q
+[1 0 0 1 40 40] cm
+101.5859 46.29417 m
+98.42335 36.18236 l
+94.5898 46.05931 l
+101.5859 46.29417 l
+h
+f
+101.5859 46.29417 m
+98.42335 36.18236 l
+94.5898 46.05931 l
+101.5859 46.29417 l
+h
+S
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 98 62.18992] Tm
+0 0 Td
+/F8_0 1 Tf
+(Do nothing)
+[0.763
+0
+0.5
+0
+0.333
+0
+0.555
+0
+0.5
+0
+0.388
+0
+0.555
+0
+0.277
+0
+0.555
+0
+0.5
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 184.73 16.49496] Tm
+0 0 Td
+/F8_0 1 Tf
+(1, 1)
+[0.5
+0
+0.277
+0
+0.333
+0
+0.5
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+197.6144 91.15465 m
+197.3294 78.41731 196.9357 60.8221 196.6085 46.19588 c
+S
+Q
+q
+[1 0 0 1 40 40] cm
+200.1073 46.10154 m
+196.3844 36.18236 l
+193.1091 46.25819 l
+200.1073 46.10154 l
+h
+f
+200.1073 46.10154 m
+196.3844 36.18236 l
+193.1091 46.25819 l
+200.1073 46.10154 l
+h
+S
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 198 62.18992] Tm
+0 0 Td
+/F8_0 1 Tf
+(Help)
+[0.75
+0
+0.444
+0
+0.277
+0
+0.555
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 256.73 16.49496] Tm
+0 0 Td
+/F8_0 1 Tf
+(1, 1)
+[0.5
+0
+0.277
+0
+0.333
+0
+0.5
+0] Tj
+Q
+q
+[1 0 0 1 40 40] cm
+211.4967 91.15465 m
+221.9553 77.79899 236.5964 59.10238 248.3541 44.08773 c
+S
+Q
+q
+[1 0 0 1 40 40] cm
+251.1349 46.21352 m
+254.5447 36.18236 l
+245.6236 41.8977 l
+251.1349 46.21352 l
+h
+f
+251.1349 46.21352 m
+254.5447 36.18236 l
+245.6236 41.8977 l
+251.1349 46.21352 l
+h
+S
+Q
+q
+[1 0 0 1 40 40] cm
+[1 0 0 1 0 0] Tm
+0 0 Td
+[14 0 0 14 244 62.18992] Tm
+0 0 Td
+/F8_0 1 Tf
+(Do nothing)
+[0.763
+0
+0.5
+0
+0.333
+0
+0.555
+0
+0.5
+0
+0.388
+0
+0.555
+0
+0.277
+0
+0.555
+0
+0.5
+0] Tj
+Q
+Q
+Q
+Q
+Q
 showpage
-grestore
 %%PageTrailer
-%%EndPage: 1
+pdfEndPage
 %%Trailer
 end
-restore
+%%DocumentSuppliedResources:
+%%+ font CSSNFD+CMUSerif-Roman
 %%EOF

@@ -58,7 +58,7 @@ and similarly for moderate (\(R_{w}(m,l)=-9\frac{1}{3}\)), and heavy (\(R_{w}(h,
 
 Once again, we return to the light drinker example.  The inferential aspects are identical with the more complex Bayesian risk minimisation algorithm, hence \(p(j)p(i | l)\), and \(u_{w}(l, i, l, j)\) remain the same, but the agent additionally calculates $v(u_{w}(l, i, l, j))w^{+}(p(j))w^{+}(p(i | l))$. For the \ac{CPT} parameters, the values are those originally given by \citet{Tversky1992} and used in the actual simulations which are given in table \ref{tab:cpt_params}.
 
-\begin{table}
+\begin{table}[H]
 \caption{\ac{CPT} parameters. \label{tab:cpt_params}}
 \begin{tabular}{llc}
 \hline
@@ -71,8 +71,8 @@ Name & Description & Value \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{equation*}
-\begin{aligned}
+%\begin{equation*}
+\begin{align*}
 \alpha &= 0.88\\
 \gamma &= 0.61\\
 p(l) &= \frac{1}{6}\\
@@ -102,8 +102,8 @@ v(u_{w}) &= 10^{0.88} = 7.59\\
 &= 0.42\\
 V(f) &= V(f^{+}) + V(f^{-}) = V(f^{+}) + 0\\
 V(f^{+}) &= \sum_{i}^{n}\pi_{i}^{+}(f^{+})v_{i}^{+}(f^{+}) = 7.59
-\end{aligned}
-\end{equation*}
+\end{align*}
+%\end{equation*}
 
 
 And as before, following the same process for moderate, and heavy signals which yields respectively 7.14, and 6.22, the agent chooses the higher valued action and sends an honest signal.

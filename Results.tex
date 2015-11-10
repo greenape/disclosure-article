@@ -11,7 +11,7 @@ As shown in figure \ref{fig:honest_signals}, all four decision rules were able t
 Trends for all four rules are broadly similar, exhibiting a gradual increase across appointments which subsequently levels off. This levelling can in part be explained by the referral results (see figure \ref{fig:ref_plot} in appendix \ref{app:additional_figures}), which show that the majority of drinkers are referred, even with substantial concealment. Referrals continue to occur, in the absence of honest signals, because drinkers are able to achieve a referral by masquerading as higher or lower types, dependent on how their initial beliefs are biased. Despite this the results suggest that a minority of risky drinkers will evade detection altogether, with no notable distinction between heavy and moderate types. Under these parameters, light drinkers always signal honestly and are never referred since there is no perceived advantage in doing so, and the evidence of deceptive signalling is insufficient to outweigh the biased priors of the midwives. 
 
 \begin{figure}[H]
-\includegraphics[width=100mm]{figures/honesty_plot}
+\includegraphics[width=100mm]{honesty_plot}
 \caption{Average fraction of population ever signalled honestly by each appointment, after 1000 rounds, mean with 95\% confidence limit over 1000 runs. Note that the large number of runs leads to very tight confidence intervals.\label{fig:honest_signals}}
 \end{figure}
 
@@ -21,7 +21,7 @@ Trends for all four rules are broadly similar, exhibiting a gradual increase acr
 Introducing social learning amongst women leads the behaviour of the decision rules to diverge markedly, which we explore possible reasons for in section \ref{sec:discussion}. Figure \ref{fig:honest_sharing} shows the proportion of women who have signalled honestly at least once by their final appointment, under four sharing conditions. 
 
 \begin{figure}[H]
-\includegraphics[width=100mm]{figures/honesty_sharing}
+\includegraphics[width=100mm]{honesty_sharing}
 \caption{Impact of social learning on trends in the average fraction of population ever signalled honestly by their final appointment, after 1000 rounds, mean with 95\% confidence interval over 100 runs}
 \label{fig:honest_sharing}
 \end{figure}
@@ -39,7 +39,7 @@ The relationship is not, however, entirely straightforward, in that increasing s
 In this section we present a brief overview of the sensitivity analysis, followed by selected results highlighting the global effect of changes to perceived payoffs and degree of bias towards honesty, as well as social learning within women. The full results for the sensitivity analysis covering all sixteen emulators are available in appendix \ref{app:sensitivity_results}.
 
 \begin{figure}[H]
-\includegraphics[width=90mm]{figures/sharing_emulated_simulated}
+\includegraphics[width=90mm]{sharing_emulated_simulated}
 \caption{Median moderate drinker signal vs median between drinking type IQR for all decision rules, with signals coded as 0 = light, 1 = moderate, and 2 = heavy.}
 \label{fig:outcome_plots}
 \end{figure}
@@ -51,7 +51,7 @@ Perhaps surprisingly, variance attributable to social learning between midwives 
 Figure \ref{fig:outcome_plots} gives a qualitative picture of both emulator quality, and the divergent response surfaces of the decision rules in response to variations in social learning parameters. Emulator fit is clearly imperfect, but overall behaviour is qualitatively similar, with both emulated and simulated plots demonstrating separation in outcome space for the decision rules.
 
 \begin{figure}[H]
-\includegraphics[width=100mm]{figures/unfixed_emu_sig_iqr}
+\includegraphics[width=100mm]{unfixed_emu_sig_iqr}
 \caption{Emulated moderate drinker signal IQR in response to varying \(q_{w}\), and \(w_{w}\)}
 \label{fig:emulated_sharing_iqr}
 \end{figure}
@@ -59,7 +59,7 @@ Figure \ref{fig:outcome_plots} gives a qualitative picture of both emulator qual
 Following from the suggestive results for social learning introducing uncertainty (section \ref{sub:sharing_results}), figure \ref{fig:emulated_sharing_iqr} shows emulated points covering the parameter space in high resolution. These plots reflect the increase in uncertainty of outcome shown for the heuristic type rules, which is especially severe for the Bayesian payoff rule. They also suggest that the Bayesian decision rule is less stable under conditions where the weight of shared information is substantially higher than the probability of sharing. This indicates that placing a high weight on information from limited sources leads to greater variability, i.e. what information is shared, matters.
 
 \begin{figure}[H]
-\includegraphics[width=100mm]{figures/unfixed_emu_payoff_honesty_group_iqr}
+\includegraphics[width=100mm]{unfixed_emu_payoff_honesty_group_iqr}
 \caption{Emulated between groups IQR in response to varying \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\), and \(x_{h}\)}
 \label{fig:emulated_payoff_group_iqr}
 \end{figure}

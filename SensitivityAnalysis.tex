@@ -1,14 +1,16 @@
 %!TEX root = disclosure_game.tex
 %Include the descent into chaos bit
-\section{Sensitivity Analysis}
+\chapter{Sensitivity Analysis}
 \label{app:sensitivity_results}
 
 This section provides complete variance based sensitivity analysis results for the disclosure game model. Each subsection gives results for one simulation output under all four decision rules, with tables providing the percentage of overall variance attributable to the individual parameters, emulator quality statistics, and the 5 most significant interaction contributions to variance in the output.
 
-\subsection{Median Moderate Drinker Signalling}
+\section{Median Moderate Drinker Signalling}
+
 
 \begin{table}[H]
 \caption{Median moderate drinker signalling parameter sensitivity \label{tab:sa_results_sig}}
+\rotatebox{90}{
 \begin{tabular} {llllll}
 \hline\noalign{\smallskip}
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} \\
@@ -26,13 +28,15 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} 
 Total & All parameters and two way interactions & 86.777 & 96.527 & 85.529 & 74.123 \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{tabular}
+}
 \end{table}
 
 \begin{table}[H]
 \caption{Median moderate drinker signalling emulator statistics \label{tab:sa_emulator_sig}}
+\rotatebox{90}{
 \begin{tabular} {lllllll}
 \hline\noalign{\smallskip}
-Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\
+Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & $\mu$ & Total output variance & Code uncertainty & RMSSE \\
 \noalign{\smallskip}\svhline\noalign{\smallskip}
 Lexicographic & 0.834 & 0.131 &  0.817 & 0.012 & 0.252 & 1.746 \\
 Bayesian Payoff & 1.667 & 0.475 &  0.662 & 0.003 & 0.181 & 3.12 \\
@@ -40,14 +44,16 @@ Bayesian & 3.352 & 0.534 & 1.160 & 0.001 & 0.068 & 2.423 \\
 \ac{CPT} & 1.503 & 0.331 & 1.241 & 0.002 & 0.101 & 1.842 \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{tabular}
+}
 \end{table}
 
-\input{top_5_table_sig}
+\input{midwives/top_5_table_sig}
 
-\subsection{Median Between Groups IQR}
+\section{Median Between Groups IQR}
 
 \begin{table}[H]
 \caption{Median between groups IQR parameter sensitivity \label{tab:sa_results_iqr}}
+\rotatebox{90}{
 \begin{tabular} {llllll}
 \hline\noalign{\smallskip}
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} \\
@@ -65,13 +71,14 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} 
 Total & All parameters and two way interactions & 81.702 & 83.693 & 47.449 & 71.032 \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{tabular}
+}
 \end{table}
 
 \begin{table}[H]
 \caption{Median between groups IQR emulator statistics \label{tab:sa_emulator_iqr}}
 \begin{tabular} {lllllll}
 \hline\noalign{\smallskip}
-Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\
+Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & $\mu$ & Total output variance & Code uncertainty & RMSSE \\
 \noalign{\smallskip}\svhline\noalign{\smallskip}
 Lexicographic & 0.930 & 0.240 & 0.249 & 0.002 & 0.040 & 1.832 \\
 Bayesian Payoff & 1.242 & 0.417 & 0.232 & 0.001 & 0.0034 & 2.308 \\
@@ -81,12 +88,13 @@ Bayesian & 1.254 & 0.131 & 0.644 & 0.000 & 0.019 & 1.167 \\
 \end{tabular}
 \end{table}
 
-\input{top_5_table_group_iqr}
+\input{midwives/top_5_table_group_iqr}
 
-\subsection{Median Moderate Drinker Signalling IQR}
+\section{Median Moderate Drinker Signalling IQR}
 
 \begin{table}[H]
 \caption{IQR of median moderate drinker signalling parameter sensitivity \label{tab:sa_results_sig_iqr}}
+\rotatebox{90}{
 \begin{tabular} {llllll}
 \hline\noalign{\smallskip}
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} \\
@@ -104,13 +112,14 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} 
 Total & All parameters and two way interactions & 84.9968 & 77.413 & 57.125 & 83.322 \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{tabular}
+}
 \end{table}
 
 \begin{table}[H]
 \caption{IQR of median between groups IQR emulator statistics \label{tab:sa_emulator_sig_iqr}}
 \begin{tabular} {lllllll}
 \hline\noalign{\smallskip}
-Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\
+Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & $\mu$ & Total output variance & Code uncertainty & RMSSE \\
 \noalign{\smallskip}\svhline\noalign{\smallskip}
 Lexicographic & 1.425 & 0.436 & 0.549 & 0.008 & 0.114 & 2.719 \\
 Bayesian Payoff & 1.223 & 0.496 & 0.747 & 0.012 & 0.207 & 2.034 \\
@@ -120,12 +129,13 @@ Bayesian &  1.065 & 0.000 & 0.230 & 0.002 & 0.088 & 1.015 \\
 \end{tabular}
 \end{table}
 
-\input{top_5_table_sig_iqr}
+\input{midwives/top_5_table_sig_iqr}
 
-\subsection{Between Groups IQR IQR}
+\section{Between Groups IQR IQR}
 
 \begin{table}[H]
 \caption{IQR of median between groups IQR parameter sensitivity \label{tab:sa_results_iqr_iqr}}
+\rotatebox{90}{
 \begin{tabular} {llllll}
 \hline\noalign{\smallskip}
 Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} \\
@@ -143,13 +153,14 @@ Parameter & Description & Lexicographic & Bayesian Payoff & Bayesian & \ac{CPT} 
 Total & All parameters and two way interactions & 85.740 & 88.611 & 68.640 & 84.210 \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{tabular}
+}
 \end{table}
 
 \begin{table}[H]
 \caption{IQR of median between groups IQR emulator statistics \label{tab:sa_emulator_iqr_iqr}}
 \begin{tabular} {lllllll}
 \hline\noalign{\smallskip}
-Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & Mean output & Total output variance & Code uncertainty & RMSSE \\
+Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & $\mu$ & Total output variance & Code uncertainty & RMSSE \\
 \noalign{\smallskip}\svhline\noalign{\smallskip}
 Lexicographic & 0.826 & 0.409 & 0.259 & 0.002 & 0.034 & 2.364 \\
 Bayesian Payoff & 3.202 & 0.520 & 0.328 & 0.002 & 0.032 & 2.452 \\
@@ -159,4 +170,4 @@ Bayesian & 1.177 & 0.041 & 0.133 & 0.000 & 0.018 & 1.152 \\
 \end{tabular}
 \end{table}
 
-\input{top_5_table_group_iqr_iqr}
+\input{midwives/top_5_table_group_iqr_iqr}

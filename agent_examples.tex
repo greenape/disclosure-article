@@ -1,15 +1,15 @@
 %!TEX root = disclosure_game.tex
-\section{Agent Examples}
+\chapter{Agent Examples}
 \label{sec:agent_eg}
 
 This section provides a worked example for the learning and decision process of each agent model, focusing on the behaviour of the signalling agent.
 
-\subsection{Lexicographic Heuristic}
+\section{Lexicographic Heuristic}
 \label{sub:lexico_eg}
 
 As an example, take a light drinker who has played three rounds with a succession of particularly judgemental midwives, signalling honestly in two and claiming to be a moderate drinker in one. The most common outcome of the honest signal was a payoff of 10, which is clearly preferable to the 9 gained by claiming to be moderate. On that basis, they choose to signal honestly.
 
-\subsection{Bayesian Payoff}
+\section{Bayesian Payoff}
 \label{sub:payoff_eg}
 
 If we take our light drinker from the lexicographic case, and assume that they began with an uninformative prior. The 6 possible signal-payoffs pairings are then \([(l,10),(m,10),(h,10),(m,9),(h,9),(h,8)]\), with \(\alpha_{i}=1\) for all \(i\). After playing the three rounds, \(n_{l,10}=2\), and \(n_{m,9}=1\).
@@ -27,7 +27,7 @@ R_{w}(l) &= -10(\frac{3}{3}) = -10
 
 and by the same method, \(R_{w}(m)=-9\frac{1}{3}\), and \(R_{w}(h)=-9\), concluding that signalling honestly is the best move.
 
-\subsection{Bayesian Risk Minimisation}
+\section{Bayesian Risk Minimisation}
 \label{sub:bayes_eg}
 
 Returning to our example agent, under this model the type of the midwife becomes salient, hence \(n_{h}=3\), and \(n_{l,n}=2\), \(n_{m,n}=1\). Their prior beliefs remain uninformative, i.e. \(\alpha_{j} = 1, j \in \{l,m,h\}\), \(\alpha_{i,j}=1,i \in \{r,n\}, j \in \{l,m,h\}\). As before, the agent evaluates \(R_{w}\) for the three signals, and the process for the light signal is given below.
@@ -53,7 +53,7 @@ R_{w}(l, l) &= -10\cdot \frac{1}{6} \cdot \frac{1}{4} - 10\cdot \frac{1}{6} \cdo
 
 and similarly for moderate (\(R_{w}(m,l)=-9\frac{1}{3}\)), and heavy (\(R_{w}(h,l)=-8\frac{1}{2}\)) signals, once again concluding that honesty is the better option.
 
-\subsection{Descriptive Decision Theory}
+\section{Descriptive Decision Theory}
 \label{sub:cpt_eg}
 
 Once again, we return to the light drinker example.  The inferential aspects are identical with the more complex Bayesian risk minimisation algorithm, hence \(p(j)p(i | l)\), and \(u_{w}(l, i, l, j)\) remain the same, but the agent additionally calculates $v(u_{w}(l, i, l, j))w^{+}(p(j))w^{+}(p(i | l))$. For the \ac{CPT} parameters, the values are those originally given by \citet{Tversky1992} and used in the actual simulations which are given in table \ref{tab:cpt_params}.

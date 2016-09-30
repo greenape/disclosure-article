@@ -570,6 +570,16 @@ title = "Psychological Games and Sequential Rationality",
 volume = {1},
 year = {1989}
 }
+@article{Glautier2007a,
+author = {Glautier, S},
+file = {:Users/jono/Documents/Mendeley Desktop/Glautier/Behavior research methods/Glautier - 2007 - Simulation of associative learning with the replaced elements model.pdf:pdf},
+journal = {Behavior research methods},
+number = {4},
+pages = {993--1000},
+title = "Simulation of associative learning with the replaced elements model",
+volume = {39},
+year = {2007}
+}
 @book{Epstein,
 address = {Reading, MA},
 author = {Epstein, Joshua M.},
@@ -905,6 +915,26 @@ author = {Staff, For},
 file = {:Users/jono/Documents/Mendeley Desktop/Staff/Unknown/Staff - Unknown - How to connect to your university email to your mobile device How to connect to your university email to your mobile d.pdf:pdf},
 title = "How to connect to your university email to your mobile device How to connect to your university email to your mobile device Quick guide"
 }
+@article{Camerer2007,
+author = {Camerer, Colin F},
+file = {:Users/jono/Documents/Mendeley Desktop/Camerer/The Economic Journal/Camerer - 2007 - Neuroeconomics Using Neuroscience to Make Economic Predictions(2).pdf:pdf},
+journal = {The Economic Journal},
+number = {519},
+pages = {C26--C42},
+title = "Neuroeconomics: Using Neuroscience to Make Economic Predictions",
+volume = {117},
+year = {2007}
+}
+@article{Byrnes1999,
+author = {Byrnes, James P and Miller, David C and Schafer, William D},
+file = {:Users/jono/Documents/Mendeley Desktop/Byrnes, Miller, Schafer/Psychological Bulletin/Byrnes, Miller, Schafer - 1999 - Gender differences in risk taking A meta-analysis.pdf:pdf},
+journal = {Psychological Bulletin},
+number = {3},
+pages = {367--383},
+title = "Gender differences in risk taking: A meta-analysis.",
+volume = {125},
+year = {1999}
+}
 @article{Littner2007,
 abstract = {Alcohol, one of the most frequently reported addictions, is a significant public health problem in the USA. Early identification is important and would aid in intervention for the pregnant woman who continues to drink and for the affected infant. To date, there isn't a definitive test which identifies either alcohol abuse during pregnancy or newborns exposed to alcohol prenatally. The existing biomarkers can detect varying degrees of alcohol exposure but further research is needed to improve sensitivity/specificity and to validate these markers.},
 author = {Littner, Yoav and Bearer, Cynthia F},
@@ -1059,6 +1089,14 @@ pages = {1390--1396},
 title = "The Evolution of Cooperation",
 volume = {211},
 year = {2008}
+}
+@article{Stone2001,
+author = {Stone, Peter and Littman, Michael L and Kearns, Michael},
+file = {:Users/jono/Documents/Mendeley Desktop/Stone, Littman, Kearns/Unknown/Stone, Littman, Kearns - 2001 - ATTac-2000 An Adaptive Autonomous Bidding Agent.pdf:pdf},
+pages = {189--206},
+title = "ATTac-2000 : An Adaptive Autonomous Bidding Agent",
+volume = {15},
+year = {2001}
 }
 @inproceedings{Wellman2006,
 author = {Wellman, Michael P and Reeves, D M},
@@ -1747,6 +1785,12 @@ title = "Cooperation and commune longevity: A test of the costly signaling theor
 volume = {37},
 year = {2003}
 }
+@article{Trip2011,
+author = {Trip, Enjoy Your},
+file = {:Users/jono/Documents/Mendeley Desktop/Trip/Unknown/Trip - 2011 - EHM8D5Z S581 Travel tips(2).pdf:pdf},
+title = "EHM8D5Z S581 Travel tips",
+year = {2011}
+}
 @article{Tingley2010,
 author = {Tingley, Dustin H.},
 file = {:Users/jono/Documents/Mendeley Desktop/Tingley/Quarterly Journal of Political Science/Tingley - 2010 - Belief Updating in Sequential Games of Two-Sided Incomplete Information An Experimental Study of a Crisis Bargaining Mo.pdf:pdf},
@@ -1776,6 +1820,19 @@ pages = {8},
 title = "The efficacy of group selection is increased by coexistence dynamics within groups",
 year = {2012}
 }
+@article{Watts1998,
+abstract = {Networks of coupled dynamical systems have been used to model biological oscillators, Josephson junction arrays, excitable media, neural networks, spatial games, genetic control networks and many other self-organizing systems. Ordinarily, the connection topology is assumed to be either completely regular or completely random. But many biological, technological and social networks lie somewhere between these two extremes. Here we explore simple models of networks that can be tuned through this middle ground: regular networks 'rewired' to introduce increasing amounts of disorder. We find that these systems can be highly clustered, like regular lattices, yet have small characteristic path lengths, like random graphs. We call them 'small-world' networks, by analogy with the small-world phenomenon (popularly known as six degrees of separation. The neural network of the worm Caenorhabditis elegans, the power grid of the western United States, and the collaboration graph of film actors are shown to be small-world networks. Models of dynamical systems with small-world coupling display enhanced signal-propagation speed, computational power, and synchronizability. In particular, infectious diseases spread more easily in small-world networks than in regular lattices.},
+author = {Watts, D J and Strogatz, S H},
+file = {:Users/jono/Documents/Mendeley Desktop/Watts, Strogatz/Nature/Watts, Strogatz - 1998 - Collective dynamics of `small-world' networks.pdf:pdf},
+journal = {Nature},
+keywords = {Animals,Biological,Caenorhabditis elegans,Caenorhabditis elegans: physiology,Communicable Diseases,Communicable Diseases: transmission,Experimental,Games,Models,Nerve Net,Neurological,Theoretical},
+number = {6684},
+pages = {440--2},
+pmid = {9623998},
+title = {{Collective dynamics of `small-world' networks}},
+volume = {393},
+year = {1998}
+}
 @article{Press2008,
 author = {Press, Graphics},
 file = {:Users/jono/Documents/Mendeley Desktop/Press/Unknown/Press - 2008 - AN EXAMPLE OF THE USAGE OF THE TUFTE-HANDOUT STYLE Page Layout Figures and Tables.pdf:pdf},
@@ -1792,6 +1849,14 @@ pages = {25--39},
 title = "Bounded Rationality in Social Science: Today and Tomorrow",
 volume = {1},
 year = {2000}
+}
+@article{Stone2001a,
+author = {Stone, Peter and Littman, Michael L and Kearns, Michael},
+file = {:Users/jono/Documents/Mendeley Desktop/Stone, Littman, Kearns/Unknown/Stone, Littman, Kearns - 2001 - ATTac-2000 An Adaptive Autonomous Bidding Agent.pdf:pdf},
+pages = {189--206},
+title = "ATTac-2000 : An Adaptive Autonomous Bidding Agent",
+volume = {15},
+year = {2001}
 }
 @article{Branke2005,
 author = {Branke, J and Schmidt, C},
@@ -2145,6 +2210,12 @@ title = {{Too cool for school? Signalling and countersignalling}},
 volume = {33},
 year = {2002}
 }
+@article{Greenwald2005,
+author = {Greenwald, Amy},
+file = {:Users/jono/Documents/Mendeley Desktop/Greenwald/Unknown/Greenwald - 2005 - Bid Determination in Simultaneous Auctions.pdf:pdf},
+title = "Bid Determination in Simultaneous Auctions",
+year = {2005}
+}
 @article{Singh1996,
 author = {Singh, S P and Sutton, R S},
 file = {:Users/jono/Documents/Mendeley Desktop/Singh, Sutton/Machine Learning/Singh, Sutton - 1996 - Reinforcement learning with replacing eligibility traces.pdf:pdf},
@@ -2387,6 +2458,13 @@ file = {:Users/jono/Documents/Mendeley Desktop/Alonso/Unknown/Alonso - Unknown -
 keywords = {an extension of temporal,and context representation,configural cues,corresponding author,difference learning for compound,stimuli,the td simulator},
 title = "Neuroinformatics An Extension of Temporal Difference Learning for Compound Stimuli , Configural Cues and Context Representation : The TD Simulator An Extension of Temporal Difference Learning for Compound Stimuli , Configural Cues and Context Representati"
 }
+@article{Camerer2007a,
+author = {Camerer, CF},
+file = {:Users/jono/Documents/Mendeley Desktop/Camerer/The Economic Journal/Camerer - 2007 - Neuroeconomics Using Neuroscience to Make Economic Predictions.pdf:pdf},
+journal = {The Economic Journal},
+title = "Neuroeconomics: Using Neuroscience to Make Economic Predictions*",
+year = {2007}
+}
 @book{NICE2010a,
 address = {London},
 author = {{National Institute for Health and Care Excellence}},
@@ -2539,6 +2617,12 @@ keywords = {agent-based modelling,climate change,complexity,integrated assessmen
 pages = {17--30},
 title = "Agent-based integrated assessment modelling : the example of climate change",
 year = {2001}
+}
+@article{Usa,
+author = {Us, Set Different and Simulation, Context and Results, Compound and Cues, Configural and Random, Number and Combinations, Trial and Distributions, Random and Cs, Variable Length and Length, Timestep and Decision, Add and Simulation, Rule and Traces, Eligibility and Type, Mean and Type, Variable Distribution and Examples, Worked and Renewal, A B A},
+file = {:Users/jono/Documents/Mendeley Desktop/Us et al/City/Us et al. - Unknown - No Title.pdf:pdf},
+journal = {City},
+title = "No Title"
 }
 @article{Hechter2012,
 author = {Hechter, Michael and Hall, Uris},
@@ -3313,6 +3397,12 @@ author = {Description, Risk and Actions, Mitigation},
 file = {:Users/jono/Documents/Mendeley Desktop/Description, Actions/Unknown/Description, Actions - Unknown - Draft for discussion.pdf:pdf},
 title = "Draft for discussion"
 }
+@article{Usb,
+author = {Us, Set Different and Simulation, Context and Results, Compound and Cues, Configural and Random, Number and Combinations, Trial and Distributions, Random and Cs, Variable Length and Length, Timestep and Decision, Add and Simulation, Rule and Traces, Eligibility and Type, Mean and Type, Variable Distribution and Examples, Worked and Renewal, A B A},
+file = {:Users/jono/Documents/Mendeley Desktop/Us et al/City/Us et al. - Unknown - No Title(2).pdf:pdf},
+journal = {City},
+title = "No Title"
+}
 @misc{Levien,
 author = {Levien, R},
 title = "Inconsolata",
@@ -3323,6 +3413,16 @@ author = {Mondrag\'{o}n, Esther and Gray, Jonathan and Alonso, Eduardo and Bonar
 file = {:Users/jono/Documents/Mendeley Desktop/Mondrag\'{o}n et al/Unknown/Mondrag\'{o}n et al. - Unknown - CCC Temporal Difference a real-time error prediction model for Compound stimuli , Configural cues and Con.pdf:pdf},
 pages = {1--58},
 title = "CCC Temporal Difference : a real-time error prediction model for Compound stimuli , Configural cues and Context representation"
+}
+@article{Blume2001,
+author = {Blume, Andreas and DeJong, Douglas V and Kim, Yong-Gwan and Sprinkle, Geoffrey B},
+file = {:Users/jono/Documents/Mendeley Desktop/Blume et al/Games and Economic Behavior/Blume et al. - 2001 - Evolution of Communication with Partial Common Interest.pdf:pdf},
+journal = {Games and Economic Behavior},
+number = {1},
+pages = {79--120},
+title = "Evolution of Communication with Partial Common Interest",
+volume = {37},
+year = {2001}
 }
 @book{Korzybski1933,
 address = {New York},
@@ -4254,6 +4354,15 @@ title = "Bounded rationality, institutions, and uncertainty",
 volume = {35},
 year = {2001}
 }
+@article{Bijak2013b,
+author = {Bijak, Jakub and Hilton, Jason and Silverman, Eric and Cao, Viet Dung},
+file = {:Users/jono/Documents/Mendeley Desktop/Bijak et al/Demographic Research/Bijak et al. - 2013 - Reforging the Wedding Ring.pdf:pdf},
+journal = {Demographic Research},
+pages = {729--766},
+title = "Reforging the Wedding Ring:",
+volume = {29},
+year = {2013}
+}
 @article{Text2010,
 author = {Text, Basic and For, Extraction and Text, Specific and To, Extraction and Textrun, One and Quality, Poor and Extraction, Text},
 file = {:Users/jono/Documents/Mendeley Desktop/Text et al/Unknown/Text et al. - 2010 - POI-HSLF - A Quick Guide.pdf:pdf},
@@ -4479,6 +4588,12 @@ file = {:Users/jono/Documents/Mendeley Desktop/Raia/Journal of Geoscience Educat
 journal = {Journal of Geoscience Education},
 title = "Students' understanding of complex dynamic systems",
 year = {2005}
+}
+@article{Greenwald2001,
+author = {Greenwald, Amy and \`{O}\o, \O and \`{O}\o, \"{O} \^{O} \"{O} and \~{N}\`{u}ð\o, \O \'{O} Ð \`{O} \O \`{O} and \'{O}\`{o}, \`{O} \'{O} \`{U} \`{U} \O and \`{O}\o, \`{O} \'{O}\~{n}\^{o}ð \~{N} and \"{O}\'{u}, \`{O} \O \O \`{O} \'{O} \O Ð \"{O} and \`{O}, \O \'{O} \`{O} \^{O} \"{O} \'{O} Ð \~{N} \`{U} and \'{O}\`{u}\"{o}, \~{N} \O \'{O} \O \^{U} \`{U} \O and \O\"{o}\`{u}, \'{O} Ð \'{O} \'{O} \`{O} and Ð, \'{O} \`{O} \^{O}\^{o}\"{o}\'{o}\"{u} \~{N} \O \'{O} \^{O} \O \~{N} and Boyan, Justin and \`{I}, \`{O} \O \'{O} \~{N} \^{O} \O \O \'{O} \`{O} and \`{I}\"{o}, \"{O} \'{O} \`{O} \^{A}\`{u}ð\'{y}º and \"{O}ð, \'{U} Ð \'{O} \'{O} \`{U}},
+file = {:Users/jono/Documents/Mendeley Desktop/Greenwald et al/Unknown/Greenwald et al. - 2001 - Bid Determination in Simultaneous Auctions A Case Study.pdf:pdf},
+title = "Bid Determination in Simultaneous Auctions A Case Study",
+year = {2001}
 }
 @article{Oliver2007a,
 author = {Oliver, Andrew C and Klute, Rainer and Fisher, David},
@@ -5108,6 +5223,28 @@ title = "Smoking and alcohol drinking during pregnancy. The reliability of retro
 volume = {12},
 year = {2004}
 }
+@article{Bijak2013a,
+author = {Bijak, Jakub and Hilton, Jason and Silverman, Eric and Cao, Viet Dung},
+file = {:Users/jono/Documents/Mendeley Desktop/Bijak et al/Demographic Research/Bijak et al. - 2013 - Reforging the Wedding Ring.pdf:pdf},
+journal = {Demographic Research},
+pages = {729--766},
+title = "Reforging the Wedding Ring:",
+volume = {29},
+year = {2013}
+}
+@article{Rangel2008,
+abstract = {Neuroeconomics is the study of the neurobiological and computational basis of value-based decision making. Its goal is to provide a biologically based account of human behaviour that can be applied in both the natural and the social sciences. This Review proposes a framework to investigate different aspects of the neurobiology of decision making. The framework allows us to bring together recent findings in the field, highlight some of the most important outstanding problems, define a common lexicon that bridges the different disciplines that inform neuroeconomics, and point the way to future applications.},
+author = {Rangel, Antonio and Camerer, Colin and Montague, P Read},
+file = {:Users/jono/Documents/Mendeley Desktop/Rangel, Camerer, Montague/Nature Reviews. Neuroscience/Rangel, Camerer, Montague - 2008 - A framework for studying the neurobiology of value-based decision making.pdf:pdf},
+journal = {Nature Reviews. Neuroscience},
+keywords = {Animals,Decision Making,Decision Making: physiology,Decision Theory,Habits,Humans,Learning,Learning: physiology,Models,Neurobiology,Neurological,Psychological,Risk,Social Values},
+number = {7},
+pages = {545--56},
+pmid = {18545266},
+title = "A framework for studying the neurobiology of value-based decision making.",
+volume = {9},
+year = {2008}
+}
 @article{Farquhar2000,
 abstract = {OBJECTIVE: To describe the views of women using one team midwifery scheme and compare them with women using more traditional models of midwifery care.
 
@@ -5517,6 +5654,19 @@ title = "A review of techniques for parameter sensitivity analysis of environmen
 volume = {32},
 year = {1994}
 }
+@article{Rangel2008a,
+abstract = {Neuroeconomics is the study of the neurobiological and computational basis of value-based decision making. Its goal is to provide a biologically based account of human behaviour that can be applied in both the natural and the social sciences. This Review proposes a framework to investigate different aspects of the neurobiology of decision making. The framework allows us to bring together recent findings in the field, highlight some of the most important outstanding problems, define a common lexicon that bridges the different disciplines that inform neuroeconomics, and point the way to future applications.},
+author = {Rangel, Antonio and Camerer, Colin and Montague, P Read},
+file = {:Users/jono/Documents/Mendeley Desktop/Rangel, Camerer, Montague/Nature reviews. Neuroscience/Rangel, Camerer, Montague - 2008 - A framework for studying the neurobiology of value-based decision making(2).pdf:pdf},
+journal = {Nature reviews. Neuroscience},
+keywords = {Animals,Decision Making,Decision Making: physiology,Decision Theory,Habits,Humans,Learning,Learning: physiology,Models, Neurological,Models, Psychological,Neurobiology,Risk,Social Values},
+number = {7},
+pages = {545--56},
+pmid = {18545266},
+title = "A framework for studying the neurobiology of value-based decision making.",
+volume = {9},
+year = {2008}
+}
 @article{Ludvig2008,
 abstract = {The phasic firing of dopamine neurons has been theorized to encode a reward-prediction error as formalized by the temporal-difference (TD) algorithm in reinforcement learning. Most TD models of dopamine have assumed a stimulus representation, known as the complete serial compound, in which each moment in a trial is distinctly represented. We introduce a more realistic temporal stimulus representation for the TD model. In our model, all external stimuli, including rewards, spawn a series of internal microstimuli, which grow weaker and more diffuse over time. These microstimuli are used by the TD learning algorithm to generate predictions of future reward. This new stimulus representation injects temporal generalization into the TD model and enhances correspondence between model and data in several experiments, including those when rewards are omitted or received early. This improved fit mostly derives from the absence of large negative errors in the new model, suggesting that dopamine alone can encode the full range of TD errors in these situations.},
 author = {Ludvig, Elliot A and Sutton, R S and Kehoe, E James},
@@ -5895,6 +6045,16 @@ pages = {497--501},
 pmid = {10456576},
 title = "Commentary on the recommendations of the Royal College of Obstetricians and Gynaecologists concerning alcohol consumption in pregnancy.",
 volume = {34},
+year = {1999}
+}
+@article{Byrnes1999a,
+author = {Byrnes, James P and Miller, David C and Schafer, William D},
+file = {:Users/jono/Documents/Mendeley Desktop/Byrnes, Miller, Schafer/Psychological Bulletin/Byrnes, Miller, Schafer - 1999 - Gender differences in risk taking A meta-analysis.pdf:pdf},
+journal = {Psychological Bulletin},
+number = {3},
+pages = {367--383},
+title = "Gender differences in risk taking: A meta-analysis.",
+volume = {125},
 year = {1999}
 }
 @article{Morse1997,
@@ -6379,6 +6539,12 @@ publisher = {IEEE},
 title = "Real-time models of classical conditioning",
 volume = {2},
 year = {1996}
+}
+@article{Shareware2008,
+author = {Shareware, Philippe Galmel},
+file = {:Users/jono/Documents/Mendeley Desktop/Shareware/Unknown/Shareware - 2008 - CONSEQUENCES THAT MAY COME ABOUT AS A RESULT OF USING THIS(2).pdf:pdf},
+title = "CONSEQUENCES THAT MAY COME ABOUT AS A RESULT OF USING THIS",
+year = {2008}
 }
 @article{Schultz2008,
 abstract = {Neuroeconomics investigates the neural mechanisms underlying decisions about rewarding or punishing outcomes ('economic' decisions). It combines the knowledge about the behavioural phenomena of economic decisions with the mechanistic explanatory power of neuroscience. Thus, it is about the neurobiological foundations of economic decision making. It is hoped that by 'opening the box' we can understand how decisions about gains and losses are directed by the brain of the individual decision maker. Perhaps we can even learn why some decisions are apparently paradoxical or pathological. The knowledge could be used to create situations that avoid suboptimal decisions and harm.},
@@ -7549,6 +7715,12 @@ number = {17},
 title = {{Your bill came to £44.13}},
 year = {2012}
 }
+@article{Shareware2008b,
+author = {Shareware, Philippe Galmel},
+file = {:Users/jono/Documents/Mendeley Desktop/Shareware/Unknown/Shareware - 2008 - CONSEQUENCES THAT MAY COME ABOUT AS A RESULT OF USING THIS.pdf:pdf},
+title = "CONSEQUENCES THAT MAY COME ABOUT AS A RESULT OF USING THIS",
+year = {2008}
+}
 @book{Kernighan1988,
 author = {Kernighan, By Brian W and Ritchie, Dennis M},
 file = {:Users/jono/Documents/Mendeley Desktop/Kernighan, Ritchie/Unknown/Kernighan, Ritchie - 1988 - The C programming Language.pdf:pdf},
@@ -7758,6 +7930,16 @@ pages = {1191-- 1198},
 publisher = {ACM Press},
 title = "Mertacor: A Successful Autonomous Trading Agent",
 year = {2006}
+}
+@article{Blume2001a,
+author = {Blume, Andreas and DeJong, Douglas V. and Kim, Yong-Gwan and Sprinkle, Geoffrey B.},
+file = {:Users/jono/Documents/Mendeley Desktop/Blume et al/Games and Economic Behavior/Blume et al. - 2001 - Evolution of Communication with Partial Common Interest.pdf:pdf},
+journal = {Games and Economic Behavior},
+number = {1},
+pages = {79--120},
+title = "Evolution of Communication with Partial Common Interest",
+volume = {37},
+year = {2001}
 }
 @article{Prelec1991,
 author = {Prelec, D and Loewenstein, George},
@@ -8122,6 +8304,19 @@ pages = {761--768},
 title = "Simulation in University Education:The Artificial Agent PSI as a Teaching Tool",
 volume = {82},
 year = {2006}
+}
+@article{Glautier2007,
+abstract = {Associative learning theories can be categorized according to whether they treat the representation of stimulus compounds in an elemental or a configural manner. Since it is clear that a simple elemental approach to stimulus representation is inadequate, there have been several attempts to produce more elaborate elemental models. One recent approach, the replaced elements model (Wagner, 2003), reproduces many results that have until recently been uniquely predicted by Pearce's configural theory (Pearce, 1994). Although it is possible to simulate the replaced elements model using "standard" simulation programs, the generation of the correct stimulus representation is complex. The present article describes a method for simulation of the replaced elements model and presents the results of two example simulations that show differential predictions of replaced elements and Pearce's configural theory.},
+author = {Glautier, Steven},
+file = {:Users/jono/Documents/Mendeley Desktop/Glautier/Behavior research methods/Glautier - 2007 - Simulation of associative learning with the replaced elements model(2).pdf:pdf},
+journal = {Behavior research methods},
+keywords = {Association Learning,Computer Simulation,Humans,Models, Psychological,Psychology, Experimental,Psychology, Experimental: instrumentation},
+number = {4},
+pages = {993--1000},
+pmid = {18183917},
+title = "Simulation of associative learning with the replaced elements model.",
+volume = {39},
+year = {2007}
 }
 @techreport{Johansson2002,
 author = {Johansson, Christopher and Lansner, Anders},
@@ -8746,6 +8941,12 @@ title = "Analysis of overshadowing in honeybees.",
 volume = {97},
 year = {1983}
 }
+@article{Trip2011a,
+author = {Trip, Enjoy Your},
+file = {:Users/jono/Documents/Mendeley Desktop/Trip/Unknown/Trip - 2011 - EHM8D5Z S581 Travel tips.pdf:pdf},
+title = "EHM8D5Z S581 Travel tips",
+year = {2011}
+}
 @article{Battigalli2007,
 author = {Battigalli, Pierpaolo and Dufwenberg, Martin},
 file = {:Users/jono/Documents/Mendeley Desktop/Battigalli, Dufwenberg/American Economic Review/Battigalli, Dufwenberg - 2007 - Guilt in Games.pdf:pdf},
@@ -9339,6 +9540,19 @@ pages = {1--10},
 title = "A network model with structured nodes",
 year = {2010}
 }
+@article{Wuchty2003a,
+abstract = {The central vertices in complex networks are of particular interest because they might play the role of organizational hubs. Here, we consider three different geometric centrality measures, excentricity, status, and centroid value, that were originally used in the context of resource placement problems. We show that these quantities lead to useful descriptions of the centers of biological networks which often, but not always, correlate with a purely local notion of centrality such as the vertex degree. We introduce the notion of local centers as local optima of a centrality value "landscape" on a network and discuss briefly their role.},
+author = {Wuchty, Stefan and Stadler, Peter F},
+file = {::},
+journal = {Journal of theoretical biology},
+keywords = {Computer Simulation,Escherichia coli,Escherichia coli: metabolism,Models, Biological,Models, Statistical,Protein Interaction Mapping,Protein Structure, Tertiary},
+number = {1},
+pages = {45--53},
+pmid = {12782116},
+title = "Centers of complex networks.",
+volume = {223},
+year = {2003}
+}
 @article{Slater2009,
 author = {Slater, Paul B},
 file = {::},
@@ -9350,6 +9564,17 @@ pmid = {19549841},
 title = "A two-stage algorithm for extracting the multiscale backbone of complex weighted networks.",
 volume = {106},
 year = {2009}
+}
+@article{Wuchty2003,
+author = {Wuchty, Stefan},
+file = {::},
+journal = {Journal of Theoretical Biology},
+keywords = {centrality,metabolic networks,networks,protein interactions,resource placement},
+number = {1},
+pages = {45--53},
+title = "Centers of complex networks",
+volume = {223},
+year = {2003}
 }
 @article{Shi2011,
 abstract = {With the exploding volume of data generated by continuously evolving high-throughput technologies, biological network analysis problems are growing larger in scale and craving for more computational power. General Purpose computation on Graphics Processing Units (GPGPU) provides a cost-effective technology for the study of large-scale biological networks. Designing algorithms that maximize data parallelism is the key in leveraging the power of GPUs.},
@@ -9384,6 +9609,19 @@ primaryClass = {arXiv:cond-mat},
 title = "Assortative model for social networks",
 volume = {70},
 year = {2004}
+}
+@article{Wang2009,
+abstract = {We modeled the mobility of mobile phone users in order to study the fundamental spreading patterns that characterize a mobile virus outbreak. We find that although Bluetooth viruses can reach all susceptible handsets with time, they spread slowly because of human mobility, offering ample opportunities to deploy antiviral software. In contrast, viruses using multimedia messaging services could infect all users in hours, but currently a phase transition on the underlying call graph limits them to only a small fraction of the susceptible users. These results explain the lack of a major mobile virus breakout so far and predict that once a mobile operating system's market share reaches the phase transition point, viruses will pose a serious threat to mobile communications.},
+author = {Wang, Pu and Gonz\'{a}lez, Marta C and Hidalgo, C\'{e}sar a and Barab\'{a}si, Albert-L\'{a}szl\'{o}},
+file = {::},
+journal = {Science (New York, N.Y.)},
+keywords = {Cellular Phone,Computer Security,Humans,Time Factors},
+number = {5930},
+pages = {1071--6},
+pmid = {19342553},
+title = "Understanding the spreading patterns of mobile phone viruses.",
+volume = {324},
+year = {2009}
 }
 @article{Sinitsyn2009,
 abstract = {We propose a universal approach for analysis and fast simulations of stiff stochastic biochemical networks, which rests on elimination of fast chemical species without a loss of information about mesoscopic, non-Poissonian fluctuations of the slow ones. Our approach is similar to the Born-Oppenheimer approximation in quantum mechanics and follows from the stochastic path integral representation of the cumulant generating function of reaction events. In applications with a small number of chemical reactions, it produces analytical expressions for cumulants of chemical fluxes between the slow variables. This allows for a low-dimensional, interpretable representation and can be used for high-accuracy, low-complexity coarse-grained numerical simulations. As an example, we derive the coarse-grained description for a chain of biochemical reactions and show that the coarse-grained and the microscopic simulations agree, but the former is 3 orders of magnitude faster.},
@@ -9435,6 +9673,19 @@ number = {4},
 title = "Combinatorial study of degree assortativity in networks",
 volume = {84},
 year = {2011}
+}
+@article{Wang2009a,
+abstract = {We modeled the mobility of mobile phone users in order to study the fundamental spreading patterns that characterize a mobile virus outbreak. We find that although Bluetooth viruses can reach all susceptible handsets with time, they spread slowly because of human mobility, offering ample opportunities to deploy antiviral software. In contrast, viruses using multimedia messaging services could infect all users in hours, but currently a phase transition on the underlying call graph limits them to only a small fraction of the susceptible users. These results explain the lack of a major mobile virus breakout so far and predict that once a mobile operating system's market share reaches the phase transition point, viruses will pose a serious threat to mobile communications.},
+author = {Wang, Pu and Gonz\'{a}lez, Marta C and Hidalgo, C\'{e}sar a and Barab\'{a}si, Albert-L\'{a}szl\'{o}},
+file = {::},
+journal = {Science (New York, N.Y.)},
+keywords = {Cellular Phone,Computer Security,Humans,Time Factors},
+number = {5930},
+pages = {1071--6},
+pmid = {19342553},
+title = "Understanding the spreading patterns of mobile phone viruses.",
+volume = {324},
+year = {2009}
 }
 @article{Wang2008,
 author = {Wang, Lin and Zhang, GuiQing and Chen, TianLun},
@@ -9727,6 +9978,19 @@ title = "Complex discovery from weighted PPI networks.",
 volume = {25},
 year = {2009}
 }
+
+@Article{Watts1998,
+  author   = {Watts, D J and Strogatz, S H},
+  title    = {{Collective dynamics of `small-world' networks}},
+  journal  = {Nature},
+  year     = {1998},
+  volume   = {393},
+  number   = {6684},
+  pages    = {440--2},
+  abstract = {Networks of coupled dynamical systems have been used to model biological oscillators, Josephson junction arrays, excitable media, neural networks, spatial games, genetic control networks and many other self-organizing systems. Ordinarily, the connection topology is assumed to be either completely regular or completely random. But many biological, technological and social networks lie somewhere between these two extremes. Here we explore simple models of networks that can be tuned through this middle ground: regular networks 'rewired' to introduce increasing amounts of disorder. We find that these systems can be highly clustered, like regular lattices, yet have small characteristic path lengths, like random graphs. We call them 'small-world' networks, by analogy with the small-world phenomenon (popularly known as six degrees of separation. The neural network of the worm Caenorhabditis elegans, the power grid of the western United States, and the collaboration graph of film actors are shown to be small-world networks. Models of dynamical systems with small-world coupling display enhanced signal-propagation speed, computational power, and synchronizability. In particular, infectious diseases spread more easily in small-world networks than in regular lattices.},
+  keywords = {Animals,Biological,Caenorhabditis elegans,Caenorhabditis elegans: physiology,Communicable Diseases,Communicable Diseases: transmission,Experimental,Games,Models,Nerve Net,Neurological,Theoretical},
+  pmid     = {9623998},
+}
 @article{DelRio2009,
 abstract = {The prediction of essential genes from molecular networks is a way to test the understanding of essentiality in the context of what is known about the network. However, the current knowledge on molecular network structures is incomplete yet, and consequently the strategies aimed to predict essential genes are prone to uncertain predictions. We propose that simultaneously evaluating different network structures and different algorithms representing gene essentiality (centrality measures) may identify essential genes in networks in a reliable fashion.},
 author = {del Rio, Gabriel and Kosch\"{u}tzki, Dirk and Coello, Gerardo},
@@ -10001,6 +10265,19 @@ pages = {1--1},
 title = {{‘Simplexus’ in ComPlexUs: Meeting the Challenge of Complexity Sciences}},
 volume = {2},
 year = {2004}
+}
+
+@Article{Tumminello2005,
+  author   = {Tumminello, M and Aste, T and {Di Matteo}, T and Mantegna, R N},
+  title    = {A tool for filtering information in complex systems.},
+  journal  = {Proceedings of the National Academy of Sciences of the United States of America},
+  year     = {2005},
+  volume   = {102},
+  number   = {30},
+  pages    = {10421--6},
+  abstract = {We introduce a technique to filter out complex data sets by extracting a subgraph of representative links. Such a filtering can be tuned up to any desired level by controlling the genus of the resulting graph. We show that this technique is especially suitable for correlation-based graphs, giving filtered graphs that preserve the hierarchical organization of the minimum spanning tree but containing a larger amount of information in their internal structure. In particular in the case of planar filtered graphs (genus equal to 0), triangular loops and four-element cliques are formed. The application of this filtering procedure to 100 stocks in the U.S. equity markets shows that such loops and cliques have important and significant relationships with the market structure and properties.},
+  file     = {::},
+  pmid     = {16027373},
 }
 @article{Sethi2009,
 abstract = {Community network analysis derived from molecular dynamics simulations is used to identify and compare the signaling pathways in a bacterial glutamyl-tRNA synthetase (GluRS):tRNA(Glu) and an archaeal leucyl-tRNA synthetase (LeuRS):tRNA(Leu) complex. Although the 2 class I synthetases have remarkably different interactions with their cognate tRNAs, the allosteric networks for charging tRNA with the correct amino acid display considerable similarities. A dynamic contact map defines the edges connecting nodes (amino acids and nucleotides) in the physical network whose overall topology is presented as a network of communities, local substructures that are highly intraconnected, but loosely interconnected. Whereas nodes within a single community can communicate through many alternate pathways, the communication between monomers in different communities has to take place through a smaller number of critical edges or interactions. Consistent with this analysis, there are a large number of suboptimal paths that can be used for communication between the identity elements on the tRNAs and the catalytic site in the aaRS:tRNA complexes. Residues and nucleotides in the majority of pathways for intercommunity signal transmission are evolutionarily conserved and are predicted to be important for allosteric signaling. The same monomers are also found in a majority of the suboptimal paths. Modifying these residues or nucleotides has a large effect on the communication pathways in the protein:RNA complex consistent with kinetic data.},
@@ -10543,6 +10820,20 @@ title = "A Theory-Based Dynamical Model of Innovation Processes",
 volume = {2},
 year = {2004}
 }
+
+@Article{Hidalgo2009,
+  author   = {Hidalgo, C\'{e}sar a and Hausmann, Ricardo},
+  title    = {The building blocks of economic complexity.},
+  journal  = {Proceedings of the National Academy of Sciences of the United States of America},
+  year     = {2009},
+  volume   = {106},
+  number   = {26},
+  pages    = {10570--5},
+  abstract = {For Adam Smith, wealth was related to the division of labor. As people and firms specialize in different activities, economic efficiency increases, suggesting that development is associated with an increase in the number of individual activities and with the complexity that emerges from the interactions between them. Here we develop a view of economic growth and development that gives a central role to the complexity of a country's economy by interpreting trade data as a bipartite network in which countries are connected to the products they export, and show that it is possible to quantify the complexity of a country's economy by characterizing the structure of this network. Furthermore, we show that the measures of complexity we derive are correlated with a country's level of income, and that deviations from this relationship are predictive of future growth. This suggests that countries tend to converge to the level of income dictated by the complexity of their productive structures, indicating that development efforts should focus on generating the conditions that would allow complexity to emerge to generate sustained growth and prosperity.},
+  file     = {::},
+  keywords = {Algorithms,Commerce,Commerce: economics,Developed Countries,Developing Countries,Humans,Industry,Industry: economics,International Cooperation,Models, Economic},
+  pmid     = {19549871},
+}
 @article{Gregg2008,
 author = {Gregg, Jay S. and Andres, Robert J. and Marland, Gregg},
 file = {::},
@@ -10721,156 +11012,6 @@ pages = {1--83},
 publisher = {The National Perinatal Epidemiology Unit},
 title = {{Safely delivered: A national survey of womens experiences of maternity care 2014}},
 year = {2014}
-}
-
-@Article{Glautier2007a,
-  author   = {Glautier, S},
-  title    = {Simulation of associative learning with the replaced elements model},
-  journal  = {Behavior research methods},
-  year     = {2007},
-  volume   = {39},
-  number   = {4},
-  pages    = {993--1000},
-  abstract = {Associative learning theories can be categorized according to whether they treat the representation of stimulus compounds in an elemental or a configural manner. Since it is clear that a simple elemental approach to stimulus representation is inadequate, there have been several attempts to produce more elaborate elemental models. One recent approach, the replaced elements model (Wagner, 2003), reproduces many results that have until recently been uniquely predicted by Pearce's configural theory (Pearce, 1994). Although it is possible to simulate the replaced elements model using "standard" simulation programs, the generation of the correct stimulus representation is complex. The present article describes a method for simulation of the replaced elements model and presents the results of two example simulations that show differential predictions of replaced elements and Pearce's configural theory.},
-  file     = {:Users/jono/Documents/Mendeley Desktop/Glautier/Behavior research methods/Glautier - 2007 - Simulation of associative learning with the replaced elements model.pdf:pdf},
-  keywords = {Association Learning,Computer Simulation,Humans,Models, Psychological,Psychology, Experimental,Psychology, Experimental: instrumentation},
-  pmid     = {18183917},
-}
-
-@Article{Camerer2007,
-  author  = {Camerer, Colin F},
-  title   = {Neuroeconomics: Using Neuroscience to Make Economic Predictions},
-  journal = {The Economic Journal},
-  year    = {2007},
-  volume  = {117},
-  number  = {519},
-  pages   = {C26--C42},
-  file    = {:Users/jono/Documents/Mendeley Desktop/Camerer/The Economic Journal/Camerer - 2007 - Neuroeconomics Using Neuroscience to Make Economic Predictions(2).pdf:pdf},
-}
-
-@Article{Byrnes1999,
-  author  = {Byrnes, James P and Miller, David C and Schafer, William D},
-  title   = {Gender differences in risk taking: A meta-analysis.},
-  journal = {Psychological Bulletin},
-  year    = {1999},
-  volume  = {125},
-  number  = {3},
-  pages   = {367--383},
-  file    = {:Users/jono/Documents/Mendeley Desktop/Byrnes, Miller, Schafer/Psychological Bulletin/Byrnes, Miller, Schafer - 1999 - Gender differences in risk taking A meta-analysis.pdf:pdf},
-}
-
-@Article{Stone2001,
-  author = {Stone, Peter and Littman, Michael L and Kearns, Michael},
-  title  = {ATTac-2000 : An Adaptive Autonomous Bidding Agent},
-  year   = {2001},
-  volume = {15},
-  pages  = {189--206},
-  file   = {:Users/jono/Documents/Mendeley Desktop/Stone, Littman, Kearns/Unknown/Stone, Littman, Kearns - 2001 - ATTac-2000 An Adaptive Autonomous Bidding Agent.pdf:pdf},
-}
-
-@Article{Trip2011,
-  author = {Trip, Enjoy Your},
-  title  = {EHM8D5Z S581 Travel tips},
-  year   = {2011},
-  file   = {:Users/jono/Documents/Mendeley Desktop/Trip/Unknown/Trip - 2011 - EHM8D5Z S581 Travel tips(2).pdf:pdf},
-}
-
-@Article{Watts1998,
-  author   = {Watts, D J and Strogatz, S H},
-  title    = {{Collective dynamics of `small-world' networks}},
-  journal  = {Nature},
-  year     = {1998},
-  volume   = {393},
-  number   = {6684},
-  pages    = {440--2},
-  abstract = {Networks of coupled dynamical systems have been used to model biological oscillators, Josephson junction arrays, excitable media, neural networks, spatial games, genetic control networks and many other self-organizing systems. Ordinarily, the connection topology is assumed to be either completely regular or completely random. But many biological, technological and social networks lie somewhere between these two extremes. Here we explore simple models of networks that can be tuned through this middle ground: regular networks 'rewired' to introduce increasing amounts of disorder. We find that these systems can be highly clustered, like regular lattices, yet have small characteristic path lengths, like random graphs. We call them 'small-world' networks, by analogy with the small-world phenomenon (popularly known as six degrees of separation. The neural network of the worm Caenorhabditis elegans, the power grid of the western United States, and the collaboration graph of film actors are shown to be small-world networks. Models of dynamical systems with small-world coupling display enhanced signal-propagation speed, computational power, and synchronizability. In particular, infectious diseases spread more easily in small-world networks than in regular lattices.},
-  file     = {:Users/jono/Documents/Mendeley Desktop/Watts, Strogatz/Nature/Watts, Strogatz - 1998 - Collective dynamics of `small-world' networks.pdf:pdf},
-  keywords = {Animals,Biological,Caenorhabditis elegans,Caenorhabditis elegans: physiology,Communicable Diseases,Communicable Diseases: transmission,Experimental,Games,Models,Nerve Net,Neurological,Theoretical},
-  pmid     = {9623998},
-}
-
-@Article{Greenwald2005,
-  author = {Greenwald, Amy},
-  title  = {Bid Determination in Simultaneous Auctions},
-  year   = {2005},
-  file   = {:Users/jono/Documents/Mendeley Desktop/Greenwald/Unknown/Greenwald - 2005 - Bid Determination in Simultaneous Auctions.pdf:pdf},
-}
-
-@Article{Usa,
-  author  = {Us, Set Different and Simulation, Context and Results, Compound and Cues, Configural and Random, Number and Combinations, Trial and Distributions, Random and Cs, Variable Length and Length, Timestep and Decision, Add and Simulation, Rule and Traces, Eligibility and Type, Mean and Type, Variable Distribution and Examples, Worked and Renewal, A B A},
-  title   = {No Title},
-  journal = {City},
-  file    = {:Users/jono/Documents/Mendeley Desktop/Us et al/City/Us et al. - Unknown - No Title.pdf:pdf},
-}
-
-@Article{Blume2001,
-  author  = {Blume, Andreas and DeJong, Douglas V and Kim, Yong-Gwan and Sprinkle, Geoffrey B},
-  title   = {Evolution of Communication with Partial Common Interest},
-  journal = {Games and Economic Behavior},
-  year    = {2001},
-  volume  = {37},
-  number  = {1},
-  pages   = {79--120},
-  file    = {:Users/jono/Documents/Mendeley Desktop/Blume et al/Games and Economic Behavior/Blume et al. - 2001 - Evolution of Communication with Partial Common Interest.pdf:pdf},
-}
-
-@Article{Bijak2013b,
-  author  = {Bijak, Jakub and Hilton, Jason and Silverman, Eric and Cao, Viet Dung},
-  title   = {Reforging the Wedding Ring:},
-  journal = {Demographic Research},
-  year    = {2013},
-  volume  = {29},
-  pages   = {729--766},
-  file    = {:Users/jono/Documents/Mendeley Desktop/Bijak et al/Demographic Research/Bijak et al. - 2013 - Reforging the Wedding Ring.pdf:pdf},
-}
-
-@Article{Rangel2008,
-  author   = {Rangel, Antonio and Camerer, Colin and Montague, P Read},
-  title    = {A framework for studying the neurobiology of value-based decision making.},
-  journal  = {Nature Reviews. Neuroscience},
-  year     = {2008},
-  volume   = {9},
-  number   = {7},
-  pages    = {545--56},
-  abstract = {Neuroeconomics is the study of the neurobiological and computational basis of value-based decision making. Its goal is to provide a biologically based account of human behaviour that can be applied in both the natural and the social sciences. This Review proposes a framework to investigate different aspects of the neurobiology of decision making. The framework allows us to bring together recent findings in the field, highlight some of the most important outstanding problems, define a common lexicon that bridges the different disciplines that inform neuroeconomics, and point the way to future applications.},
-  file     = {:Users/jono/Documents/Mendeley Desktop/Rangel, Camerer, Montague/Nature Reviews. Neuroscience/Rangel, Camerer, Montague - 2008 - A framework for studying the neurobiology of value-based decision making.pdf:pdf},
-  keywords = {Animals,Decision Making,Decision Making: physiology,Decision Theory,Habits,Humans,Learning,Learning: physiology,Models,Neurobiology,Neurological,Psychological,Risk,Social Values},
-  pmid     = {18545266},
-}
-
-@Article{Shareware2008,
-  author = {Shareware, Philippe Galmel},
-  title  = {CONSEQUENCES THAT MAY COME ABOUT AS A RESULT OF USING THIS},
-  year   = {2008},
-  file   = {:Users/jono/Documents/Mendeley Desktop/Shareware/Unknown/Shareware - 2008 - CONSEQUENCES THAT MAY COME ABOUT AS A RESULT OF USING THIS(2).pdf:pdf},
-}
-
-@Article{Wuchty2003a,
-  author   = {Wuchty, Stefan and Stadler, Peter F},
-  title    = {Centers of complex networks.},
-  journal  = {Journal of theoretical biology},
-  year     = {2003},
-  volume   = {223},
-  number   = {1},
-  pages    = {45--53},
-  abstract = {The central vertices in complex networks are of particular interest because they might play the role of organizational hubs. Here, we consider three different geometric centrality measures, excentricity, status, and centroid value, that were originally used in the context of resource placement problems. We show that these quantities lead to useful descriptions of the centers of biological networks which often, but not always, correlate with a purely local notion of centrality such as the vertex degree. We introduce the notion of local centers as local optima of a centrality value "landscape" on a network and discuss briefly their role.},
-  file     = {::},
-  keywords = {Computer Simulation,Escherichia coli,Escherichia coli: metabolism,Models, Biological,Models, Statistical,Protein Interaction Mapping,Protein Structure, Tertiary},
-  pmid     = {12782116},
-}
-
-@Article{Wang2009,
-  author   = {Wang, Pu and Gonz\'{a}lez, Marta C and Hidalgo, C\'{e}sar a and Barab\'{a}si, Albert-L\'{a}szl\'{o}},
-  title    = {Understanding the spreading patterns of mobile phone viruses.},
-  journal  = {Science (New York, N.Y.)},
-  year     = {2009},
-  volume   = {324},
-  number   = {5930},
-  pages    = {1071--6},
-  abstract = {We modeled the mobility of mobile phone users in order to study the fundamental spreading patterns that characterize a mobile virus outbreak. We find that although Bluetooth viruses can reach all susceptible handsets with time, they spread slowly because of human mobility, offering ample opportunities to deploy antiviral software. In contrast, viruses using multimedia messaging services could infect all users in hours, but currently a phase transition on the underlying call graph limits them to only a small fraction of the susceptible users. These results explain the lack of a major mobile virus breakout so far and predict that once a mobile operating system's market share reaches the phase transition point, viruses will pose a serious threat to mobile communications.},
-  file     = {::},
-  keywords = {Cellular Phone,Computer Security,Humans,Time Factors},
-  pmid     = {19342553},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

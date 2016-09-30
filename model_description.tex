@@ -1,5 +1,5 @@
 %!TEX root = disclosure_game.tex
-\section{Disclosure Game Model Development}
+\chapter{Disclosure Game Model Development}
 \label{app:model_description}
 
 This appendix provides a more in depth exploration of the model development process, beginning by deriving a game to serve as the basis for the model, and decision problems.
@@ -10,9 +10,9 @@ A very simple way to represent this would be a game with two players, who both h
 
 
 \begin{figure}[H]
-\sidecaption
+%\sidecaption
 \includegraphics[width=7cm]{simplest_game}
-\caption{A very simple two player game. The only time things in this very restricted world obviously end poorly, is if the woman asks for help but does not get any. This implies that a rational player would always refer if asked for help, and is indifferent otherwise - in other words, there are three possible Nash equilibriums\protect\footnotemark.}
+\caption[Simplest form of the disclosure game]{A very simple two player game. The only time things in this very restricted world obviously end poorly, is if the woman asks for help but does not get any. This implies that a rational player would always refer if asked for help, and is indifferent otherwise - in other words, there are three possible Nash equilibriums\protect\footnotemark.}
 \label{fig:simplest_game}
 \end{figure}
 
@@ -40,9 +40,18 @@ At this juncture, we do not gain much further from the game representation, and 
 Breaking the game down into separate decision problems can be achieved by treating the moves of the other players as a chance node, and omitting moves by nature that are known to them. For women, there are two such nodes, corresponding to the move by nature determining the type of midwife they play against, and the midwife's action. Midwives have simpler problem with only a single chance node, because the woman's move is known to them. Figure \ref{fig:decision_problems} shows the structure of the resulting decision problems. Note that there are in fact three distinct decision problems for the three types of woman, since the move by nature determining their type is known to them. 
 
 \begin{figure}[H]
-\subfloat[Women (heavy drinkers)]{\includegraphics[width=11.9cm]{women_influence}}
-\vskip\baselineskip
-\subfloat[Midwives]{\includegraphics[width=11.9cm]{mw_influence}}
+
+\begin{subfigure}[]{\textwidth}
+\includegraphics[width=\textwidth]{women_influence}
+\caption{Women (heavy drinkers)}
+\end{subfigure}
+
+
+\begin{subfigure}[]{\textwidth}
+\includegraphics[width=\textwidth]{mw_influence}
+\caption{Midwives}
+\end{subfigure}
+
 \caption{Influence diagrams, showing the game broken into two decision problems. Squares indicate a decision node, while circles are (from the perspective of the agent) chance nodes}
 
 \label{fig:decision_problems}

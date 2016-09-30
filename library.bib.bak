@@ -4056,16 +4056,16 @@ title = "Bayes Rule as a Descriptive Model : The Representativeness Heuristic",
 volume = {95},
 year = {1980}
 }
-@incollection{RoyalCollegeofObstetriciansandGynaecologists2006,
-address = {London},
-author = {{Royal College of Obstetricians and Gynaecologists}},
-booktitle = "RCOG Statement No. 5",
-file = {:Users/jono/Documents/Mendeley Desktop/Royal College of Obstetricians and Gynaecologists/RCOG Statement No. 5/Royal College of Obstetricians and Gynaecologists - 2006 - Alcohol Consumption and the Outcomes of Pregnancy.pdf:pdf},
-number = {5},
-pages = {1--10},
-publisher = {RCOG},
-title = "Alcohol Consumption and the Outcomes of Pregnancy",
-year = {2006}
+
+@InCollection{RoyalCollegeofObstetriciansandGynaecologists2006,
+  author    = {{Royal College of Obstetricians and Gynaecologists}},
+  title     = {Alcohol Consumption and the Outcomes of Pregnancy},
+  booktitle = {RCOG Statement No. 5},
+  publisher = {RCOG},
+  year      = {2006},
+  pages     = {1--10},
+  address   = {London},
+  file      = {:Users/jono/Documents/Mendeley Desktop/Royal College of Obstetricians and Gynaecologists/RCOG Statement No. 5/Royal College of Obstetricians and Gynaecologists - 2006 - Alcohol Consumption and the Outcomes of Pregnancy.pdf:pdf},
 }
 @incollection{Wagner1972,
 address = {New York},
@@ -5911,15 +5911,6 @@ title = "Good judgments do not require complex cognition.",
 volume = {11},
 year = {2010}
 }
-@article{Silverberg2013,
-archivePrefix = {arXiv},
-arxivId = {arXiv:1302.1886v1},
-author = {Silverberg, Jesse L and Bierbaum, Matthew and Sethna, James P and Cohen, Itai},
-eprint = {arXiv:1302.1886v1},
-file = {:Users/jono/Documents/Mendeley Desktop/Silverberg et al/Unknown/Silverberg et al. - 2013 - Collective Motion of Moshers at Heavy Metal Concerts.pdf:pdf},
-title = "Collective Motion of Moshers at Heavy Metal Concerts",
-year = {2013}
-}
 @article{Guerri1999,
 author = {Guerri, C and Riley, E and Str\"{o}mland, K},
 file = {:Users/jono/Documents/Mendeley Desktop/Guerri, Riley, Str\"{o}mland/Alcohol and Alcoholism/Guerri, Riley, Str\"{o}mland - 1999 - Commentary on the recommendations of the Royal College of Obstetricians and Gynaecologists concerning.pdf:pdf},
@@ -6160,17 +6151,6 @@ pmid = {8656156},
 title = "Temporal discounting and utility for health and money.",
 volume = {22},
 year = {1996}
-}
-
-@Article{Silverberg2013,
-  author  = {Silverberg, Jesse L. and Bierbaum, Matthew and Sethna, James P. and Cohen, Itai},
-  title   = {Collective Motion of Humans in Mosh and Circle Pits at Heavy Metal Concerts},
-  journal = {Physical Review Letters},
-  year    = {2013},
-  volume  = {110},
-  number  = {22},
-  pages   = {228701},
-  file    = {:Users/jono/Documents/Mendeley Desktop/Silverberg et al/Physical Review Letters/Silverberg et al. - 2013 - Collective Motion of Humans in Mosh and Circle Pits at Heavy Metal Concerts.pdf:pdf},
 }
 @article{Kosfeld2005,
 abstract = {Trust pervades human societies. Trust is indispensable in friendship, love, families and organizations, and plays a key role in economic exchange and politics. In the absence of trust among trading partners, market transactions break down. In the absence of trust in a country's institutions and leaders, political legitimacy breaks down. Much recent evidence indicates that trust contributes to economic, political and social success. Little is known, however, about the biological basis of trust among humans. Here we show that intranasal administration of oxytocin, a neuropeptide that plays a key role in social attachment and affiliation in non-human mammals, causes a substantial increase in trust among humans, thereby greatly increasing the benefits from social interactions. We also show that the effect of oxytocin on trust is not due to a general increase in the readiness to bear risks. On the contrary, oxytocin specifically affects an individual's willingness to accept social risks arising through interpersonal interactions. These results concur with animal research suggesting an essential role for oxytocin as a biological basis of prosocial approach behaviour.},
@@ -7360,13 +7340,14 @@ title = "Neural correlates of interspecies perspective taking in the post-mortem
 volume = {1},
 year = {2010}
 }
-@incollection{Gynecologists1996,
-address = {London},
-author = {{Royal College of Obstetricians and Gynecologists}},
-booktitle = "RCOG Guideline No. 9",
-publisher = {RCOG},
-title = "Alcohol Consumption in Pregnancy",
-year = {1996}
+
+@InCollection{Gynecologists1996,
+  author    = {{Royal College of Obstetricians and Gynaecologists}},
+  title     = {Alcohol Consumption in Pregnancy},
+  booktitle = {RCOG Guideline No. 9},
+  publisher = {RCOG},
+  year      = {1996},
+  address   = {London},
 }
 @article{Edwards1954,
 author = {Edwards, Ward},
@@ -11076,6 +11057,20 @@ year = {2014}
   title   = {No Title},
   journal = {City},
   file    = {:Users/jono/Documents/Mendeley Desktop/Us et al/City/Us et al. - Unknown - No Title(2).pdf:pdf},
+}
+
+@Article{Silverberg2013,
+  author        = {Silverberg, Jesse L and Bierbaum, Matthew and Sethna, James P and Cohen, Itai},
+  title         = {Collective Motion of Moshers at Heavy Metal Concerts},
+  journal       = {Physical Review Letters},
+  year          = {2013},
+  volume        = {110},
+  number        = {22},
+  pages         = {228701},
+  archiveprefix = {arXiv},
+  arxivid       = {arXiv:1302.1886v1},
+  eprint        = {arXiv:1302.1886v1},
+  file          = {:Users/jono/Documents/Mendeley Desktop/Silverberg et al/Unknown/Silverberg et al. - 2013 - Collective Motion of Moshers at Heavy Metal Concerts.pdf:pdf},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

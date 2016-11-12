@@ -29,10 +29,10 @@
   \acroindefinite{CMACE}{the}{the}
   \acro{AUDIT}{Alcohol Use Disorders Identification Test}
   \acro{T-ACE}{Tolerance, Annoyance, Cut down, Eye-opener}
-  \acro{RCOG}{Royal College of Obstetricians and Gynecologists}
+  \acro{RCOG}{Royal College of Obstetricians and Gynaecologists}
   \acroindefinite{RCOG}{the}{the}
-  \acro{AML}{acute myeloid leukemia}
-  \acro{ADHD}{Attention Defecit Hyperactivity Disorder}
+  \acro{AML}{acute myeloid leukaemia}
+  \acro{ADHD}{Attention Deficit Hyperactivity Disorder}
   \acro{PND}{Postnatal Depression}
   \acro{RCT}{randomised control trial}
   \acro{WHO}{the World Health Organisation}
@@ -91,7 +91,7 @@ The case in favour of \ac{ABM} as a general analytical approach has been made nu
 
 This exercise is framed in the context of disclosure decisions, taking drinking patterns in pregnant women as a motivating example. Alcohol consumption in the antenatal period is a significant issue in itself, although there is not a clear consensus on associated risk. In terms of official guidance in the UK, \ac{NICE} acknowledge that evidence of harm to the fetus is less than conclusive, but advise not drinking at all, or significant moderation \citep{NICE2010a}, with similar advice from the UK \cite{DepartmentofHealth2008}.
 
-Turning more specifically to disclosure of alcohol use by women to healthcare professionals during their pregnancy, research is relatively sparse, although qualitative trends are reported by \citet{Phillips2007} and \citet{Alvik2006}. The former explored factors impacting disclosure through a small case study, highlighting the need to build up rapport between woman and midwife over several appointments; the latter compared post partum reports of consumption with contemporaneous accounts, finding apparent underreporting during pregnancy which was amplified by increased drinking. The simulation model described in this paper is able to replicate both qualitative trends, i.e. an increase in disclosure over appointments, and more honest behaviour by moderate as compared to heavier drinkers.
+Turning more specifically to disclosure of alcohol use by women to healthcare professionals during their pregnancy, research is relatively sparse, although qualitative trends are reported by \citet{Phillips2007} and \citet{Alvik2006}. The former explored factors impacting disclosure through a small case study, highlighting the need to build up rapport between woman and midwife over several appointments; the latter compared post partum reports of consumption with contemporaneous accounts, finding apparent under reporting during pregnancy which was amplified by increased drinking. The simulation model described in this paper is able to replicate both qualitative trends, i.e. an increase in disclosure over appointments, and more honest behaviour by moderate as compared to heavier drinkers.
 
 The resulting scenario is of substantial independent interest, and shows the potential utility of a simulation approach in domains where the process is obscured, here both because of the interest in concealment, and obvious ethical concerns. With this said, the lack of a strong quantitative evidence base against which to validate the behaviour of the model augers for caution in interpreting the results, and a necessary reminder that in this instance the model is primarily a tool for formalisation of the thought process \citep{epstein2008}, rather than a machine for predicting.
 
@@ -316,7 +316,7 @@ R_{m}(s_{w}, s_{m}) = \sum_{i\in \Theta} -u_{m}(s_{w}, s_{m}, i)p(i | s_{w})
 
 The most complex decision rule used is \ac{CPT}, which attempts to reproduce a number of systematic deviations from rationality observed in humans. Rather than risk, `prospects', the sequence of payoff-probability pairings in ascending order of payoff, associated with an action  are used as decision criteria. While \ac{CPT} has primarily been applied in the context of decisions from description, it has been modified to deal with decisions from experience by incorporating a first stage where probabilities are estimates from observations \cite{FoxCPT}. In this instance the Bayesian inference process fills the first stage role.
 
-\ac{CPT} uses transformed probabilities, underweighting small probabilities, and overweighting large ones. This is intended to reflect the observed behaviour of humans, where sufficiently high likelihoods are treated as certain, and contrastingly low probabilities as impossible. The correct weighting function is subject to some debate, but here we have used that of \citet{Tversky1992}, which treats probabilities differently for gains (eqn \ref{eqn:cpt_p_pos}) and losses (eqn \ref{eqn:cpt_p_neg}) -
+\ac{CPT} uses transformed probabilities, under weighting small probabilities, and over weighting large ones. This is intended to reflect the observed behaviour of humans, where sufficiently high likelihoods are treated as certain, and contrastingly low probabilities as impossible. The correct weighting function is subject to some debate, but here we have used that of \citet{Tversky1992}, which treats probabilities differently for gains (eqn \ref{eqn:cpt_p_pos}) and losses (eqn \ref{eqn:cpt_p_neg}) -
 
 \begin{align}
 w^{+}(p) & = \frac{p^{\gamma}}{(p^{\gamma}+(1-p)^{\gamma})^{\frac{1}{\gamma}}}\label{eqn:cpt_p_pos}\\
@@ -472,7 +472,7 @@ In addition to the sensitivity analysis, we also employed the resulting emulator
 \subsection{Qualitative Trends}
 \label{sub:qt_results}
 
-As shown in figure \ref{fig:honest_signals}, all four decision rules were able to reproduce both qualitative trends towards more disclosure as women experience more appointments \citep{Phillips2007}, and a greater tendency towards underreporting of consumption by heavier drinkers \citep{Alvik2006}.  
+As shown in figure \ref{fig:honest_signals}, all four decision rules were able to reproduce both qualitative trends towards more disclosure as women experience more appointments \citep{Phillips2007}, and a greater tendency towards under reporting of consumption by heavier drinkers \citep{Alvik2006}.  
 Trends for all four rules are broadly similar, exhibiting a gradual increase across appointments which subsequently levels off. This levelling can in part be explained by the referral results (see figure \ref{fig:ref_plot} in appendix \ref{app:additional_figures}), which show that the majority of drinkers are referred, even with substantial concealment. Referrals continue to occur, in the absence of honest signals, because drinkers are able to achieve a referral by masquerading as higher or lower types, dependent on how their initial beliefs are biased. Despite this the results suggest that a minority of risky drinkers will evade detection altogether, with no notable distinction between heavy and moderate types. Under these parameters, light drinkers always signal honestly and are never referred since there is no perceived advantage in doing so, and the evidence of deceptive signalling is insufficient to outweigh the biased priors of the midwives. 
 
 \begin{figure}[H]

@@ -1,9 +1,9 @@
 %!TEX root = disclosure_game.tex
 %Include the descent into chaos bit
-\chapter{Sensitivity Analysis}
+\chapter{Disclosure Game Model Sensitivity Analysis}
 \label{app:sensitivity_results}
 
-This section provides complete variance based sensitivity analysis results for the disclosure game model. Each subsection gives results for one simulation output under all four decision rules, with tables providing the percentage of overall variance attributable to the individual parameters, emulator quality statistics, and the 5 most significant interaction contributions to variance in the output.
+This section provides complete variance based sensitivity analysis results for the disclosure game model. Each subsection gives results for one simulation output under all four decision rules, with tables providing the percentage of overall variance attributable to the individual parameters, emulator quality statistics, and the five most important interaction contributions to variance in the output.
 
 \section{Median Moderate Drinker Signalling}
 
@@ -33,7 +33,6 @@ Total & All parameters and two way interactions & 86.777 & 96.527 & 85.529 & 74.
 
 \begin{table}[H]
 \caption{Median moderate drinker signalling emulator statistics \label{tab:sa_emulator_sig}}
-\rotatebox{90}{
 \begin{tabular} {lllllll}
 \hline\noalign{\smallskip}
 Rule & \(\sigma^2\) & Nugget \(\sigma^2\) & $\mu$ & Total output variance & Code uncertainty & RMSSE \\
@@ -44,7 +43,6 @@ Bayesian & 3.352 & 0.534 & 1.160 & 0.001 & 0.068 & 2.423 \\
 \ac{CPT} & 1.503 & 0.331 & 1.241 & 0.002 & 0.101 & 1.842 \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{tabular}
-}
 \end{table}
 
 \input{midwives/top_5_table_sig}

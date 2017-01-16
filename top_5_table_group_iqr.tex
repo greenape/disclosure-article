@@ -1,62 +1,24 @@
-\begin{table}[h]
-\caption{Top 5 Interaction terms for \ac{CPT} decision rule.}
-\label{tab:sa_interaction_prospect_group_iqr}
-\begin{tabular} {ll}
+\begin{table}[H]
+\caption{Top five interaction terms for median between groups IQR \label{tab:sa_interaction_prospect_group_iqr}}
+\begin{tabular} {lllll}
 \hline\noalign{\smallskip}
-Parameter & Variance \\ 
+Parameter & \multicolumn{4}{c}{Variance} \\ 
+& \ac{CPT} & Bayesian & Lexicographic & \ac{PB} \\
 \noalign{\smallskip}\svhline\noalign{\smallskip}
 
-\(x_{h}\)*\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & 19.551\\
-\(p_{w}(l)\)*\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & 3.838\\
+\(x_{h}\)*\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & 19.551 & 2.680&&2.360\\
+\(p_{w}(l)\)*\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & 3.838 & 2.943 && 12.883\\
 \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\)*\(w_{w}\) & 2.450\\
-\(p_{w}(l)\)*\(x_{h}\) & 2.337\\
-\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\)*\(q_{m}\) & 2.046\\
+\(p_{w}(l)\)*\(x_{h}\) & 2.337 &&& 2.447\\
+\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\)*\(q_{m}\) & 2.046 & 4.284\\
+\(p_{w}(l)\)*\(q_{m}\) && 3.866\\
+\(q_{m}\)*\(w_{w}\) && 2.282\\
+\(p_{m}(l)\)*\(p_{m}(m)\) &&& 12.046\\
+\(p_{m}(m)\)*\(p_{w}(l)\) &&& 5.054 & 1.919\\
+\(p_{m}(l)\)*\(p_{w}(l)\) &&& 3.005\\
+\(p_{m}(l)\)*\(w_{w}\) &&& 0.819\\
+\(p_{m}(m)\)*\(w_{w}\) &&& 0.757\\
+\(p_{w}(l)\)*\(w_{w}\) &&&& 5.667\\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{tabular}
 \end{table}
-
-\begin{table}[H]
-\caption{Top 5 Interaction terms for Bayesian decision rule. \label{tab:sa_interaction_sharing_group_iqr}}
-\begin{tabular} {ll}
-\hline\noalign{\smallskip}
-Parameter & Variance \\
-\noalign{\smallskip}\svhline\noalign{\smallskip}
-\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\)*\(q_{m}\) & 4.284\\
-\(p_{w}(l)\)*\(q_{m}\) & 3.866\\
-\(p_{w}(l)\)*\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & 2.943\\
-\(x_{h}\)*\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & 2.680\\
-\(q_{m}\)*\(w_{w}\) & 2.282\\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\caption{Top 5 Interaction terms for Lexicographic decision rule. \label{tab:sa_interaction_lexic_group_iqr}}
-\begin{tabular} {ll}
-\hline\noalign{\smallskip}
-Parameter & Variance \\
-\noalign{\smallskip}\svhline\noalign{\smallskip}
-\(p_{m}(l)\)*\(p_{m}(m)\) & 12.046\\
-\(p_{m}(m)\)*\(p_{w}(l)\) & 5.054\\
-\(p_{m}(l)\)*\(p_{w}(l)\) & 3.005\\
-\(p_{m}(l)\)*\(w_{w}\) & 0.819\\
-\(p_{m}(m)\)*\(w_{w}\) & 0.757\\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\caption{Top 5 Interaction terms for Bayesian Payoff decision rule. \label{tab:sa_interaction_payoff_group_iqr}}
-\begin{tabular} {ll}
-\hline\noalign{\smallskip}
-Parameter & Variance \\
-\noalign{\smallskip}\svhline\noalign{\smallskip}
-\(p_{w}(l)\)*\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & 12.883\\
-\(p_{w}(l)\)*\(w_{w}\) & 5.667\\
-\(p_{w}(l)\)*\(x_{h}\) & 2.447\\
-\(x_{h}\)*\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & 2.360\\
-\(p_{m}(m)\)*\(p_{w}(l)\) & 1.919\\ 
-\noalign{\smallskip}\hline\noalign{\smallskip}
-\end{tabular}
-\end{table}
-

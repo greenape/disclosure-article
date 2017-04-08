@@ -30,7 +30,7 @@ Runs & Simulation runs & 1000 \\
 \(w_{w}\) & Weight of shared information for women & 0. \\ 
 \(q_{m}\) & Probability of midwives sharing & 0. \\ 
 \(w_{m}\) & Weight of shared information for midwives & 0. \\ 
-\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty & 10:1 \\ 
+\(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) & Pseudo-count favouring honesty\footnotemark & 10:1 \\ 
 \(\gamma\) & Probability weighting for gains  & 0.61 \\ 
 \(\delta\) & Probability weighting for losses &  0.69\\ 
 \(\alpha\) & Power for gains  & 0.88 \\ 
@@ -39,16 +39,17 @@ Runs & Simulation runs & 1000 \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
 \end{tabular}
 \end{table}
+\footnotetext{This is the ratio by which the Dirichlet hyperparameters favour assuming a signal is accurate. In the case of the Lexicographic rule, this equates to setting the starting count of payoffs following an action to ten, where ${s_w=s_m}$.}
 
 Two key measures were used: the fraction of the subpopulation of women who had ever signalled honestly, and the proportion of the population who were referred for specialist treatment. Both measures were taken after every round of play, and were taken relative to the agent's position in their sequence of appointments giving the probability of signalling honestly, or being referred having had a given number of appointments.
 
 
-In addition to assessing the adequacy of the rules in capturing qualitative trends, we also examined the impact of simple social learning within the population of women (section \ref{sub:info_sharing}) on the robustness of these trends. The original experiment was repeated for different values of $q_{w}$ \(\{0.25, 0.5, 0.75, 1 | q_{w}=w_{w}\}\), with 100 runs under each condition. 
+In addition to assessing the adequacy of the rules in capturing qualitative trends, I also examined the impact of simple social learning within the population of women (section \ref{sub:info_sharing}) on the robustness of these trends. The original experiment was repeated for different values of $q_{w}$ \(\{0.25, 0.5, 0.75, 1 | q_{w}=w_{w}\}\), with 100 runs under each condition. 
 
 \subsection{Global Sensitivity Analysis}
 \label{sub:sensitivity}
 
-In general, we have followed the example of \cite{Bijak2013b} for global sensitivity analysis of stochastic agent-based models, although see \citet{Thiele2014} for a review of alternative techniques. For this purpose the \ac{GEM-SA} software \citep{Kennedy} was used, which implements the \ac{BACCO} method developed by \citeauthor{Oakley2004} \citep{Oakley2002,Oakley2004,Dorresteijn2010}. This is a form of variance-based sensitivity analysis, which assumes that the model output is an unknown, smooth function of the inputs. The unknown function can then be approximated as a Gaussian Process, which is fitted to the training data using Bayes' Theorem and then serves as an emulator for the simulator. The meta-model is then able to provide an indication about the extent to which uncertainty in a parameter propagates to uncertainty in the output, and how sharply the output responds to change in each parameter.
+In general, I have followed the example of \cite{Bijak2013b} for global sensitivity analysis of stochastic agent-based models, although see \citet{Thiele2014} for a review of alternative techniques. For this purpose the \ac{GEM-SA} software \citep{Kennedy} was used, which implements the \ac{BACCO} method developed by \citeauthor{Oakley2004} \citeyear{Oakley2002,Oakley2004}. This is a form of variance-based sensitivity analysis, which assumes that the model output is an unknown, smooth function of the inputs. The unknown function can then be approximated as a Gaussian Process, which is fitted to the training data using Bayes' Theorem and then serves as an emulator for the simulator. The meta-model is then able to provide an indication about the extent to which uncertainty in a parameter propagates to uncertainty in the output, and how sharply the output responds to change in each parameter.
 
 \begin{comment}
 
@@ -56,7 +57,7 @@ Justification for doing SA, point out the wide variety of places this gets used.
 
 \end{comment}
 
-Parameters for training were generated in R \citep{RTeam2014} using and appropriately transformed Latin Hypercube Sample \citep{Carnell2012} over the space of parameters given in table \ref{tab:sa_params}, giving eleven free parameters which were treated as uniformly distributed in the range given.  Given the limitation of 400 design points for the \ac{GEM-SA} software, we produced exactly that many parameter combinations and collected results for 100 runs of each, with emulator quality assessed by leave-one-out cross validation. A fixed set of 100 random seeds was used\footnote{Fixed random seeds were used to allow simulation results to be reproducible, since the combination of a parameter set and a random seed yields a deterministic process.}, such that each parameter set was run once with each seed, for every decision rule.
+Parameters for training were generated in R \citep{RTeam2014} using and appropriately transformed Latin Hypercube Sample \citep{Carnell2012} over the space of parameters given in table \ref{tab:sa_params}, giving eleven free parameters which were treated as uniformly distributed in the range given.  Given the limitation of 400 design points for the \ac{GEM-SA} software, I produced exactly that many parameter combinations and collected results for 100 runs of each, with emulator quality assessed by leave-one-out cross validation. A fixed set of 100 random seeds was used\footnote{Fixed random seeds were used to allow simulation results to be reproducible, since the combination of a parameter set and a random seed yields a deterministic process.}, such that each parameter set was run once with each seed, for every decision rule.
 
 \begin{table}
 \caption[Parameter ranges for sensitivity analysis of the midwives and women disclosure game model]{Parameter ranges.}
@@ -80,10 +81,10 @@ Name & Description & Min & Max \\
 \end{tabular}
 \end{table}
 
-To capture the response characteristics for the model, we measured four outcome variables - (1) the \ac{IQR} of the average signal sent by each type of agent in a run, (2) the average signal of moderate drinking agents in a run, and (3, 4) the \ac{IQR} of 1 \& 2 between simulation runs. Together these four metrics give an indication of how far women are separable by their signalling behaviour (1), the behaviour of the at risk drinking groups\footnote{Under most conditions, the behaviour of heavy drinkers tracks closely with their moderate counterparts.} (2), and finally the variability of the system in response to changes to the parameters (3 \& 4).
+To capture the response characteristics for the model, I measured four outcome variables - (1) the \ac{IQR} of the average signal sent by each type of agent in a run, (2) the average signal of moderate drinking agents in a run, and (3, 4) the \ac{IQR} of 1 \& 2 between simulation runs. Together these four metrics give an indication of how far women are separable by their signalling behaviour (1), the behaviour of the at risk drinking groups\footnote{Under most conditions, the behaviour of heavy drinkers tracks closely with their moderate counterparts.} (2), and finally the variability of the system in response to changes to the parameters (3 \& 4).
 
 Measurements were taken at the end of 1000 rounds of play, and emulators were built against 400 sample points from the full set of simulation results (1 \& 2), and \ac{IQR} at each point (3 \& 4) to assess both the overall trend, and the extent to which the parameters contribute to variance between runs.
 
 Sixteen emulators were built, covering each of the four outputs on all decision models and used to conduct a probabilistic sensitivity analysis to assess the impact of parameters and interactions.
 
-In addition to the sensitivity analysis, we also employed the resulting emulators to rapidly\footnote{Once constructed, the emulator has an analytical solution conditional on the roughness parameters, which obviates the need to use MCMC.} explore the parameter space. While emulated results are subject to inaccuracy, they do provide an indication of the interest, and plausibility, of regions of the parameter space. Results for the outcomes of the interactions of \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) with \(x_{h}\), and \(q_{w}\) with \(w_{w}\) are given in section \ref{sub:sa_results}.
+In addition to the sensitivity analysis, I also employed the resulting emulators to rapidly\footnote{Once constructed, the emulator has an analytical solution conditional on the roughness parameters \citep{Oakley2002}, which obviates the need to use MCMC \citep{Oakley2004}.} explore the parameter space. While emulated results are subject to inaccuracy, they do provide an indication of the interest, and plausibility, of regions of the parameter space. Results for the outcomes of the interactions of \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\) with \(x_{h}\), and \(q_{w}\) with \(w_{w}\) are given in section \ref{sub:sa_results}.

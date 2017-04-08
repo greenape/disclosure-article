@@ -25,7 +25,7 @@ Referrals continue to occur, in the absence of honest signals, because drinkers 
 \subsection{Social Learning}
 \label{sub:sharing_results}
 
-Introducing social learning amongst women leads the behaviour of the decision rules to diverge markedly, which we explore possible reasons for in section \ref{sec:discussion}. Figure \ref{fig:honest_sharing} shows the proportion of women who have signalled honestly at least once by their final appointment, under four sharing conditions. 
+Introducing social learning amongst women leads the behaviour of the decision rules to diverge markedly, possible reasons for which I explore in section \ref{sec:discussion}. Figure \ref{fig:honest_sharing} shows the proportion of women who have signalled honestly at least once by their final appointment, under four sharing conditions. 
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{honesty_sharing}
@@ -37,36 +37,38 @@ Aside from the lexicographic decision rule, the general tendency is towards less
 
 Particularly notable, is the decline in honest signalling by light drinkers visible in both heuristic type rules at the 0.25 level of \(q_{w}\) and \(w_{w}\), which is associated with an increase in false positives. This arises because of the lack of homophily in social learning, as light drinkers become informed about negative outcomes associated with concealment, despite having nothing to conceal. The relatively high referral rates of drinkers heighten the effect further, because shared information becomes dominated by their experiences. 
 
-The relationship is not, however, entirely straightforward, in that increasing social learning leads to greater variance between runs. A linear model was used to predict the between-runs interquartile range of the average signal sent by moderate drinkers. The predictors used were decision rule, and level of social learning, together with the interaction between the two. The regression results were significant (\(F_{7,12}=25,p<2.9\times10^{-6}\)) with \(R^2=94\%\), and intercept 0.07. The only significant coefficients were for the interaction terms, which were 0.44 (\(p<0.05\)) for the Bayesian payoff rule, and 0.69 (\(p<0.005\)) for the lexicographic. This suggests that social learning, for the heuristic style decision rules introduces considerable uncertainty to the model, which is explored further in the sensitivity analysis below.
+The relationship is not, however, entirely straightforward, in that increasing social learning leads to greater variance between runs. As a preminary investigation of this, linear model was used to predict the between-runs interquartile range of the average signal sent by moderate drinkers. The predictors used were decision rule, and level of social learning, together with the interaction between the two. The regression results were significant (\(F_{7,12}=25,p<2.9\times10^{-6}\)) with \(R^2=94\%\), and intercept 0.07. The only significant coefficients were for the interaction terms, which were 0.44 (\(p<0.05\)) for the Bayesian payoff rule, and 0.69 (\(p<0.005\)) for the lexicographic. This suggests that social learning, for the heuristic style decision rules introduces considerable uncertainty to the model, which is explored further in the sensitivity analysis below.
 
 
 \subsection{Sensitivity Analysis}
 \label{sub:sa_results}
 
-In this section we present a brief overview of the sensitivity analysis, followed by selected results highlighting the global effect of changes to perceived payoffs and degree of bias towards honesty, as well as social learning within women. The full results for the sensitivity analysis covering all sixteen emulators are available in appendix \ref{app:sensitivity_results}.
-
-\begin{figure}[H]
-\includegraphics[width=90mm]{sharing_emulated_simulated}
-\caption{Median moderate drinker signal vs median between drinking type IQR for all decision rules, with signals coded as 0 = light, 1 = moderate, and 2 = heavy.}
-\label{fig:outcome_plots}
-\end{figure}
+In this section I present a brief overview of the sensitivity analysis, followed by selected results highlighting the global effect of changes to perceived payoffs and degree of bias towards honesty, as well as social learning within women. The full results for the sensitivity analysis covering all sixteen emulators are available in appendix \ref{app:sensitivity_results}.
 
 For the median signal choice of moderate drinkers, the results of the sensitivity analysis suggest that the proportion of light drinkers has a significant effect for all decision rules, accounting for 10\%, 38\%, 24\%, and 5\% of the variance in output for the Lexicographic, Bayesian Payoff, Bayesian, and \ac{CPT} rules respectively. For the Lexicographic rule, the overwhelming majority of variance in signalling behaviour is reflective of the prevalence of stigmatisation by midwives (44\% \(p_{m}(m)\), 7\% \(p_{l}(m)\), and a further 15\% for their interaction).  The proportions of midwives are also key drivers in group separation, and the between run IQR of both measures for this rule. 
 
-Perhaps surprisingly, variance attributable to social learning between midwives is relatively low, with neither the weight nor probability accounting for more than 5\% of variance in any measure. While there are small contributions to variance in interaction with other parameters (e.g. 4\% to between groups IQR, for the interaction with the proportion of light drinkers under the Bayesian rule), this may suggest that the model is lacking in this area, which we touch on in section \ref{sec:conclusion}.
+Perhaps surprisingly, variance attributable to social learning between midwives is relatively low, with neither the weight nor probability accounting for more than 5\% of variance in any measure. While there are small contributions to variance in interaction with other parameters (e.g. 4\% to between groups IQR, for the interaction with the proportion of light drinkers under the Bayesian rule), this may suggest that the model is lacking in this area, which I touch on in section \ref{sec:conclusion}.
 
-Figure \ref{fig:outcome_plots} gives a qualitative picture of both emulator quality, and the divergent response surfaces of the decision rules in response to variations in social learning parameters. Emulator fit is clearly imperfect, but overall behaviour is qualitatively similar, with both emulated and simulated plots demonstrating separation in outcome space for the decision rules.
+Figure \ref{fig:outcome_plots} gives a qualitative picture of both emulator quality, and the divergent response surfaces of the decision rules in response to variations in social learning parameters. The figure shows the median signal by moderate drinkers versus the median IQR of the signal by all the drinking types. A higher IQR implies more separation in signalling behaviour between the groups, which in principle makes it less challenging to decide how to respond to a signal. The right hand side of the plot shows results from simulation for the four decision rules, at a variety of sharing parameters. The left hand side shows the output predicted by the emulator. Emulator fit is clearly imperfect, but overall behaviour is qualitatively similar, with both emulated and simulated plots demonstrating separation in outcome space for the decision rules.
 
 \begin{figure}[H]
-\includegraphics[width=100mm]{unfixed_emu_sig_iqr}
-\caption{Emulated moderate drinker signal IQR in response to varying \(q_{w}\), and \(w_{w}\)}
-\label{fig:emulated_sharing_iqr}
+\includegraphics[width=0.8\textwidth]{sharing_emulated_simulated}
+\caption{Median moderate drinker signal vs median between drinking type IQR for all decision rules, with signals coded as 0 = light, 1 = moderate, and 2 = heavy.}
+\label{fig:outcome_plots}
 \end{figure}
 
 Following from the suggestive results for social learning introducing uncertainty (section \ref{sub:sharing_results}), figure \ref{fig:emulated_sharing_iqr} shows emulated points covering the parameter space in high resolution. These plots reflect the increase in uncertainty of outcome shown for the heuristic type rules, which is especially severe for the Bayesian payoff rule. They also suggest that the Bayesian decision rule is less stable under conditions where the weight of shared information is substantially higher than the probability of sharing. This indicates that placing a high weight on information from limited sources leads to greater variability, i.e. what information is shared, matters.
 
 \begin{figure}[H]
-\includegraphics[width=100mm]{unfixed_emu_payoff_honesty_group_iqr}
+\includegraphics[width=\textwidth]{unfixed_emu_sig_iqr}
+\caption{Emulated moderate drinker signal IQR in response to varying \(q_{w}\), and \(w_{w}\)}
+\label{fig:emulated_sharing_iqr}
+\end{figure}
+
+For the \ac{CPT}, and Bayesian decision models, the interaction of bias towards honesty, and distinction between payoffs has a significant, and non-linear effect on instability, and separability of groups. Figure \ref{fig:emulated_payoff_group_iqr} shows the effects, and also highlights the tendency towards poor separability of groups for both the heuristic type decision rules. The response surface of the Bayesian payoff rule is slightly more nuanced than the simple Lexicographic rule. Figure \ref{fig:emulated_payoff_group_iqr} shows better separation, close to partial pooling\footnote{Pooling occurs when signallers of different types `pool' their signals, and one adopts the signals of another.} at high payoff distinction, with relatively modest honesty bias, which is reflected by the variance contributions of 11\% and 8\% respectively.  For the more complex rules, the general tendency is towards less pooling for higher values of both, but with pockets where full pooling\footnote{Indicating that all signaller types are using a the same signal.} occurs.  The plots also suggest that the sensitivity of the \ac{CPT} rule is marginally greater, which is supported by the significant contribution to variance of close to 15\% for all measures of \(x_{h}\).
+
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{unfixed_emu_payoff_honesty_group_iqr}
 \caption{Emulated between groups IQR in response to varying \(s_{i}[a_{i}]:s_{i}[a_{\neg i}]\), and \(x_{h}\)}
 \label{fig:emulated_payoff_group_iqr}
 \end{figure}

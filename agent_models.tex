@@ -56,7 +56,7 @@ p(x=j|D,\alpha)=\frac{\alpha_{j}+n_{j}}{\sum_{j}(\alpha_{j}+n_{j})}\label{eq:pos
 \end{equation}
 
 
-Where \(n_{j}\) is simply the count of occurrences of signal-payoff pair \(j\), and \(\alpha_{i}\) is the pseudo-count of prior observations\footnote{Psuedo-counts are related to, but distinct from prior beliefs. Here, the pseudo-count is a hyperparameter of the prior Dirichlet distribution and is nothing more than a hypothetical count of prior observations. The outcome is a result of the relationship between $\alpha$, and $n$, which is increasingly driven by the priors as for higher values of $\alpha$.} for a pair \(i\). Hence,
+Where \(n_{j}\) is simply the count of occurrences of signal-payoff pair \(j\), and \(\alpha_{j}\) is the pseudo-count of prior observations\footnote{Psuedo-counts are related to, but distinct from prior beliefs. Here, the pseudo-count is a hyperparameter of the prior Dirichlet distribution and is nothing more than a hypothetical count of prior observations. The outcome is a result of the relationship between $\alpha$, and $n$, which is increasingly driven by the priors as for higher values of $\alpha$.} for a pair \(j\). Hence,
 the belief that a signal will lead to a payoff is the number
 of times that pairing has been observed (including the pseudo-count),
 over the total number of observations thus far. This makes computation
